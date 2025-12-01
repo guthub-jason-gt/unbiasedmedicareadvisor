@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about Medicare, Medigap, Medicare Advantage, and our fee-only Medicare consulting services.">
+    <meta name="keywords" content="medicare faq, medicare questions, medigap questions, medicare advantage faq, medicare help">
+    <title>Frequently Asked Questions | Unbiased Medicare Advisor</title>
+
+    <meta property="og:title" content="Medicare FAQ | Unbiased Medicare Advisor">
+    <meta property="og:description" content="Get answers to common Medicare questions from our fee-only advisors.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/faq">
+
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --primary-dark: #134a5f;
+            --primary-light: #2d8f9c;
+            --accent: #e8a838;
+            --accent-dark: #c98c2a;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+            --black: #212529;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 18px;
+            --line-height: 1.6;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-xxl: 4rem;
+            --max-width: 1200px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: var(--font-size-base);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: var(--line-height);
+            color: var(--black);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--black);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+
+        .nav {
+            display: none;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-xs);
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+
+        .dropdown:hover .dropdown-toggle::after {
+            transform: rotate(-135deg);
+            margin-top: 3px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .dropdown-link:hover {
+            background: var(--off-white);
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            margin-left: var(--spacing-sm);
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #1a5f7a;
+            border-radius: 2px;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+        }
+
+        .mobile-nav-item {
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 0;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .mobile-dropdown-menu {
+            display: none;
+            padding-left: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            display: block;
+        }
+
+        .mobile-dropdown-link {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--medium-gray);
+            text-decoration: none;
+        }
+
+        .mobile-nav-cta {
+            margin-top: var(--spacing-lg);
+        }
+
+        .mobile-nav-cta .btn {
+            display: block;
+            width: 100%;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: var(--spacing-xxl);
+        }
+
+        .faq-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-section h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        /* Accordion */
+        .faq-item {
+            border: 1px solid var(--light-gray);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: var(--spacing-md);
+            background: var(--white);
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            font-family: var(--font-main);
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: var(--off-white);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 var(--spacing-md) var(--spacing-md);
+            color: var(--medium-gray);
+            font-size: 1rem;
+        }
+
+        .faq-answer-content p {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .faq-answer-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-answer-content a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .faq-answer-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--off-white);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-top: var(--spacing-xxl);
+        }
+
+        .cta-section h2 {
+            font-size: 1.5rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .cta-section p {
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: var(--spacing-xxl) 0 var(--spacing-lg);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-logo .logo-icon {
+            background: var(--primary-light);
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-nav h4 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--white);
+        }
+
+        .footer-nav ul {
+            list-style: none;
+        }
+
+        .footer-nav li {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .footer-nav a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--white);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav {
+                display: block;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            :root {
+                --font-size-base: 16px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+                padding: var(--spacing-sm) var(--spacing-md);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">M</span>
+                <span>Unbiased Medicare Advisor</span>
+            </a>
+
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="/services/medicare-consultant" class="dropdown-link">Medicare Consultant</a>
+                            <a href="/services/fee-only-medicare-advisor" class="dropdown-link">Fee-Only Advisor</a>
+                            <a href="/services/independent-medicare-advisor" class="dropdown-link">Independent Advisor</a>
+                            <a href="/services/medicare-plan-comparison" class="dropdown-link">Plan Comparison Help</a>
+                            <a href="/services/enrollment-assistance" class="dropdown-link">Enrollment Assistance</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Learn</a>
+                        <div class="dropdown-menu">
+                            <a href="/guides/medigap-vs-medicare-advantage" class="dropdown-link">Medigap vs Medicare Advantage</a>
+                            <a href="/guides/turning-65-medicare-guide" class="dropdown-link">Turning 65 Guide</a>
+                            <a href="/guides/medicare-parts-explained" class="dropdown-link">Medicare Parts Explained</a>
+                            <a href="/guides" class="dropdown-link">All Guides</a>
+                            <a href="/blog" class="dropdown-link">Blog Articles</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Your State</a>
+                        <div class="dropdown-menu">
+                            <a href="/states/florida" class="dropdown-link">Florida</a>
+                            <a href="/states/ohio" class="dropdown-link">Ohio</a>
+                            <a href="/states/arizona" class="dropdown-link">Arizona</a>
+                            <a href="/states/california" class="dropdown-link">California</a>
+                            <a href="/states" class="dropdown-link">All 50 States</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item nav-cta">
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Services</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/services/medicare-consultant" class="mobile-dropdown-link">Medicare Consultant</a>
+                        <a href="/services/fee-only-medicare-advisor" class="mobile-dropdown-link">Fee-Only Advisor</a>
+                        <a href="/services/independent-medicare-advisor" class="mobile-dropdown-link">Independent Advisor</a>
+                        <a href="/services/medicare-plan-comparison" class="mobile-dropdown-link">Plan Comparison Help</a>
+                        <a href="/services/enrollment-assistance" class="mobile-dropdown-link">Enrollment Assistance</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Learn</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/guides/medigap-vs-medicare-advantage" class="mobile-dropdown-link">Medigap vs Medicare Advantage</a>
+                        <a href="/guides/turning-65-medicare-guide" class="mobile-dropdown-link">Turning 65 Guide</a>
+                        <a href="/guides/medicare-parts-explained" class="mobile-dropdown-link">Medicare Parts Explained</a>
+                        <a href="/guides" class="mobile-dropdown-link">All Guides</a>
+                        <a href="/blog" class="mobile-dropdown-link">Blog Articles</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Your State</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/states/florida" class="mobile-dropdown-link">Florida</a>
+                        <a href="/states/ohio" class="mobile-dropdown-link">Ohio</a>
+                        <a href="/states/arizona" class="mobile-dropdown-link">Arizona</a>
+                        <a href="/states/california" class="mobile-dropdown-link">California</a>
+                        <a href="/states" class="mobile-dropdown-link">All 50 States</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/about" class="mobile-nav-link">About</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/contact" class="mobile-nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="mobile-nav-cta">
+                <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about Medicare and our fee-only advisory services.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-narrow">
+            <!-- About Our Services -->
+            <section class="faq-section">
+                <h2>About Our Services</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What is a fee-only Medicare advisor?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>A fee-only Medicare advisor is a consultant who charges you directly for their services and does not receive any commissions or compensation from insurance companies. This means our advice is completely unbiased &mdash; we have no financial incentive to recommend one plan over another.</p>
+                            <p>Most Medicare "helpers" are actually insurance agents who earn commissions when you sign up for certain plans. While their services appear free, they may steer you toward plans that benefit them financially, not necessarily the best plan for you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How much do your services cost?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>We offer a free initial consultation to discuss your situation and answer basic questions. If you'd like personalized guidance, plan comparisons, and enrollment assistance, we offer comprehensive consultations for a flat fee.</p>
+                            <p>Contact us to learn about current pricing. We believe in transparent, upfront pricing with no hidden costs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Why should I pay for advice when I can get free help from an agent?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>The "free" help from insurance agents isn't truly free &mdash; agents earn commissions from insurance companies, which means they have a financial incentive to recommend certain plans over others.</p>
+                            <p>When you pay for our advice, you know we're working exclusively for you. We'll compare ALL your options, including plans that agents might not show you because they pay lower (or no) commissions. For many people, this unbiased guidance results in better coverage and can save money over time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What's included in a consultation?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Our consultations include:</p>
+                            <p><strong>Understanding your needs:</strong> We'll discuss your health situation, medications, preferred doctors, budget, and coverage priorities.</p>
+                            <p><strong>Plan comparison:</strong> We'll analyze the Medicare options available in your area, including Original Medicare, Medigap plans, Medicare Advantage plans, and Part D prescription coverage.</p>
+                            <p><strong>Personalized recommendations:</strong> Based on your unique situation, we'll explain which options make the most sense for you and why.</p>
+                            <p><strong>Enrollment guidance:</strong> We'll walk you through the enrollment process, important deadlines, and help you avoid penalties.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Medicare Basics -->
+            <section class="faq-section">
+                <h2>Medicare Basics</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What are the different parts of Medicare?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Part A (Hospital Insurance):</strong> Covers inpatient hospital stays, skilled nursing facility care, hospice care, and some home health care. Most people don't pay a premium for Part A.</p>
+                            <p><strong>Part B (Medical Insurance):</strong> Covers doctor visits, outpatient care, preventive services, and medical equipment. Part B has a monthly premium.</p>
+                            <p><strong>Part C (Medicare Advantage):</strong> An alternative to Original Medicare offered by private insurers. These plans include Parts A and B coverage and often include drug coverage and extra benefits.</p>
+                            <p><strong>Part D (Prescription Drug Coverage):</strong> Helps cover the cost of prescription drugs. Available as a standalone plan or included in many Medicare Advantage plans.</p>
+                            <p><a href="/guides/medicare-parts-explained">Read our complete guide to Medicare parts &rarr;</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What's the difference between Medigap and Medicare Advantage?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Medigap (Medicare Supplement):</strong> Works alongside Original Medicare (Parts A & B) to cover out-of-pocket costs like deductibles and coinsurance. You can see any doctor who accepts Medicare, with no network restrictions. You'll also need a separate Part D plan for prescriptions.</p>
+                            <p><strong>Medicare Advantage (Part C):</strong> Replaces Original Medicare with an all-in-one plan from a private insurer. Often includes drug coverage and extra benefits like dental and vision. Usually requires using a network of doctors and may require referrals for specialists.</p>
+                            <p>Neither is universally "better" &mdash; the right choice depends on your health needs, preferred doctors, budget, and priorities.</p>
+                            <p><a href="/guides/medigap-vs-medicare-advantage">Read our complete Medigap vs Medicare Advantage guide &rarr;</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        When can I enroll in Medicare?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Initial Enrollment Period:</strong> The 7-month period that starts 3 months before you turn 65, includes your birthday month, and ends 3 months after. This is your first chance to enroll.</p>
+                            <p><strong>General Enrollment Period:</strong> January 1 - March 31 each year for people who missed their initial enrollment. Coverage starts July 1, and late penalties may apply.</p>
+                            <p><strong>Special Enrollment Periods:</strong> Triggered by certain life events, like losing employer coverage, moving, or other qualifying circumstances.</p>
+                            <p><strong>Annual Enrollment Period:</strong> October 15 - December 7 each year to make changes to your Medicare Advantage or Part D coverage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Will I have a penalty if I enroll late?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>It depends. If you delay enrolling without qualifying coverage (like employer insurance), you may face late enrollment penalties:</p>
+                            <p><strong>Part B Penalty:</strong> 10% added to your Part B premium for each 12-month period you could have had Part B but didn't enroll. This penalty lasts as long as you have Medicare.</p>
+                            <p><strong>Part D Penalty:</strong> 1% of the national base beneficiary premium for each month you went without creditable drug coverage. This also lasts as long as you have Medicare.</p>
+                            <p>If you have creditable coverage through an employer or union, you typically won't face penalties when you eventually enroll. Understanding these rules is one area where our guidance can be especially valuable.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Working With Us -->
+            <section class="faq-section">
+                <h2>Working With Us</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you sell insurance policies?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>No. We do not sell insurance policies or receive any compensation from insurance companies. We provide advice and guidance only. When you're ready to enroll, we'll help you understand the process and can guide you through enrolling directly with Medicare or the insurance company of your choice.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How do I get started?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>The easiest way to get started is to <a href="/book-consultation">book a free consultation</a>. During this call, we'll discuss your situation, answer your initial questions, and explain how our services work. There's no obligation to continue after the free consultation.</p>
+                            <p>You can also <a href="/contact">send us a message</a> if you prefer to start with an email.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Can you help if I'm already enrolled in Medicare?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes! We help people who are new to Medicare as well as those who have been enrolled for years and want to review their options. Whether you're unhappy with your current plan, your needs have changed, or you just want a second opinion, we can help you understand your options during the Annual Enrollment Period or if you qualify for a Special Enrollment Period.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What if I have more questions?
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>We're here to help! You can <a href="/contact">contact us</a> with any questions, or <a href="/book-consultation">schedule a free consultation</a> to discuss your specific situation. We're happy to answer questions even if you're not sure you need our services yet.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-section">
+                <h2>Still Have Questions?</h2>
+                <p>Schedule a free consultation and get personalized answers to your Medicare questions.</p>
+                <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">M</span>
+                        <span>Unbiased Medicare Advisor</span>
+                    </a>
+                    <p>
+                        Independent, fee-only Medicare guidance. We're paid by you, not insurance companies,
+                        so you can trust our advice is always in your best interest.
+                    </p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services/medicare-consultant">Medicare Consultant</a></li>
+                        <li><a href="/services/fee-only-medicare-advisor">Fee-Only Advisor</a></li>
+                        <li><a href="/services/medicare-plan-comparison">Plan Comparison</a></li>
+                        <li><a href="/services/enrollment-assistance">Enrollment Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/guides/medigap-vs-medicare-advantage">Medigap vs MA</a></li>
+                        <li><a href="/guides/turning-65-medicare-guide">Turning 65 Guide</a></li>
+                        <li><a href="/guides">All Guides</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/book-consultation">Book a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function toggleMobileDropdown(event) {
+            event.preventDefault();
+            const parent = event.target.closest('.mobile-dropdown');
+            parent.classList.toggle('active');
+        }
+
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
