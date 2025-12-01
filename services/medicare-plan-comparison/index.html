@@ -74,7 +74,8 @@
         .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
         .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; padding: 0.5rem 0; z-index: 100; }
         .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown-link { display: block; padding: 0.75rem 1.25rem; color: var(--dark-gray); text-decoration: none; }
+        .dropdown-link { display: block; padding: 0.75rem 1.25rem; color: var(--dark-gray); text-decoration: none; border-bottom: 1px solid var(--light-gray); }
+        .dropdown-link:last-child { border-bottom: none; }
         .dropdown-link:hover { background: var(--off-white); color: var(--primary); }
         .nav-cta { margin-left: var(--spacing-sm); }
 
