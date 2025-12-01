@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medicare Enrollment Assistance from Unbiased Medicare Advisor. Get expert help navigating enrollment periods, avoiding penalties, and completing your Medicare application correctly.">
+    <meta name="keywords" content="medicare enrollment help, medicare enrollment assistance, medicare sign up help, medicare application help, medicare enrollment guide">
+    <title>Medicare Enrollment Assistance | Unbiased Medicare Advisor</title>
+
+    <meta property="og:title" content="Medicare Enrollment Assistance | Unbiased Medicare Advisor">
+    <meta property="og:description" content="Step-by-step help with Medicare enrollment. Avoid costly mistakes and penalties with expert guidance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/services/enrollment-assistance">
+
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        .btn { display: inline-block; padding: 0.875rem 1.75rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s ease; border: none; text-align: center; }
+        .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35); padding: 1rem 2rem; font-size: 1.1rem; }
+        .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45); }
+        .btn-secondary { background: var(--white); color: var(--primary); border: 2px solid var(--primary); }
+        .btn-secondary:hover { background: var(--primary); color: var(--white); }
+        .btn-white { background: var(--white); color: var(--primary); }
+        .btn-white:hover { background: var(--off-white); transform: translateY(-2px); }
+        .btn-outline-white { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-outline-white:hover { background: var(--white); color: var(--primary); }
+
+        .header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-height); background: var(--white); box-shadow: var(--shadow-sm); z-index: 1000; }
+        .header-container { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+        .logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 1.25rem; }
+        .logo-icon { width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; color: var(--white); font-size: 1.25rem; }
+
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link { display: block; padding: 0.5rem 1rem; color: var(--dark-gray); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after { content: ''; border: solid var(--dark-gray); border-width: 0 2px 2px 0; display: inline-block; padding: 3px; transform: rotate(45deg); margin-top: -3px; transition: transform 0.2s; }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; padding: 0.5rem 0; z-index: 100; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link { display: block; padding: 0.75rem 1.25rem; color: var(--dark-gray); text-decoration: none; transition: all 0.2s; border-bottom: 1px solid var(--light-gray); }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+
+        .mobile-menu-btn { display: flex; flex-direction: column; justify-content: space-around; width: 30px; height: 24px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 1001; }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav { position: fixed; top: var(--header-height); left: 0; right: 0; bottom: 0; background: var(--white); padding: var(--spacing-md); transform: translateX(100%); transition: transform 0.3s ease; overflow-y: auto; z-index: 999; }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        .page-header { padding-top: calc(var(--header-height) + var(--spacing-xxl)); padding-bottom: var(--spacing-xl); background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); }
+        .page-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: var(--spacing-sm); }
+        .page-header p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; }
+
+        .main-content { padding: var(--spacing-xxl) 0; }
+        .content-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-xl); }
+
+        .service-intro h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-md); }
+        .service-intro p { color: var(--dark-gray); margin-bottom: var(--spacing-md); font-size: 1.05rem; }
+
+        .benefits-section { background: var(--off-white); padding: var(--spacing-xxl) 0; }
+        .benefits-section h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg); }
+        .benefit-card { background: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+        .benefit-icon { width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: var(--spacing-md); color: var(--white); font-size: 1.75rem; }
+        .benefit-card h3 { font-size: 1.2rem; color: var(--black); margin-bottom: var(--spacing-xs); }
+        .benefit-card p { color: var(--medium-gray); font-size: 0.95rem; }
+
+        .enrollment-types { padding: var(--spacing-xxl) 0; }
+        .enrollment-types h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .enrollment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg); }
+        .enrollment-card { background: var(--white); border: 2px solid var(--light-gray); padding: var(--spacing-lg); border-radius: var(--radius-lg); }
+        .enrollment-card h3 { font-size: 1.2rem; color: var(--primary); margin-bottom: var(--spacing-sm); }
+        .enrollment-card p { color: var(--medium-gray); font-size: 0.95rem; margin-bottom: var(--spacing-sm); }
+        .enrollment-card ul { color: var(--medium-gray); font-size: 0.95rem; padding-left: 1.25rem; }
+        .enrollment-card li { margin-bottom: 0.5rem; }
+
+        .warning-section { background: #fff3cd; padding: var(--spacing-xl) 0; border-top: 4px solid #ffc107; border-bottom: 4px solid #ffc107; }
+        .warning-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .warning-icon { font-size: 3rem; margin-bottom: var(--spacing-sm); }
+        .warning-section h2 { font-size: 1.5rem; color: var(--black); margin-bottom: var(--spacing-sm); }
+        .warning-section p { color: var(--dark-gray); font-size: 1.05rem; }
+
+        .process-section { padding: var(--spacing-xxl) 0; background: var(--off-white); }
+        .process-section h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .process-steps { max-width: 700px; margin: 0 auto; }
+        .process-step { display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-lg); }
+        .process-step:last-child { margin-bottom: 0; }
+        .step-number { width: 50px; height: 50px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem; flex-shrink: 0; }
+        .step-content h3 { font-size: 1.1rem; color: var(--black); margin-bottom: 0.25rem; }
+        .step-content p { color: var(--medium-gray); }
+
+        .cta-section { background: var(--primary); color: var(--white); padding: var(--spacing-xxl) 0; text-align: center; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); }
+        .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        .other-services { padding: var(--spacing-xxl) 0; }
+        .other-services h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); max-width: 900px; margin: 0 auto; }
+        .service-link-card { background: var(--white); padding: var(--spacing-md); border-radius: var(--radius-md); text-decoration: none; color: inherit; display: block; box-shadow: var(--shadow-sm); transition: all 0.2s; border: 1px solid var(--light-gray); }
+        .service-link-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+        .service-link-card h3 { color: var(--primary); font-size: 1rem; margin-bottom: 0.25rem; }
+        .service-link-card p { color: var(--medium-gray); font-size: 0.875rem; margin: 0; }
+
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom { padding-top: var(--spacing-lg); border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--spacing-sm); font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .page-header h1 { font-size: 3rem; }
+            .content-grid { grid-template-columns: 2fr 1fr; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .page-header h1 { font-size: 2.25rem; }
+            .btn { padding: 1rem 1.75rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .mobile-nav-link { padding: 1.25rem 0; font-size: 1.15rem; }
+            .mobile-dropdown-link { padding: 0.75rem 0; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+
+        .back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; background: var(--primary); color: var(--white); border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 999; }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo"><span class="logo-icon">M</span><span>Unbiased Medicare Advisor</span></a>
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Services</a><div class="dropdown-menu"><a href="/services/medicare-consultant" class="dropdown-link">Medicare Consultant</a><a href="/services/fee-only-medicare-advisor" class="dropdown-link">Fee-Only Advisor</a><a href="/services/independent-medicare-advisor" class="dropdown-link">Independent Advisor</a><a href="/services/medicare-plan-comparison" class="dropdown-link">Plan Comparison</a><a href="/services/enrollment-assistance" class="dropdown-link">Enrollment Assistance</a></div></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Learn</a><div class="dropdown-menu"><a href="/guides/medigap-vs-medicare-advantage" class="dropdown-link">Medigap vs Medicare Advantage</a><a href="/guides/turning-65-medicare-guide" class="dropdown-link">Turning 65 Guide</a><a href="/guides/medicare-parts-explained" class="dropdown-link">Medicare Parts Explained</a><a href="/guides" class="dropdown-link">All Guides</a><a href="/blog" class="dropdown-link">Blog Articles</a></div></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Your State</a><div class="dropdown-menu"><a href="/states/florida" class="dropdown-link">Florida</a><a href="/states/ohio" class="dropdown-link">Ohio</a><a href="/states/arizona" class="dropdown-link">Arizona</a><a href="/states/california" class="dropdown-link">California</a><a href="/states" class="dropdown-link">All 50 States</a></div></li>
+                    <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item nav-cta"><a href="/book-consultation" class="btn btn-primary">Book Free Call</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item mobile-dropdown"><a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Services</a><div class="mobile-dropdown-menu"><a href="/services/medicare-consultant" class="mobile-dropdown-link">Medicare Consultant</a><a href="/services/fee-only-medicare-advisor" class="mobile-dropdown-link">Fee-Only Advisor</a><a href="/services/independent-medicare-advisor" class="mobile-dropdown-link">Independent Advisor</a><a href="/services/medicare-plan-comparison" class="mobile-dropdown-link">Plan Comparison</a><a href="/services/enrollment-assistance" class="mobile-dropdown-link">Enrollment Assistance</a></div></li>
+                <li class="mobile-nav-item mobile-dropdown"><a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Learn</a><div class="mobile-dropdown-menu"><a href="/guides/medigap-vs-medicare-advantage" class="mobile-dropdown-link">Medigap vs Medicare Advantage</a><a href="/guides/turning-65-medicare-guide" class="mobile-dropdown-link">Turning 65 Guide</a><a href="/guides/medicare-parts-explained" class="mobile-dropdown-link">Medicare Parts Explained</a><a href="/guides" class="mobile-dropdown-link">All Guides</a><a href="/blog" class="mobile-dropdown-link">Blog Articles</a></div></li>
+                <li class="mobile-nav-item mobile-dropdown"><a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Your State</a><div class="mobile-dropdown-menu"><a href="/states/florida" class="mobile-dropdown-link">Florida</a><a href="/states/ohio" class="mobile-dropdown-link">Ohio</a><a href="/states/arizona" class="mobile-dropdown-link">Arizona</a><a href="/states/california" class="mobile-dropdown-link">California</a><a href="/states" class="mobile-dropdown-link">All 50 States</a></div></li>
+                <li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">About</a></li>
+                <li class="mobile-nav-item"><a href="/contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-cta"><a href="/book-consultation" class="btn btn-primary">Book Free Call</a></div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Medicare Enrollment Assistance</h1>
+            <p>Step-by-step guidance to help you enroll in Medicare correctly and avoid costly mistakes.</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="service-intro">
+                <h2>Navigating Medicare Enrollment Doesn't Have to Be Confusing</h2>
+                <p>Medicare enrollment involves strict deadlines, multiple coverage options, and complex rules that vary based on your situation. Missing a deadline or making the wrong choice can result in permanent penalties or gaps in coverage.</p>
+                <p>Our enrollment assistance service guides you through every step of the process. We help you understand which enrollment period applies to you, what forms to complete, and how to avoid the mistakes that cost many people hundreds of dollars per year in penalties.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="warning-section">
+        <div class="container">
+            <div class="warning-content">
+                <div class="warning-icon">&#9888;</div>
+                <h2>Late Enrollment Penalties Are Permanent</h2>
+                <p>If you miss your Initial Enrollment Period and don't qualify for a Special Enrollment Period, you may face lifelong penalties. The Part B penalty alone is 10% for every 12 months you were eligible but didn't enroll. These penalties never go away.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="enrollment-types">
+        <div class="container">
+            <h2>Medicare Enrollment Periods Explained</h2>
+            <div class="enrollment-grid">
+                <div class="enrollment-card">
+                    <h3>Initial Enrollment Period (IEP)</h3>
+                    <p>Your first chance to enroll in Medicare, lasting 7 months:</p>
+                    <ul>
+                        <li>3 months before you turn 65</li>
+                        <li>Your birthday month</li>
+                        <li>3 months after you turn 65</li>
+                    </ul>
+                </div>
+                <div class="enrollment-card">
+                    <h3>Special Enrollment Period (SEP)</h3>
+                    <p>Available if you delayed Medicare due to:</p>
+                    <ul>
+                        <li>Employer coverage (you or your spouse)</li>
+                        <li>Moving to a new area</li>
+                        <li>Losing other coverage</li>
+                        <li>Other qualifying life events</li>
+                    </ul>
+                </div>
+                <div class="enrollment-card">
+                    <h3>General Enrollment Period (GEP)</h3>
+                    <p>If you missed your IEP and don't qualify for SEP:</p>
+                    <ul>
+                        <li>January 1 - March 31 each year</li>
+                        <li>Coverage starts July 1</li>
+                        <li>Late penalties may apply</li>
+                    </ul>
+                </div>
+                <div class="enrollment-card">
+                    <h3>Annual Election Period (AEP)</h3>
+                    <p>For changing Medicare Advantage or Part D plans:</p>
+                    <ul>
+                        <li>October 15 - December 7 each year</li>
+                        <li>Changes take effect January 1</li>
+                        <li>Review your coverage annually</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2>How We Help With Enrollment</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#128197;</div>
+                    <h3>Deadline Tracking</h3>
+                    <p>We identify your specific enrollment windows and ensure you don't miss critical deadlines that could result in penalties or coverage gaps.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#128203;</div>
+                    <h3>Document Preparation</h3>
+                    <p>We help you gather the right documentation and complete enrollment forms correctly the first time, avoiding delays and rejections.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#128269;</div>
+                    <h3>Coverage Analysis</h3>
+                    <p>Before you enroll, we review your options to ensure you're choosing the right combination of Original Medicare, Medigap, Medicare Advantage, and Part D.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#9989;</div>
+                    <h3>Enrollment Verification</h3>
+                    <p>After enrollment, we help verify that your coverage is active and correct, catching any errors before they become problems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <h2>Our Enrollment Assistance Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Situation Assessment</h3>
+                        <p>We review your current coverage, work status, age, and any special circumstances to determine which enrollment period applies to you.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Timeline Creation</h3>
+                        <p>We create a personalized enrollment timeline with specific dates and action items so you never miss a deadline.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Coverage Planning</h3>
+                        <p>We help you decide between Original Medicare with Medigap or Medicare Advantage, and select a Part D plan if needed.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Enrollment Support</h3>
+                        <p>We walk you through each enrollment step, whether online, by phone, or by mail, ensuring everything is completed correctly.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Confirmation & Follow-Up</h3>
+                        <p>We help you verify enrollment confirmation and ensure your Medicare card and plan documents arrive as expected.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Enroll in Medicare?</h2>
+            <p>Don't risk penalties or coverage gaps. Get expert help navigating the Medicare enrollment process.</p>
+            <div class="cta-buttons">
+                <a href="/book-consultation" class="btn btn-white">Book a Free Consultation</a>
+                <a href="/contact" class="btn btn-outline-white">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="other-services">
+        <div class="container">
+            <h2>Explore Our Other Services</h2>
+            <div class="services-grid">
+                <a href="/services/medicare-consultant" class="service-link-card">
+                    <h3>Medicare Consultant</h3>
+                    <p>Expert guidance on all aspects of Medicare coverage.</p>
+                </a>
+                <a href="/services/fee-only-medicare-advisor" class="service-link-card">
+                    <h3>Fee-Only Advisor</h3>
+                    <p>Learn about our transparent, commission-free pricing model.</p>
+                </a>
+                <a href="/services/medicare-plan-comparison" class="service-link-card">
+                    <h3>Plan Comparison</h3>
+                    <p>Side-by-side analysis of Medicare plans in your area.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="/" class="footer-logo"><span class="logo-icon">M</span><span>Unbiased Medicare Advisor</span></a><p>Independent, fee-only Medicare guidance. We're paid by you, not insurance companies, so you can trust our advice is always in your best interest.</p></div>
+                <div class="footer-nav"><h4>Services</h4><ul><li><a href="/services/medicare-consultant">Medicare Consultant</a></li><li><a href="/services/fee-only-medicare-advisor">Fee-Only Advisor</a></li><li><a href="/services/medicare-plan-comparison">Plan Comparison</a></li><li><a href="/services/enrollment-assistance">Enrollment Help</a></li></ul></div>
+                <div class="footer-nav"><h4>Resources</h4><ul><li><a href="/guides/medigap-vs-medicare-advantage">Medigap vs MA</a></li><li><a href="/guides/turning-65-medicare-guide">Turning 65 Guide</a></li><li><a href="/guides">All Guides</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li></ul></div>
+                <div class="footer-nav"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/book-consultation">Book a Call</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p><div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() { document.getElementById('mobileNav').classList.toggle('active'); }
+        function toggleMobileDropdown(event) { event.preventDefault(); event.target.closest('.mobile-dropdown').classList.toggle('active'); }
+        document.addEventListener('click', function(event) { const mobileNav = document.getElementById('mobileNav'); const menuBtn = document.querySelector('.mobile-menu-btn'); if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) { mobileNav.classList.remove('active'); } });
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() { if (window.scrollY > 400) { backToTop.classList.add('visible'); } else { backToTop.classList.remove('visible'); } });
+        if (backToTop) { backToTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); }); }
+    </script>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+</body>
+</html>

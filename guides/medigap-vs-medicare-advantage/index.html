@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medigap vs Medicare Advantage: An unbiased comparison to help you choose the right Medicare coverage. Learn the key differences, costs, pros and cons of Medicare Supplement vs Medicare Advantage plans.">
+    <meta name="keywords" content="medigap vs medicare advantage, medicare supplement vs medicare advantage, medicare advantage vs medigap, medicare supplement vs ma, medigap or medicare advantage">
+    <title>Medigap vs Medicare Advantage: Which Is Right for You? | Unbiased Medicare Advisor</title>
+
+    <meta property="og:title" content="Medigap vs Medicare Advantage: Complete Comparison Guide">
+    <meta property="og:description" content="Unbiased comparison of Medigap (Medicare Supplement) and Medicare Advantage. Learn the pros, cons, and costs to make the right choice.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/guides/medigap-vs-medicare-advantage">
+
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --content-width: 800px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+        .content-container { max-width: var(--content-width); margin: 0 auto; }
+
+        .btn { display: inline-block; padding: 0.875rem 1.75rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s ease; border: none; text-align: center; }
+        .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35); padding: 1rem 2rem; font-size: 1.1rem; }
+        .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45); }
+        .btn-secondary { background: var(--white); color: var(--primary); border: 2px solid var(--primary); }
+        .btn-secondary:hover { background: var(--primary); color: var(--white); }
+        .btn-white { background: var(--white); color: var(--primary); }
+        .btn-white:hover { background: var(--off-white); transform: translateY(-2px); }
+        .btn-outline-white { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-outline-white:hover { background: var(--white); color: var(--primary); }
+
+        .header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-height); background: var(--white); box-shadow: var(--shadow-sm); z-index: 1000; }
+        .header-container { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+        .logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 1.25rem; }
+        .logo-icon { width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; color: var(--white); font-size: 1.25rem; }
+
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link { display: block; padding: 0.5rem 1rem; color: var(--dark-gray); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after { content: ''; border: solid var(--dark-gray); border-width: 0 2px 2px 0; display: inline-block; padding: 3px; transform: rotate(45deg); margin-top: -3px; transition: transform 0.2s; }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; padding: 0.5rem 0; z-index: 100; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link { display: block; padding: 0.75rem 1.25rem; color: var(--dark-gray); text-decoration: none; transition: all 0.2s; border-bottom: 1px solid var(--light-gray); }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+
+        .mobile-menu-btn { display: flex; flex-direction: column; justify-content: space-around; width: 30px; height: 24px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 1001; }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav { position: fixed; top: var(--header-height); left: 0; right: 0; bottom: 0; background: var(--white); padding: var(--spacing-md); transform: translateX(100%); transition: transform 0.3s ease; overflow-y: auto; z-index: 999; }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        .guide-header { padding-top: calc(var(--header-height) + var(--spacing-xxl)); padding-bottom: var(--spacing-xl); background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); }
+        .guide-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: var(--spacing-sm); }
+        .guide-header .subtitle { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin-bottom: var(--spacing-md); }
+        .guide-meta { font-size: 0.9rem; opacity: 0.8; }
+
+        .guide-content { padding: var(--spacing-xxl) 0; }
+        .guide-content h2 { font-size: 1.75rem; color: var(--primary); margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md); padding-top: var(--spacing-md); border-top: 2px solid var(--light-gray); }
+        .guide-content h2:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+        .guide-content h3 { font-size: 1.3rem; color: var(--black); margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm); }
+        .guide-content p { color: var(--dark-gray); margin-bottom: var(--spacing-md); }
+        .guide-content ul, .guide-content ol { color: var(--dark-gray); margin-bottom: var(--spacing-md); padding-left: 1.5rem; }
+        .guide-content li { margin-bottom: 0.5rem; }
+
+        .toc { background: var(--off-white); padding: var(--spacing-lg); border-radius: var(--radius-lg); margin-bottom: var(--spacing-xl); }
+        .toc h2 { font-size: 1.25rem; margin-bottom: var(--spacing-md); color: var(--primary); border: none; padding: 0; margin-top: 0; }
+        .toc ul { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 0.5rem; }
+        .toc a { color: var(--secondary); text-decoration: none; font-weight: 500; }
+        .toc a:hover { color: var(--primary); text-decoration: underline; }
+
+        .comparison-table { width: 100%; border-collapse: collapse; margin: var(--spacing-lg) 0; background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+        .comparison-table th, .comparison-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--light-gray); }
+        .comparison-table th { background: var(--primary); color: var(--white); font-weight: 600; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:nth-child(even) { background: var(--off-white); }
+        .comparison-table .feature-col { font-weight: 600; color: var(--black); width: 30%; }
+
+        .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); margin: var(--spacing-lg) 0; }
+        .pros, .cons { padding: var(--spacing-lg); border-radius: var(--radius-lg); }
+        .pros { background: #e8f5e9; border-left: 4px solid var(--success); }
+        .cons { background: #ffebee; border-left: 4px solid var(--danger); }
+        .pros h4, .cons h4 { font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .pros h4 { color: var(--success); }
+        .cons h4 { color: var(--danger); }
+        .pros ul, .cons ul { margin: 0; padding-left: 1.25rem; }
+        .pros li, .cons li { margin-bottom: 0.5rem; color: var(--dark-gray); }
+
+        .highlight-box { background: #e3f2fd; border-left: 4px solid var(--secondary); padding: var(--spacing-lg); border-radius: var(--radius-md); margin: var(--spacing-lg) 0; }
+        .highlight-box h4 { color: var(--primary); margin-bottom: var(--spacing-sm); }
+        .highlight-box p { margin: 0; color: var(--dark-gray); }
+
+        .warning-box { background: #fff3cd; border-left: 4px solid var(--warning); padding: var(--spacing-lg); border-radius: var(--radius-md); margin: var(--spacing-lg) 0; }
+        .warning-box h4 { color: #856404; margin-bottom: var(--spacing-sm); }
+        .warning-box p { margin: 0; color: var(--dark-gray); }
+
+        .decision-helper { background: var(--off-white); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin: var(--spacing-xl) 0; }
+        .decision-helper h3 { color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; font-size: 1.5rem; }
+        .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); }
+        .decision-card { background: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
+        .decision-card h4 { color: var(--primary); margin-bottom: var(--spacing-sm); font-size: 1.1rem; }
+        .decision-card p { font-size: 0.95rem; color: var(--medium-gray); margin-bottom: var(--spacing-sm); }
+        .decision-card ul { font-size: 0.95rem; color: var(--dark-gray); padding-left: 1.25rem; margin: 0; }
+
+        .cta-section { background: var(--primary); color: var(--white); padding: var(--spacing-xxl) 0; text-align: center; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); }
+        .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        .related-guides { padding: var(--spacing-xxl) 0; background: var(--off-white); }
+        .related-guides h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md); max-width: 900px; margin: 0 auto; }
+        .guide-link-card { background: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-md); text-decoration: none; color: inherit; display: block; box-shadow: var(--shadow-sm); transition: all 0.2s; }
+        .guide-link-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+        .guide-link-card h3 { color: var(--primary); font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .guide-link-card p { color: var(--medium-gray); font-size: 0.9rem; margin: 0; }
+
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom { padding-top: var(--spacing-lg); border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--spacing-sm); font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .guide-header h1 { font-size: 2.75rem; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .guide-header h1 { font-size: 2rem; }
+            .btn { padding: 1rem 1.75rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .mobile-nav-link { padding: 1.25rem 0; font-size: 1.15rem; }
+            .mobile-dropdown-link { padding: 0.75rem 0; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .comparison-table { font-size: 0.85rem; }
+            .comparison-table th, .comparison-table td { padding: 0.75rem 0.5rem; }
+            .pros-cons { grid-template-columns: 1fr; }
+            .decision-grid { grid-template-columns: 1fr; }
+        }
+
+        .back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; background: var(--primary); color: var(--white); border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 999; }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo"><span class="logo-icon">M</span><span>Unbiased Medicare Advisor</span></a>
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Services</a><div class="dropdown-menu"><a href="/services/medicare-consultant" class="dropdown-link">Medicare Consultant</a><a href="/services/fee-only-medicare-advisor" class="dropdown-link">Fee-Only Advisor</a><a href="/services/independent-medicare-advisor" class="dropdown-link">Independent Advisor</a><a href="/services/medicare-plan-comparison" class="dropdown-link">Plan Comparison</a><a href="/services/enrollment-assistance" class="dropdown-link">Enrollment Assistance</a></div></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Learn</a><div class="dropdown-menu"><a href="/guides/medigap-vs-medicare-advantage" class="dropdown-link">Medigap vs Medicare Advantage</a><a href="/guides/turning-65-medicare-guide" class="dropdown-link">Turning 65 Guide</a><a href="/guides/medicare-parts-explained" class="dropdown-link">Medicare Parts Explained</a><a href="/guides" class="dropdown-link">All Guides</a><a href="/blog" class="dropdown-link">Blog Articles</a></div></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Your State</a><div class="dropdown-menu"><a href="/states/florida" class="dropdown-link">Florida</a><a href="/states/ohio" class="dropdown-link">Ohio</a><a href="/states/arizona" class="dropdown-link">Arizona</a><a href="/states/california" class="dropdown-link">California</a><a href="/states" class="dropdown-link">All 50 States</a></div></li>
+                    <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item nav-cta"><a href="/book-consultation" class="btn btn-primary">Book Free Call</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item mobile-dropdown"><a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Services</a><div class="mobile-dropdown-menu"><a href="/services/medicare-consultant" class="mobile-dropdown-link">Medicare Consultant</a><a href="/services/fee-only-medicare-advisor" class="mobile-dropdown-link">Fee-Only Advisor</a><a href="/services/independent-medicare-advisor" class="mobile-dropdown-link">Independent Advisor</a><a href="/services/medicare-plan-comparison" class="mobile-dropdown-link">Plan Comparison</a><a href="/services/enrollment-assistance" class="mobile-dropdown-link">Enrollment Assistance</a></div></li>
+                <li class="mobile-nav-item mobile-dropdown"><a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Learn</a><div class="mobile-dropdown-menu"><a href="/guides/medigap-vs-medicare-advantage" class="mobile-dropdown-link">Medigap vs Medicare Advantage</a><a href="/guides/turning-65-medicare-guide" class="mobile-dropdown-link">Turning 65 Guide</a><a href="/guides/medicare-parts-explained" class="mobile-dropdown-link">Medicare Parts Explained</a><a href="/guides" class="mobile-dropdown-link">All Guides</a><a href="/blog" class="mobile-dropdown-link">Blog Articles</a></div></li>
+                <li class="mobile-nav-item mobile-dropdown"><a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Your State</a><div class="mobile-dropdown-menu"><a href="/states/florida" class="mobile-dropdown-link">Florida</a><a href="/states/ohio" class="mobile-dropdown-link">Ohio</a><a href="/states/arizona" class="mobile-dropdown-link">Arizona</a><a href="/states/california" class="mobile-dropdown-link">California</a><a href="/states" class="mobile-dropdown-link">All 50 States</a></div></li>
+                <li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">About</a></li>
+                <li class="mobile-nav-item"><a href="/contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-cta"><a href="/book-consultation" class="btn btn-primary">Book Free Call</a></div>
+        </nav>
+    </header>
+
+    <section class="guide-header">
+        <div class="container">
+            <h1>Medigap vs Medicare Advantage</h1>
+            <p class="subtitle">An unbiased comparison to help you choose between Medicare Supplement (Medigap) and Medicare Advantage plans. No sales pitch, just the facts.</p>
+            <p class="guide-meta">Last updated: December 2025 | 12 min read</p>
+        </div>
+    </section>
+
+    <main class="guide-content">
+        <div class="container">
+            <div class="content-container">
+
+                <nav class="toc">
+                    <h2>In This Guide</h2>
+                    <ul>
+                        <li><a href="#quick-comparison">Quick Comparison Table</a></li>
+                        <li><a href="#what-is-medigap">What Is Medigap (Medicare Supplement)?</a></li>
+                        <li><a href="#what-is-medicare-advantage">What Is Medicare Advantage?</a></li>
+                        <li><a href="#key-differences">Key Differences Explained</a></li>
+                        <li><a href="#costs">Costs: Premiums, Deductibles & Out-of-Pocket</a></li>
+                        <li><a href="#pros-cons">Pros and Cons of Each Option</a></li>
+                        <li><a href="#which-is-right">Which Is Right for You?</a></li>
+                        <li><a href="#switching">Can You Switch Between Them?</a></li>
+                        <li><a href="#faq">Frequently Asked Questions</a></li>
+                    </ul>
+                </nav>
+
+                <p>If you're approaching Medicare eligibility or already on Medicare, you've likely encountered the most common question: <strong>Should I choose Medigap (also called Medicare Supplement) or Medicare Advantage?</strong></p>
+
+                <p>This decision affects your healthcare costs, doctor choices, and coverage for years to come. Unfortunately, most information online comes from insurance companies or agents who earn commissions selling one option over the other.</p>
+
+                <p>This guide provides an unbiased comparison based solely on what's best for you, not what generates the highest commission.</p>
+
+                <h2 id="quick-comparison">Quick Comparison: Medigap vs Medicare Advantage</h2>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="feature-col">Feature</th>
+                            <th>Medigap (Medicare Supplement)</th>
+                            <th>Medicare Advantage (Part C)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-col">How It Works</td>
+                            <td>Supplements Original Medicare; you keep Parts A & B</td>
+                            <td>Replaces Original Medicare with a private plan</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">Monthly Premium</td>
+                            <td>$100-$300+ (varies by plan and location)</td>
+                            <td>$0-$150 (many plans are $0 premium)</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">Out-of-Pocket Maximum</td>
+                            <td>Varies by plan; some have none</td>
+                            <td>Required; typically $3,000-$8,000/year</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">Doctor Network</td>
+                            <td>Any doctor that accepts Medicare nationwide</td>
+                            <td>Usually limited to plan's network</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">Referrals for Specialists</td>
+                            <td>Not required</td>
+                            <td>Often required (especially HMO plans)</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">Prescription Drug Coverage</td>
+                            <td>Requires separate Part D plan</td>
+                            <td>Usually included</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">Extra Benefits</td>
+                            <td>None (medical coverage only)</td>
+                            <td>Often includes dental, vision, hearing, gym</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">Travel Coverage</td>
+                            <td>Some plans cover foreign travel emergencies</td>
+                            <td>Limited coverage outside service area</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col">Best For</td>
+                            <td>Those who want predictable costs and flexibility</td>
+                            <td>Those who want lower premiums and extra benefits</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="what-is-medigap">What Is Medigap (Medicare Supplement)?</h2>
+
+                <p>Medigap, officially called Medicare Supplement Insurance, is a type of private insurance that works alongside Original Medicare (Parts A and B). It helps pay for costs that Original Medicare doesn't cover, such as:</p>
+
+                <ul>
+                    <li>Part A deductible ($1,632 in 2024)</li>
+                    <li>Part B deductible ($240 in 2024)</li>
+                    <li>Part B coinsurance (typically 20% of approved costs)</li>
+                    <li>Part A coinsurance for hospital stays</li>
+                    <li>Some foreign travel emergency coverage</li>
+                </ul>
+
+                <h3>How Medigap Works</h3>
+
+                <p>When you have Medigap, you still have Original Medicare as your primary coverage. Here's the process:</p>
+
+                <ol>
+                    <li>You visit any doctor or hospital that accepts Medicare</li>
+                    <li>Medicare pays its share first (typically 80%)</li>
+                    <li>Your Medigap policy then pays most or all of the remaining costs</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <h4>Important: Medigap Plans Are Standardized</h4>
+                    <p>Medigap plans are labeled with letters (A, B, C, D, F, G, K, L, M, N). Each letter offers the same coverage regardless of which insurance company sells it. The only differences are price and customer service. Plan G is currently the most popular option.</p>
+                </div>
+
+                <h2 id="what-is-medicare-advantage">What Is Medicare Advantage?</h2>
+
+                <p>Medicare Advantage (also called Part C) is an alternative way to receive your Medicare benefits. Instead of using Original Medicare, you enroll in a private health plan that provides all your Part A and Part B coverage, usually with additional benefits.</p>
+
+                <h3>How Medicare Advantage Works</h3>
+
+                <p>When you enroll in Medicare Advantage:</p>
+
+                <ol>
+                    <li>You're still enrolled in Medicare, but your coverage comes from the private plan</li>
+                    <li>You typically pay copays for services instead of the 20% coinsurance</li>
+                    <li>You usually need to use doctors and hospitals within the plan's network</li>
+                    <li>You may need referrals to see specialists (depending on plan type)</li>
+                </ol>
+
+                <h3>Types of Medicare Advantage Plans</h3>
+
+                <ul>
+                    <li><strong>HMO (Health Maintenance Organization):</strong> Must use network providers; need referrals for specialists</li>
+                    <li><strong>PPO (Preferred Provider Organization):</strong> Can see out-of-network providers at higher cost; no referrals needed</li>
+                    <li><strong>PFFS (Private Fee-for-Service):</strong> Can see any provider who accepts the plan's payment terms</li>
+                    <li><strong>SNP (Special Needs Plans):</strong> For people with specific diseases, conditions, or circumstances</li>
+                </ul>
+
+                <h2 id="key-differences">Key Differences Between Medigap and Medicare Advantage</h2>
+
+                <h3>1. Doctor and Hospital Choice</h3>
+
+                <p><strong>Medigap:</strong> You can see any doctor or hospital in the country that accepts Medicare. No networks, no referrals, complete freedom.</p>
+
+                <p><strong>Medicare Advantage:</strong> Most plans require you to use in-network providers. Going out of network may mean paying full price or getting no coverage at all (except for emergencies).</p>
+
+                <h3>2. Cost Structure</h3>
+
+                <p><strong>Medigap:</strong> Higher monthly premiums, but very predictable costs. With comprehensive plans like Plan G, you pay little to nothing when you receive care.</p>
+
+                <p><strong>Medicare Advantage:</strong> Lower (often $0) monthly premiums, but you pay copays and coinsurance when you use services. Costs can add up if you need significant care.</p>
+
+                <h3>3. Coverage When Traveling</h3>
+
+                <p><strong>Medigap:</strong> Works anywhere in the U.S. that accepts Medicare. Some plans also cover foreign travel emergencies up to plan limits.</p>
+
+                <p><strong>Medicare Advantage:</strong> Coverage is typically limited to your plan's service area. Emergency coverage exists, but routine care outside your area may not be covered.</p>
+
+                <h3>4. Extra Benefits</h3>
+
+                <p><strong>Medigap:</strong> Covers only medical expenses. No dental, vision, hearing, or fitness benefits.</p>
+
+                <p><strong>Medicare Advantage:</strong> Many plans include dental, vision, hearing aids, gym memberships, transportation to appointments, and over-the-counter allowances.</p>
+
+                <h2 id="costs">Understanding the True Costs</h2>
+
+                <h3>Medigap Costs</h3>
+
+                <ul>
+                    <li><strong>Part B Premium:</strong> $174.70/month (2024 standard amount) - you pay this regardless</li>
+                    <li><strong>Medigap Premium:</strong> $100-$300+/month depending on plan, age, and location</li>
+                    <li><strong>Part D Premium:</strong> $15-$100/month for prescription drug coverage (separate plan)</li>
+                    <li><strong>Out-of-Pocket Costs:</strong> With Plan G, you only pay the Part B deductible ($240/year), then everything else is covered</li>
+                </ul>
+
+                <p><strong>Total Monthly Cost Example (Plan G):</strong> $174.70 (Part B) + $150 (Medigap) + $30 (Part D) = approximately $355/month</p>
+
+                <h3>Medicare Advantage Costs</h3>
+
+                <ul>
+                    <li><strong>Part B Premium:</strong> $174.70/month - you still pay this</li>
+                    <li><strong>MA Plan Premium:</strong> $0-$150/month (many plans are $0)</li>
+                    <li><strong>Copays:</strong> $0-$50 per doctor visit, $100-$500 per hospital admission</li>
+                    <li><strong>Out-of-Pocket Maximum:</strong> $3,000-$8,000/year</li>
+                </ul>
+
+                <p><strong>Total Monthly Cost Example ($0 premium plan):</strong> $174.70 (Part B) + $0 (MA plan) = $174.70/month, plus copays when you use services</p>
+
+                <div class="warning-box">
+                    <h4>The Hidden Cost of Medicare Advantage</h4>
+                    <p>While the $0 premium looks attractive, Medicare Advantage costs can vary dramatically based on how much healthcare you use. A healthy year might cost you very little beyond the Part B premium, but a year with hospitalizations, surgeries, or cancer treatment could cost you $5,000-$8,000 in out-of-pocket expenses.</p>
+                </div>
+
+                <h2 id="pros-cons">Pros and Cons of Each Option</h2>
+
+                <h3>Medigap (Medicare Supplement)</h3>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Advantages</h4>
+                        <ul>
+                            <li>Predictable, low out-of-pocket costs</li>
+                            <li>See any Medicare-accepting doctor nationwide</li>
+                            <li>No network restrictions or referrals</li>
+                            <li>Great for travelers and snowbirds</li>
+                            <li>Coverage is guaranteed renewable</li>
+                            <li>Easier to budget for healthcare expenses</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Disadvantages</h4>
+                        <ul>
+                            <li>Higher monthly premiums</li>
+                            <li>No extra benefits (dental, vision, etc.)</li>
+                            <li>Must buy separate Part D drug plan</li>
+                            <li>Premiums increase with age</li>
+                            <li>Medical underwriting may apply after initial enrollment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Medicare Advantage</h3>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Advantages</h4>
+                        <ul>
+                            <li>Lower monthly premiums (often $0)</li>
+                            <li>Extra benefits included (dental, vision, etc.)</li>
+                            <li>Drug coverage usually included</li>
+                            <li>Out-of-pocket maximum protects from catastrophic costs</li>
+                            <li>All-in-one plan simplicity</li>
+                            <li>Care coordination may improve outcomes</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Disadvantages</h4>
+                        <ul>
+                            <li>Network restrictions limit doctor choice</li>
+                            <li>May need referrals for specialists</li>
+                            <li>Prior authorization often required</li>
+                            <li>Limited coverage when traveling</li>
+                            <li>Costs unpredictable if you get sick</li>
+                            <li>Plans change every year; may need to switch</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 id="which-is-right">Which Option Is Right for You?</h2>
+
+                <div class="decision-helper">
+                    <h3>Consider Your Situation</h3>
+                    <div class="decision-grid">
+                        <div class="decision-card">
+                            <h4>Medigap May Be Better If You:</h4>
+                            <ul>
+                                <li>Travel frequently or live in multiple states</li>
+                                <li>Want to see any doctor without restrictions</li>
+                                <li>Prefer predictable, budgetable costs</li>
+                                <li>Have ongoing health conditions requiring specialists</li>
+                                <li>Can afford higher monthly premiums</li>
+                                <li>Value peace of mind over extra benefits</li>
+                            </ul>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Medicare Advantage May Be Better If You:</h4>
+                            <ul>
+                                <li>Stay in one geographic area most of the year</li>
+                                <li>Are comfortable with a network of doctors</li>
+                                <li>Want lower monthly premiums</li>
+                                <li>Value extra benefits like dental and vision</li>
+                                <li>Are generally healthy and use little healthcare</li>
+                                <li>Prefer an all-in-one plan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="switching">Can You Switch Between Medigap and Medicare Advantage?</h2>
+
+                <h3>From Medicare Advantage to Medigap</h3>
+
+                <p>You can switch from Medicare Advantage back to Original Medicare and Medigap during the Annual Election Period (October 15 - December 7) or during the Medicare Advantage Open Enrollment Period (January 1 - March 31).</p>
+
+                <div class="warning-box">
+                    <h4>Warning: Medical Underwriting May Apply</h4>
+                    <p>If you switch from Medicare Advantage to Medigap after your initial enrollment period (the 6 months after you turn 65 and enroll in Part B), insurance companies can deny you coverage or charge higher premiums based on your health conditions. This is a major consideration before choosing Medicare Advantage.</p>
+                </div>
+
+                <h3>From Medigap to Medicare Advantage</h3>
+
+                <p>You can switch from Medigap to Medicare Advantage during the Annual Election Period. No health questions are asked for Medicare Advantage enrollment, so switching in this direction is easier.</p>
+
+                <h2 id="faq">Frequently Asked Questions</h2>
+
+                <h3>Can I have both Medigap and Medicare Advantage?</h3>
+                <p>No. It's illegal for a company to sell you a Medigap policy if you're enrolled in Medicare Advantage (with limited exceptions). You must choose one or the other.</p>
+
+                <h3>What's the most popular Medigap plan?</h3>
+                <p>Plan G is currently the most popular choice. It covers everything Plan F covers except the Part B deductible ($240/year). Since Plan F is no longer available to new Medicare enrollees (as of 2020), Plan G offers the most comprehensive coverage available.</p>
+
+                <h3>Are $0 premium Medicare Advantage plans really free?</h3>
+                <p>No. You still pay your Part B premium, and you'll have copays, coinsurance, and deductibles when you use services. The plan premium is $0, but your total costs depend on how much healthcare you need.</p>
+
+                <h3>Which option is better for cancer patients?</h3>
+                <p>This depends on your situation, but many people facing serious illnesses prefer Medigap because it allows access to any specialist nationwide without network restrictions, and costs are more predictable. However, Medicare Advantage's out-of-pocket maximum can provide protection against unlimited costs.</p>
+
+                <h3>Do I need a separate drug plan with Medigap?</h3>
+                <p>Yes. Medigap does not cover prescription drugs. You'll need to enroll in a standalone Part D plan for drug coverage.</p>
+
+                <h3>Can my Medigap premium increase?</h3>
+                <p>Yes. Most Medigap policies use "attained-age" pricing, meaning premiums increase as you get older. Premiums can also increase due to inflation and healthcare cost increases. However, the insurance company cannot raise your premium based on your health status.</p>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Still Unsure Which Option Is Right for You?</h2>
+            <p>Every situation is different. Schedule a free consultation with our fee-only advisors for personalized guidance based on your specific needs, health, and budget.</p>
+            <div class="cta-buttons">
+                <a href="/book-consultation" class="btn btn-white">Book a Free Consultation</a>
+                <a href="/contact" class="btn btn-outline-white">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-guides">
+        <div class="container">
+            <h2>Related Guides</h2>
+            <div class="guides-grid">
+                <a href="/guides/turning-65-medicare-guide" class="guide-link-card">
+                    <h3>Turning 65 Medicare Guide</h3>
+                    <p>Everything you need to know about enrolling in Medicare when you turn 65.</p>
+                </a>
+                <a href="/guides/medicare-parts-explained" class="guide-link-card">
+                    <h3>Medicare Parts Explained</h3>
+                    <p>Understand Medicare Parts A, B, C, and D and how they work together.</p>
+                </a>
+                <a href="/services/medicare-plan-comparison" class="guide-link-card">
+                    <h3>Plan Comparison Service</h3>
+                    <p>Let us compare plans in your area and find the best fit for your needs.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="/" class="footer-logo"><span class="logo-icon">M</span><span>Unbiased Medicare Advisor</span></a><p>Independent, fee-only Medicare guidance. We're paid by you, not insurance companies, so you can trust our advice is always in your best interest.</p></div>
+                <div class="footer-nav"><h4>Services</h4><ul><li><a href="/services/medicare-consultant">Medicare Consultant</a></li><li><a href="/services/fee-only-medicare-advisor">Fee-Only Advisor</a></li><li><a href="/services/medicare-plan-comparison">Plan Comparison</a></li><li><a href="/services/enrollment-assistance">Enrollment Help</a></li></ul></div>
+                <div class="footer-nav"><h4>Resources</h4><ul><li><a href="/guides/medigap-vs-medicare-advantage">Medigap vs MA</a></li><li><a href="/guides/turning-65-medicare-guide">Turning 65 Guide</a></li><li><a href="/guides">All Guides</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li></ul></div>
+                <div class="footer-nav"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/book-consultation">Book a Call</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p><div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() { document.getElementById('mobileNav').classList.toggle('active'); }
+        function toggleMobileDropdown(event) { event.preventDefault(); event.target.closest('.mobile-dropdown').classList.toggle('active'); }
+        document.addEventListener('click', function(event) { const mobileNav = document.getElementById('mobileNav'); const menuBtn = document.querySelector('.mobile-menu-btn'); if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) { mobileNav.classList.remove('active'); } });
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() { if (window.scrollY > 400) { backToTop.classList.add('visible'); } else { backToTop.classList.remove('visible'); } });
+        if (backToTop) { backToTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); }); }
+    </script>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+</body>
+</html>

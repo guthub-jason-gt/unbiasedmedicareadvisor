@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medicare Parts A, B, C, and D explained in plain English. Understand what each part of Medicare covers, what it costs, and how they work together.">
+    <meta name="keywords" content="medicare parts explained, medicare part a, medicare part b, medicare part c, medicare part d, what does medicare cover">
+    <title>Medicare Parts A, B, C, D Explained | Unbiased Medicare Advisor</title>
+
+    <meta property="og:title" content="Medicare Parts A, B, C, D Explained: Your Complete Guide">
+    <meta property="og:description" content="Understand the four parts of Medicare and what each one covers. Plain English explanations with no confusing jargon.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/guides/medicare-parts-explained">
+
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --part-a: #2e7d32;
+            --part-b: #1565c0;
+            --part-c: #7b1fa2;
+            --part-d: #ef6c00;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --content-width: 800px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+        .content-container { max-width: var(--content-width); margin: 0 auto; }
+
+        .btn { display: inline-block; padding: 0.875rem 1.75rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s ease; border: none; text-align: center; }
+        .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35); padding: 1rem 2rem; font-size: 1.1rem; }
+        .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45); }
+        .btn-white { background: var(--white); color: var(--primary); }
+        .btn-white:hover { background: var(--off-white); transform: translateY(-2px); }
+        .btn-outline-white { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-outline-white:hover { background: var(--white); color: var(--primary); }
+
+        .header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-height); background: var(--white); box-shadow: var(--shadow-sm); z-index: 1000; }
+        .header-container { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+        .logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 1.25rem; }
+        .logo-icon { width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; color: var(--white); font-size: 1.25rem; }
+
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link { display: block; padding: 0.5rem 1rem; color: var(--dark-gray); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after { content: ''; border: solid var(--dark-gray); border-width: 0 2px 2px 0; display: inline-block; padding: 3px; transform: rotate(45deg); margin-top: -3px; transition: transform 0.2s; }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; padding: 0.5rem 0; z-index: 100; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link { display: block; padding: 0.75rem 1.25rem; color: var(--dark-gray); text-decoration: none; transition: all 0.2s; border-bottom: 1px solid var(--light-gray); }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+
+        .mobile-menu-btn { display: flex; flex-direction: column; justify-content: space-around; width: 30px; height: 24px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 1001; }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav { position: fixed; top: var(--header-height); left: 0; right: 0; bottom: 0; background: var(--white); padding: var(--spacing-md); transform: translateX(100%); transition: transform 0.3s ease; overflow-y: auto; z-index: 999; }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        .guide-header { padding-top: calc(var(--header-height) + var(--spacing-xxl)); padding-bottom: var(--spacing-xl); background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); }
+        .guide-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: var(--spacing-sm); }
+        .guide-header .subtitle { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin-bottom: var(--spacing-md); }
+        .guide-meta { font-size: 0.9rem; opacity: 0.8; }
+
+        .guide-content { padding: var(--spacing-xxl) 0; }
+        .guide-content h2 { font-size: 1.75rem; color: var(--primary); margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md); padding-top: var(--spacing-md); border-top: 2px solid var(--light-gray); }
+        .guide-content h2:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+        .guide-content h3 { font-size: 1.3rem; color: var(--black); margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm); }
+        .guide-content p { color: var(--dark-gray); margin-bottom: var(--spacing-md); }
+        .guide-content ul, .guide-content ol { color: var(--dark-gray); margin-bottom: var(--spacing-md); padding-left: 1.5rem; }
+        .guide-content li { margin-bottom: 0.5rem; }
+
+        .toc { background: var(--off-white); padding: var(--spacing-lg); border-radius: var(--radius-lg); margin-bottom: var(--spacing-xl); }
+        .toc h2 { font-size: 1.25rem; margin-bottom: var(--spacing-md); color: var(--primary); border: none; padding: 0; margin-top: 0; }
+        .toc ul { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 0.5rem; }
+        .toc a { color: var(--secondary); text-decoration: none; font-weight: 500; }
+        .toc a:hover { color: var(--primary); text-decoration: underline; }
+
+        .parts-overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); margin: var(--spacing-xl) 0; }
+        .part-card { padding: var(--spacing-lg); border-radius: var(--radius-lg); color: var(--white); }
+        .part-card.part-a { background: linear-gradient(135deg, var(--part-a), #4caf50); }
+        .part-card.part-b { background: linear-gradient(135deg, var(--part-b), #42a5f5); }
+        .part-card.part-c { background: linear-gradient(135deg, var(--part-c), #ab47bc); }
+        .part-card.part-d { background: linear-gradient(135deg, var(--part-d), #ff9800); }
+        .part-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .part-card .part-subtitle { font-size: 1rem; opacity: 0.9; margin-bottom: var(--spacing-sm); }
+        .part-card p { font-size: 0.95rem; opacity: 0.95; margin: 0; }
+
+        .part-section { margin: var(--spacing-xxl) 0; padding: var(--spacing-xl); border-radius: var(--radius-lg); }
+        .part-section.part-a-section { background: linear-gradient(to right, rgba(46, 125, 50, 0.1), rgba(46, 125, 50, 0.05)); border-left: 4px solid var(--part-a); }
+        .part-section.part-b-section { background: linear-gradient(to right, rgba(21, 101, 192, 0.1), rgba(21, 101, 192, 0.05)); border-left: 4px solid var(--part-b); }
+        .part-section.part-c-section { background: linear-gradient(to right, rgba(123, 31, 162, 0.1), rgba(123, 31, 162, 0.05)); border-left: 4px solid var(--part-c); }
+        .part-section.part-d-section { background: linear-gradient(to right, rgba(239, 108, 0, 0.1), rgba(239, 108, 0, 0.05)); border-left: 4px solid var(--part-d); }
+        .part-section h2 { border: none; padding: 0; margin-top: 0; }
+        .part-section.part-a-section h2 { color: var(--part-a); }
+        .part-section.part-b-section h2 { color: var(--part-b); }
+        .part-section.part-c-section h2 { color: var(--part-c); }
+        .part-section.part-d-section h2 { color: var(--part-d); }
+
+        .coverage-list { background: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-md); margin: var(--spacing-md) 0; }
+        .coverage-list h4 { color: var(--primary); margin-bottom: var(--spacing-sm); }
+        .coverage-list ul { margin: 0; }
+
+        .costs-table { width: 100%; border-collapse: collapse; margin: var(--spacing-lg) 0; background: var(--white); border-radius: var(--radius-md); overflow: hidden; }
+        .costs-table th, .costs-table td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--light-gray); }
+        .costs-table th { background: var(--primary); color: var(--white); font-weight: 600; }
+        .costs-table tr:last-child td { border-bottom: none; }
+
+        .highlight-box { background: #e3f2fd; border-left: 4px solid var(--secondary); padding: var(--spacing-lg); border-radius: var(--radius-md); margin: var(--spacing-lg) 0; }
+        .highlight-box h4 { color: var(--primary); margin-bottom: var(--spacing-sm); }
+        .highlight-box p { margin: 0; color: var(--dark-gray); }
+
+        .warning-box { background: #fff3cd; border-left: 4px solid var(--warning); padding: var(--spacing-lg); border-radius: var(--radius-md); margin: var(--spacing-lg) 0; }
+        .warning-box h4 { color: #856404; margin-bottom: var(--spacing-sm); }
+        .warning-box p { margin: 0; color: var(--dark-gray); }
+
+        .diagram { background: var(--off-white); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin: var(--spacing-xl) 0; text-align: center; }
+        .diagram h3 { color: var(--primary); margin-bottom: var(--spacing-lg); }
+        .diagram-visual { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-md); margin-bottom: var(--spacing-lg); }
+        .diagram-box { padding: var(--spacing-md) var(--spacing-lg); border-radius: var(--radius-md); color: var(--white); font-weight: 600; min-width: 120px; }
+        .diagram-plus { display: flex; align-items: center; font-size: 1.5rem; color: var(--dark-gray); font-weight: 700; }
+        .diagram-arrow { display: flex; align-items: center; font-size: 1.5rem; color: var(--dark-gray); }
+        .diagram-label { color: var(--medium-gray); font-size: 0.9rem; margin-top: var(--spacing-sm); }
+
+        .cta-section { background: var(--primary); color: var(--white); padding: var(--spacing-xxl) 0; text-align: center; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); }
+        .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        .related-guides { padding: var(--spacing-xxl) 0; background: var(--off-white); }
+        .related-guides h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md); max-width: 900px; margin: 0 auto; }
+        .guide-link-card { background: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-md); text-decoration: none; color: inherit; display: block; box-shadow: var(--shadow-sm); transition: all 0.2s; }
+        .guide-link-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+        .guide-link-card h3 { color: var(--primary); font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .guide-link-card p { color: var(--medium-gray); font-size: 0.9rem; margin: 0; }
+
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom { padding-top: var(--spacing-lg); border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--spacing-sm); font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .guide-header h1 { font-size: 2.75rem; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .guide-header h1 { font-size: 2rem; }
+            .btn { padding: 1rem 1.75rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .mobile-nav-link { padding: 1.25rem 0; font-size: 1.15rem; }
+            .mobile-dropdown-link { padding: 0.75rem 0; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .diagram-visual { flex-direction: column; align-items: center; }
+            .diagram-plus, .diagram-arrow { transform: rotate(90deg); margin: var(--spacing-xs) 0; }
+        }
+
+        .back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; background: var(--primary); color: var(--white); border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 999; }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo"><span class="logo-icon">M</span><span>Unbiased Medicare Advisor</span></a>
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Services</a><div class="dropdown-menu"><a href="/services/medicare-consultant" class="dropdown-link">Medicare Consultant</a><a href="/services/fee-only-medicare-advisor" class="dropdown-link">Fee-Only Advisor</a><a href="/services/independent-medicare-advisor" class="dropdown-link">Independent Advisor</a><a href="/services/medicare-plan-comparison" class="dropdown-link">Plan Comparison</a><a href="/services/enrollment-assistance" class="dropdown-link">Enrollment Assistance</a></div></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Learn</a><div class="dropdown-menu"><a href="/guides/medigap-vs-medicare-advantage" class="dropdown-link">Medigap vs Medicare Advantage</a><a href="/guides/turning-65-medicare-guide" class="dropdown-link">Turning 65 Guide</a><a href="/guides/medicare-parts-explained" class="dropdown-link">Medicare Parts Explained</a><a href="/guides" class="dropdown-link">All Guides</a><a href="/blog" class="dropdown-link">Blog Articles</a></div></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Your State</a><div class="dropdown-menu"><a href="/states/florida" class="dropdown-link">Florida</a><a href="/states/ohio" class="dropdown-link">Ohio</a><a href="/states/arizona" class="dropdown-link">Arizona</a><a href="/states/california" class="dropdown-link">California</a><a href="/states" class="dropdown-link">All 50 States</a></div></li>
+                    <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item nav-cta"><a href="/book-consultation" class="btn btn-primary">Book Free Call</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item mobile-dropdown"><a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Services</a><div class="mobile-dropdown-menu"><a href="/services/medicare-consultant" class="mobile-dropdown-link">Medicare Consultant</a><a href="/services/fee-only-medicare-advisor" class="mobile-dropdown-link">Fee-Only Advisor</a><a href="/services/independent-medicare-advisor" class="mobile-dropdown-link">Independent Advisor</a><a href="/services/medicare-plan-comparison" class="mobile-dropdown-link">Plan Comparison</a><a href="/services/enrollment-assistance" class="mobile-dropdown-link">Enrollment Assistance</a></div></li>
+                <li class="mobile-nav-item mobile-dropdown"><a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Learn</a><div class="mobile-dropdown-menu"><a href="/guides/medigap-vs-medicare-advantage" class="mobile-dropdown-link">Medigap vs Medicare Advantage</a><a href="/guides/turning-65-medicare-guide" class="mobile-dropdown-link">Turning 65 Guide</a><a href="/guides/medicare-parts-explained" class="mobile-dropdown-link">Medicare Parts Explained</a><a href="/guides" class="mobile-dropdown-link">All Guides</a><a href="/blog" class="mobile-dropdown-link">Blog Articles</a></div></li>
+                <li class="mobile-nav-item mobile-dropdown"><a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Your State</a><div class="mobile-dropdown-menu"><a href="/states/florida" class="mobile-dropdown-link">Florida</a><a href="/states/ohio" class="mobile-dropdown-link">Ohio</a><a href="/states/arizona" class="mobile-dropdown-link">Arizona</a><a href="/states/california" class="mobile-dropdown-link">California</a><a href="/states" class="mobile-dropdown-link">All 50 States</a></div></li>
+                <li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">About</a></li>
+                <li class="mobile-nav-item"><a href="/contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-cta"><a href="/book-consultation" class="btn btn-primary">Book Free Call</a></div>
+        </nav>
+    </header>
+
+    <section class="guide-header">
+        <div class="container">
+            <h1>Medicare Parts A, B, C, D Explained</h1>
+            <p class="subtitle">A clear, jargon-free guide to understanding the four parts of Medicare and what each one covers.</p>
+            <p class="guide-meta">Last updated: December 2025 | 8 min read</p>
+        </div>
+    </section>
+
+    <main class="guide-content">
+        <div class="container">
+            <div class="content-container">
+
+                <nav class="toc">
+                    <h2>In This Guide</h2>
+                    <ul>
+                        <li><a href="#overview">Medicare at a Glance</a></li>
+                        <li><a href="#part-a">Part A: Hospital Insurance</a></li>
+                        <li><a href="#part-b">Part B: Medical Insurance</a></li>
+                        <li><a href="#part-c">Part C: Medicare Advantage</a></li>
+                        <li><a href="#part-d">Part D: Prescription Drug Coverage</a></li>
+                        <li><a href="#how-they-work">How the Parts Work Together</a></li>
+                        <li><a href="#faq">Frequently Asked Questions</a></li>
+                    </ul>
+                </nav>
+
+                <p>Medicare uses a lettering system (Parts A, B, C, D) that often confuses people new to the program. Each "part" covers different healthcare services, and understanding them is essential for making informed coverage decisions.</p>
+
+                <p>This guide breaks down each Medicare part in plain English so you can understand exactly what you're getting and what you need.</p>
+
+                <h2 id="overview">Medicare at a Glance</h2>
+
+                <div class="parts-overview">
+                    <div class="part-card part-a">
+                        <h3>Part A</h3>
+                        <p class="part-subtitle">Hospital Insurance</p>
+                        <p>Inpatient hospital care, skilled nursing, hospice, home health</p>
+                    </div>
+                    <div class="part-card part-b">
+                        <h3>Part B</h3>
+                        <p class="part-subtitle">Medical Insurance</p>
+                        <p>Doctor visits, outpatient care, preventive services, equipment</p>
+                    </div>
+                    <div class="part-card part-c">
+                        <h3>Part C</h3>
+                        <p class="part-subtitle">Medicare Advantage</p>
+                        <p>Private plan alternative that bundles A, B, and usually D</p>
+                    </div>
+                    <div class="part-card part-d">
+                        <h3>Part D</h3>
+                        <p class="part-subtitle">Drug Coverage</p>
+                        <p>Prescription medications through private insurance plans</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>Original Medicare vs. Medicare Advantage</h4>
+                    <p><strong>Original Medicare</strong> = Part A + Part B (run by the federal government)<br>
+                    <strong>Medicare Advantage</strong> = Part C (private plans that replace Original Medicare)</p>
+                    <p>You choose one or the other, not both.</p>
+                </div>
+
+                <section class="part-section part-a-section" id="part-a">
+                    <h2>Part A: Hospital Insurance</h2>
+
+                    <p>Medicare Part A is often called "hospital insurance" because it primarily covers inpatient care. Most people get Part A premium-free because they (or their spouse) paid Medicare taxes while working.</p>
+
+                    <div class="coverage-list">
+                        <h4>What Part A Covers</h4>
+                        <ul>
+                            <li><strong>Inpatient hospital stays:</strong> Room, meals, nursing care, medications, and other services during a hospital admission</li>
+                            <li><strong>Skilled nursing facility (SNF) care:</strong> Up to 100 days per benefit period following a qualifying hospital stay</li>
+                            <li><strong>Home health care:</strong> Part-time skilled nursing, physical therapy, and other services if you're homebound</li>
+                            <li><strong>Hospice care:</strong> Comfort care for terminally ill patients, including medications for symptom control</li>
+                            <li><strong>Inpatient care in religious nonmedical health care institutions</strong></li>
+                        </ul>
+                    </div>
+
+                    <h3>Part A Costs (2024)</h3>
+
+                    <table class="costs-table">
+                        <tr>
+                            <th>Cost Type</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr>
+                            <td>Premium (if you qualify)</td>
+                            <td>$0/month</td>
+                        </tr>
+                        <tr>
+                            <td>Premium (if you don't qualify)</td>
+                            <td>Up to $505/month</td>
+                        </tr>
+                        <tr>
+                            <td>Hospital deductible (per benefit period)</td>
+                            <td>$1,632</td>
+                        </tr>
+                        <tr>
+                            <td>Hospital coinsurance (days 61-90)</td>
+                            <td>$408/day</td>
+                        </tr>
+                        <tr>
+                            <td>Hospital coinsurance (lifetime reserve days)</td>
+                            <td>$816/day</td>
+                        </tr>
+                        <tr>
+                            <td>Skilled nursing coinsurance (days 21-100)</td>
+                            <td>$204/day</td>
+                        </tr>
+                    </table>
+
+                    <div class="warning-box">
+                        <h4>Part A Doesn't Cover Everything in a Hospital</h4>
+                        <p>Part A only covers inpatient care. If you're in the hospital under "observation status" (outpatient), Part A doesn't apply - Part B does. This distinction affects your costs and whether skilled nursing care is covered afterward.</p>
+                    </div>
+                </section>
+
+                <section class="part-section part-b-section" id="part-b">
+                    <h2>Part B: Medical Insurance</h2>
+
+                    <p>Medicare Part B covers medical services you receive outside of a hospital admission, including doctor visits, preventive care, and outpatient procedures. Part B requires a monthly premium, which is deducted from your Social Security check if you receive benefits.</p>
+
+                    <div class="coverage-list">
+                        <h4>What Part B Covers</h4>
+                        <ul>
+                            <li><strong>Doctor services:</strong> Office visits, consultations, second opinions</li>
+                            <li><strong>Outpatient care:</strong> Surgery, diagnostic tests, emergency room visits</li>
+                            <li><strong>Preventive services:</strong> Annual wellness visits, screenings, vaccinations</li>
+                            <li><strong>Durable medical equipment:</strong> Wheelchairs, walkers, oxygen, hospital beds</li>
+                            <li><strong>Mental health services:</strong> Psychiatric care, therapy, counseling</li>
+                            <li><strong>Ambulance services:</strong> Emergency transportation</li>
+                            <li><strong>Some home health services</strong></li>
+                            <li><strong>Lab tests and X-rays</strong></li>
+                        </ul>
+                    </div>
+
+                    <h3>Part B Costs (2024)</h3>
+
+                    <table class="costs-table">
+                        <tr>
+                            <th>Cost Type</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr>
+                            <td>Standard premium</td>
+                            <td>$174.70/month</td>
+                        </tr>
+                        <tr>
+                            <td>Higher income premium</td>
+                            <td>Up to $594.00/month</td>
+                        </tr>
+                        <tr>
+                            <td>Annual deductible</td>
+                            <td>$240</td>
+                        </tr>
+                        <tr>
+                            <td>Coinsurance (after deductible)</td>
+                            <td>20% of Medicare-approved amount</td>
+                        </tr>
+                    </table>
+
+                    <div class="highlight-box">
+                        <h4>The 20% Coinsurance Can Add Up</h4>
+                        <p>Part B pays 80% of approved amounts, leaving you responsible for 20%. There's no out-of-pocket maximum in Original Medicare. A $100,000 surgery means you owe $20,000. This is why many people add Medigap or choose Medicare Advantage.</p>
+                    </div>
+                </section>
+
+                <section class="part-section part-c-section" id="part-c">
+                    <h2>Part C: Medicare Advantage</h2>
+
+                    <p>Medicare Part C, commonly called Medicare Advantage (MA), is a different way to receive your Medicare benefits. Instead of using Original Medicare (Parts A & B), you enroll in a private health plan that provides all your Medicare coverage.</p>
+
+                    <p><strong>Important:</strong> Part C is not an addition to Original Medicare - it's a replacement. When you enroll in Medicare Advantage, you leave Original Medicare.</p>
+
+                    <div class="coverage-list">
+                        <h4>What Medicare Advantage Typically Includes</h4>
+                        <ul>
+                            <li><strong>All Part A benefits</strong> (hospital insurance)</li>
+                            <li><strong>All Part B benefits</strong> (medical insurance)</li>
+                            <li><strong>Usually Part D</strong> (prescription drug coverage)</li>
+                            <li><strong>Often extra benefits:</strong> Dental, vision, hearing, fitness programs, over-the-counter allowances, transportation</li>
+                        </ul>
+                    </div>
+
+                    <h3>Types of Medicare Advantage Plans</h3>
+
+                    <ul>
+                        <li><strong>HMO:</strong> Must use network providers except emergencies; usually need referrals for specialists</li>
+                        <li><strong>PPO:</strong> Can use out-of-network providers at higher cost; no referrals needed</li>
+                        <li><strong>PFFS:</strong> Can use any provider who accepts the plan's terms</li>
+                        <li><strong>SNP:</strong> Special Needs Plans for specific populations</li>
+                    </ul>
+
+                    <h3>Medicare Advantage Costs</h3>
+
+                    <ul>
+                        <li><strong>Part B premium:</strong> You still pay this ($174.70/month)</li>
+                        <li><strong>MA plan premium:</strong> $0-$150/month (many plans are $0)</li>
+                        <li><strong>Copays:</strong> Vary by service ($0-$50 for doctor visits, more for hospital)</li>
+                        <li><strong>Out-of-pocket maximum:</strong> Required by law (typically $3,000-$8,000/year)</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <h4>Network Restrictions Apply</h4>
+                        <p>Most Medicare Advantage plans require you to use their network of doctors and hospitals. Going out of network may mean paying full price or receiving no coverage at all (except for emergencies).</p>
+                    </div>
+                </section>
+
+                <section class="part-section part-d-section" id="part-d">
+                    <h2>Part D: Prescription Drug Coverage</h2>
+
+                    <p>Medicare Part D provides coverage for prescription medications. Unlike Parts A and B, Part D is only available through private insurance companies approved by Medicare.</p>
+
+                    <p>You can get Part D coverage in two ways:</p>
+                    <ol>
+                        <li><strong>Standalone Part D plan:</strong> Add to Original Medicare + Medigap</li>
+                        <li><strong>Medicare Advantage with drug coverage:</strong> Part D is bundled into your MA plan</li>
+                    </ol>
+
+                    <div class="coverage-list">
+                        <h4>How Part D Works</h4>
+                        <ul>
+                            <li><strong>Formulary:</strong> Each plan has a list of covered drugs in different "tiers"</li>
+                            <li><strong>Pharmacies:</strong> Plans have preferred pharmacies with lower costs</li>
+                            <li><strong>Coverage phases:</strong> Your costs change as you spend more on drugs throughout the year</li>
+                        </ul>
+                    </div>
+
+                    <h3>Part D Coverage Phases (2024)</h3>
+
+                    <table class="costs-table">
+                        <tr>
+                            <th>Phase</th>
+                            <th>How It Works</th>
+                        </tr>
+                        <tr>
+                            <td>Deductible</td>
+                            <td>You pay 100% until you reach $545 (some plans have $0 deductible)</td>
+                        </tr>
+                        <tr>
+                            <td>Initial Coverage</td>
+                            <td>You pay copays/coinsurance until total drug costs reach $5,030</td>
+                        </tr>
+                        <tr>
+                            <td>Coverage Gap (Donut Hole)</td>
+                            <td>You pay 25% of drug costs until your out-of-pocket reaches $8,000</td>
+                        </tr>
+                        <tr>
+                            <td>Catastrophic Coverage</td>
+                            <td>You pay $0 for the rest of the year</td>
+                        </tr>
+                    </table>
+
+                    <div class="highlight-box">
+                        <h4>Part D Late Enrollment Penalty</h4>
+                        <p>If you don't enroll in Part D when first eligible and don't have other creditable drug coverage, you'll pay a penalty. The penalty is 1% of the national average premium multiplied by the number of months you went without coverage. This penalty is permanent.</p>
+                    </div>
+                </section>
+
+                <h2 id="how-they-work">How the Parts Work Together</h2>
+
+                <p>There are two main ways to structure your Medicare coverage:</p>
+
+                <div class="diagram">
+                    <h3>Option 1: Original Medicare Path</h3>
+                    <div class="diagram-visual">
+                        <div class="diagram-box" style="background: var(--part-a);">Part A</div>
+                        <div class="diagram-plus">+</div>
+                        <div class="diagram-box" style="background: var(--part-b);">Part B</div>
+                        <div class="diagram-plus">+</div>
+                        <div class="diagram-box" style="background: var(--primary);">Medigap</div>
+                        <div class="diagram-plus">+</div>
+                        <div class="diagram-box" style="background: var(--part-d);">Part D</div>
+                    </div>
+                    <p class="diagram-label">Government-run Original Medicare with private supplemental coverage</p>
+                </div>
+
+                <div class="diagram">
+                    <h3>Option 2: Medicare Advantage Path</h3>
+                    <div class="diagram-visual">
+                        <div class="diagram-box" style="background: var(--part-c);">Part C (Medicare Advantage)</div>
+                    </div>
+                    <p class="diagram-label">Private plan that replaces Original Medicare and usually includes drug coverage</p>
+                </div>
+
+                <h3>Key Points</h3>
+
+                <ul>
+                    <li><strong>Parts A & B</strong> are the foundation - you need both to have full Original Medicare</li>
+                    <li><strong>Part C</strong> replaces Parts A & B - you don't have both at the same time</li>
+                    <li><strong>Part D</strong> is separate from Parts A & B, but often bundled into Part C</li>
+                    <li><strong>Medigap</strong> only works with Original Medicare (Parts A & B), not Medicare Advantage</li>
+                </ul>
+
+                <h2 id="faq">Frequently Asked Questions</h2>
+
+                <h3>Do I need all four parts of Medicare?</h3>
+                <p>No. Parts A and B together form Original Medicare. Part C (Medicare Advantage) is an alternative to Original Medicare, not an addition. Part D (drug coverage) is important but technically optional.</p>
+
+                <h3>Can I have Part C and Parts A & B at the same time?</h3>
+                <p>Technically, you're still enrolled in Parts A & B when you have Medicare Advantage, but the MA plan provides all your coverage. You can't use Original Medicare while enrolled in an MA plan.</p>
+
+                <h3>What's the difference between Part B and Part D?</h3>
+                <p>Part B covers medical services (doctor visits, lab tests, outpatient care). Part D covers prescription medications. You need both for complete coverage.</p>
+
+                <h3>Is Medicare Part A really free?</h3>
+                <p>For most people, yes. If you or your spouse paid Medicare taxes for at least 40 quarters (10 years), you pay no premium for Part A. However, Part A still has deductibles and coinsurance.</p>
+
+                <h3>Which parts have late enrollment penalties?</h3>
+                <p>Part B and Part D both have permanent late enrollment penalties. Part A does not have a penalty. Medicare Advantage (Part C) follows Part B enrollment rules.</p>
+
+                <h3>Can I change my coverage after I enroll?</h3>
+                <p>Yes, but only during certain periods. The Annual Election Period (October 15 - December 7) allows you to switch between Original Medicare and Medicare Advantage or change Part D plans. Changes take effect January 1.</p>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Need Help Understanding Your Options?</h2>
+            <p>Medicare can be confusing. Our fee-only advisors can help you understand which parts you need and which coverage path is right for your situation.</p>
+            <div class="cta-buttons">
+                <a href="/book-consultation" class="btn btn-white">Book a Free Consultation</a>
+                <a href="/contact" class="btn btn-outline-white">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-guides">
+        <div class="container">
+            <h2>Related Guides</h2>
+            <div class="guides-grid">
+                <a href="/guides/turning-65-medicare-guide" class="guide-link-card">
+                    <h3>Turning 65 Medicare Guide</h3>
+                    <p>Everything you need to know about enrolling in Medicare at 65.</p>
+                </a>
+                <a href="/guides/medigap-vs-medicare-advantage" class="guide-link-card">
+                    <h3>Medigap vs Medicare Advantage</h3>
+                    <p>Compare Original Medicare + Medigap vs. Medicare Advantage plans.</p>
+                </a>
+                <a href="/services/enrollment-assistance" class="guide-link-card">
+                    <h3>Enrollment Assistance</h3>
+                    <p>Get step-by-step help with your Medicare enrollment.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="/" class="footer-logo"><span class="logo-icon">M</span><span>Unbiased Medicare Advisor</span></a><p>Independent, fee-only Medicare guidance. We're paid by you, not insurance companies, so you can trust our advice is always in your best interest.</p></div>
+                <div class="footer-nav"><h4>Services</h4><ul><li><a href="/services/medicare-consultant">Medicare Consultant</a></li><li><a href="/services/fee-only-medicare-advisor">Fee-Only Advisor</a></li><li><a href="/services/medicare-plan-comparison">Plan Comparison</a></li><li><a href="/services/enrollment-assistance">Enrollment Help</a></li></ul></div>
+                <div class="footer-nav"><h4>Resources</h4><ul><li><a href="/guides/medigap-vs-medicare-advantage">Medigap vs MA</a></li><li><a href="/guides/turning-65-medicare-guide">Turning 65 Guide</a></li><li><a href="/guides">All Guides</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li></ul></div>
+                <div class="footer-nav"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/book-consultation">Book a Call</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p><div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a></div></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() { document.getElementById('mobileNav').classList.toggle('active'); }
+        function toggleMobileDropdown(event) { event.preventDefault(); event.target.closest('.mobile-dropdown').classList.toggle('active'); }
+        document.addEventListener('click', function(event) { const mobileNav = document.getElementById('mobileNav'); const menuBtn = document.querySelector('.mobile-menu-btn'); if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) { mobileNav.classList.remove('active'); } });
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() { if (window.scrollY > 400) { backToTop.classList.add('visible'); } else { backToTop.classList.remove('visible'); } });
+        if (backToTop) { backToTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); }); }
+    </script>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+</body>
+</html>
