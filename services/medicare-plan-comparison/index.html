@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare Plan Comparison Service | Unbiased Medicare Advisor</title>
+    <meta name="description" content="Get a comprehensive, unbiased comparison of Medicare plans in your area. We analyze Medicare Supplement, Medicare Advantage, and Part D plans to find your best fit.">
+    <meta name="keywords" content="medicare plan comparison, compare medicare plans, medicare supplement comparison, medicare advantage comparison">
+    <link rel="canonical" href="https://unbiasedmedicareadvisor.com/services/medicare-plan-comparison/">
+    <style>
+        :root {
+            --primary-blue: #1a5f7a;
+            --secondary-blue: #2e8bc0;
+            --accent-gold: #c9a227;
+            --light-bg: #f8f9fa;
+            --dark-text: #2d3436;
+            --white: #ffffff;
+            --gray-100: #f7f7f7;
+            --gray-200: #eeeeee;
+            --gray-600: #666666;
+            --success-green: #27ae60;
+            --warning-orange: #f39c12;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-toggle::after {
+            content: '▼';
+            font-size: 0.6rem;
+            transition: transform 0.3s;
+        }
+
+        .dropdown:hover .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s;
+            padding: 0.5rem 0;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-text);
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--light-bg);
+            color: var(--primary-blue);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-blue);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--accent-gold);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: #b89223;
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #1a5f7a;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* What We Compare Section */
+        .compare-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .compare-card {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .compare-card-header {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .compare-card-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .compare-card-header p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .compare-card-body {
+            padding: 1.5rem;
+        }
+
+        .compare-list {
+            list-style: none;
+        }
+
+        .compare-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .compare-list li:last-child {
+            border-bottom: none;
+        }
+
+        .compare-list .icon {
+            color: var(--success-green);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .process-timeline {
+            position: relative;
+            margin-top: 3rem;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--gray-200);
+        }
+
+        .process-step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-content {
+            flex: 1;
+            padding-top: 0.5rem;
+        }
+
+        .process-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .process-content p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Comparison Factors */
+        .factors-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+        }
+
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .factor-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .factor-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .factor-card p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Why Comparison Matters */
+        .why-section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .why-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light-bg);
+            border-radius: 10px;
+        }
+
+        .why-item .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .why-item h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+        }
+
+        .why-item p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        /* Sample Report */
+        .sample-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+        }
+
+        .sample-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sample-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .sample-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .sample-preview {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            color: var(--dark-text);
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .sample-preview h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .sample-preview ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .sample-preview li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sample-preview li:last-child {
+            border-bottom: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-text);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--gray-200);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: var(--gray-200);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 30px;
+                height: 24px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                z-index: 1001;
+            }
+
+            .mobile-menu-btn span {
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: #1a5f7a;
+                border-radius: 2px;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--white);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                background: var(--gray-100);
+                border-radius: 8px;
+                margin-top: 0.5rem;
+            }
+
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .process-timeline::before {
+                left: 20px;
+            }
+
+            .process-number {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+
+            .process-step {
+                gap: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Unbiased Medicare <span>Advisor</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Services</span>
+                    <div class="dropdown-menu">
+                        <a href="/services/medicare-consultant/">Medicare Consultant</a>
+                        <a href="/services/fee-only-medicare-advisor/">Fee-Only Advisor</a>
+                        <a href="/services/independent-medicare-advisor/">Independent Advisor</a>
+                        <a href="/services/medicare-plan-comparison/">Plan Comparison</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Learn</span>
+                    <div class="dropdown-menu">
+                        <a href="/guides/medicare-parts-explained/">Medicare Parts Explained</a>
+                        <a href="/guides/medigap-vs-advantage/">Medigap vs Advantage</a>
+                        <a href="/guides/turning-65-checklist/">Turning 65 Checklist</a>
+                        <a href="/faq/">FAQs</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Your State</span>
+                    <div class="dropdown-menu">
+                        <a href="/states/">Find Your State</a>
+                        <a href="/states/florida/">Florida</a>
+                        <a href="/states/ohio/">Ohio</a>
+                        <a href="/states/arizona/">Arizona</a>
+                    </div>
+                </li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/book-consultation/" class="btn btn-primary">Free Consultation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Medicare Plan Comparison Service</h1>
+            <p>Cut through the confusion with a personalized, side-by-side comparison of Medicare plans in your area. We analyze the details so you can make a confident choice.</p>
+            <a href="/book-consultation/" class="btn btn-secondary">Get Your Comparison</a>
+        </div>
+    </section>
+
+    <section class="compare-section">
+        <h2 class="section-title">What We Compare</h2>
+        <p class="section-subtitle">We provide comprehensive comparisons across all major Medicare plan types.</p>
+        <div class="compare-grid">
+            <div class="compare-card">
+                <div class="compare-card-header">
+                    <h3>Medicare Supplement (Medigap)</h3>
+                    <p>Plans A, B, C, D, F, G, K, L, M, N</p>
+                </div>
+                <div class="compare-card-body">
+                    <ul class="compare-list">
+                        <li><span class="icon">&#10003;</span> Monthly premium costs by carrier</li>
+                        <li><span class="icon">&#10003;</span> Coverage gaps filled by each plan</li>
+                        <li><span class="icon">&#10003;</span> Out-of-pocket maximums</li>
+                        <li><span class="icon">&#10003;</span> Carrier financial ratings</li>
+                        <li><span class="icon">&#10003;</span> Rate increase history</li>
+                        <li><span class="icon">&#10003;</span> Household discounts available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="compare-card">
+                <div class="compare-card-header">
+                    <h3>Medicare Advantage (Part C)</h3>
+                    <p>HMO, PPO, PFFS, SNP Plans</p>
+                </div>
+                <div class="compare-card-body">
+                    <ul class="compare-list">
+                        <li><span class="icon">&#10003;</span> Monthly premiums and copays</li>
+                        <li><span class="icon">&#10003;</span> Doctor and hospital networks</li>
+                        <li><span class="icon">&#10003;</span> Drug coverage (Part D included)</li>
+                        <li><span class="icon">&#10003;</span> Extra benefits (dental, vision, hearing)</li>
+                        <li><span class="icon">&#10003;</span> Star ratings and quality scores</li>
+                        <li><span class="icon">&#10003;</span> Prior authorization requirements</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="compare-card">
+                <div class="compare-card-header">
+                    <h3>Part D Prescription Plans</h3>
+                    <p>Standalone Drug Coverage</p>
+                </div>
+                <div class="compare-card-body">
+                    <ul class="compare-list">
+                        <li><span class="icon">&#10003;</span> Monthly premiums</li>
+                        <li><span class="icon">&#10003;</span> Deductibles and copays</li>
+                        <li><span class="icon">&#10003;</span> Your specific drug costs</li>
+                        <li><span class="icon">&#10003;</span> Formulary tier placement</li>
+                        <li><span class="icon">&#10003;</span> Pharmacy network options</li>
+                        <li><span class="icon">&#10003;</span> Coverage gap (donut hole) costs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <h2 class="section-title">Our Comparison Process</h2>
+        <p class="section-subtitle">A thorough, personalized approach to finding your ideal Medicare coverage.</p>
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="process-number">1</div>
+                <div class="process-content">
+                    <h3>Gather Your Information</h3>
+                    <p>We start by understanding your complete healthcare picture: current doctors, prescription medications, health conditions, budget preferences, and coverage priorities. This ensures our comparison is tailored to your actual needs.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="process-number">2</div>
+                <div class="process-content">
+                    <h3>Research Available Plans</h3>
+                    <p>We research every plan available in your zip code across all carriers. This includes checking provider networks, running your medications through drug formularies, and calculating true annual costs.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="process-number">3</div>
+                <div class="process-content">
+                    <h3>Build Your Comparison Report</h3>
+                    <p>We compile our findings into a clear, easy-to-understand comparison report. You'll see side-by-side plan details, total estimated costs, and how each option meets your specific requirements.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="process-number">4</div>
+                <div class="process-content">
+                    <h3>Review Together</h3>
+                    <p>We walk through the comparison with you, explaining the trade-offs between plans and answering all your questions. You'll understand exactly what you're getting with each option.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="process-number">5</div>
+                <div class="process-content">
+                    <h3>Support Your Decision</h3>
+                    <p>Once you've chosen the plan that's right for you, we help ensure a smooth enrollment process. No pressure, no sales tactics - just clear support for the choice you make.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="factors-section">
+        <h2 class="section-title">Factors We Analyze</h2>
+        <p class="section-subtitle">Our comparison goes beyond premiums to examine what really matters for your healthcare.</p>
+        <div class="factors-grid">
+            <div class="factor-card">
+                <h3>Total Annual Costs</h3>
+                <p>We calculate premiums, deductibles, copays, and coinsurance to show your true yearly healthcare expenses with each plan.</p>
+            </div>
+            <div class="factor-card">
+                <h3>Doctor Access</h3>
+                <p>We verify your current doctors and specialists are in-network, and assess how easy it is to see new providers if needed.</p>
+            </div>
+            <div class="factor-card">
+                <h3>Drug Coverage</h3>
+                <p>Your specific medications are analyzed for formulary coverage, tier placement, and total drug costs throughout the year.</p>
+            </div>
+            <div class="factor-card">
+                <h3>Hospital Networks</h3>
+                <p>We check which hospitals and facilities are covered, especially important for those with ongoing care needs.</p>
+            </div>
+            <div class="factor-card">
+                <h3>Extra Benefits</h3>
+                <p>Dental, vision, hearing, fitness programs, and other extras are compared across Medicare Advantage plans.</p>
+            </div>
+            <div class="factor-card">
+                <h3>Travel Coverage</h3>
+                <p>For those who travel, we assess how each plan covers care outside your home area domestically and abroad.</p>
+            </div>
+            <div class="factor-card">
+                <h3>Financial Stability</h3>
+                <p>We review carrier ratings and rate increase history so you know your plan will be there when you need it.</p>
+            </div>
+            <div class="factor-card">
+                <h3>Flexibility</h3>
+                <p>We examine referral requirements, prior authorizations, and how much freedom you have to direct your own care.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <h2 class="section-title">Why Plan Comparison Matters</h2>
+        <p class="section-subtitle">The right choice can save you thousands while providing better coverage.</p>
+        <div class="why-content">
+            <div class="why-item">
+                <div class="number">50+</div>
+                <h3>Plans Available</h3>
+                <p>Most areas have over 50 Medicare plan options. Without comparison, you're guessing.</p>
+            </div>
+            <div class="why-item">
+                <div class="number">$3,000+</div>
+                <h3>Potential Savings</h3>
+                <p>Choosing the right plan can save thousands annually in premiums and out-of-pocket costs.</p>
+            </div>
+            <div class="why-item">
+                <div class="number">Annual</div>
+                <h3>Changes</h3>
+                <p>Plans change every year. What was best last year may not be optimal for the coming year.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sample-section">
+        <div class="sample-content">
+            <h2>What Your Comparison Report Includes</h2>
+            <p>A personalized analysis designed to make your decision clear and confident.</p>
+            <div class="sample-preview">
+                <h4>Sample Report Contents:</h4>
+                <ul>
+                    <li><span>Executive Summary</span><span>Top 3 recommended plans</span></li>
+                    <li><span>Cost Analysis</span><span>Side-by-side annual cost comparison</span></li>
+                    <li><span>Coverage Details</span><span>What each plan covers and doesn't</span></li>
+                    <li><span>Network Check</span><span>Your doctors/hospitals status</span></li>
+                    <li><span>Drug Analysis</span><span>Your medication costs by plan</span></li>
+                    <li><span>Recommendation</span><span>Our independent assessment</span></li>
+                </ul>
+            </div>
+            <a href="/book-consultation/" class="btn btn-secondary">Request Your Comparison</a>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready for Your Personalized Comparison?</h2>
+            <p>Schedule a free consultation and get a comprehensive comparison of Medicare plans tailored to your healthcare needs and budget.</p>
+            <div class="cta-buttons">
+                <a href="/book-consultation/" class="btn btn-primary">Schedule Free Consultation</a>
+                <a href="/contact/" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/services/medicare-consultant/">Medicare Consultant</a></li>
+                    <li><a href="/services/fee-only-medicare-advisor/">Fee-Only Advisor</a></li>
+                    <li><a href="/services/independent-medicare-advisor/">Independent Advisor</a></li>
+                    <li><a href="/services/medicare-plan-comparison/">Plan Comparison</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/guides/medicare-parts-explained/">Medicare Parts Explained</a></li>
+                    <li><a href="/guides/medigap-vs-advantage/">Medigap vs Medicare Advantage</a></li>
+                    <li><a href="/guides/turning-65-checklist/">Turning 65 Checklist</a></li>
+                    <li><a href="/faq/">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get Started</h4>
+                <ul>
+                    <li><a href="/book-consultation/">Book Consultation</a></li>
+                    <li><a href="/states/">Find Your State</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">We are not affiliated with or endorsed by Medicare or any government agency.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Mobile dropdown toggle
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                navLinks.classList.remove('active');
+                dropdowns.forEach(d => d.classList.remove('active'));
+            }
+        });
+    </script>
+</body>
+</html>

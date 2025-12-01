@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independent Medicare Advisor | Unbiased Medicare Advisor</title>
+    <meta name="description" content="Work with an independent Medicare advisor who isn't tied to any insurance company. Get objective guidance and personalized recommendations based solely on your needs.">
+    <meta name="keywords" content="independent medicare advisor, unbiased medicare help, medicare guidance, medicare expert">
+    <link rel="canonical" href="https://unbiasedmedicareadvisor.com/services/independent-medicare-advisor/">
+    <style>
+        :root {
+            --primary-blue: #1a5f7a;
+            --secondary-blue: #2e8bc0;
+            --accent-gold: #c9a227;
+            --light-bg: #f8f9fa;
+            --dark-text: #2d3436;
+            --white: #ffffff;
+            --gray-100: #f7f7f7;
+            --gray-200: #eeeeee;
+            --gray-600: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-toggle::after {
+            content: '▼';
+            font-size: 0.6rem;
+            transition: transform 0.3s;
+        }
+
+        .dropdown:hover .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s;
+            padding: 0.5rem 0;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-text);
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--light-bg);
+            color: var(--primary-blue);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-blue);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--accent-gold);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: #b89223;
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #1a5f7a;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Independence Benefits */
+        .independence-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+        }
+
+        .independence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .independence-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .independence-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .independence-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .independence-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: var(--white);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.25rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .comparison-table th {
+            background: var(--primary-blue);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .comparison-table th:first-child {
+            width: 40%;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: var(--gray-100);
+        }
+
+        .check {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cross {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* What to Expect */
+        .expect-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+        }
+
+        .expect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .expect-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            padding-top: 3rem;
+        }
+
+        .expect-number {
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background: var(--accent-gold);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .expect-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+        }
+
+        .expect-card p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* Credentials Section */
+        .credentials-section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .credentials-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .credentials-list li {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .credentials-list .icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .credentials-list h4 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .credentials-list p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-section .btn-secondary {
+            background: var(--accent-gold);
+        }
+
+        .cta-section .btn-outline {
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        .cta-section .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-text);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--gray-200);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: var(--gray-200);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 30px;
+                height: 24px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                z-index: 1001;
+            }
+
+            .mobile-menu-btn span {
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: #1a5f7a;
+                border-radius: 2px;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--white);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                background: var(--gray-100);
+                border-radius: 8px;
+                margin-top: 0.5rem;
+            }
+
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Unbiased Medicare <span>Advisor</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Services</span>
+                    <div class="dropdown-menu">
+                        <a href="/services/medicare-consultant/">Medicare Consultant</a>
+                        <a href="/services/fee-only-medicare-advisor/">Fee-Only Advisor</a>
+                        <a href="/services/independent-medicare-advisor/">Independent Advisor</a>
+                        <a href="/services/medicare-plan-comparison/">Plan Comparison</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Learn</span>
+                    <div class="dropdown-menu">
+                        <a href="/guides/medicare-parts-explained/">Medicare Parts Explained</a>
+                        <a href="/guides/medigap-vs-advantage/">Medigap vs Advantage</a>
+                        <a href="/guides/turning-65-checklist/">Turning 65 Checklist</a>
+                        <a href="/faq/">FAQs</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Your State</span>
+                    <div class="dropdown-menu">
+                        <a href="/states/">Find Your State</a>
+                        <a href="/states/florida/">Florida</a>
+                        <a href="/states/ohio/">Ohio</a>
+                        <a href="/states/arizona/">Arizona</a>
+                    </div>
+                </li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/book-consultation/" class="btn btn-primary">Free Consultation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Independent Medicare Advisor</h1>
+            <p>Get objective Medicare guidance from an advisor who works for you, not insurance companies. Our independence means your best interests always come first.</p>
+            <a href="/book-consultation/" class="btn btn-secondary">Schedule Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="independence-section">
+        <h2 class="section-title">What Independence Really Means</h2>
+        <p class="section-subtitle">Our independence isn't just a talking point - it's the foundation of how we serve you.</p>
+        <div class="independence-grid">
+            <div class="independence-card">
+                <div class="icon">&#128274;</div>
+                <h3>No Insurance Company Ties</h3>
+                <p>We have no contracts, quotas, or financial arrangements with any insurance carrier. This means we can recommend the best plan for your situation, not the one that pays us the most.</p>
+            </div>
+            <div class="independence-card">
+                <div class="icon">&#128176;</div>
+                <h3>Fee-Only Compensation</h3>
+                <p>You pay us directly for our expertise, just like you'd pay a lawyer or accountant. We don't receive commissions, bonuses, or incentives from insurance companies.</p>
+            </div>
+            <div class="independence-card">
+                <div class="icon">&#129309;</div>
+                <h3>Your Advocate First</h3>
+                <p>As your independent advisor, we work exclusively for you. Our loyalty is to helping you find the right coverage, not to meeting sales targets or pushing specific products.</p>
+            </div>
+            <div class="independence-card">
+                <div class="icon">&#128200;</div>
+                <h3>Unbiased Analysis</h3>
+                <p>We analyze all available options using objective criteria. Whether it's Medicare Supplement, Medicare Advantage, or Part D plans, we evaluate each on its merits for your specific needs.</p>
+            </div>
+            <div class="independence-card">
+                <div class="icon">&#128218;</div>
+                <h3>Education-Focused</h3>
+                <p>We believe in empowering you with knowledge, not pressuring you into quick decisions. Take the time you need to understand your options fully before choosing.</p>
+            </div>
+            <div class="independence-card">
+                <div class="icon">&#127968;</div>
+                <h3>Long-Term Relationship</h3>
+                <p>We're here for the long haul. As your needs change, we'll help you evaluate whether your current coverage still makes sense or if adjustments would benefit you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <h2 class="section-title">Independent vs. Commission-Based Advisors</h2>
+        <p class="section-subtitle">Understanding the difference can save you thousands and ensure you get the right coverage.</p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Factor</th>
+                    <th>Independent Advisor</th>
+                    <th>Commission-Based Agent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Primary loyalty</td>
+                    <td><span class="check">&#10003;</span> To you, the client</td>
+                    <td><span class="cross">&#10007;</span> To insurance carriers</td>
+                </tr>
+                <tr>
+                    <td>Compensation source</td>
+                    <td><span class="check">&#10003;</span> Direct fee from you</td>
+                    <td><span class="cross">&#10007;</span> Commissions from insurers</td>
+                </tr>
+                <tr>
+                    <td>Plan recommendations</td>
+                    <td><span class="check">&#10003;</span> Based on your needs</td>
+                    <td><span class="cross">&#10007;</span> May favor high-commission plans</td>
+                </tr>
+                <tr>
+                    <td>Ongoing support incentive</td>
+                    <td><span class="check">&#10003;</span> Continued relationship value</td>
+                    <td><span class="cross">&#10007;</span> Initial sale only</td>
+                </tr>
+                <tr>
+                    <td>Disclosure of conflicts</td>
+                    <td><span class="check">&#10003;</span> Full transparency</td>
+                    <td><span class="cross">&#10007;</span> Often unclear</td>
+                </tr>
+                <tr>
+                    <td>Pressure to enroll quickly</td>
+                    <td><span class="check">&#10003;</span> No pressure</td>
+                    <td><span class="cross">&#10007;</span> Common tactic</td>
+                </tr>
+                <tr>
+                    <td>Access to all carriers</td>
+                    <td><span class="check">&#10003;</span> Can review any plan</td>
+                    <td><span class="cross">&#10007;</span> Limited to contracted carriers</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="expect-section">
+        <h2 class="section-title">What to Expect Working With Us</h2>
+        <p class="section-subtitle">Our independent advisory process puts your needs at the center of every decision.</p>
+        <div class="expect-grid">
+            <div class="expect-card">
+                <div class="expect-number">1</div>
+                <h3>Discovery Call</h3>
+                <p>We start with a free, no-obligation consultation to understand your health needs, budget, preferred doctors, and prescription medications.</p>
+            </div>
+            <div class="expect-card">
+                <div class="expect-number">2</div>
+                <h3>Comprehensive Analysis</h3>
+                <p>We research all available options in your area, comparing benefits, costs, provider networks, and drug coverage against your specific requirements.</p>
+            </div>
+            <div class="expect-card">
+                <div class="expect-number">3</div>
+                <h3>Personalized Recommendations</h3>
+                <p>You receive a clear, written comparison of your top options with our independent assessment of which plans best fit your situation and why.</p>
+            </div>
+            <div class="expect-card">
+                <div class="expect-number">4</div>
+                <h3>Decision Support</h3>
+                <p>We answer all your questions, explain the trade-offs, and give you the time you need to make a confident choice. No pressure, ever.</p>
+            </div>
+            <div class="expect-card">
+                <div class="expect-number">5</div>
+                <h3>Enrollment Assistance</h3>
+                <p>Once you've decided, we guide you through the enrollment process step by step, ensuring everything is completed correctly and on time.</p>
+            </div>
+            <div class="expect-card">
+                <div class="expect-number">6</div>
+                <h3>Ongoing Partnership</h3>
+                <p>We're here for you year-round. Whether you have questions about using your benefits or want an annual review of your coverage, we're just a call away.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="credentials-section">
+        <h2 class="section-title">Our Independent Credentials</h2>
+        <p class="section-subtitle">The qualifications and standards that ensure you receive trustworthy guidance.</p>
+        <ul class="credentials-list">
+            <li>
+                <span class="icon">&#127891;</span>
+                <div>
+                    <h4>Licensed Professionals</h4>
+                    <p>Fully licensed and certified to advise on Medicare in all 50 states.</p>
+                </div>
+            </li>
+            <li>
+                <span class="icon">&#128220;</span>
+                <div>
+                    <h4>Fiduciary Standard</h4>
+                    <p>We adhere to fiduciary principles, always putting your interests first.</p>
+                </div>
+            </li>
+            <li>
+                <span class="icon">&#128203;</span>
+                <div>
+                    <h4>Zero Carrier Contracts</h4>
+                    <p>No agreements with insurance companies that could influence our advice.</p>
+                </div>
+            </li>
+            <li>
+                <span class="icon">&#128196;</span>
+                <div>
+                    <h4>Full Transparency</h4>
+                    <p>We disclose exactly how we're compensated and any potential conflicts.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Experience Truly Independent Medicare Advice</h2>
+            <p>Ready to work with an advisor who puts your interests first? Schedule your free consultation and discover the difference independence makes.</p>
+            <div class="cta-buttons">
+                <a href="/book-consultation/" class="btn btn-secondary">Book Free Consultation</a>
+                <a href="/contact/" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/services/medicare-consultant/">Medicare Consultant</a></li>
+                    <li><a href="/services/fee-only-medicare-advisor/">Fee-Only Advisor</a></li>
+                    <li><a href="/services/independent-medicare-advisor/">Independent Advisor</a></li>
+                    <li><a href="/services/medicare-plan-comparison/">Plan Comparison</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/guides/medicare-parts-explained/">Medicare Parts Explained</a></li>
+                    <li><a href="/guides/medigap-vs-advantage/">Medigap vs Medicare Advantage</a></li>
+                    <li><a href="/guides/turning-65-checklist/">Turning 65 Checklist</a></li>
+                    <li><a href="/faq/">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get Started</h4>
+                <ul>
+                    <li><a href="/book-consultation/">Book Consultation</a></li>
+                    <li><a href="/states/">Find Your State</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">We are not affiliated with or endorsed by Medicare or any government agency.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Mobile dropdown toggle
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                navLinks.classList.remove('active');
+                dropdowns.forEach(d => d.classList.remove('active'));
+            }
+        });
+    </script>
+</body>
+</html>
