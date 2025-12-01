@@ -342,6 +342,54 @@
             font-size: 1.2rem;
         }
 
+        /* Mobile Comparison Cards (hidden on desktop) */
+        .comparison-cards-mobile {
+            display: none;
+            margin-top: 2rem;
+        }
+
+        .comparison-card-mobile {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .comparison-card-mobile .factor-header {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .comparison-card-mobile .advisor-row {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .comparison-card-mobile .advisor-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-card-mobile .advisor-label {
+            font-weight: 600;
+            color: var(--dark-text);
+            min-width: 100px;
+            font-size: 0.85rem;
+        }
+
+        .comparison-card-mobile .advisor-value {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
         /* What to Expect */
         .expect-section {
             background: var(--light-bg);
@@ -594,14 +642,11 @@
             }
 
             .comparison-table {
-                display: block;
-                overflow-x: auto;
+                display: none;
             }
 
-            .comparison-table th,
-            .comparison-table td {
-                padding: 1rem;
-                font-size: 0.9rem;
+            .comparison-cards-mobile {
+                display: block;
             }
 
             .cta-buttons {
@@ -749,6 +794,93 @@
                 </tr>
             </tbody>
         </table>
+
+        <!-- Mobile version: stacked cards -->
+        <div class="comparison-cards-mobile">
+            <div class="comparison-card-mobile">
+                <div class="factor-header">Primary Loyalty</div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Independent:</span>
+                    <span class="advisor-value"><span class="check">✓</span> To you, the client</span>
+                </div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Commission:</span>
+                    <span class="advisor-value"><span class="cross">✗</span> To insurance carriers</span>
+                </div>
+            </div>
+
+            <div class="comparison-card-mobile">
+                <div class="factor-header">Compensation Source</div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Independent:</span>
+                    <span class="advisor-value"><span class="check">✓</span> Direct fee from you</span>
+                </div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Commission:</span>
+                    <span class="advisor-value"><span class="cross">✗</span> Commissions from insurers</span>
+                </div>
+            </div>
+
+            <div class="comparison-card-mobile">
+                <div class="factor-header">Plan Recommendations</div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Independent:</span>
+                    <span class="advisor-value"><span class="check">✓</span> Based on your needs</span>
+                </div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Commission:</span>
+                    <span class="advisor-value"><span class="cross">✗</span> May favor high-commission plans</span>
+                </div>
+            </div>
+
+            <div class="comparison-card-mobile">
+                <div class="factor-header">Ongoing Support Incentive</div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Independent:</span>
+                    <span class="advisor-value"><span class="check">✓</span> Continued relationship value</span>
+                </div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Commission:</span>
+                    <span class="advisor-value"><span class="cross">✗</span> Initial sale only</span>
+                </div>
+            </div>
+
+            <div class="comparison-card-mobile">
+                <div class="factor-header">Disclosure of Conflicts</div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Independent:</span>
+                    <span class="advisor-value"><span class="check">✓</span> Full transparency</span>
+                </div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Commission:</span>
+                    <span class="advisor-value"><span class="cross">✗</span> Often unclear</span>
+                </div>
+            </div>
+
+            <div class="comparison-card-mobile">
+                <div class="factor-header">Pressure to Enroll Quickly</div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Independent:</span>
+                    <span class="advisor-value"><span class="check">✓</span> No pressure</span>
+                </div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Commission:</span>
+                    <span class="advisor-value"><span class="cross">✗</span> Common tactic</span>
+                </div>
+            </div>
+
+            <div class="comparison-card-mobile">
+                <div class="factor-header">Access to All Carriers</div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Independent:</span>
+                    <span class="advisor-value"><span class="check">✓</span> Can review any plan</span>
+                </div>
+                <div class="advisor-row">
+                    <span class="advisor-label">Commission:</span>
+                    <span class="advisor-value"><span class="cross">✗</span> Limited to contracted carriers</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="expect-section">
