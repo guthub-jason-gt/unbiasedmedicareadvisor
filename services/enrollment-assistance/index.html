@@ -123,10 +123,9 @@
         .enrollment-card li { margin-bottom: 0.5rem; }
 
         .warning-section { padding: var(--spacing-xl) 0; }
-        .warning-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: var(--spacing-lg); border-radius: var(--radius-md); max-width: 800px; margin: 0 auto; }
-        .warning-box-header { display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm); }
-        .warning-icon { font-size: 1.75rem; }
-        .warning-box h2 { font-size: 1.35rem; color: #856404; margin: 0; }
+        .warning-box { background: #fff3cd; border: 4px solid #ffc107; padding: var(--spacing-lg); border-radius: var(--radius-md); max-width: 800px; margin: 0 auto; text-align: center; }
+        .warning-icon { font-size: 2.5rem; display: block; margin-bottom: var(--spacing-sm); }
+        .warning-box h2 { font-size: 1.35rem; color: #856404; margin: 0 0 var(--spacing-sm) 0; }
         .warning-box p { color: var(--dark-gray); font-size: 1.05rem; margin: 0; }
 
         .process-section { padding: var(--spacing-xxl) 0; background: var(--off-white); }
@@ -237,10 +236,8 @@
     <section class="warning-section">
         <div class="container">
             <div class="warning-box">
-                <div class="warning-box-header">
-                    <span class="warning-icon">&#9888;</span>
-                    <h2>Late Enrollment Penalties Are Permanent</h2>
-                </div>
+                <span class="warning-icon">&#9888;</span>
+                <h2>Late Enrollment Penalties Are Permanent</h2>
                 <p>If you miss your Initial Enrollment Period and don't qualify for a Special Enrollment Period, you may face lifelong penalties. The Part B penalty alone is 10% for every 12 months you were eligible but didn't enroll. These penalties never go away.</p>
             </div>
         </div>
