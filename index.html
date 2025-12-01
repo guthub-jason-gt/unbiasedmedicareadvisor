@@ -35,7 +35,7 @@
             --white: #ffffff;
             --off-white: #f8f9fa;
             --light-gray: #e9ecef;
-            --medium-gray: #555555;
+            --medium-gray: #444444;
             --dark-gray: #343a40;
             --black: #1a1a1a;
 
@@ -44,13 +44,13 @@
             --font-size-base: 19px;
             --line-height: 1.75;
 
-            /* Spacing */
+            /* Spacing - increased for better section separation */
             --spacing-xs: 0.5rem;
             --spacing-sm: 1rem;
             --spacing-md: 1.5rem;
-            --spacing-lg: 2rem;
-            --spacing-xl: 3rem;
-            --spacing-xxl: 4rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
 
             /* Layout */
             --max-width: 1200px;
@@ -301,6 +301,11 @@
 
         .nav-cta {
             margin-left: var(--spacing-sm);
+        }
+
+        .nav-cta .btn-primary {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.05rem;
         }
 
         /* Mobile Menu Button */
@@ -913,6 +918,36 @@
             }
         }
 
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
         @media (max-width: 767px) {
             :root {
                 --font-size-base: 16px;
@@ -1128,25 +1163,25 @@
                 <a href="/services/medicare-consultant" class="service-card">
                     <div class="service-icon">&#128101;</div>
                     <h3>Medicare Consultation</h3>
-                    <p>One-on-one guidance to understand your Medicare options, coverage needs, and budget considerations.</p>
+                    <p><strong>One-on-one guidance</strong> to understand your Medicare options, coverage needs, and budget considerations.</p>
                     <span class="service-link">Learn more</span>
                 </a>
                 <a href="/services/medicare-plan-comparison" class="service-card">
                     <div class="service-icon">&#9878;</div>
                     <h3>Plan Comparison</h3>
-                    <p>Side-by-side analysis of Medicare Supplement (Medigap) and Medicare Advantage plans available in your area.</p>
+                    <p><strong>Side-by-side analysis</strong> of Medicare Supplement (Medigap) and Medicare Advantage plans available in your area.</p>
                     <span class="service-link">Learn more</span>
                 </a>
                 <a href="/services/enrollment-assistance" class="service-card">
                     <div class="service-icon">&#128203;</div>
                     <h3>Enrollment Assistance</h3>
-                    <p>Step-by-step help through the enrollment process, ensuring you meet deadlines and avoid penalties.</p>
+                    <p><strong>Step-by-step help</strong> through the enrollment process, ensuring you meet deadlines and avoid penalties.</p>
                     <span class="service-link">Learn more</span>
                 </a>
                 <a href="/services/fee-only-medicare-advisor" class="service-card">
                     <div class="service-icon">&#128176;</div>
                     <h3>Fee-Only Advice</h3>
-                    <p>Transparent, flat-fee consultations with no commissions or kickbacks from insurance companies.</p>
+                    <p><strong>Transparent, flat-fee consultations</strong> with no commissions or kickbacks from insurance companies.</p>
                     <span class="service-link">Learn more</span>
                 </a>
             </div>
@@ -1169,22 +1204,22 @@
                 <div class="why-us-item">
                     <div class="why-us-icon">&#128274;</div>
                     <h3>No Hidden Agenda</h3>
-                    <p>We don't sell insurance policies or earn commissions. Our only goal is finding what's best for you.</p>
+                    <p><strong>We don't sell insurance policies</strong> or earn commissions. Our only goal is finding what's best for you.</p>
                 </div>
                 <div class="why-us-item">
                     <div class="why-us-icon">&#128200;</div>
                     <h3>All Options Considered</h3>
-                    <p>We compare every plan type: Medigap, Medicare Advantage, Part D, and more &mdash; not just ones that pay us.</p>
+                    <p><strong>We compare every plan type:</strong> Medigap, Medicare Advantage, Part D, and more &mdash; not just ones that pay us.</p>
                 </div>
                 <div class="why-us-item">
                     <div class="why-us-icon">&#128483;</div>
                     <h3>Plain English</h3>
-                    <p>Medicare is confusing. We explain your options in simple terms so you can make confident decisions.</p>
+                    <p>Medicare is confusing. <strong>We explain your options in simple terms</strong> so you can make confident decisions.</p>
                 </div>
                 <div class="why-us-item">
                     <div class="why-us-icon">&#127919;</div>
                     <h3>Personalized Guidance</h3>
-                    <p>Your health needs, budget, and preferences are unique. We tailor our recommendations to you.</p>
+                    <p>Your health needs, budget, and preferences are unique. <strong>We tailor our recommendations to you.</strong></p>
                 </div>
             </div>
         </div>
@@ -1419,6 +1454,21 @@
                 mobileNav.classList.remove('active');
             }
         });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
 </body>
 </html>
