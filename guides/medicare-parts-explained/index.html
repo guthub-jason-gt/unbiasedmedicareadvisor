@@ -197,6 +197,9 @@
         .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
         .footer-bottom a:hover { color: var(--white); }
         .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+        .footer-phone-icon { font-size: 1.5rem; filter: brightness(0) invert(1); }
 
         @media (min-width: 768px) {
             .nav { display: block; }
@@ -607,7 +610,7 @@
                 <div class="footer-brand"><a href="/" class="footer-logo"><span class="logo-icon">M</span><span>Unbiased Medicare Advisor</span></a><p>Independent, fee-only Medicare guidance. We're paid by you, not insurance companies, so you can trust our advice is always in your best interest.</p></div>
                 <div class="footer-nav"><h4>Services</h4><ul><li><a href="/services/medicare-consultant">Medicare Consultant</a></li><li><a href="/services/fee-only-medicare-advisor">Fee-Only Advisor</a></li><li><a href="/services/medicare-plan-comparison">Plan Comparison</a></li><li><a href="/services/enrollment-assistance">Enrollment Help</a></li></ul></div>
                 <div class="footer-nav"><h4>Resources</h4><ul><li><a href="/guides/medigap-vs-medicare-advantage">Medigap vs MA</a></li><li><a href="/guides/turning-65-medicare-guide">Turning 65 Guide</a></li><li><a href="/guides">All Guides</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li></ul></div>
-                <div class="footer-nav"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/book-consultation">Book a Call</a></li><li><a href="tel:+18508101000">(850) 810-1000</a></li></ul></div>
+                <div class="footer-nav"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/book-consultation">Book a Call</a></li></ul><a href="tel:+18508101000" class="footer-phone"><span class="footer-phone-icon" aria-hidden="true">&#128222;</span><span>(850) 810-1000</span></a></div>
             </div>
             <div class="footer-bottom"><p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p><div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a></div></div>
         </div>
