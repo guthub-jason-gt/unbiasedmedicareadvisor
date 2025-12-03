@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Unbiased Medicare Advisor - Fee-only Medicare consultant providing independent, commission-free guidance on Medicare Supplement and Medicare Advantage plans.">
-    <meta name="keywords" content="fee only medicare advisor, independent medicare advisor, medicare consultant, unbiased medicare advice, medicare supplement plans">
-    <title>Unbiased Medicare Advisor | Fee-Only Medicare Consultant</title>
+    <meta name="description" content="Arizona Medicare Supplement Plans explained. Compare Medigap options, costs, and find unbiased guidance from a fee-only Medicare advisor serving Arizona residents.">
+    <meta name="keywords" content="medicare supplement plans arizona, arizona medigap plans, medicare advisor arizona, arizona medicare help">
+    <title>Medicare Supplement Plans in Arizona | Unbiased Medicare Advisor</title>
 
     <!-- Open Graph / Social -->
-    <meta property="og:title" content="Unbiased Medicare Advisor | Fee-Only Medicare Consultant">
-    <meta property="og:description" content="Get independent, commission-free Medicare guidance. We're paid by you, not insurance companies.">
+    <meta property="og:title" content="Medicare Supplement Plans in Arizona | Unbiased Medicare Advisor">
+    <meta property="og:description" content="Compare Arizona Medigap plans with unbiased, fee-only guidance. No commissions, no sales pressure.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://unbiasedmedicareadvisor.com">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/states/arizona">
 
     <style>
         /* ============================================
@@ -400,13 +400,10 @@
             padding-bottom: var(--spacing-xxl);
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: var(--white);
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
         }
 
         .hero-content {
-            max-width: 700px;
+            max-width: 800px;
         }
 
         .hero-badge {
@@ -439,40 +436,54 @@
             gap: var(--spacing-sm);
         }
 
-        .hero-trust {
-            margin-top: var(--spacing-xl);
-            padding-top: var(--spacing-lg);
-            border-top: 1px solid rgba(255,255,255,0.2);
+        /* ============================================
+           BREADCRUMB
+           ============================================ */
+        .breadcrumb {
+            padding: var(--spacing-sm) 0;
+            background: var(--off-white);
+            border-bottom: 1px solid var(--light-gray);
         }
 
-        .hero-trust-text {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .hero-trust-items {
+        .breadcrumb-list {
             display: flex;
             flex-wrap: wrap;
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-sm);
+            list-style: none;
+            font-size: 0.9rem;
         }
 
-        .hero-trust-item {
+        .breadcrumb-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-weight: 500;
         }
 
-        .hero-trust-item svg {
-            color: var(--accent);
+        .breadcrumb-item:not(:last-child)::after {
+            content: '/';
+            margin: 0 0.5rem;
+            color: var(--medium-gray);
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-item a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--medium-gray);
         }
 
         /* ============================================
-           SERVICES SECTION
+           MAIN CONTENT
            ============================================ */
-        .services {
+        .content-section {
             padding: var(--spacing-xxl) 0;
+        }
+
+        .content-section:nth-child(even) {
             background: var(--off-white);
         }
 
@@ -503,265 +514,211 @@
             font-size: 1.1rem;
         }
 
-        .services-grid {
+        .content-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--spacing-lg);
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
         }
 
-        .service-card {
+        .main-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
+        .main-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .main-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+
+        .main-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+
+        .main-content ul,
+        .main-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+
+        .main-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           SIDEBAR
+           ============================================ */
+        .sidebar {
+            position: sticky;
+            top: calc(var(--header-height) + var(--spacing-md));
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .sidebar-card .btn {
+            width: 100%;
+        }
+
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .sidebar-cta h3 {
+            color: var(--white);
+        }
+
+        .sidebar-cta p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* ============================================
+           STATE STATS
+           ============================================ */
+        .state-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .stat-card {
             background: var(--white);
             padding: var(--spacing-lg);
             border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: var(--spacing-md);
-            color: var(--white);
-            font-size: 1.75rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: var(--spacing-xs);
-            color: var(--black);
-        }
-
-        .service-card p {
-            color: var(--medium-gray);
-            font-size: 0.95rem;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .service-link {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.95rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .service-link::after {
-            content: '\2192';
-            transition: transform 0.2s;
-        }
-
-        .service-card:hover .service-link::after {
-            transform: translateX(4px);
-        }
-
-        /* ============================================
-           WHY CHOOSE US SECTION
-           ============================================ */
-        .why-us {
-            padding: var(--spacing-xxl) 0;
-        }
-
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
-        }
-
-        .why-us-item {
             text-align: center;
-            padding: var(--spacing-md);
+            box-shadow: var(--shadow-sm);
         }
 
-        .why-us-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--off-white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--spacing-md);
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
             color: var(--primary);
-            font-size: 2rem;
-        }
-
-        .why-us-item h3 {
-            font-size: 1.1rem;
+            line-height: 1;
             margin-bottom: var(--spacing-xs);
-            color: var(--black);
         }
 
-        .why-us-item p {
-            color: var(--medium-gray);
+        .stat-label {
             font-size: 0.95rem;
+            color: var(--medium-gray);
         }
 
         /* ============================================
-           GUIDES SECTION
+           COMPARISON TABLE
            ============================================ */
-        .guides {
-            padding: var(--spacing-xxl) 0;
-            background: var(--off-white);
-        }
-
-        .guides-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
-        }
-
-        .guide-card {
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
             background: var(--white);
             border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
         }
 
-        .guide-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .guide-image {
-            height: 160px;
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 3rem;
-        }
-
-        .guide-content {
+        .comparison-table th,
+        .comparison-table td {
             padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
         }
 
-        .guide-label {
-            display: inline-block;
-            background: var(--off-white);
-            color: var(--primary);
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
             font-weight: 600;
-            margin-bottom: var(--spacing-xs);
         }
 
-        .guide-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: var(--spacing-xs);
-            color: var(--black);
+        .comparison-table tr:last-child td {
+            border-bottom: none;
         }
 
-        .guide-card p {
-            color: var(--medium-gray);
-            font-size: 0.9rem;
+        .comparison-table tr:hover {
+            background: var(--off-white);
         }
 
         /* ============================================
-           STATE SELECTOR SECTION
+           INFO BOX
            ============================================ */
-        .state-selector {
-            padding: var(--spacing-xxl) 0;
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .state-selector .section-header {
-            color: var(--white);
-        }
-
-        .state-selector .section-label {
-            color: var(--accent);
-        }
-
-        .state-selector .section-title {
-            color: var(--white);
-        }
-
-        .state-selector .section-subtitle {
-            color: rgba(255,255,255,0.85);
-        }
-
-        .state-select-wrapper {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .state-select {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            font-size: 1.1rem;
-            border: 2px solid rgba(255,255,255,0.3);
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
             border-radius: var(--radius-md);
-            background: var(--white);
-            color: var(--black);
-            cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231a5f7a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 1rem center;
-            background-size: 1.5rem;
+            margin: var(--spacing-lg) 0;
         }
 
-        .state-select:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .state-select-btn {
-            margin-top: var(--spacing-md);
-        }
-
-        .popular-states {
-            margin-top: var(--spacing-lg);
-        }
-
-        .popular-states-label {
-            font-size: 0.875rem;
-            opacity: 0.85;
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .popular-states-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: var(--spacing-xs);
-        }
-
-        .popular-state-link {
-            color: var(--white);
-            text-decoration: none;
-            padding: 0.375rem 0.75rem;
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 50px;
-            font-size: 0.875rem;
-            transition: all 0.2s;
-        }
-
-        .popular-state-link:hover {
-            background: var(--white);
+        .info-box h4 {
             color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* ============================================
+           FAQ SECTION
+           ============================================ */
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+            padding: var(--spacing-md) 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            color: var(--medium-gray);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
         }
 
         /* ============================================
@@ -770,6 +727,8 @@
         .cta {
             padding: var(--spacing-xxl) 0;
             text-align: center;
+            background: var(--primary);
+            color: var(--white);
         }
 
         .cta-content {
@@ -780,11 +739,11 @@
         .cta h2 {
             font-size: 2rem;
             margin-bottom: var(--spacing-sm);
-            color: var(--black);
+            color: var(--white);
         }
 
         .cta p {
-            color: var(--medium-gray);
+            color: rgba(255,255,255,0.9);
             font-size: 1.1rem;
             margin-bottom: var(--spacing-lg);
         }
@@ -929,17 +888,75 @@
             }
         }
 
-        @media (min-width: 1024px) {
-            .hero h1 {
-                font-size: 3.5rem;
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
             }
 
-            .hero-content {
-                max-width: 800px;
+            .sidebar {
+                position: static;
             }
         }
 
-        /* Back to Top Button */
+        @media (max-width: 767px) {
+            :root {
+                --font-size-base: 17px;
+            }
+
+            .hero {
+                padding-top: calc(var(--header-height) + var(--spacing-xl));
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: var(--spacing-sm);
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ============================================
+           BACK TO TOP BUTTON
+           ============================================ */
         .back-to-top {
             position: fixed;
             bottom: 2rem;
@@ -968,78 +985,16 @@
             background: var(--primary-dark);
             transform: translateY(-3px);
         }
-
-        @media (max-width: 767px) {
-            :root {
-                --font-size-base: 17px;
-            }
-
-            .hero {
-                padding-top: calc(var(--header-height) + var(--spacing-xl));
-                min-height: auto;
-            }
-
-            .hero h1 {
-                font-size: 2.25rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.15rem;
-            }
-
-            .section-title {
-                font-size: 1.85rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-            }
-
-            .hero-cta .btn {
-                width: 100%;
-                padding: 1rem 1.75rem;
-            }
-
-            .btn {
-                padding: 1rem 1.75rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .cta-buttons .btn {
-                width: 100%;
-            }
-
-            .mobile-nav-link {
-                padding: 1.25rem 0;
-                font-size: 1.15rem;
-            }
-
-            .mobile-dropdown-link {
-                padding: 0.75rem 0;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- ============================================
-         HEADER
-         ============================================ -->
+    <!-- Header -->
     <header class="header">
         <div class="header-container">
             <a href="/" class="logo">
                 <span class="logo-icon">M</span>
                 <span>Unbiased Medicare Advisor</span>
             </a>
-
-            <!-- Desktop Navigation -->
             <nav class="nav" aria-label="Main navigation">
                 <ul class="nav-list">
                     <li class="nav-item dropdown">
@@ -1073,30 +1028,16 @@
                             <a href="/states" class="dropdown-link">All 50 States</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a href="/about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/contact" class="nav-link">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="tel:+18508101000" class="nav-link">(850) 810-1000</a>
-                    </li>
-                    <li class="nav-item nav-cta">
-                        <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
-                    </li>
+                    <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="tel:+18508101000" class="nav-link">(850) 810-1000</a></li>
+                    <li class="nav-item nav-cta"><a href="/book-consultation" class="btn btn-primary">Book Free Call</a></li>
                 </ul>
             </nav>
-
-            <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
-
-        <!-- Mobile Navigation -->
         <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
             <ul class="mobile-nav-list">
                 <li class="mobile-nav-item mobile-dropdown">
@@ -1130,289 +1071,389 @@
                         <a href="/states" class="mobile-dropdown-link">All 50 States</a>
                     </div>
                 </li>
-                <li class="mobile-nav-item">
-                    <a href="/about" class="mobile-nav-link">About</a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="/contact" class="mobile-nav-link">Contact</a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="tel:+18508101000" class="mobile-nav-link">(850) 810-1000</a>
-                </li>
+                <li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">About</a></li>
+                <li class="mobile-nav-item"><a href="/contact" class="mobile-nav-link">Contact</a></li>
+                <li class="mobile-nav-item"><a href="tel:+18508101000" class="mobile-nav-link">(850) 810-1000</a></li>
             </ul>
-            <div class="mobile-nav-cta">
-                <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
-            </div>
+            <div class="mobile-nav-cta"><a href="/book-consultation" class="btn btn-primary">Book Free Call</a></div>
         </nav>
     </header>
 
-
-    <!-- ============================================
-         HERO SECTION
-         ============================================ -->
+    <!-- Hero -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-badge">Fee-Only Medicare Advisor</span>
-                <h1>Independent Medicare Guidance You Can Trust</h1>
+                <span class="hero-badge">Arizona Medicare Guide</span>
+                <h1>Medicare Supplement Plans in Arizona</h1>
                 <p class="hero-subtitle">
-                    We're paid by you, not insurance companies. Get unbiased advice on Medicare Supplement
-                    and Medicare Advantage plans without the sales pressure. Your best interest is our only interest.
+                    Compare Arizona Medigap plans with unbiased, fee-only guidance. As a top retirement destination,
+                    Arizona attracts millions of seniors who need to understand their Medicare options.
+                    Let us help you find the right coverage for the Grand Canyon State.
                 </p>
                 <div class="hero-cta">
-                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
-                    <a href="/guides/medigap-vs-medicare-advantage" class="btn btn-outline-white">Compare Your Options</a>
-                </div>
-                <div class="hero-trust">
-                    <p class="hero-trust-text">Why choose a fee-only advisor?</p>
-                    <div class="hero-trust-items">
-                        <span class="hero-trust-item">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            No commissions
-                        </span>
-                        <span class="hero-trust-item">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            No hidden incentives
-                        </span>
-                        <span class="hero-trust-item">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            100% on your side
-                        </span>
-                    </div>
+                    <a href="/book-consultation" class="btn btn-primary">Get Arizona-Specific Help</a>
+                    <a href="/guides/medigap-vs-medicare-advantage" class="btn btn-outline-white">Medigap vs Medicare Advantage</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================
-         SERVICES SECTION
-         ============================================ -->
-    <section class="services" id="services">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/states">States</a></li>
+                <li class="breadcrumb-item active">Arizona</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Stats Section -->
+    <section class="content-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Our Services</span>
-                <h2 class="section-title">How We Help You Navigate Medicare</h2>
-                <p class="section-subtitle">
-                    From understanding your options to enrolling in the right plan, we provide
-                    personalized guidance every step of the way.
-                </p>
+                <span class="section-label">Arizona Medicare by the Numbers</span>
+                <h2 class="section-title">Understanding Arizona's Medicare Landscape</h2>
             </div>
-            <div class="services-grid">
-                <a href="/services/medicare-consultant" class="service-card">
-                    <div class="service-icon">&#128101;</div>
-                    <h3>Medicare Consultation</h3>
-                    <p><strong>One-on-one guidance</strong> to understand your Medicare options, coverage needs, and budget considerations.</p>
-                    <span class="service-link">Learn more</span>
-                </a>
-                <a href="/services/medicare-plan-comparison" class="service-card">
-                    <div class="service-icon">&#9878;</div>
-                    <h3>Plan Comparison</h3>
-                    <p><strong>Side-by-side analysis</strong> of Medicare Supplement (Medigap) and Medicare Advantage plans available in your area.</p>
-                    <span class="service-link">Learn more</span>
-                </a>
-                <a href="/services/enrollment-assistance" class="service-card">
-                    <div class="service-icon">&#128203;</div>
-                    <h3>Enrollment Assistance</h3>
-                    <p><strong>Step-by-step help</strong> through the enrollment process, ensuring you meet deadlines and avoid penalties.</p>
-                    <span class="service-link">Learn more</span>
-                </a>
-                <a href="/services/fee-only-medicare-advisor" class="service-card">
-                    <div class="service-icon">&#128176;</div>
-                    <h3>Fee-Only Advice</h3>
-                    <p><strong>Transparent, flat-fee consultations</strong> with no commissions or kickbacks from insurance companies.</p>
-                    <span class="service-link">Learn more</span>
-                </a>
+            <div class="state-stats">
+                <div class="stat-card">
+                    <div class="stat-number">1.3M+</div>
+                    <div class="stat-label">Arizona Medicare Beneficiaries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Insurance Companies Offering Medigap</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Standardized Medigap Plan Letters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6 Mo</div>
+                    <div class="stat-label">Open Enrollment Period</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================
-         WHY CHOOSE US SECTION
-         ============================================ -->
-    <section class="why-us">
+    <!-- Main Content -->
+    <section class="content-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Why Choose Us</span>
-                <h2 class="section-title">The Unbiased Difference</h2>
-                <p class="section-subtitle">
-                    Most Medicare advisors are paid by insurance companies. We're different.
-                </p>
-            </div>
-            <div class="why-us-grid">
-                <div class="why-us-item">
-                    <div class="why-us-icon">&#128274;</div>
-                    <h3>No Hidden Agenda</h3>
-                    <p><strong>We don't sell insurance policies</strong> or earn commissions. Our only goal is finding what's best for you.</p>
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>Arizona Medicare Supplement Plans: What You Need to Know</h2>
+                    <p>
+                        Arizona is one of the fastest-growing states for retirees, with communities like
+                        Sun City, Scottsdale, and Tucson attracting seniors from across the country. With
+                        over 1.3 million Medicare beneficiaries, understanding your Medicare Supplement
+                        options is essential for protecting your health and finances.
+                    </p>
+                    <p>
+                        Like all states, Arizona requires that <strong>Medigap plans be standardized by letter</strong>
+                        (A, B, C, D, F, G, K, L, M, N). This means a Plan G from one company covers exactly
+                        the same benefits as a Plan G from another company. The only differences are the
+                        premium and the company's service quality.
+                    </p>
+
+                    <h3>Arizona's Medigap Open Enrollment Period</h3>
+                    <p>
+                        Your Medigap Open Enrollment Period in Arizona begins on the first day of the month
+                        you turn 65 <strong>and</strong> are enrolled in Medicare Part B. This 6-month window
+                        is your best opportunity to get coverage because:
+                    </p>
+                    <ul>
+                        <li>Insurance companies <strong>cannot deny you coverage</strong> for any reason</li>
+                        <li>They <strong>cannot charge you more</strong> due to pre-existing health conditions</li>
+                        <li>You have <strong>guaranteed issue rights</strong> to any Medigap plan sold in Arizona</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Arizona's Continuous Open Enrollment</h4>
+                        <p>
+                            Unlike most states, Arizona provides limited continuous open enrollment protections.
+                            If you're already enrolled in a Medigap plan, Arizona law allows you to switch to
+                            another Medigap plan from the same insurer without medical underwriting. However,
+                            switching to a different company may require underwriting outside of your initial
+                            open enrollment. This makes your initial choice even more important.
+                        </p>
+                    </div>
+
+                    <h2>Most Popular Medigap Plans in Arizona</h2>
+                    <p>
+                        While 10 standardized Medigap plans are available in Arizona, the most common choices are:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Plan</th>
+                                <th>Coverage Level</th>
+                                <th>Best For</th>
+                                <th>AZ Monthly Premium*</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Plan G</strong></td>
+                                <td>Comprehensive</td>
+                                <td>Most new enrollees (best value)</td>
+                                <td>$110 - $220</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan N</strong></td>
+                                <td>High with copays</td>
+                                <td>Those wanting lower premiums</td>
+                                <td>$85 - $165</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan F</strong></td>
+                                <td>Most comprehensive</td>
+                                <td>Those eligible before 2020</td>
+                                <td>$140 - $280</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size: 0.9rem; color: var(--medium-gray);">
+                        *Premium ranges are estimates and vary by age, location within Arizona, gender, and tobacco use.
+                        Contact us for personalized quotes.
+                    </p>
+
+                    <h3>Plan G vs Plan N in Arizona</h3>
+                    <p>
+                        For most Arizona residents new to Medicare, the choice comes down to <strong>Plan G</strong>
+                        or <strong>Plan N</strong>:
+                    </p>
+                    <ul>
+                        <li><strong>Plan G</strong> covers everything except the Part B deductible ($240 in 2024).
+                            No copays, no surprises. Ideal if you want predictable costs and visit doctors frequently.</li>
+                        <li><strong>Plan N</strong> has lower premiums but requires up to $20 copays for office visits
+                            and up to $50 for ER visits (waived if admitted). Good choice if you're healthy and want
+                            to save on monthly costs.</li>
+                    </ul>
+
+                    <h2>Arizona Medicare Supplement vs Medicare Advantage</h2>
+                    <p>
+                        Arizona has a very competitive Medicare Advantage market, especially in the Phoenix metro area.
+                        But these are fundamentally different products:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Medigap (Supplement)</th>
+                                <th>Medicare Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monthly Premium</td>
+                                <td>$85 - $280+</td>
+                                <td>$0 - $50 (some higher)</td>
+                            </tr>
+                            <tr>
+                                <td>Out-of-Pocket Maximum</td>
+                                <td>Very low (predictable)</td>
+                                <td>Up to $8,850/year</td>
+                            </tr>
+                            <tr>
+                                <td>Doctor Network</td>
+                                <td>Any doctor accepting Medicare</td>
+                                <td>Network restrictions</td>
+                            </tr>
+                            <tr>
+                                <td>Referrals Needed</td>
+                                <td>No</td>
+                                <td>Often yes (HMO plans)</td>
+                            </tr>
+                            <tr>
+                                <td>Prescription Drug Coverage</td>
+                                <td>Separate Part D plan needed</td>
+                                <td>Usually included</td>
+                            </tr>
+                            <tr>
+                                <td>Travel Coverage</td>
+                                <td>Nationwide (any Medicare doctor)</td>
+                                <td>Limited outside network</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        <a href="/guides/medigap-vs-medicare-advantage">Read our complete Medigap vs Medicare Advantage guide</a>
+                        to understand which option might be better for your situation.
+                    </p>
+
+                    <h2>Arizona-Specific Medicare Considerations</h2>
+
+                    <h3>Snowbirds: Splitting Time Between States</h3>
+                    <p>
+                        Many Arizona residents are "snowbirds" who spend part of the year in other states.
+                        If you split your time between Arizona and another state, <strong>Medigap is often
+                        the better choice</strong> because it works with any doctor who accepts Medicare,
+                        anywhere in the country. Medicare Advantage plans typically have network restrictions
+                        that can complicate care when you're away from Arizona.
+                    </p>
+
+                    <h3>Arizona's Healthcare Landscape</h3>
+                    <p>
+                        Arizona has excellent healthcare facilities, including the Mayo Clinic in Phoenix,
+                        Banner Health system, and numerous specialized facilities. With a Medigap plan, you
+                        have unrestricted access to any of these providers. Medicare Advantage plans may
+                        limit which facilities are in-network.
+                    </p>
+
+                    <h3>Rural Arizona Coverage</h3>
+                    <p>
+                        If you live in rural areas like Flagstaff, Yuma, or smaller communities, Medigap
+                        can be especially valuable. Medicare Advantage networks are typically concentrated
+                        in Phoenix and Tucson metro areas, which can leave rural residents with fewer
+                        in-network options.
+                    </p>
+
+                    <h3>Arizona SHIP Program</h3>
+                    <p>
+                        Arizona offers free Medicare counseling through the <strong>State Health Insurance
+                        Assistance Program (SHIP)</strong>. While SHIP counselors can provide general Medicare
+                        education, they cannot recommend specific plans or companies. A fee-only Medicare
+                        advisor can provide personalized recommendations based on your specific situation.
+                    </p>
+
+                    <h2>Frequently Asked Questions: Arizona Medicare</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            When is the best time to enroll in a Medigap plan in Arizona?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                The best time is during your 6-month Medigap Open Enrollment Period, which starts
+                                the month you turn 65 and are enrolled in Part B. During this time, you have
+                                guaranteed issue rights and cannot be denied coverage or charged more due to
+                                health conditions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            How much does Medigap cost in Arizona?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Medigap premiums in Arizona typically range from $85-$280+ per month depending on
+                                the plan letter, your age, location within Arizona (Phoenix metro is often higher
+                                than rural areas), gender, and tobacco use. Arizona premiums are generally moderate
+                                compared to coastal states.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Can I use my Arizona Medigap plan when I'm traveling?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Yes! One of the biggest advantages of Medigap is that it works nationwide. Whether
+                                you're visiting family in another state or spending the summer elsewhere, your
+                                Medigap plan covers you with any doctor or hospital that accepts Medicare.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Is Plan F still available in Arizona?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Plan F is only available to those who became eligible for Medicare <strong>before</strong>
+                                January 1, 2020. If you turned 65 before that date, you can still enroll in Plan F.
+                                However, Plan G offers nearly identical coverage and often has lower premiums.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Do I need a separate Part D plan with Medigap in Arizona?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. Medigap plans do not include prescription drug coverage. You'll need to enroll
+                                in a standalone Medicare Part D plan separately. We can help you compare Part D
+                                options based on your specific medications and the pharmacies available in your area.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="why-us-item">
-                    <div class="why-us-icon">&#128200;</div>
-                    <h3>All Options Considered</h3>
-                    <p><strong>We compare every plan type:</strong> Medigap, Medicare Advantage, Part D, and more &mdash; not just ones that pay us.</p>
-                </div>
-                <div class="why-us-item">
-                    <div class="why-us-icon">&#128483;</div>
-                    <h3>Plain English</h3>
-                    <p>Medicare is confusing. <strong>We explain your options in simple terms</strong> so you can make confident decisions.</p>
-                </div>
-                <div class="why-us-item">
-                    <div class="why-us-icon">&#127919;</div>
-                    <h3>Personalized Guidance</h3>
-                    <p>Your health needs, budget, and preferences are unique. <strong>We tailor our recommendations to you.</strong></p>
-                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Get Personalized Arizona Medicare Help</h3>
+                        <p>
+                            Compare plans, understand your options, and make confident decisions with unbiased,
+                            fee-only guidance.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medigap-vs-medicare-advantage" style="color: var(--primary); text-decoration: none;">
+                                    Medigap vs Medicare Advantage
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/turning-65-medicare-guide" style="color: var(--primary); text-decoration: none;">
+                                    Turning 65? Start Here
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-parts-explained" style="color: var(--primary); text-decoration: none;">
+                                    Medicare Parts Explained
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>
 
-    <!-- ============================================
-         GUIDES SECTION
-         ============================================ -->
-    <section class="guides" id="guides">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Free Resources</span>
-                <h2 class="section-title">Medicare Guides &amp; Education</h2>
-                <p class="section-subtitle">
-                    Learn at your own pace with our comprehensive, easy-to-understand guides.
-                </p>
-            </div>
-            <div class="guides-grid">
-                <a href="/guides/medigap-vs-medicare-advantage" class="guide-card">
-                    <div class="guide-image">&#9878;</div>
-                    <div class="guide-content">
-                        <span class="guide-label">Most Popular</span>
-                        <h3>Medigap vs Medicare Advantage</h3>
-                        <p>The complete comparison guide to help you choose the right coverage type.</p>
-                    </div>
-                </a>
-                <a href="/guides/turning-65-medicare-guide" class="guide-card">
-                    <div class="guide-image">&#127874;</div>
-                    <div class="guide-content">
-                        <span class="guide-label">Getting Started</span>
-                        <h3>Turning 65? Start Here</h3>
-                        <p>Everything you need to know about enrolling in Medicare for the first time.</p>
-                    </div>
-                </a>
-                <a href="/guides/medicare-parts-explained" class="guide-card">
-                    <div class="guide-image">&#128218;</div>
-                    <div class="guide-content">
-                        <span class="guide-label">Basics</span>
-                        <h3>Medicare Parts A, B, C &amp; D</h3>
-                        <p>Understanding what each part of Medicare covers and what it costs.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         STATE SELECTOR SECTION
-         ============================================ -->
-    <section class="state-selector" id="states">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">State-Specific Help</span>
-                <h2 class="section-title">Medicare Help for Your State</h2>
-                <p class="section-subtitle">
-                    Medicare Supplement plans and rates vary by state. Find information specific to where you live.
-                </p>
-            </div>
-            <div class="state-select-wrapper">
-                <select class="state-select" id="stateSelect" aria-label="Select your state">
-                    <option value="">Select your state...</option>
-                    <option value="alabama">Alabama</option>
-                    <option value="alaska">Alaska</option>
-                    <option value="arizona">Arizona</option>
-                    <option value="arkansas">Arkansas</option>
-                    <option value="california">California</option>
-                    <option value="colorado">Colorado</option>
-                    <option value="connecticut">Connecticut</option>
-                    <option value="delaware">Delaware</option>
-                    <option value="florida">Florida</option>
-                    <option value="georgia">Georgia</option>
-                    <option value="hawaii">Hawaii</option>
-                    <option value="idaho">Idaho</option>
-                    <option value="illinois">Illinois</option>
-                    <option value="indiana">Indiana</option>
-                    <option value="iowa">Iowa</option>
-                    <option value="kansas">Kansas</option>
-                    <option value="kentucky">Kentucky</option>
-                    <option value="louisiana">Louisiana</option>
-                    <option value="maine">Maine</option>
-                    <option value="maryland">Maryland</option>
-                    <option value="massachusetts">Massachusetts</option>
-                    <option value="michigan">Michigan</option>
-                    <option value="minnesota">Minnesota</option>
-                    <option value="mississippi">Mississippi</option>
-                    <option value="missouri">Missouri</option>
-                    <option value="montana">Montana</option>
-                    <option value="nebraska">Nebraska</option>
-                    <option value="nevada">Nevada</option>
-                    <option value="new-hampshire">New Hampshire</option>
-                    <option value="new-jersey">New Jersey</option>
-                    <option value="new-mexico">New Mexico</option>
-                    <option value="new-york">New York</option>
-                    <option value="north-carolina">North Carolina</option>
-                    <option value="north-dakota">North Dakota</option>
-                    <option value="ohio">Ohio</option>
-                    <option value="oklahoma">Oklahoma</option>
-                    <option value="oregon">Oregon</option>
-                    <option value="pennsylvania">Pennsylvania</option>
-                    <option value="rhode-island">Rhode Island</option>
-                    <option value="south-carolina">South Carolina</option>
-                    <option value="south-dakota">South Dakota</option>
-                    <option value="tennessee">Tennessee</option>
-                    <option value="texas">Texas</option>
-                    <option value="utah">Utah</option>
-                    <option value="vermont">Vermont</option>
-                    <option value="virginia">Virginia</option>
-                    <option value="washington">Washington</option>
-                    <option value="west-virginia">West Virginia</option>
-                    <option value="wisconsin">Wisconsin</option>
-                    <option value="wyoming">Wyoming</option>
-                </select>
-                <button class="btn btn-primary state-select-btn" onclick="goToState()">View State Guide</button>
-                <div class="popular-states">
-                    <p class="popular-states-label">Popular states:</p>
-                    <div class="popular-states-list">
-                        <a href="/states/florida" class="popular-state-link">Florida</a>
-                        <a href="/states/ohio" class="popular-state-link">Ohio</a>
-                        <a href="/states/arizona" class="popular-state-link">Arizona</a>
-                        <a href="/states/california" class="popular-state-link">California</a>
-                        <a href="/states/texas" class="popular-state-link">Texas</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         CTA SECTION
-         ============================================ -->
+    <!-- CTA -->
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Still Have Questions?</h2>
+                <h2>Ready to Compare Arizona Medicare Plans?</h2>
                 <p>
-                    Medicare decisions are important. Schedule a free consultation and get personalized,
-                    unbiased answers to your specific questions.
+                    Don't navigate Arizona's Medicare options alone. Schedule a free consultation
+                    and get personalized, unbiased guidance on the best Medigap or Medicare Advantage
+                    options for your situation.
                 </p>
                 <div class="cta-buttons">
                     <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
-                    <a href="/contact" class="btn btn-secondary">Send Us a Message</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================
-         FOOTER
-         ============================================ -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -1467,35 +1508,24 @@
         </div>
     </footer>
 
-
-    <!-- ============================================
-         JAVASCRIPT
-         ============================================ -->
     <script>
-        // Mobile menu toggle
         function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            mobileNav.classList.toggle('active');
+            document.getElementById('mobileNav').classList.toggle('active');
         }
-
-        // Mobile dropdown toggle
         function toggleMobileDropdown(event) {
             event.preventDefault();
-            const parent = event.target.closest('.mobile-dropdown');
-            parent.classList.toggle('active');
+            event.target.closest('.mobile-dropdown').classList.toggle('active');
         }
-
-        // Close mobile menu when clicking outside
+        function toggleFaq(element) {
+            element.closest('.faq-item').classList.toggle('active');
+        }
         document.addEventListener('click', function(event) {
             const mobileNav = document.getElementById('mobileNav');
             const menuBtn = document.querySelector('.mobile-menu-btn');
-
             if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
                 mobileNav.classList.remove('active');
             }
         });
-
-        // Back to top button
         const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', function() {
             if (window.scrollY > 400) {
@@ -1504,15 +1534,12 @@
                 backToTop.classList.remove('visible');
             }
         });
-
         if (backToTop) {
             backToTop.addEventListener('click', function() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
     </script>
-
     <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
-
 </body>
 </html>
