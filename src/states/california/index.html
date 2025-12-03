@@ -458,9 +458,14 @@
         }
 
         .breadcrumb-item:not(:last-child)::after {
-            content: '/';
+            content: '→';
             margin: 0 0.5rem;
             color: var(--medium-gray);
+        }
+
+        .breadcrumb-label {
+            color: var(--medium-gray);
+            margin-right: 0.5rem;
         }
 
         .breadcrumb-item a {
@@ -1020,6 +1025,7 @@
          ============================================ -->
     <nav class="breadcrumb" aria-label="Breadcrumb">
         <div class="container">
+            <span class="breadcrumb-label">You are here:</span>
             <ol class="breadcrumb-list">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item"><a href="/states">States</a></li>
