@@ -12,96 +12,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://unbiasedmedicareadvisor.com/services/fee-only-medicare-advisor">
 
+    <!-- Page-specific styles -->
     <style>
-        :root {
-            --primary: #1e3a5f;
-            --primary-dark: #0f1f33;
-            --primary-light: #2d5a8a;
-            --accent: #ff6b35;
-            --accent-dark: #e55a2b;
-            --accent-light: #ff8559;
-            --secondary: #4a90d9;
-            --white: #ffffff;
-            --off-white: #f8f9fa;
-            --light-gray: #e9ecef;
-            --medium-gray: #444444;
-            --dark-gray: #343a40;
-            --black: #1a1a1a;
-            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            --font-size-base: 19px;
-            --line-height: 1.75;
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 1.5rem;
-            --spacing-lg: 2.5rem;
-            --spacing-xl: 4rem;
-            --spacing-xxl: 5.5rem;
-            --max-width: 1200px;
-            --header-height: 80px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
-            --radius-md: 8px;
-            --radius-lg: 12px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
-        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
-        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
-
-        .btn { display: inline-block; padding: 0.875rem 1.75rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s ease; border: none; text-align: center; }
-        .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35); padding: 1rem 2rem; font-size: 1.1rem; }
-        .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45); }
-        .btn-white { background: var(--white); color: var(--primary); }
-        .btn-white:hover { background: var(--off-white); transform: translateY(-2px); }
-        .btn-outline-white { background: transparent; color: var(--white); border: 2px solid var(--white); }
-        .btn-outline-white:hover { background: var(--white); color: var(--primary); }
-
-        .header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-height); background: var(--white); box-shadow: var(--shadow-sm); z-index: 1000; }
-        .header-container { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
-        .logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 1.25rem; }
-        .logo-icon { width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; color: var(--white); font-size: 1.25rem; }
-
-        .nav { display: none; }
-        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
-        .nav-item { position: relative; }
-        .nav-link { display: block; padding: 0.5rem 1rem; color: var(--dark-gray); text-decoration: none; font-weight: 500; transition: color 0.2s; }
-        .nav-link:hover { color: var(--primary); }
-        .dropdown { position: relative; }
-        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
-        .dropdown-toggle::after { content: ''; border: solid var(--dark-gray); border-width: 0 2px 2px 0; display: inline-block; padding: 3px; transform: rotate(45deg); margin-top: -3px; }
-        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
-        .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; padding: 0.5rem 0; z-index: 100; }
-        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown-link { display: block; padding: 0.75rem 1.25rem; color: var(--dark-gray); text-decoration: none; border-bottom: 1px solid var(--light-gray); }
-        .dropdown-link:last-child { border-bottom: none; }
-        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
-        .nav-cta { margin-left: var(--spacing-sm); }
-        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
-
-        .mobile-menu-btn { display: flex; flex-direction: column; justify-content: space-around; width: 30px; height: 24px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 1001; }
-        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
-        .mobile-nav { position: fixed; top: var(--header-height); left: 0; right: 0; bottom: 0; background: var(--white); padding: var(--spacing-md); transform: translateX(100%); transition: transform 0.3s ease; overflow-y: auto; z-index: 999; }
-        .mobile-nav.active { transform: translateX(0); }
-        .mobile-nav-list { list-style: none; }
-        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
-        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
-        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
-        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
-        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
-        .mobile-nav-cta { margin-top: var(--spacing-lg); }
-        .mobile-nav-cta .btn { display: block; width: 100%; }
-
-        .page-header { padding-top: calc(var(--header-height) + var(--spacing-xxl)); padding-bottom: var(--spacing-xl); background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); }
-        .page-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: var(--spacing-sm); }
-        .page-header p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; }
-
-        .main-content { padding: var(--spacing-xxl) 0; }
-        .service-intro { max-width: 800px; margin: 0 auto var(--spacing-xxl); }
-        .service-intro h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-md); }
-        .service-intro p { color: var(--dark-gray); margin-bottom: var(--spacing-md); font-size: 1.05rem; }
-
         .comparison-section { background: var(--off-white); padding: var(--spacing-xxl) 0; }
         .comparison-section h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
         .comparison-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); max-width: 900px; margin: 0 auto; }
@@ -115,14 +27,6 @@
         .comparison-list.pros li::before { content: '✓'; color: #28a745; font-weight: bold; }
         .comparison-list.cons li::before { content: '✗'; color: #dc3545; font-weight: bold; }
 
-        .benefits-section { padding: var(--spacing-xxl) 0; }
-        .benefits-section h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
-        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg); }
-        .benefit-card { text-align: center; padding: var(--spacing-lg); }
-        .benefit-icon { width: 70px; height: 70px; background: var(--off-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); color: var(--primary); font-size: 2rem; }
-        .benefit-card h3 { font-size: 1.1rem; color: var(--black); margin-bottom: var(--spacing-xs); }
-        .benefit-card p { color: var(--medium-gray); font-size: 0.95rem; }
-
         .pricing-section { background: var(--off-white); padding: var(--spacing-xxl) 0; }
         .pricing-section h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-sm); text-align: center; }
         .pricing-section > .container > p { text-align: center; color: var(--medium-gray); margin-bottom: var(--spacing-xl); max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -132,60 +36,16 @@
         .pricing-box .btn { margin-bottom: var(--spacing-sm); }
         .pricing-note { font-size: 0.875rem; color: var(--medium-gray); }
 
-        .cta-section { background: var(--primary); color: var(--white); padding: var(--spacing-xxl) 0; text-align: center; }
-        .cta-section h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); }
-        .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
-        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
-
-        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
-        .footer-brand { max-width: 300px; }
-        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
-        .footer-logo .logo-icon { background: var(--primary-light); }
-        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
-        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
-        .footer-nav ul { list-style: none; }
-        .footer-nav li { margin-bottom: var(--spacing-xs); }
-        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; }
-        .footer-nav a:hover { color: var(--white); }
-        .footer-bottom { padding-top: var(--spacing-lg); border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--spacing-sm); font-size: 0.875rem; color: rgba(255,255,255,0.6); }
-        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
-        .footer-bottom a:hover { color: var(--white); }
-        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
-        .footer-phone:hover { color: var(--accent); }
-        .footer-phone-icon { font-size: 1.5rem; filter: brightness(0) invert(1); }
-
         @media (min-width: 768px) {
-            .nav { display: block; }
-            .mobile-menu-btn { display: none; }
-            .page-header h1 { font-size: 3rem; }
             .comparison-grid { grid-template-columns: 1fr 1fr; }
         }
-        @media (max-width: 767px) {
-            :root { --font-size-base: 17px; }
-            .page-header h1 { font-size: 2.25rem; }
-            .btn { padding: 1rem 1.75rem; }
-            .cta-buttons { flex-direction: column; }
-            .cta-buttons .btn { width: 100%; }
-            .mobile-nav-link { padding: 1.25rem 0; font-size: 1.15rem; }
-            .mobile-dropdown-link { padding: 0.75rem 0; }
-            .footer-bottom { flex-direction: column; text-align: center; }
-        }
-
-        .back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; background: var(--primary); color: var(--white); border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 999; }
-        .back-to-top.visible { opacity: 1; visibility: visible; }
-        .back-to-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
-
-        /* Top Bar Styles */
-        .top-bar { background: #1a365d; color: white; padding: 8px 20px; }
-        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
-        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
-        .top-bar-phone:hover { color: #90cdf4; }
-        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
     </style>
 </head>
 <body>
-    <!-- Top Bar & Header Position Fixes -->
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Top Bar & Header Position Fixes (must come after external CSS to override) -->
     <style>
         .top-bar {
             position: fixed !important;

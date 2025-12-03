@@ -1,5 +1,81 @@
 # Unbiased Medicare Advisor - Project Notes
 
+## CURRENT PROJECT: Extract CSS to External File
+
+### Why
+- Each page has 200+ lines of duplicated CSS
+- External CSS file = browser caching, faster loads, easier updates
+- No rebuild needed for CSS changes
+
+### Chunk Breakdown
+
+**Chunk 1: Extract CSS and create external file** - STATUS: COMPLETE
+- Command: `"Extract shared CSS from source files into /css/styles.css"`
+- Tasks:
+  - Read src/index.html to get full shared CSS - DONE
+  - Create `/css/styles.css` with shared styles - DONE (900+ lines)
+  - Update this file with progress - DONE
+- **File created:** `/css/styles.css`
+- **Includes:** CSS variables, reset, buttons, header/nav, mobile nav, page headers, hero, services, guides, state selector, CTA, footer, top bar, back-to-top button, responsive styles
+
+**Chunk 2: Update header partial to link CSS** - STATUS: COMPLETE
+- Command: `"Add CSS link to header partial"`
+- Tasks:
+  - ✅ Add `<link rel="stylesheet" href="/css/styles.css">` to `/partials/header.html`
+  - ✅ Ran `node build.js` - all 20 pages now include CSS link
+  - ✅ Update this file with progress
+
+**Chunk 3: Remove inline styles (batch 1 - 10 pages)** - STATUS: COMPLETE
+- Command: `"Remove inline shared CSS from batch 1 pages (see CLAUDE.md for list)"`
+- Pages updated:
+  - ✅ src/index.html - removed all inline CSS (no page-specific styles)
+  - ✅ src/about/index.html - kept page-specific styles (~90 lines)
+  - ✅ src/contact/index.html - kept page-specific styles (~110 lines)
+  - ✅ src/faq/index.html - kept accordion styles (~90 lines)
+  - ✅ src/book-consultation/index.html - kept booking styles (~130 lines)
+  - ✅ src/privacy-policy/index.html - kept legal content styles (~45 lines)
+  - ⏭️ src/guides/index.html - does not exist (skipped)
+  - ✅ src/guides/medigap-vs-medicare-advantage/index.html - kept guide styles (~90 lines)
+  - ✅ src/guides/turning-65-medicare-guide/index.html - kept guide styles (~90 lines)
+  - ✅ src/guides/medicare-parts-explained/index.html - kept guide styles (~100 lines)
+- ✅ Ran `node build.js` - all 20 pages built successfully
+
+**Chunk 4: Remove inline styles (batch 2 - remaining pages)** - STATUS: IN PROGRESS
+- Command: `"Remove inline shared CSS from batch 2 pages, run build, verify"`
+- Pages to update (11 total):
+  - ✅ src/services/medicare-consultant/index.html - DONE
+  - ✅ src/services/fee-only-medicare-advisor/index.html - DONE
+  - ✅ src/services/independent-medicare-advisor/index.html - DONE
+  - ✅ src/services/medicare-plan-comparison/index.html - DONE
+  - ✅ src/services/enrollment-assistance/index.html - DONE
+  - ✅ src/states/index.html - DONE
+  - ✅ src/states/florida/index.html - DONE (restored and fixed)
+  - ✅ src/states/texas/index.html - DONE (December 3, 2025)
+  - [ ] src/states/california/index.html
+  - [ ] src/states/ohio/index.html
+  - [ ] src/states/arizona/index.html
+
+### REMAINING: 3 State Pages (California, Ohio, Arizona)
+Split into mini-chunks due to token limits. Prompts saved in `/Users/jasonbaar/Desktop/claudefolder/Prompts/`:
+- Chunk4a-Texas.txt
+- Chunk4b-California.txt
+- Chunk4c-Ohio.txt
+- Chunk4d-Arizona.txt (includes verification + commit/push)
+
+**Use Florida as template** - see src/states/florida/index.html lines 16-50 for correct page-specific styles
+
+- Keep page-specific styles inline (like service cards, state-specific styling)
+- Run `node build.js`
+- Test that pages load correctly
+- Update this file to mark COMPLETE
+
+---
+
+## Prompts Location
+When creating prompts for the user, save them to: `/Users/jasonbaar/Desktop/claudefolder/prompts/`
+
+---
+
 ## Phone Number Format
 **Always display as: (850) 810-1000** (with parentheses around area code)
 
@@ -16,8 +92,8 @@
 
 ### Current Partial Usage:
 - `{{HEADER}}` - **All 20 pages** use this partial
-- `{{FOOTER}}` - **13 pages** use this partial (7 have hardcoded footers)
-- `{{SCRIPTS}}` - **13 pages** use this partial (7 have hardcoded scripts)
+- `{{FOOTER}}` - **All 20 pages** use this partial
+- `{{SCRIPTS}}` - **All 20 pages** use this partial
 
 ### To Make Site-Wide Changes:
 1. Edit the appropriate partial in `/partials/`
@@ -26,26 +102,41 @@
 4. `git add . && git commit -m "message" && git push`
 5. Vercel auto-deploys (takes ~30 seconds)
 
-## TODO: Convert Footer & Scripts to Partials
+## Creating New Pages
 
-### Problem
-7 src files still have hardcoded footers and scripts instead of using `{{FOOTER}}` and `{{SCRIPTS}}`:
-- src/about/index.html
-- src/contact/index.html
-- src/faq/index.html
-- src/book-consultation/index.html
-- src/states/index.html
-- src/states/ohio/index.html
-- src/states/arizona/index.html
+**IMPORTANT:** When creating any new HTML page, ALWAYS use this template structure:
 
-This means footer/script changes require editing these 7 files manually.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title | Unbiased Medicare Advisor</title>
+    <meta name="description" content="Page description here">
+    <!-- page-specific styles if needed -->
+</head>
+<body>
+    {{HEADER}}
 
-### Solution
-Convert these 7 files to use `{{FOOTER}}` and `{{SCRIPTS}}` placeholders. After conversion:
-- All 20 pages will use all 3 partials
-- Any site-wide change only requires editing one file
+    <!-- Page content here -->
 
-### Status: IN PROGRESS
+    {{FOOTER}}
+
+    {{SCRIPTS}}
+</body>
+</html>
+```
+
+- Create new pages in `/src/` directory
+- Always include all 3 partials: `{{HEADER}}`, `{{FOOTER}}`, `{{SCRIPTS}}`
+- Run `node build.js` after creating the page
+- Never create pages directly in the root folder
+
+## Footer & Scripts Partials Conversion - COMPLETED
+
+All 20 pages now use all 3 partials (`{{HEADER}}`, `{{FOOTER}}`, `{{SCRIPTS}}`).
+Any site-wide change only requires editing one partial file.
 
 ## File Structure
 ```
