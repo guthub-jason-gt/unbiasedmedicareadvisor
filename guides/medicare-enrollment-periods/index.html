@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete guide to Medicare enrollment periods. Learn about the Initial Enrollment Period, General Enrollment, Special Enrollment Periods, Open Enrollment, and Medigap windows.">
+    <meta name="keywords" content="medicare enrollment periods, medicare initial enrollment period, medicare open enrollment, medicare special enrollment period, when to enroll in medicare">
+    <title>Medicare Enrollment Periods: Complete Guide to Every Enrollment Window | Unbiased Medicare Advisor</title>
+
+    <meta property="og:title" content="Medicare Enrollment Periods: Every Enrollment Window Explained">
+    <meta property="og:description" content="Don't miss your Medicare enrollment window. Learn about all the enrollment periods and when you can sign up or make changes.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/guides/medicare-enrollment-periods">
+
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --content-width: 800px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+        .content-container { max-width: var(--content-width); margin: 0 auto; }
+
+        .btn { display: inline-block; padding: 0.875rem 1.75rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s ease; border: none; text-align: center; }
+        .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35); padding: 1rem 2rem; font-size: 1.1rem; }
+        .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45); }
+        .btn-white { background: var(--white); color: var(--primary); }
+        .btn-white:hover { background: var(--off-white); transform: translateY(-2px); }
+        .btn-outline-white { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-outline-white:hover { background: var(--white); color: var(--primary); }
+
+        .header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-height); background: var(--white); box-shadow: var(--shadow-sm); z-index: 1000; }
+        .header-container { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+        .logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 1.25rem; }
+        .logo-icon { width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; color: var(--white); font-size: 1.25rem; }
+
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link { display: block; padding: 0.5rem 1rem; color: var(--dark-gray); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after { content: ''; border: solid var(--dark-gray); border-width: 0 2px 2px 0; display: inline-block; padding: 3px; transform: rotate(45deg); margin-top: -3px; transition: transform 0.2s; }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; padding: 0.5rem 0; z-index: 100; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link { display: block; padding: 0.75rem 1.25rem; color: var(--dark-gray); text-decoration: none; transition: all 0.2s; border-bottom: 1px solid var(--light-gray); }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+
+        .mobile-menu-btn { display: flex; flex-direction: column; justify-content: space-around; width: 30px; height: 24px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 1001; }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav { position: fixed; top: var(--header-height); left: 0; right: 0; bottom: 0; background: var(--white); padding: var(--spacing-md); transform: translateX(100%); transition: transform 0.3s ease; overflow-y: auto; z-index: 999; }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        .guide-header { padding-top: calc(var(--header-height) + var(--spacing-xxl)); padding-bottom: var(--spacing-xl); background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); }
+        .guide-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: var(--spacing-sm); }
+        .guide-header .subtitle { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin-bottom: var(--spacing-md); }
+        .guide-meta { font-size: 0.9rem; opacity: 0.8; }
+
+        .guide-content { padding: var(--spacing-xxl) 0; }
+        .guide-content h2 { font-size: 1.75rem; color: var(--primary); margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md); padding-top: var(--spacing-md); border-top: 2px solid var(--light-gray); }
+        .guide-content h2:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+        .guide-content h3 { font-size: 1.3rem; color: var(--black); margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm); }
+        .guide-content p { color: var(--dark-gray); margin-bottom: var(--spacing-md); }
+        .guide-content ul, .guide-content ol { color: var(--dark-gray); margin-bottom: var(--spacing-md); padding-left: 1.5rem; }
+        .guide-content li { margin-bottom: 0.5rem; }
+
+        .toc { background: var(--off-white); padding: var(--spacing-lg); border-radius: var(--radius-lg); margin-bottom: var(--spacing-xl); }
+        .toc h2 { font-size: 1.25rem; margin-bottom: var(--spacing-md); color: var(--primary); border: none; padding: 0; margin-top: 0; }
+        .toc ul { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 0.5rem; }
+        .toc a { color: var(--secondary); text-decoration: none; font-weight: 500; }
+        .toc a:hover { color: var(--primary); text-decoration: underline; }
+
+        .enrollment-card { background: var(--off-white); border-left: 4px solid var(--primary); padding: var(--spacing-lg); border-radius: var(--radius-md); margin: var(--spacing-lg) 0; }
+        .enrollment-card h4 { color: var(--primary); margin-bottom: var(--spacing-xs); font-size: 1.2rem; }
+        .enrollment-card .dates { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .enrollment-card p { margin: 0 0 var(--spacing-sm) 0; color: var(--dark-gray); }
+        .enrollment-card ul { margin: var(--spacing-sm) 0 0 0; padding-left: 1.25rem; }
+
+        .highlight-box { background: #e3f2fd; border-left: 4px solid var(--secondary); padding: var(--spacing-lg); border-radius: var(--radius-md); margin: var(--spacing-lg) 0; }
+        .highlight-box h4 { color: var(--primary); margin-bottom: var(--spacing-sm); }
+        .highlight-box p { margin: 0; color: var(--dark-gray); }
+        .highlight-box ul { margin: var(--spacing-sm) 0 0 0; padding-left: 1.25rem; }
+
+        .warning-box { background: #fff3cd; border: 4px solid var(--warning); padding: var(--spacing-lg); border-radius: var(--radius-md); margin: var(--spacing-lg) 0; text-align: center; max-width: 800px; }
+        .warning-icon { font-size: 2.5rem; display: block; margin-bottom: var(--spacing-sm); }
+        .warning-box h4 { color: #856404; margin-bottom: var(--spacing-sm); }
+        .warning-box p { margin: 0; color: var(--dark-gray); }
+
+        .success-box { background: #d4edda; border-left: 4px solid var(--success); padding: var(--spacing-lg); border-radius: var(--radius-md); margin: var(--spacing-lg) 0; }
+        .success-box h4 { color: #155724; margin-bottom: var(--spacing-sm); }
+        .success-box p { margin: 0; color: var(--dark-gray); }
+
+        .comparison-table { width: 100%; border-collapse: collapse; margin: var(--spacing-lg) 0; font-size: 0.95rem; }
+        .comparison-table th, .comparison-table td { padding: var(--spacing-sm); text-align: left; border-bottom: 1px solid var(--light-gray); }
+        .comparison-table th { background: var(--primary); color: var(--white); font-weight: 600; }
+        .comparison-table tr:nth-child(even) { background: var(--off-white); }
+        .comparison-table td:first-child { font-weight: 600; color: var(--primary); }
+
+        .cta-section { background: var(--primary); color: var(--white); padding: var(--spacing-xxl) 0; text-align: center; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); }
+        .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        .related-guides { padding: var(--spacing-xxl) 0; background: var(--off-white); }
+        .related-guides h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md); max-width: 900px; margin: 0 auto; }
+        .guide-link-card { background: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-md); text-decoration: none; color: inherit; display: block; box-shadow: var(--shadow-sm); transition: all 0.2s; }
+        .guide-link-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+        .guide-link-card h3 { color: var(--primary); font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .guide-link-card p { color: var(--medium-gray); font-size: 0.9rem; margin: 0; }
+
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom { padding-top: var(--spacing-lg); border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--spacing-sm); font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+        .footer-phone-icon { font-size: 1.5rem; filter: brightness(0) invert(1); }
+
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .guide-header h1 { font-size: 2.75rem; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .guide-header h1 { font-size: 2rem; }
+            .btn { padding: 1rem 1.75rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .mobile-nav-link { padding: 1.25rem 0; font-size: 1.15rem; }
+            .mobile-dropdown-link { padding: 0.75rem 0; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .comparison-table { font-size: 0.85rem; }
+            .comparison-table th, .comparison-table td { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar & Header Position Fixes -->
+    <style>
+        .top-bar {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: #1a365d !important;
+            color: white !important;
+            padding: 8px 20px !important;
+            z-index: 1001 !important;
+        }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
+        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .top-bar-phone:hover { color: #90cdf4; }
+        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+        .header { top: 36px !important; }
+        .hero, .page-header, .guide-header { padding-top: calc(var(--header-height, 80px) + 36px + 2rem) !important; }
+    </style>
+
+    <!-- ============================================
+         TOP BAR
+         ============================================ -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <a href="tel:+18508101000" class="top-bar-phone">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call Us: (850) 810-1000
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">M</span>
+                <span>Unbiased Medicare Advisor</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Learn</a>
+                        <div class="dropdown-menu">
+                            <a href="/guides/medigap-vs-medicare-advantage" class="dropdown-link">Medigap vs Medicare Advantage</a>
+                            <a href="/guides/turning-65-medicare-guide" class="dropdown-link">Turning 65 Guide</a>
+                            <a href="/guides/medicare-parts-explained" class="dropdown-link">Medicare Parts Explained (A, B, C, D)</a>
+                            <a href="/guides" class="dropdown-link">All Guides</a>
+                            <a href="/blog" class="dropdown-link">Blog Articles</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="/services/medicare-consultant" class="dropdown-link">Medicare Consultant</a>
+                            <a href="/services/fee-only-medicare-advisor" class="dropdown-link">Fee-Only Advisor</a>
+                            <a href="/services/independent-medicare-advisor" class="dropdown-link">Independent Advisor</a>
+                            <a href="/services/medicare-plan-comparison" class="dropdown-link">Plan Comparison Help</a>
+                            <a href="/services/enrollment-assistance" class="dropdown-link">Enrollment Assistance</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Your State</a>
+                        <div class="dropdown-menu">
+                            <a href="/states/florida" class="dropdown-link">Florida</a>
+                            <a href="/states/texas" class="dropdown-link">Texas</a>
+                            <a href="/states/california" class="dropdown-link">California</a>
+                            <a href="/states/ohio" class="dropdown-link">Ohio</a>
+                            <a href="/states/arizona" class="dropdown-link">Arizona</a>
+                            <a href="/states" class="dropdown-link">All 50 States</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item nav-cta">
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Learn</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/guides/medigap-vs-medicare-advantage" class="mobile-dropdown-link">Medigap vs Medicare Advantage</a>
+                        <a href="/guides/turning-65-medicare-guide" class="mobile-dropdown-link">Turning 65 Guide</a>
+                        <a href="/guides/medicare-parts-explained" class="mobile-dropdown-link">Medicare Parts Explained (A, B, C, D)</a>
+                        <a href="/guides" class="mobile-dropdown-link">All Guides</a>
+                        <a href="/blog" class="mobile-dropdown-link">Blog Articles</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Services</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/services/medicare-consultant" class="mobile-dropdown-link">Medicare Consultant</a>
+                        <a href="/services/fee-only-medicare-advisor" class="mobile-dropdown-link">Fee-Only Advisor</a>
+                        <a href="/services/independent-medicare-advisor" class="mobile-dropdown-link">Independent Advisor</a>
+                        <a href="/services/medicare-plan-comparison" class="mobile-dropdown-link">Plan Comparison Help</a>
+                        <a href="/services/enrollment-assistance" class="mobile-dropdown-link">Enrollment Assistance</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Your State</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/states/florida" class="mobile-dropdown-link">Florida</a>
+                        <a href="/states/texas" class="mobile-dropdown-link">Texas</a>
+                        <a href="/states/california" class="mobile-dropdown-link">California</a>
+                        <a href="/states/ohio" class="mobile-dropdown-link">Ohio</a>
+                        <a href="/states/arizona" class="mobile-dropdown-link">Arizona</a>
+                        <a href="/states" class="mobile-dropdown-link">All 50 States</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/about" class="mobile-nav-link">About</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/contact" class="mobile-nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="mobile-nav-cta">
+                <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="guide-header">
+        <div class="container">
+            <h1>Medicare Enrollment Periods: Complete Guide</h1>
+            <p class="subtitle">Understanding when you can enroll in Medicare or make changes to your coverage. Missing the right window can cost you in penalties and delayed coverage.</p>
+            <p class="guide-meta">Last updated: December 2025 | 12 min read</p>
+        </div>
+    </section>
+
+    <main class="guide-content">
+        <div class="container">
+            <div class="content-container">
+
+                <nav class="toc">
+                    <h2>In This Guide</h2>
+                    <ul>
+                        <li><a href="#overview">Enrollment Periods Overview</a></li>
+                        <li><a href="#iep">Initial Enrollment Period (IEP)</a></li>
+                        <li><a href="#gep">General Enrollment Period (GEP)</a></li>
+                        <li><a href="#sep">Special Enrollment Periods (SEP)</a></li>
+                        <li><a href="#oep">Open Enrollment Period (OEP)</a></li>
+                        <li><a href="#ma-oep">Medicare Advantage Open Enrollment</a></li>
+                        <li><a href="#medigap">Medigap Open Enrollment</a></li>
+                        <li><a href="#part-d">Part D Enrollment Windows</a></li>
+                        <li><a href="#penalties">Late Enrollment Penalties</a></li>
+                        <li><a href="#quick-reference">Quick Reference Table</a></li>
+                    </ul>
+                </nav>
+
+                <p>Medicare has multiple enrollment periods, each with its own rules about when you can sign up or make changes. Understanding these windows is crucial because enrolling at the wrong time—or missing your window entirely—can result in penalties, coverage gaps, or being locked into a plan you don't want.</p>
+
+                <p>This guide covers every Medicare enrollment period so you know exactly when you can take action.</p>
+
+                <h2 id="overview">Enrollment Periods at a Glance</h2>
+
+                <p>Here's a quick overview of the main Medicare enrollment periods:</p>
+
+                <ul>
+                    <li><strong>Initial Enrollment Period (IEP):</strong> Your first chance to enroll when you turn 65</li>
+                    <li><strong>General Enrollment Period (GEP):</strong> Annual window if you missed your IEP</li>
+                    <li><strong>Special Enrollment Periods (SEP):</strong> Triggered by qualifying life events</li>
+                    <li><strong>Open Enrollment Period (OEP):</strong> Annual window to change Medicare Advantage or Part D plans</li>
+                    <li><strong>Medicare Advantage Open Enrollment:</strong> Early-year window for MA enrollees to switch</li>
+                    <li><strong>Medigap Open Enrollment:</strong> Your 6-month window for guaranteed Medigap access</li>
+                </ul>
+
+                <h2 id="iep">Initial Enrollment Period (IEP)</h2>
+
+                <div class="enrollment-card">
+                    <h4>Initial Enrollment Period</h4>
+                    <div class="dates">7 months around your 65th birthday</div>
+                    <p>This is your first and best opportunity to enroll in Medicare Parts A and B. The 7-month window includes:</p>
+                    <ul>
+                        <li>3 months before your 65th birthday month</li>
+                        <li>Your birthday month</li>
+                        <li>3 months after your birthday month</li>
+                    </ul>
+                </div>
+
+                <h3>When Does Coverage Start?</h3>
+
+                <p>Your coverage start date depends on when you enroll during your IEP:</p>
+
+                <ul>
+                    <li><strong>Enroll 3 months before birthday:</strong> Coverage starts the 1st of your birthday month</li>
+                    <li><strong>Enroll during birthday month:</strong> Coverage starts the 1st of the following month</li>
+                    <li><strong>Enroll 1 month after birthday:</strong> Coverage starts 2 months later</li>
+                    <li><strong>Enroll 2-3 months after birthday:</strong> Coverage starts 3 months later</li>
+                </ul>
+
+                <div class="success-box">
+                    <h4>Best Practice</h4>
+                    <p>Enroll during the 3 months before your 65th birthday to ensure your coverage starts right when you turn 65, with no gap in protection.</p>
+                </div>
+
+                <h3>What If You're Still Working?</h3>
+
+                <p>If you have health insurance through your employer (or your spouse's employer) with 20+ employees, you can delay Medicare enrollment without penalty. You'll qualify for a Special Enrollment Period when that coverage ends.</p>
+
+                <h2 id="gep">General Enrollment Period (GEP)</h2>
+
+                <div class="enrollment-card">
+                    <h4>General Enrollment Period</h4>
+                    <div class="dates">January 1 - March 31 each year</div>
+                    <p>If you missed your Initial Enrollment Period and don't qualify for a Special Enrollment Period, this is your annual window to sign up for Medicare Parts A and B.</p>
+                </div>
+
+                <div class="warning-box">
+                    <span class="warning-icon">&#9888;</span>
+                    <h4>GEP Comes with Consequences</h4>
+                    <p>Enrolling during the General Enrollment Period means you'll likely pay late enrollment penalties, and your coverage won't start until July 1st. Avoid the GEP if possible by enrolling during your IEP or qualifying for a SEP.</p>
+                </div>
+
+                <h3>GEP Key Points</h3>
+
+                <ul>
+                    <li><strong>Coverage start date:</strong> July 1st of the same year</li>
+                    <li><strong>Penalties:</strong> You'll pay the Part B late penalty (10% for every 12-month period you could have had Part B but didn't)</li>
+                    <li><strong>Who uses it:</strong> People who missed their IEP and don't qualify for a SEP</li>
+                </ul>
+
+                <h2 id="sep">Special Enrollment Periods (SEP)</h2>
+
+                <div class="enrollment-card">
+                    <h4>Special Enrollment Periods</h4>
+                    <div class="dates">Varies based on qualifying event</div>
+                    <p>Special Enrollment Periods are triggered by specific life events that give you the opportunity to enroll in or change your Medicare coverage outside of regular enrollment windows.</p>
+                </div>
+
+                <h3>Common SEP Triggers</h3>
+
+                <h4>Loss of Employer Coverage</h4>
+                <p>If you delayed Medicare because you had coverage through an employer with 20+ employees, you qualify for a SEP when:</p>
+                <ul>
+                    <li>Your employment ends</li>
+                    <li>Your employer coverage ends</li>
+                    <li>Your employer reduces workforce below 20 employees</li>
+                </ul>
+                <p><strong>Timeframe:</strong> 8 months from the date employment or coverage ends (whichever comes first)</p>
+
+                <h4>Moving to a New Area</h4>
+                <p>If you move to an area where your current Medicare Advantage or Part D plan isn't available, you can switch plans.</p>
+                <p><strong>Timeframe:</strong> Generally 2 months after you move</p>
+
+                <h4>Leaving a Medicare Advantage Plan</h4>
+                <p>Certain situations allow you to leave a Medicare Advantage plan and return to Original Medicare:</p>
+                <ul>
+                    <li>Moving out of your plan's service area</li>
+                    <li>Plan is terminated or reduces service area</li>
+                    <li>Qualifying for Medicaid</li>
+                    <li>Entering a skilled nursing facility</li>
+                </ul>
+
+                <h4>5-Star Plan SEP</h4>
+                <p>You can switch to a Medicare Advantage or Part D plan with a 5-star rating once per year, outside of regular enrollment periods.</p>
+
+                <div class="highlight-box">
+                    <h4>Important: COBRA Doesn't Count</h4>
+                    <p>COBRA coverage does NOT qualify you for a Special Enrollment Period. If you're on COBRA when you turn 65, you should enroll in Medicare during your Initial Enrollment Period to avoid penalties.</p>
+                </div>
+
+                <h2 id="oep">Open Enrollment Period (OEP) / Annual Election Period</h2>
+
+                <div class="enrollment-card">
+                    <h4>Medicare Open Enrollment (Annual Election Period)</h4>
+                    <div class="dates">October 15 - December 7 each year</div>
+                    <p>This is the annual window to review and change your Medicare Advantage and/or Part D coverage for the following year. Changes take effect January 1st.</p>
+                </div>
+
+                <h3>What You Can Do During Open Enrollment</h3>
+
+                <ul>
+                    <li>Switch from Original Medicare to a Medicare Advantage plan</li>
+                    <li>Switch from a Medicare Advantage plan to Original Medicare</li>
+                    <li>Switch from one Medicare Advantage plan to another</li>
+                    <li>Join a Medicare Part D prescription drug plan</li>
+                    <li>Switch from one Part D plan to another</li>
+                    <li>Drop your Part D coverage (not recommended)</li>
+                </ul>
+
+                <h3>What You Cannot Do</h3>
+
+                <ul>
+                    <li>Enroll in Medicare Parts A or B for the first time (that's the IEP or GEP)</li>
+                    <li>Buy or change a Medigap policy (different rules apply)</li>
+                </ul>
+
+                <div class="success-box">
+                    <h4>Review Your Coverage Every Year</h4>
+                    <p>Plans change their costs, coverage, and drug formularies annually. Even if you're happy with your current plan, review the Annual Notice of Change document you receive in September to make sure it still meets your needs.</p>
+                </div>
+
+                <h2 id="ma-oep">Medicare Advantage Open Enrollment Period</h2>
+
+                <div class="enrollment-card">
+                    <h4>Medicare Advantage Open Enrollment Period</h4>
+                    <div class="dates">January 1 - March 31 each year</div>
+                    <p>This window is exclusively for people already enrolled in a Medicare Advantage plan. It allows you to make one plan change.</p>
+                </div>
+
+                <h3>What You Can Do</h3>
+
+                <ul>
+                    <li>Switch to a different Medicare Advantage plan</li>
+                    <li>Drop your Medicare Advantage plan and return to Original Medicare</li>
+                    <li>If you return to Original Medicare, you can also join a standalone Part D plan</li>
+                </ul>
+
+                <h3>What You Cannot Do</h3>
+
+                <ul>
+                    <li>Switch from Original Medicare to a Medicare Advantage plan (that's the fall OEP)</li>
+                    <li>Join Medicare for the first time</li>
+                    <li>Make multiple changes (only one change allowed during this period)</li>
+                </ul>
+
+                <h2 id="medigap">Medigap Open Enrollment Period</h2>
+
+                <div class="enrollment-card">
+                    <h4>Medigap Open Enrollment Period</h4>
+                    <div class="dates">6 months starting when you're 65+ AND enrolled in Part B</div>
+                    <p>This is your one-time window to buy any Medigap policy sold in your state, regardless of health conditions. Insurance companies cannot deny you or charge you more due to pre-existing conditions during this period.</p>
+                </div>
+
+                <div class="warning-box">
+                    <span class="warning-icon">&#9888;</span>
+                    <h4>Critical: Don't Miss This Window</h4>
+                    <p>After your 6-month Medigap Open Enrollment Period ends, insurance companies can use medical underwriting. They can deny you coverage or charge significantly higher premiums based on your health. This window only happens once.</p>
+                </div>
+
+                <h3>When Does It Start?</h3>
+
+                <p>Your Medigap Open Enrollment Period begins on the first day of the month in which you are:</p>
+                <ul>
+                    <li>65 years old or older, AND</li>
+                    <li>Enrolled in Medicare Part B</li>
+                </ul>
+
+                <p><strong>Example:</strong> If you turn 65 in March and Part B starts March 1st, your Medigap window is March 1st through August 31st.</p>
+
+                <h3>What's Guaranteed During This Window</h3>
+
+                <ul>
+                    <li>You can buy any Medigap policy sold in your state</li>
+                    <li>You pay the same price as someone in perfect health</li>
+                    <li>Pre-existing conditions cannot be permanently excluded (though there may be a waiting period for conditions treated in the 6 months before coverage starts)</li>
+                </ul>
+
+                <h2 id="part-d">Part D Enrollment Windows</h2>
+
+                <h3>Initial Part D Enrollment</h3>
+
+                <p>Your Initial Enrollment Period for Part D is the same as your Initial Enrollment Period for Parts A and B: the 7 months around your 65th birthday.</p>
+
+                <h3>Changing Part D Plans</h3>
+
+                <p>You can change your Part D plan during:</p>
+                <ul>
+                    <li><strong>Open Enrollment Period:</strong> October 15 - December 7</li>
+                    <li><strong>Special Enrollment Periods:</strong> When you have a qualifying life event</li>
+                </ul>
+
+                <h3>Part D Late Enrollment Penalty</h3>
+
+                <p>If you don't enroll in Part D when first eligible and don't have creditable drug coverage (coverage as good as Medicare's), you'll pay a penalty:</p>
+
+                <ul>
+                    <li>1% of the national base beneficiary premium for every month you didn't have coverage</li>
+                    <li>This penalty is permanent and added to your monthly Part D premium</li>
+                    <li><strong>Example:</strong> 24 months without coverage = 24% penalty on your monthly premium, for life</li>
+                </ul>
+
+                <h2 id="penalties">Late Enrollment Penalties</h2>
+
+                <h3>Part B Late Enrollment Penalty</h3>
+
+                <ul>
+                    <li><strong>Amount:</strong> 10% of the standard premium for every 12-month period you could have had Part B but didn't</li>
+                    <li><strong>Duration:</strong> You pay this penalty for as long as you have Part B</li>
+                    <li><strong>Example:</strong> If you delayed Part B for 3 years without qualifying coverage, you'd pay a 30% penalty on your monthly premium for life</li>
+                </ul>
+
+                <h3>Part D Late Enrollment Penalty</h3>
+
+                <ul>
+                    <li><strong>Amount:</strong> 1% of the national base beneficiary premium for every month you were without creditable drug coverage</li>
+                    <li><strong>Duration:</strong> Permanent, added to your monthly Part D premium</li>
+                    <li><strong>Example:</strong> 18 months without coverage = 18% penalty</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>How to Avoid Penalties</h4>
+                    <p>Enroll during your Initial Enrollment Period, or make sure you have qualifying coverage (employer insurance for Part B, creditable drug coverage for Part D) that allows you to delay enrollment without penalty.</p>
+                </div>
+
+                <h2 id="quick-reference">Quick Reference Table</h2>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Enrollment Period</th>
+                            <th>Dates</th>
+                            <th>What You Can Do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Initial Enrollment (IEP)</td>
+                            <td>7 months around 65th birthday</td>
+                            <td>Enroll in Parts A, B, C, D; buy Medigap</td>
+                        </tr>
+                        <tr>
+                            <td>General Enrollment (GEP)</td>
+                            <td>Jan 1 - Mar 31</td>
+                            <td>Enroll in Parts A & B if you missed IEP</td>
+                        </tr>
+                        <tr>
+                            <td>Special Enrollment (SEP)</td>
+                            <td>Varies by event</td>
+                            <td>Enroll/change due to qualifying event</td>
+                        </tr>
+                        <tr>
+                            <td>Open Enrollment (OEP)</td>
+                            <td>Oct 15 - Dec 7</td>
+                            <td>Change MA or Part D plans</td>
+                        </tr>
+                        <tr>
+                            <td>MA Open Enrollment</td>
+                            <td>Jan 1 - Mar 31</td>
+                            <td>Switch MA plans or return to Original Medicare</td>
+                        </tr>
+                        <tr>
+                            <td>Medigap Open Enrollment</td>
+                            <td>6 months from 65 + Part B</td>
+                            <td>Buy any Medigap policy guaranteed</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Not Sure Which Enrollment Period Applies to You?</h2>
+            <p>Medicare enrollment rules can be confusing. Our fee-only advisors can review your situation and make sure you enroll at the right time to avoid penalties and coverage gaps.</p>
+            <div class="cta-buttons">
+                <a href="/book-consultation" class="btn btn-white">Book a Free Consultation</a>
+                <a href="/contact" class="btn btn-outline-white">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-guides">
+        <div class="container">
+            <h2>Related Guides</h2>
+            <div class="guides-grid">
+                <a href="/guides/turning-65-medicare-guide" class="guide-link-card">
+                    <h3>Turning 65 Medicare Guide</h3>
+                    <p>Complete checklist for Medicare enrollment when you turn 65.</p>
+                </a>
+                <a href="/guides/medigap-vs-medicare-advantage" class="guide-link-card">
+                    <h3>Medigap vs Medicare Advantage</h3>
+                    <p>Compare your coverage options after enrolling in Medicare.</p>
+                </a>
+                <a href="/guides/medicare-parts-explained" class="guide-link-card">
+                    <h3>Medicare Parts Explained (A, B, C, D)</h3>
+                    <p>Understand what each part of Medicare covers.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">M</span>
+                        <span>Unbiased Medicare Advisor</span>
+                    </a>
+                    <p>
+                        Independent, fee-only Medicare guidance. We're paid by you, not insurance companies,
+                        so you can trust our advice is always in your best interest.
+                    </p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services/medicare-consultant">Medicare Consultant</a></li>
+                        <li><a href="/services/fee-only-medicare-advisor">Fee-Only Advisor</a></li>
+                        <li><a href="/services/medicare-plan-comparison">Plan Comparison</a></li>
+                        <li><a href="/services/enrollment-assistance">Enrollment Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/guides/medigap-vs-medicare-advantage">Medigap vs MA</a></li>
+                        <li><a href="/guides/turning-65-medicare-guide">Turning 65 Guide</a></li>
+                        <li><a href="/guides">All Guides</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/book-consultation">Book a Call</a></li>
+                    </ul>
+                    <a href="tel:+18508101000" class="footer-phone">
+                        <span class="footer-phone-icon" aria-hidden="true">&#128222;</span>
+                        <span>(850) 810-1000</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(event) {
+            event.preventDefault();
+            const parent = event.target.closest('.mobile-dropdown');
+            parent.classList.toggle('active');
+        }
+
+        // FAQ accordion toggle
+        function toggleFaq(element) {
+            element.closest('.faq-item').classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        if (backToTop) {
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+</body>
+</html>
