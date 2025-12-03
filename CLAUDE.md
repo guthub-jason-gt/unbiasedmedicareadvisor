@@ -11,8 +11,13 @@
 ## Build System
 - **Build command:** `node build.js`
 - **Partials location:** `/partials/` (header.html, footer.html, scripts.html)
-- **Source files:** `/src/` - all 20 pages use `{{HEADER}}`, `{{FOOTER}}`, `{{SCRIPTS}}` placeholders
+- **Source files:** `/src/` - use `{{HEADER}}`, `{{FOOTER}}`, `{{SCRIPTS}}` placeholders
 - **Output:** Root folder HTML files (don't edit these directly)
+
+### Current Partial Usage:
+- `{{HEADER}}` - **All 20 pages** use this partial
+- `{{FOOTER}}` - **13 pages** use this partial (7 have hardcoded footers)
+- `{{SCRIPTS}}` - **13 pages** use this partial (7 have hardcoded scripts)
 
 ### To Make Site-Wide Changes:
 1. Edit the appropriate partial in `/partials/`
@@ -20,6 +25,27 @@
 3. All 20 pages will be regenerated
 4. `git add . && git commit -m "message" && git push`
 5. Vercel auto-deploys (takes ~30 seconds)
+
+## TODO: Convert Footer & Scripts to Partials
+
+### Problem
+7 src files still have hardcoded footers and scripts instead of using `{{FOOTER}}` and `{{SCRIPTS}}`:
+- src/about/index.html
+- src/contact/index.html
+- src/faq/index.html
+- src/book-consultation/index.html
+- src/states/index.html
+- src/states/ohio/index.html
+- src/states/arizona/index.html
+
+This means footer/script changes require editing these 7 files manually.
+
+### Solution
+Convert these 7 files to use `{{FOOTER}}` and `{{SCRIPTS}}` placeholders. After conversion:
+- All 20 pages will use all 3 partials
+- Any site-wide change only requires editing one file
+
+### Status: IN PROGRESS
 
 ## File Structure
 ```
