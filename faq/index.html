@@ -660,16 +660,32 @@
             transform: translateY(-3px);
         }
 
-        /* Top Bar Styles */
-        .top-bar { background: #1a365d; color: white; padding: 8px 20px; }
+    </style>
+</head>
+<body>
+    <!-- Top Bar & Header Position Fixes -->
+    <style>
+        .top-bar {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: #1a365d !important;
+            color: white !important;
+            padding: 8px 20px !important;
+            z-index: 1001 !important;
+        }
         .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
         .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
         .top-bar-phone:hover { color: #90cdf4; }
         .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+        .header { top: 36px !important; }
+        .hero, .page-header, .guide-header { padding-top: calc(var(--header-height, 80px) + 36px + 2rem) !important; }
     </style>
-</head>
-<body>
-    <!-- Top Bar -->
+
+    <!-- ============================================
+         TOP BAR
+         ============================================ -->
     <div class="top-bar">
         <div class="top-bar-container">
             <a href="tel:+18508101000" class="top-bar-phone">
@@ -679,7 +695,9 @@
         </div>
     </div>
 
-    <!-- Header -->
+    <!-- ============================================
+         HEADER
+         ============================================ -->
     <header class="header">
         <div class="header-container">
             <a href="/" class="logo">
@@ -687,6 +705,7 @@
                 <span>Unbiased Medicare Advisor</span>
             </a>
 
+            <!-- Desktop Navigation -->
             <nav class="nav" aria-label="Main navigation">
                 <ul class="nav-list">
                     <li class="nav-item dropdown">
@@ -713,9 +732,10 @@
                         <a href="#" class="nav-link dropdown-toggle">Your State</a>
                         <div class="dropdown-menu">
                             <a href="/states/florida" class="dropdown-link">Florida</a>
+                            <a href="/states/texas" class="dropdown-link">Texas</a>
+                            <a href="/states/california" class="dropdown-link">California</a>
                             <a href="/states/ohio" class="dropdown-link">Ohio</a>
                             <a href="/states/arizona" class="dropdown-link">Arizona</a>
-                            <a href="/states/california" class="dropdown-link">California</a>
                             <a href="/states" class="dropdown-link">All 50 States</a>
                         </div>
                     </li>
@@ -731,6 +751,7 @@
                 </ul>
             </nav>
 
+            <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
                 <span></span>
                 <span></span>
@@ -738,6 +759,7 @@
             </button>
         </div>
 
+        <!-- Mobile Navigation -->
         <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
             <ul class="mobile-nav-list">
                 <li class="mobile-nav-item mobile-dropdown">
@@ -764,9 +786,10 @@
                     <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Your State</a>
                     <div class="mobile-dropdown-menu">
                         <a href="/states/florida" class="mobile-dropdown-link">Florida</a>
+                        <a href="/states/texas" class="mobile-dropdown-link">Texas</a>
+                        <a href="/states/california" class="mobile-dropdown-link">California</a>
                         <a href="/states/ohio" class="mobile-dropdown-link">Ohio</a>
                         <a href="/states/arizona" class="mobile-dropdown-link">Arizona</a>
-                        <a href="/states/california" class="mobile-dropdown-link">California</a>
                         <a href="/states" class="mobile-dropdown-link">All 50 States</a>
                     </div>
                 </li>
@@ -782,6 +805,7 @@
             </div>
         </nav>
     </header>
+
 
     <!-- Page Header -->
     <section class="page-header">

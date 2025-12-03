@@ -108,3 +108,21 @@ gh api repos/guthub-jason-gt/unbiasedmedicareadvisor/deployments/DEPLOYMENT_ID/s
 ### Deployment failing?
 - Make sure `vercel.json` exists with `"buildCommand": null`
 - Check that all HTML files are valid
+
+## Partial Conversion - COMPLETED
+
+### What Was Done
+Converted all 7 hardcoded pages to use `{{HEADER}}` placeholder:
+- src/about/index.html
+- src/contact/index.html
+- src/faq/index.html
+- src/book-consultation/index.html
+- src/states/index.html
+- src/states/ohio/index.html
+- src/states/arizona/index.html
+
+### Result
+All 20 pages now use `partials/header.html`. To make any header change:
+1. Edit `partials/header.html`
+2. Run `node build.js`
+3. All 20 pages update automatically
