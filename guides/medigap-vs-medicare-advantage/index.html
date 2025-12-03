@@ -793,6 +793,11 @@
             parent.classList.toggle('active');
         }
 
+        // FAQ accordion toggle
+        function toggleFaq(element) {
+            element.closest('.faq-item').classList.toggle('active');
+        }
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             const mobileNav = document.getElementById('mobileNav');
