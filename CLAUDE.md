@@ -15,14 +15,21 @@
 - **Output:** Root folder HTML files (don't edit these directly)
 
 ### Current Partial Usage:
-- `{{HEADER}}` - **All 20 pages** use this partial
-- `{{FOOTER}}` - **13 pages** use this partial (7 have hardcoded footers)
-- `{{SCRIPTS}}` - **13 pages** use this partial (7 have hardcoded scripts)
+- `{{HEADER}}` - **All 24 pages** use this partial
+- `{{FOOTER}}` - **17 pages** use this partial (7 have hardcoded footers)
+- `{{SCRIPTS}}` - **17 pages** use this partial (7 have hardcoded scripts)
+
+### Current Page Count: 24 pages
+- 6 Core pages (Home, About, Contact, Book Consultation, FAQ, Privacy)
+- 5 Service pages
+- 6 Guide pages (ALL COMPLETE as of Dec 3, 2025)
+- 1 States index + 5 State pages
+- 1 Guides index
 
 ### To Make Site-Wide Changes:
 1. Edit the appropriate partial in `/partials/`
 2. Run `node build.js`
-3. All 20 pages will be regenerated
+3. All 24 pages will be regenerated
 4. `git add . && git commit -m "message" && git push`
 5. Vercel auto-deploys (takes ~30 seconds)
 
@@ -121,3 +128,19 @@ gh api repos/guthub-jason-gt/unbiasedmedicareadvisor/deployments/DEPLOYMENT_ID/s
 ### Deployment failing?
 - Make sure `vercel.json` exists with `"buildCommand": null`
 - Check that all HTML files are valid
+
+---
+
+## Progress Update - December 3, 2025
+
+**ALL 6 GUIDES COMPLETE!**
+
+Guides live:
+1. /guides/medigap-vs-medicare-advantage/
+2. /guides/turning-65-medicare-guide/
+3. /guides/medicare-parts-explained/
+4. /guides/medicare-enrollment-periods/
+5. /guides/medicare-supplement-plans/
+6. /guides/medicare-advantage-pros-cons/
+
+**Next:** Create blog index page (/blog/) and start blog posts
