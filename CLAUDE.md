@@ -3,6 +3,11 @@
 ## Phone Number Format
 **Always display as: (850) 810-1000** (with parentheses around area code)
 
+## Hosting
+- **Platform:** Vercel (not GitHub Pages)
+- **Repo:** https://github.com/guthub-jason-gt/unbiasedmedicareadvisor
+- **Live site:** https://unbiasedmedicareadvisor.com
+
 ## Top Bar Implementation - COMPLETED
 
 ### What Was Done
@@ -49,6 +54,7 @@ This means:
 1. Edit the appropriate partial in `/partials/`
 2. Run `node build.js`
 3. All 20 pages will be regenerated
+4. Commit and push to deploy
 
 ## File Structure
 ```
@@ -59,8 +65,46 @@ This means:
 
 /src/            <- Source files with {{PLACEHOLDER}} tags
 /                <- Built/output HTML files (don't edit directly)
+
+vercel.json      <- Tells Vercel to serve static files (no build)
+package.json     <- Local build script only
+build.js         <- Combines partials with src files
 ```
 
-## Git/Deployment
-- Changes are LOCAL until pushed
-- To deploy: push to remote repository
+## Vercel Deployment
+
+### Important: vercel.json
+The `vercel.json` file is critical. It tells Vercel to serve static files WITHOUT running the build script:
+```json
+{
+  "buildCommand": null,
+  "outputDirectory": "."
+}
+```
+
+Without this file, Vercel sees `package.json` and tries to run `npm run build`, which fails because the output goes to the root directory instead of where Vercel expects.
+
+### Deployment Process
+1. Make changes locally
+2. Run `node build.js` to regenerate pages
+3. `git add . && git commit -m "message" && git push`
+4. Vercel auto-deploys from GitHub (takes ~30 seconds)
+5. Hard refresh browser (Cmd+Shift+R) to see changes
+
+### Checking Deployment Status
+```bash
+gh api repos/guthub-jason-gt/unbiasedmedicareadvisor/deployments --jq '.[0] | {id, sha, created_at}'
+gh api repos/guthub-jason-gt/unbiasedmedicareadvisor/deployments/DEPLOYMENT_ID/statuses --jq '.[0] | {state, description}'
+```
+
+## Troubleshooting
+
+### Site not updating after push?
+1. Check deployment status (see commands above)
+2. If deployment failed, check for vercel.json issues
+3. Hard refresh browser (Cmd+Shift+R) or use incognito
+4. Vercel may cache - wait 1-2 minutes
+
+### Deployment failing?
+- Make sure `vercel.json` exists with `"buildCommand": null`
+- Check that all HTML files are valid
