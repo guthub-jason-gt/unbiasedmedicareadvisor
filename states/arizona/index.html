@@ -985,9 +985,26 @@
             background: var(--primary-dark);
             transform: translateY(-3px);
         }
+
+        /* Top Bar Styles */
+        .top-bar { background: #1a365d; color: white; padding: 8px 20px; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
+        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .top-bar-phone:hover { color: #90cdf4; }
+        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
     </style>
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <a href="tel:+18508101000" class="top-bar-phone">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call Us: 850-810-1000
+            </a>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="header-container">
@@ -1030,7 +1047,6 @@
                     </li>
                     <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="tel:+18508101000" class="nav-link">(850) 810-1000</a></li>
                     <li class="nav-item nav-cta"><a href="/book-consultation" class="btn btn-primary">Book Free Call</a></li>
                 </ul>
             </nav>
@@ -1073,7 +1089,6 @@
                 </li>
                 <li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">About</a></li>
                 <li class="mobile-nav-item"><a href="/contact" class="mobile-nav-link">Contact</a></li>
-                <li class="mobile-nav-item"><a href="tel:+18508101000" class="mobile-nav-link">(850) 810-1000</a></li>
             </ul>
             <div class="mobile-nav-cta"><a href="/book-consultation" class="btn btn-primary">Book Free Call</a></div>
         </nav>
