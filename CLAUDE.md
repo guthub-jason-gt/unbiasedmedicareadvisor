@@ -8,19 +8,40 @@
 - **Repo:** https://github.com/guthub-jason-gt/unbiasedmedicareadvisor
 - **Live site:** https://unbiasedmedicareadvisor.com
 
-## Top Bar Implementation - COMPLETED
+## Build System
+- **Build command:** `node build.js`
+- **Partials location:** `/partials/` (header.html, footer.html, scripts.html)
+- **Source files:** `/src/` - all 20 pages use `{{HEADER}}`, `{{FOOTER}}`, `{{SCRIPTS}}` placeholders
+- **Output:** Root folder HTML files (don't edit these directly)
 
-### What Was Done
-Added a dark blue top bar above the header with "Call Us: (850) 810-1000" and a phone icon. The phone number was removed from the navigation menu.
+### To Make Site-Wide Changes:
+1. Edit the appropriate partial in `/partials/`
+2. Run `node build.js`
+3. All 20 pages will be regenerated
+4. `git add . && git commit -m "message" && git push`
+5. Vercel auto-deploys (takes ~30 seconds)
+
+## File Structure
+```
+/partials/
+  header.html    <- Edit this for header/nav/top bar changes
+  footer.html    <- Edit this for footer changes
+  scripts.html   <- Edit this for JavaScript changes
+
+/src/            <- Source files with {{PLACEHOLDER}} tags (edit these)
+/                <- Built/output HTML files (don't edit directly)
+
+vercel.json      <- Tells Vercel to serve static files (no build)
+package.json     <- Local build script only
+build.js         <- Combines partials with src files
+```
+
+## Top Bar Implementation
 
 ### How It Works
-The fix is implemented in `/partials/header.html` which includes:
+The top bar is in `/partials/header.html` which includes:
 1. A `<style>` block with `!important` rules that override page-specific CSS
 2. The top bar HTML with the phone number
-
-This means:
-- **One file to edit** = all 20 pages update automatically via `node build.js`
-- No need to edit each page's CSS individually
 
 ### Key CSS Rules (in partials/header.html)
 ```css
@@ -38,38 +59,11 @@ This means:
 .hero, .page-header, .guide-header { padding-top: calc(var(--header-height, 80px) + 36px + 2rem) !important; }
 ```
 
-### Why These Fixes Are Needed
+### Why These CSS Rules Are Needed
 - The header uses `position: fixed; top: 0;` which was covering the top bar
 - Top bar needs `z-index: 1001` (higher than header's 1000)
 - Header needs `top: 36px` to sit below the 36px-tall top bar
 - Hero/page sections need extra padding to account for the top bar
-
-## Build System
-- **Build command:** `node build.js`
-- **Partials location:** `/partials/` (header.html, footer.html, scripts.html)
-- **Source files:** `/src/` - use `{{HEADER}}`, `{{FOOTER}}`, `{{SCRIPTS}}` placeholders
-- **Output:** Root folder HTML files
-
-### To Make Site-Wide Changes:
-1. Edit the appropriate partial in `/partials/`
-2. Run `node build.js`
-3. All 20 pages will be regenerated
-4. Commit and push to deploy
-
-## File Structure
-```
-/partials/
-  header.html    <- Edit this for header/nav/top bar changes
-  footer.html    <- Edit this for footer changes
-  scripts.html   <- Edit this for JavaScript changes
-
-/src/            <- Source files with {{PLACEHOLDER}} tags
-/                <- Built/output HTML files (don't edit directly)
-
-vercel.json      <- Tells Vercel to serve static files (no build)
-package.json     <- Local build script only
-build.js         <- Combines partials with src files
-```
 
 ## Vercel Deployment
 
@@ -82,14 +76,7 @@ The `vercel.json` file is critical. It tells Vercel to serve static files WITHOU
 }
 ```
 
-Without this file, Vercel sees `package.json` and tries to run `npm run build`, which fails because the output goes to the root directory instead of where Vercel expects.
-
-### Deployment Process
-1. Make changes locally
-2. Run `node build.js` to regenerate pages
-3. `git add . && git commit -m "message" && git push`
-4. Vercel auto-deploys from GitHub (takes ~30 seconds)
-5. Hard refresh browser (Cmd+Shift+R) to see changes
+Without this file, Vercel sees `package.json` and tries to run `npm run build`, which fails.
 
 ### Checking Deployment Status
 ```bash
@@ -108,21 +95,3 @@ gh api repos/guthub-jason-gt/unbiasedmedicareadvisor/deployments/DEPLOYMENT_ID/s
 ### Deployment failing?
 - Make sure `vercel.json` exists with `"buildCommand": null`
 - Check that all HTML files are valid
-
-## Partial Conversion - COMPLETED
-
-### What Was Done
-Converted all 7 hardcoded pages to use `{{HEADER}}` placeholder:
-- src/about/index.html
-- src/contact/index.html
-- src/faq/index.html
-- src/book-consultation/index.html
-- src/states/index.html
-- src/states/ohio/index.html
-- src/states/arizona/index.html
-
-### Result
-All 20 pages now use `partials/header.html`. To make any header change:
-1. Edit `partials/header.html`
-2. Run `node build.js`
-3. All 20 pages update automatically
