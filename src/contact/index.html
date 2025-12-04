@@ -722,7 +722,12 @@
                     <h2>Send Us a Message</h2>
                     <p>Fill out the form below and we'll get back to you within 1 business day.</p>
 
-                    <form action="https://formspree.io/f/yourformid" method="POST">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="8b9fb180-2c29-445b-b2d7-a53478583efa">
+                        <input type="hidden" name="subject" value="New Contact Form Submission - Unbiased Medicare Advisor">
+                        <input type="hidden" name="redirect" value="https://unbiasedmedicareadvisor.com/contact/?success=true">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                         <div class="form-group">
                             <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" required placeholder="John Smith">
@@ -784,15 +789,6 @@
                                 <h3>Schedule a Call</h3>
                                 <p>Book a free consultation at a time that works for you.</p>
                                 <a href="/book-consultation">Book a Call &rarr;</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="contact-method-icon">&#9993;</div>
-                            <div class="contact-method-content">
-                                <h3>Email Us</h3>
-                                <p>Send us an email directly at:</p>
-                                <a href="mailto:hello@unbiasedmedicareadvisor.com">hello@unbiasedmedicareadvisor.com</a>
                             </div>
                         </div>
 
