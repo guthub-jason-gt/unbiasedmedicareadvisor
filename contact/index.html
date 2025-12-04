@@ -1087,13 +1087,14 @@
         });
 
         // Check for form submission success
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('success') === 'true') {
-            document.getElementById('success-message').style.display = 'block';
-            document.getElementById('form-container').style.display = 'none';
-            // Scroll to top so they see the message
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true') {
+                document.getElementById('success-message').style.display = 'block';
+                document.getElementById('form-container').style.display = 'none';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
     </script>
 
     <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
