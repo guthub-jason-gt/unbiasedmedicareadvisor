@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avoid costly Medicare enrollment mistakes. Learn the 7 most common errors that lead to lifetime penalties, coverage gaps, and thousands in unnecessary costs.">
+    <meta name="keywords" content="medicare enrollment mistakes, medicare enrollment errors, medicare mistakes to avoid, medicare penalty, late enrollment penalty, medicare IEP">
+    <title>Medicare Enrollment Mistakes: 7 Costly Errors to Avoid | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Medicare Enrollment Mistakes: 7 Costly Errors to Avoid">
+    <meta property="og:description" content="Avoid costly Medicare enrollment mistakes. Learn the 7 most common errors that lead to lifetime penalties, coverage gaps, and thousands in unnecessary costs.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/blog/medicare-enrollment-mistakes">
+
+    <!-- Article Metadata -->
+        <meta property="article:author" content="Unbiased Medicare Advisor">
+    <meta property="article:section" content="Medicare">
+    <meta property="article:tag" content="Medicare">
+    <meta property="article:tag" content="Enrollment">
+    <meta property="article:tag" content="Penalties">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        /* Article Header */
+        .article-header {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .article-header-content { max-width: 800px; }
+        .article-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .article-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+        .article-meta {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .article-meta span {
+            margin-right: var(--spacing-md);
+        }
+
+        /* Article Content */
+        .article-section { padding: var(--spacing-xxl) 0; }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+        .article-content { }
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        .article-content h2:first-child { margin-top: 0; }
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+        .article-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+        .article-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+        .article-content strong {
+            color: var(--black);
+        }
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: var(--accent);
+        }
+
+        /* Key Takeaway Box */
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .key-takeaway h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .key-takeaway p {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border: 4px solid #ffc107;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .warning-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box p {
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: var(--off-white); }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: calc(var(--header-height) + var(--spacing-md) + 36px); }
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+        .sidebar-card .btn { width: 100%; }
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .sidebar-cta h3 { color: var(--white); }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .toc h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: var(--spacing-xs);
+        }
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta { padding: var(--spacing-xxl) 0; text-align: center; background: var(--primary); color: var(--white); }
+        .cta-content { max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); color: var(--white); }
+        .cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: var(--spacing-lg); }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        /* Footer */
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .article-header h1 { font-size: 3rem; }
+        }
+        @media (max-width: 968px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .article-header { padding-top: calc(var(--header-height) + var(--spacing-xl)); }
+            .article-header h1 { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .comparison-table { font-size: 0.9rem; }
+            .comparison-table th, .comparison-table td { padding: var(--spacing-sm); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+{{HEADER}}
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <span class="article-tag">Enrollment</span>
+                <h1>Medicare Enrollment Mistakes: 7 Costly Errors That Can Follow You for Life</h1>
+                <div class="article-meta">
+                    <span>9 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-section">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+                    <p>
+                        <strong>Medicare enrollment mistakes can cost you thousands of dollars over your lifetime, and most of them are completely preventable.</strong> Every year, thousands of Americans face permanent penalties, coverage gaps, and surprise bills because they didn't understand Medicare's complex enrollment rules.
+                    </p>
+
+                    <p>
+                        The problem? Medicare doesn't give you a second chance. Miss a deadline or make a wrong assumption, and you could pay the price every month for the rest of your life. This guide covers the seven most expensive Medicare enrollment mistakes and exactly how to avoid them.
+                    </p>
+
+                    <div class="key-takeaway">
+                        <h4>&#9733; Key Takeaway</h4>
+                        <p>
+                            Most Medicare penalties are permanent and compound over time. A single enrollment mistake at 65 can cost you $10,000+ over your lifetime. Understanding the rules before you enroll is critical.
+                        </p>
+                    </div>
+
+                    <h2 id="mistake-1">Mistake #1: Missing Your Initial Enrollment Period</h2>
+
+                    <p>
+                        Your Initial Enrollment Period (IEP) is a 7-month window centered around your 65th birthday. It's your first and best opportunity to enroll in Medicare without penalties or restrictions.
+                    </p>
+
+                    <h3>When Is Your IEP?</h3>
+
+                    <p>
+                        Your Initial Enrollment Period includes:
+                    </p>
+
+                    <ul>
+                        <li><strong>3 months before</strong> your 65th birthday month</li>
+                        <li><strong>Your birthday month</strong></li>
+                        <li><strong>3 months after</strong> your 65th birthday month</li>
+                    </ul>
+
+                    <h3>What Happens If You Miss It?</h3>
+
+                    <p>
+                        If you don't enroll during your IEP and don't have qualifying coverage (like employer insurance), you'll face two consequences:
+                    </p>
+
+                    <ul>
+                        <li><strong>Coverage gap:</strong> You can't enroll until the General Enrollment Period (January 1 - March 31), and coverage won't start until July 1</li>
+                        <li><strong>Late enrollment penalty:</strong> Your Part B premium increases 10% for each 12-month period you could have had coverage but didn't</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>The Part B Penalty Is Permanent</h4>
+                        <p>
+                            If you delay Part B enrollment by 2 years without qualifying coverage, you'll pay a 20% higher premium for the rest of your life. At the 2025 standard premium of $185/month, that's an extra $444 per year, every year, forever.
+                        </p>
+                    </div>
+
+                    <h2 id="mistake-2">Mistake #2: Assuming Employer Coverage Always Protects You</h2>
+
+                    <p>
+                        Many people think they can simply delay Medicare because they have employer health insurance. This is one of the most dangerous assumptions in Medicare planning.
+                    </p>
+
+                    <h3>The 20-Employee Rule</h3>
+
+                    <p>
+                        Whether you can delay Medicare depends on your employer's size:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Employer Size</th>
+                                <th>Can You Delay Medicare?</th>
+                                <th>What Happens</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>20+ employees</strong></td>
+                                <td>Yes</td>
+                                <td>Employer insurance pays first; you can delay Part B without penalty</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Under 20 employees</strong></td>
+                                <td>No</td>
+                                <td>Medicare is primary; employer insurance may not pay if you don't have Medicare</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>The Small Employer Trap</h3>
+
+                    <p>
+                        If you work for a company with fewer than 20 employees and don't enroll in Medicare at 65, you could face:
+                    </p>
+
+                    <ul>
+                        <li>Unpaid medical claims (your employer plan expects Medicare to pay first)</li>
+                        <li>Late enrollment penalties when you do enroll</li>
+                        <li>A coverage gap while you wait for the next enrollment period</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>HSA Warning</h4>
+                        <p>
+                            If you're enrolled in a High Deductible Health Plan with an HSA, you must stop contributing to your HSA when you enroll in any part of Medicare, including Part A. Since Part A is retroactive up to 6 months, plan your enrollment carefully to avoid tax penalties.
+                        </p>
+                    </div>
+
+                    <h2 id="mistake-3">Mistake #3: Skipping Part B Because You're Healthy</h2>
+
+                    <p>
+                        "I'm healthy. I don't need insurance." This reasoning has led to some of the most expensive Medicare mistakes. Health can change overnight, but Medicare penalties last forever.
+                    </p>
+
+                    <h3>The Math of Delaying</h3>
+
+                    <p>
+                        Let's say you're 65, healthy, and decide to skip Part B to save $185/month. Here's what happens if you delay for 5 years:
+                    </p>
+
+                    <ul>
+                        <li><strong>Penalty:</strong> 10% per year x 5 years = 50% permanent increase</li>
+                        <li><strong>Extra monthly cost:</strong> $92.50/month for life (at 2025 rates)</li>
+                        <li><strong>Annual extra cost:</strong> $1,110/year</li>
+                        <li><strong>20-year total:</strong> $22,200 in extra premiums</li>
+                    </ul>
+
+                    <p>
+                        And that's assuming premiums don't increase (they always do). The penalty percentage applies to whatever the premium is each year.
+                    </p>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>No Coverage During the Wait</h4>
+                        <p>
+                            If you skip Part B and later need it, you can only enroll during the General Enrollment Period (January 1 - March 31). Coverage doesn't start until July 1. That's potentially 3-6 months with no coverage while you wait.
+                        </p>
+                    </div>
+
+                    <h2 id="mistake-4">Mistake #4: Not Understanding Part D Creditable Coverage</h2>
+
+                    <p>
+                        Part D (prescription drug coverage) has its own set of enrollment rules and penalties. The key concept is "creditable coverage," meaning drug coverage that's at least as good as Medicare Part D.
+                    </p>
+
+                    <h3>The Part D Penalty</h3>
+
+                    <p>
+                        If you go 63 or more consecutive days without Part D or creditable drug coverage, you'll pay a late enrollment penalty when you do enroll:
+                    </p>
+
+                    <ul>
+                        <li><strong>Penalty calculation:</strong> 1% of the national base premium ($34.70 in 2025) for each month you went without coverage</li>
+                        <li><strong>Example:</strong> 24 months without coverage = 24% penalty = $8.33 extra per month, permanently</li>
+                    </ul>
+
+                    <h3>What Counts as Creditable Coverage?</h3>
+
+                    <ul>
+                        <li>Employer drug coverage (if the employer says it's creditable)</li>
+                        <li>TRICARE</li>
+                        <li>VA health benefits</li>
+                        <li>Federal employee health benefits (FEHB)</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Keep Your Creditable Coverage Letters</h4>
+                        <p>
+                            Your employer or plan must send you a letter each year stating whether your drug coverage is creditable. Save these letters. You'll need them to prove you shouldn't pay the late penalty when you eventually enroll in Part D.
+                        </p>
+                    </div>
+
+                    <h2 id="mistake-5">Mistake #5: Choosing Medicare Advantage Without Understanding the Trade-offs</h2>
+
+                    <p>
+                        Medicare Advantage plans are heavily marketed and often have $0 premiums. But choosing one without understanding the restrictions can be a costly mistake, especially if your health situation changes.
+                    </p>
+
+                    <h3>What Many People Don't Realize</h3>
+
+                    <ul>
+                        <li><strong>Network restrictions:</strong> You may be limited to specific doctors and hospitals</li>
+                        <li><strong>Prior authorization:</strong> The plan must approve many treatments before they're covered</li>
+                        <li><strong>Out-of-pocket maximums:</strong> You could pay up to $8,850 per year (2025) before the plan pays 100%</li>
+                        <li><strong>Difficult to leave:</strong> If you want to switch to Original Medicare + Medigap later, you may not be able to get a Medigap policy due to medical underwriting</li>
+                    </ul>
+
+                    <h3>The Medigap Problem</h3>
+
+                    <p>
+                        Your best chance to get a Medigap policy is during your 6-month Medigap Open Enrollment Period, which starts when you're 65 AND enrolled in Part B. If you choose Medicare Advantage at 65, that window closes.
+                    </p>
+
+                    <p>
+                        Want to switch later? Unless you're within your first 12 months of Medicare Advantage, you'll face medical underwriting. Pre-existing conditions can result in denial or higher premiums. For more details, see our guide on <a href="/blog/switch-medicare-advantage-to-medigap">switching from Medicare Advantage to Medigap</a>.
+                    </p>
+
+                    <h2 id="mistake-6">Mistake #6: Not Reviewing Your Coverage Every Year</h2>
+
+                    <p>
+                        Medicare isn't "set it and forget it." Plans change every year, and failing to review your coverage annually can cost you hundreds or thousands of dollars.
+                    </p>
+
+                    <h3>What Changes Each Year</h3>
+
+                    <ul>
+                        <li><strong>Premiums:</strong> Your plan's monthly cost can increase significantly</li>
+                        <li><strong>Formularies:</strong> Your medications may move to a higher cost tier or be dropped entirely</li>
+                        <li><strong>Networks:</strong> Your doctors may leave your plan's network</li>
+                        <li><strong>Benefits:</strong> Extra benefits like dental or vision may change</li>
+                        <li><strong>Star ratings:</strong> Plan quality can decline, affecting benefits and costs</li>
+                    </ul>
+
+                    <h3>Annual Enrollment Period</h3>
+
+                    <p>
+                        Each year from <strong>October 15 - December 7</strong>, you can:
+                    </p>
+
+                    <ul>
+                        <li>Switch Medicare Advantage plans</li>
+                        <li>Switch from Medicare Advantage to Original Medicare</li>
+                        <li>Join or switch Part D plans</li>
+                        <li>Add or drop Medicare Advantage or Part D coverage</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Check Your Annual Notice of Change</h4>
+                        <p>
+                            Medicare Advantage and Part D plans must send you an Annual Notice of Change (ANOC) by September 30 each year. This document outlines all changes for the upcoming year. Read it carefully and compare your options before the enrollment period ends.
+                        </p>
+                    </div>
+
+                    <h2 id="mistake-7">Mistake #7: Waiting Until the Last Minute</h2>
+
+                    <p>
+                        Procrastinating on Medicare enrollment can lead to processing delays, confusion, and costly mistakes. The best time to start planning is 3-6 months before you turn 65.
+                    </p>
+
+                    <h3>Why Early Planning Matters</h3>
+
+                    <ul>
+                        <li><strong>Processing times:</strong> Social Security can take several weeks to process your enrollment</li>
+                        <li><strong>Coverage start dates vary:</strong> Enroll in the first 3 months of your IEP for coverage starting on your birthday month. Wait until the last 3 months and coverage may not start until 1-3 months later</li>
+                        <li><strong>Coordination issues:</strong> If you have employer coverage, coordinating the transition takes time</li>
+                        <li><strong>Plan comparison:</strong> Comparing Medicare Advantage, Medigap, and Part D options properly takes research</li>
+                    </ul>
+
+                    <h3>When Your Coverage Starts Based on Enrollment Timing</h3>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>When You Enroll</th>
+                                <th>Coverage Starts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1-3 months before birthday month</td>
+                                <td>First day of your birthday month</td>
+                            </tr>
+                            <tr>
+                                <td>During birthday month</td>
+                                <td>First day of the following month</td>
+                            </tr>
+                            <tr>
+                                <td>1 month after birthday month</td>
+                                <td>First day, 2 months later</td>
+                            </tr>
+                            <tr>
+                                <td>2 months after birthday month</td>
+                                <td>First day, 3 months later</td>
+                            </tr>
+                            <tr>
+                                <td>3 months after birthday month</td>
+                                <td>First day, 3 months later</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 id="avoid-mistakes">How to Avoid These Mistakes</h2>
+
+                    <p>
+                        Protecting yourself from Medicare enrollment mistakes comes down to preparation and understanding your specific situation. Here's your action plan:
+                    </p>
+
+                    <ol>
+                        <li><strong>Mark your calendar:</strong> Set reminders for 6 months and 3 months before your 65th birthday to start the enrollment process</li>
+                        <li><strong>Verify your employer situation:</strong> If you're still working, confirm your employer has 20+ employees and get documentation that your coverage is primary</li>
+                        <li><strong>Check for creditable drug coverage:</strong> Request a creditable coverage letter from your employer or current plan and save it</li>
+                        <li><strong>Understand your options:</strong> Learn the differences between Original Medicare + Medigap vs. Medicare Advantage before choosing</li>
+                        <li><strong>Enroll early in your IEP:</strong> Don't wait until the last month. Enroll in the first 3 months for the earliest coverage start date</li>
+                        <li><strong>Review coverage annually:</strong> Set a calendar reminder for October to review your plans before the December 7 deadline</li>
+                        <li><strong>Get help if needed:</strong> Consider consulting a fee-only Medicare advisor who can review your situation without trying to sell you a plan</li>
+                    </ol>
+
+                    <div class="key-takeaway">
+                        <h4>&#128203; The Bottom Line</h4>
+                        <p>
+                            Medicare enrollment mistakes are expensive and usually permanent. The rules are complex, but they're knowable. Taking time to understand your options before you turn 65, not after, is the single best way to avoid costly errors that can follow you for the rest of your life.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Need Personalized Help?</h4>
+                        <p>
+                            Everyone's Medicare situation is different. If you're approaching 65 or navigating a complex enrollment situation, a fee-only Medicare advisor can help you understand your options without any sales pressure. We don't sell insurance; we just help you make the right decision.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="toc">
+                        <h3>In This Article</h3>
+                        <ul>
+                            <li><a href="#mistake-1">Missing Your IEP</a></li>
+                            <li><a href="#mistake-2">Employer Coverage Assumptions</a></li>
+                            <li><a href="#mistake-3">Skipping Part B</a></li>
+                            <li><a href="#mistake-4">Part D Creditable Coverage</a></li>
+                            <li><a href="#mistake-5">Medicare Advantage Trade-offs</a></li>
+                            <li><a href="#mistake-6">Not Reviewing Annually</a></li>
+                            <li><a href="#mistake-7">Waiting Too Long</a></li>
+                            <li><a href="#avoid-mistakes">How to Avoid Mistakes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Worried About Enrollment?</h3>
+                        <p>
+                            Get personalized guidance on your Medicare enrollment from a fee-only advisor with no insurance company ties.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-enrollment-periods" style="color: var(--primary); text-decoration: none;">
+                                    Medicare Enrollment Periods
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/turning-65-medicare-guide" style="color: var(--primary); text-decoration: none;">
+                                    Turning 65 Medicare Guide
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-parts-explained" style="color: var(--primary); text-decoration: none;">
+                                    Medicare Parts A, B, C, D Explained
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have Medicare Enrollment Questions?</h2>
+                <p>
+                    Don't risk costly mistakes. Schedule a free consultation to get personalized
+                    guidance on your Medicare enrollment from someone who doesn't sell insurance.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{FOOTER}}
+{{SCRIPTS}}
+</body>
+</html>
