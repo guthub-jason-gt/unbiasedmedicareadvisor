@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medicare and employer insurance: when to delay Medicare if you're still working, rules for employers with 20+ vs under 20 employees, HSA considerations, and how to avoid late enrollment penalties.">
+    <meta name="keywords" content="medicare and employer insurance, medicare while working, delay medicare, employer health insurance medicare, hsa and medicare">
+    <title>Medicare and Employer Insurance: When to Delay, When to Enroll | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Medicare and Employer Insurance: When to Delay, When to Enroll">
+    <meta property="og:description" content="Learn how Medicare works with employer coverage, when you can safely delay enrollment, and how to avoid costly penalties.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/blog/medicare-and-employer-insurance">
+
+    <!-- Article Metadata -->
+        <meta property="article:author" content="Unbiased Medicare Advisor">
+    <meta property="article:section" content="Medicare">
+    <meta property="article:tag" content="Medicare">
+    <meta property="article:tag" content="Employer Insurance">
+    <meta property="article:tag" content="Working Past 65">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        /* Article Header */
+        .article-header {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .article-header-content { max-width: 800px; }
+        .article-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .article-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+        .article-meta {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .article-meta span {
+            margin-right: var(--spacing-md);
+        }
+
+        /* Article Content */
+        .article-section { padding: var(--spacing-xxl) 0; }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+        .article-content { }
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        .article-content h2:first-child { margin-top: 0; }
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+        .article-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+        .article-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+        .article-content strong {
+            color: var(--black);
+        }
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: var(--accent);
+        }
+
+        /* Key Takeaway Box */
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .key-takeaway h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .key-takeaway p {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border: 4px solid #ffc107;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .warning-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box p {
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: var(--off-white); }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: calc(var(--header-height) + var(--spacing-md) + 36px); }
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+        .sidebar-card .btn { width: 100%; }
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .sidebar-cta h3 { color: var(--white); }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .toc h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: var(--spacing-xs);
+        }
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta { padding: var(--spacing-xxl) 0; text-align: center; background: var(--primary); color: var(--white); }
+        .cta-content { max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); color: var(--white); }
+        .cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: var(--spacing-lg); }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        /* Footer */
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .article-header h1 { font-size: 3rem; }
+        }
+        @media (max-width: 968px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .article-header { padding-top: calc(var(--header-height) + var(--spacing-xl)); }
+            .article-header h1 { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .comparison-table { font-size: 0.9rem; }
+            .comparison-table th, .comparison-table td { padding: var(--spacing-sm); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+{{HEADER}}
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <span class="article-tag">Working Past 65</span>
+                <h1>Medicare and Employer Insurance: When to Delay, When to Enroll</h1>
+                <div class="article-meta">
+                    <span>9 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-section">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+                    <p>
+                        <strong>If you're turning 65 but still working with employer health insurance, you face an important decision: enroll in Medicare now or delay it?</strong> The answer depends on your employer's size, the quality of your current coverage, and whether you have a Health Savings Account (HSA). Getting this wrong can cost you thousands in penalties or leave you with gaps in coverage.
+                    </p>
+
+                    <p>
+                        This guide explains exactly how Medicare works with employer insurance, when you can safely delay enrollment, and what steps to take when you eventually transition to Medicare.
+                    </p>
+
+                    <div class="key-takeaway">
+                        <h4>&#9733; Key Takeaway</h4>
+                        <p>
+                            If your employer has 20 or more employees, you can delay Medicare without penalty while covered by employer insurance. If your employer has fewer than 20 employees, Medicare becomes your primary insurance at 65 and you should enroll.
+                        </p>
+                    </div>
+
+                    <h2 id="employer-size-matters">Why Employer Size Matters</h2>
+
+                    <p>
+                        The single most important factor in deciding whether to enroll in Medicare while working is your employer's size. Federal law establishes which insurance pays first (primary) and which pays second (secondary) based on the number of employees.
+                    </p>
+
+                    <h3>Employers With 20 or More Employees</h3>
+
+                    <p>
+                        If you work for a company with 20 or more employees:
+                    </p>
+
+                    <ul>
+                        <li><strong>Employer insurance is primary</strong> - It pays first for your medical bills</li>
+                        <li><strong>Medicare is secondary</strong> - If you enroll, it only pays after your employer plan</li>
+                        <li><strong>You can delay Part B</strong> - No penalty as long as you're covered by employer insurance</li>
+                        <li><strong>You can delay Part D</strong> - Employer drug coverage is typically creditable</li>
+                    </ul>
+
+                    <p>
+                        For most people in this situation, it makes sense to keep employer coverage and delay Medicare Part B. You'll avoid the Part B premium ($185/month in 2025) while maintaining good coverage through work.
+                    </p>
+
+                    <h3>Employers With Fewer Than 20 Employees</h3>
+
+                    <p>
+                        If your employer has fewer than 20 employees:
+                    </p>
+
+                    <ul>
+                        <li><strong>Medicare is primary</strong> - It pays first, even if you have employer coverage</li>
+                        <li><strong>Employer insurance is secondary</strong> - It only covers what Medicare doesn't</li>
+                        <li><strong>You should enroll in Part B at 65</strong> - Otherwise, you'll have significant coverage gaps</li>
+                        <li><strong>Delaying will result in penalties</strong> - The late enrollment penalty applies</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>Small Employer Warning</h4>
+                        <p>
+                            If your employer has fewer than 20 employees and you don't enroll in Medicare Part B at 65, your employer plan may not cover services that Medicare would have paid for. This can leave you responsible for large medical bills.
+                        </p>
+                    </div>
+
+                    <h2 id="coordination-rules">How Medicare Coordinates With Employer Insurance</h2>
+
+                    <p>
+                        When you have both Medicare and employer coverage, one plan pays first (primary) and the other pays second (secondary). Understanding this coordination is essential to avoiding coverage gaps.
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Situation</th>
+                                <th>Primary Insurance</th>
+                                <th>Secondary Insurance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Working for employer with 20+ employees</td>
+                                <td>Employer plan</td>
+                                <td>Medicare (if enrolled)</td>
+                            </tr>
+                            <tr>
+                                <td>Working for employer with fewer than 20 employees</td>
+                                <td>Medicare</td>
+                                <td>Employer plan</td>
+                            </tr>
+                            <tr>
+                                <td>Retired with retiree health benefits</td>
+                                <td>Medicare</td>
+                                <td>Retiree plan</td>
+                            </tr>
+                            <tr>
+                                <td>COBRA coverage</td>
+                                <td>Medicare</td>
+                                <td>COBRA</td>
+                            </tr>
+                            <tr>
+                                <td>Covered through spouse's employer (20+ employees)</td>
+                                <td>Spouse's employer plan</td>
+                                <td>Medicare (if enrolled)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Should You Enroll in Part A While Working?</h3>
+
+                    <p>
+                        Medicare Part A (hospital insurance) is premium-free for most people, so many assume there's no downside to enrolling. However, there's one important exception:
+                    </p>
+
+                    <ul>
+                        <li><strong>If you have an HSA:</strong> Don't enroll in Part A. You cannot contribute to an HSA once enrolled in any part of Medicare.</li>
+                        <li><strong>If you don't have an HSA:</strong> Go ahead and enroll in Part A at 65. It provides backup coverage at no cost.</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Automatic Enrollment Alert</h4>
+                        <p>
+                            If you're already receiving Social Security benefits when you turn 65, you'll be automatically enrolled in Part A and Part B. To delay Part B, you must actively decline it. To avoid Part A (for HSA reasons), you may need to delay Social Security benefits.
+                        </p>
+                    </div>
+
+                    <h2 id="hsa-considerations">HSA and Medicare: The Critical Rule</h2>
+
+                    <p>
+                        Health Savings Accounts (HSAs) offer triple tax advantages: tax-deductible contributions, tax-free growth, and tax-free withdrawals for medical expenses. But there's a catch with Medicare.
+                    </p>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>HSA Contribution Rule</h4>
+                        <p>
+                            You cannot contribute to an HSA once you're enrolled in any part of Medicare, including Part A. If you want to keep contributing, you must delay Medicare enrollment entirely.
+                        </p>
+                    </div>
+
+                    <h3>HSA Strategy for Those Turning 65</h3>
+
+                    <ol>
+                        <li><strong>Stop contributions 6 months before enrolling</strong> - When you enroll in Part A, coverage is retroactive up to 6 months. To avoid IRS penalties, stop HSA contributions 6 months before your Part A enrollment date.</li>
+                        <li><strong>You can still use HSA funds</strong> - After enrolling in Medicare, you can withdraw from your HSA tax-free for qualified medical expenses, including Medicare premiums. You just can't contribute more.</li>
+                        <li><strong>Consider maximizing before 65</strong> - If you're approaching 65, consider making catch-up contributions ($1,000 extra for those 55+) while you still can.</li>
+                    </ol>
+
+                    <h3>Can You Keep Your HSA After Medicare?</h3>
+
+                    <p>
+                        Yes. Your HSA doesn't go away when you enroll in Medicare. You can:
+                    </p>
+
+                    <ul>
+                        <li>Keep the account indefinitely</li>
+                        <li>Use funds for Medicare premiums (Parts A, B, C, D - but not Medigap)</li>
+                        <li>Use funds for medical expenses, prescriptions, and dental/vision care</li>
+                        <li>Let the balance grow tax-free</li>
+                    </ul>
+
+                    <h2 id="when-to-delay">When You Can Safely Delay Medicare</h2>
+
+                    <p>
+                        You can delay Medicare Part B (and Part D) without penalty if you have coverage through:
+                    </p>
+
+                    <ul>
+                        <li><strong>Current employment</strong> with an employer of 20+ employees</li>
+                        <li><strong>Spouse's current employment</strong> with an employer of 20+ employees</li>
+                        <li><strong>COBRA does NOT count</strong> - This is not current employment coverage</li>
+                        <li><strong>Retiree benefits do NOT count</strong> - You're no longer actively employed</li>
+                    </ul>
+
+                    <h3>Benefits of Delaying</h3>
+
+                    <ul>
+                        <li>Avoid Part B premium ($185/month in 2025)</li>
+                        <li>Maintain HSA contribution eligibility (if not enrolled in Part A)</li>
+                        <li>Keep existing doctor network without Medicare restrictions</li>
+                        <li>Employer may cover spouse and dependents</li>
+                    </ul>
+
+                    <h3>Reasons You Might Enroll Anyway</h3>
+
+                    <ul>
+                        <li>Your employer plan has high deductibles or poor coverage</li>
+                        <li>You want Medicare as secondary insurance for added protection</li>
+                        <li>You're planning to retire soon anyway</li>
+                        <li>Your employer offers to pay your Medicare premiums</li>
+                    </ul>
+
+                    <h2 id="special-enrollment">Special Enrollment Period When You Lose Coverage</h2>
+
+                    <p>
+                        When your employer coverage ends (due to retirement, job loss, or dropping the plan), you qualify for a Special Enrollment Period (SEP) to join Medicare without penalties.
+                    </p>
+
+                    <h3>How the SEP Works</h3>
+
+                    <ul>
+                        <li><strong>Duration:</strong> 8 months after employer coverage ends OR employment ends (whichever comes first)</li>
+                        <li><strong>Coverage start:</strong> Part B begins the month after you enroll</li>
+                        <li><strong>No penalty:</strong> As long as you enroll during the SEP, no late penalties apply</li>
+                    </ul>
+
+                    <div class="key-takeaway">
+                        <h4>&#128203; Document Your Coverage</h4>
+                        <p>
+                            Get proof of your employer coverage before it ends. You'll need a letter from your employer or HR department confirming dates of coverage to avoid late enrollment penalties.
+                        </p>
+                    </div>
+
+                    <h3>Steps to Take When Employer Coverage Ends</h3>
+
+                    <ol>
+                        <li><strong>Request proof of coverage</strong> - Get a letter from HR confirming your coverage dates</li>
+                        <li><strong>Enroll in Part B</strong> - Contact Social Security or visit SSA.gov</li>
+                        <li><strong>Choose Part D or Medicare Advantage</strong> - Decide between Original Medicare with a standalone drug plan or Medicare Advantage</li>
+                        <li><strong>Consider Medigap</strong> - If choosing Original Medicare, apply for a Medigap policy during your 6-month open enrollment window</li>
+                        <li><strong>Don't rely on COBRA long-term</strong> - COBRA is expensive and doesn't protect you from Medicare penalties</li>
+                    </ol>
+
+                    <h2 id="late-penalties">Avoiding Late Enrollment Penalties</h2>
+
+                    <p>
+                        If you delay Medicare without qualifying coverage, you'll face permanent penalties when you do enroll.
+                    </p>
+
+                    <h3>Part B Late Enrollment Penalty</h3>
+
+                    <ul>
+                        <li><strong>Amount:</strong> 10% of the premium for every 12-month period you delayed</li>
+                        <li><strong>Duration:</strong> You pay this penalty every month for as long as you have Part B</li>
+                        <li><strong>Example:</strong> Delay 3 years = 30% higher premium for life</li>
+                    </ul>
+
+                    <h3>Part D Late Enrollment Penalty</h3>
+
+                    <ul>
+                        <li><strong>Amount:</strong> 1% of the national base premium per month you delayed</li>
+                        <li><strong>Duration:</strong> Permanent - added to your premium forever</li>
+                        <li><strong>Example:</strong> Delay 24 months = ~$8/month extra for life</li>
+                    </ul>
+
+                    <h3>What Counts as Creditable Coverage?</h3>
+
+                    <p>
+                        To avoid penalties, your alternative coverage must be "creditable" - meaning it's at least as good as Medicare. Examples include:
+                    </p>
+
+                    <ul>
+                        <li>Employer or union group health plans (for Part B)</li>
+                        <li>Employer drug coverage that's certified as creditable (for Part D)</li>
+                        <li>TRICARE</li>
+                        <li>VA health benefits</li>
+                    </ul>
+
+                    <p>
+                        Your employer must send you an annual notice stating whether your drug coverage is creditable. Keep these notices - you'll need them to prove you shouldn't pay the Part D penalty.
+                    </p>
+
+                    <h2 id="spouse-coverage">Coverage Through a Spouse's Employer</h2>
+
+                    <p>
+                        If you're covered through your spouse's employer plan, the same rules apply:
+                    </p>
+
+                    <ul>
+                        <li><strong>20+ employees:</strong> Spouse's plan is primary; you can delay Medicare</li>
+                        <li><strong>Fewer than 20:</strong> Medicare is primary; enroll at 65</li>
+                        <li><strong>When spouse retires:</strong> You get an 8-month SEP to enroll in Medicare</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Spouse Losing Coverage?</h4>
+                        <p>
+                            If your spouse's employer coverage ends for any reason (retirement, job loss, divorce), you qualify for a Special Enrollment Period. You have 8 months to enroll in Part B without penalty.
+                        </p>
+                    </div>
+
+                    <h2 id="common-mistakes">Common Mistakes to Avoid</h2>
+
+                    <h3>Mistake 1: Thinking COBRA Protects You</h3>
+
+                    <p>
+                        COBRA is continuation of your employer coverage after you leave, but it's NOT considered current employment coverage. If you're 65+ and relying on COBRA instead of Medicare, you may face late enrollment penalties when COBRA ends.
+                    </p>
+
+                    <h3>Mistake 2: Confusing Retiree Benefits With Active Coverage</h3>
+
+                    <p>
+                        Retiree health benefits are secondary to Medicare. If you're offered retiree coverage, you still need to enroll in Medicare Part B at 65 (or when you retire). Most retiree plans expect Medicare to be your primary insurance.
+                    </p>
+
+                    <h3>Mistake 3: Missing the 8-Month Window</h3>
+
+                    <p>
+                        When employer coverage ends, you have exactly 8 months to enroll in Part B without penalty. Miss this window and you'll have to wait for the General Enrollment Period (January-March) and face late penalties.
+                    </p>
+
+                    <h3>Mistake 4: Not Getting Proof of Coverage</h3>
+
+                    <p>
+                        Social Security may question whether you had creditable coverage. Always get written documentation from your employer confirming your coverage dates before leaving.
+                    </p>
+
+                    <h2 id="action-steps">Your Action Steps</h2>
+
+                    <p>
+                        Here's what to do based on your situation:
+                    </p>
+
+                    <h3>If You're Approaching 65 and Still Working:</h3>
+
+                    <ol>
+                        <li><strong>Check your employer size</strong> - Fewer than 20 employees? Enroll in Medicare at 65.</li>
+                        <li><strong>Review your current coverage</strong> - Compare benefits and costs with Medicare options.</li>
+                        <li><strong>Consider your HSA</strong> - If you have one, decide whether to stop contributions or delay all Medicare enrollment.</li>
+                        <li><strong>Confirm coverage is creditable</strong> - Get documentation that your employer plan qualifies.</li>
+                    </ol>
+
+                    <h3>If You're Planning to Retire Soon:</h3>
+
+                    <ol>
+                        <li><strong>Get proof of employer coverage</strong> - Request a letter from HR before your last day.</li>
+                        <li><strong>Mark your calendar</strong> - You have 8 months from coverage end to enroll in Part B.</li>
+                        <li><strong>Research your options</strong> - Original Medicare + Medigap or Medicare Advantage?</li>
+                        <li><strong>Don't rely on COBRA</strong> - It's expensive and doesn't protect you from penalties.</li>
+                    </ol>
+
+                    <div class="info-box">
+                        <h4>Need Personalized Guidance?</h4>
+                        <p>
+                            Every situation is different. If you're unsure whether to delay Medicare, how to coordinate with employer coverage, or what to do when you retire, a fee-only Medicare advisor can help you make the right decision for your specific circumstances.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="toc">
+                        <h3>In This Article</h3>
+                        <ul>
+                            <li><a href="#employer-size-matters">Why Employer Size Matters</a></li>
+                            <li><a href="#coordination-rules">Coordination Rules</a></li>
+                            <li><a href="#hsa-considerations">HSA Considerations</a></li>
+                            <li><a href="#when-to-delay">When to Delay Medicare</a></li>
+                            <li><a href="#special-enrollment">Special Enrollment Period</a></li>
+                            <li><a href="#late-penalties">Avoiding Late Penalties</a></li>
+                            <li><a href="#spouse-coverage">Spouse's Employer Coverage</a></li>
+                            <li><a href="#common-mistakes">Common Mistakes</a></li>
+                            <li><a href="#action-steps">Your Action Steps</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Still Working at 65?</h3>
+                        <p>
+                            Get personalized guidance on coordinating Medicare with your employer coverage from a fee-only advisor.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/turning-65-medicare-guide" style="color: var(--primary); text-decoration: none;">
+                                    Turning 65 Medicare Guide
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-enrollment-periods" style="color: var(--primary); text-decoration: none;">
+                                    Medicare Enrollment Periods
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-parts-explained" style="color: var(--primary); text-decoration: none;">
+                                    Medicare Parts A, B, C, D Explained
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Questions About Medicare and Work?</h2>
+                <p>
+                    Your situation may have unique considerations. Schedule a free consultation
+                    for personalized guidance on coordinating Medicare with employer coverage.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{FOOTER}}
+{{SCRIPTS}}
+</body>
+</html>
