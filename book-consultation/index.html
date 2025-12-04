@@ -372,44 +372,10 @@
             margin-bottom: var(--spacing-lg);
         }
 
-        /* Calendar Placeholder */
-        .calendar-placeholder {
-            background: var(--off-white);
-            border: 2px dashed var(--light-gray);
+        /* Calendly Widget */
+        .calendly-inline-widget {
             border-radius: var(--radius-lg);
-            padding: var(--spacing-xxl);
-            text-align: center;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .calendar-placeholder-icon {
-            font-size: 4rem;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .calendar-placeholder h3 {
-            font-size: 1.5rem;
-            color: var(--dark-gray);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .calendar-placeholder p {
-            color: var(--medium-gray);
-            max-width: 400px;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .calendar-placeholder .btn {
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .calendar-placeholder small {
-            color: var(--medium-gray);
-            font-size: 0.875rem;
+            overflow: hidden;
         }
 
         /* Info Section */
@@ -871,19 +837,9 @@
                     <h2>Schedule Your Free Call</h2>
                     <p>Choose a time that works for you. Initial consultations are complimentary and last about 20-30 minutes.</p>
 
-                    <!-- Calendly Placeholder - Replace with actual embed -->
-                    <div class="calendar-placeholder">
-                        <div class="calendar-placeholder-icon">&#128197;</div>
-                        <h3>Calendly Calendar Coming Soon</h3>
-                        <p>We're setting up online scheduling. In the meantime, please contact us directly to book your consultation.</p>
-                        <a href="tel:+18508101000" class="btn btn-primary">Call (850) 810-1000</a>
-                        <small>Or use our <a href="/contact">contact form</a></small>
-                    </div>
-
-                    <!-- When Calendly is set up, replace the placeholder with:
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_CALENDLY_LINK" style="min-width:320px;height:630px;"></div>
+                    <!-- Calendly inline widget -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/calendly-unbiasedmedicareadvisor/30min" style="min-width:320px;height:700px;"></div>
                     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                    -->
                 </div>
 
                 <!-- Info Section -->
