@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medicare Part D explained in plain English. Learn how prescription drug coverage works, what it costs, enrollment periods, coverage phases, and how to choose the right plan.">
+    <meta name="keywords" content="medicare part d explained, medicare part d, medicare prescription drug coverage, part d enrollment, medicare drug plans">
+    <title>Medicare Part D Explained: Complete Guide to Prescription Drug Coverage | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Medicare Part D Explained: Complete Guide to Prescription Drug Coverage">
+    <meta property="og:description" content="Everything you need to know about Medicare Part D prescription drug coverage - costs, enrollment periods, coverage phases, and how to choose the right plan.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/blog/medicare-part-d-explained">
+
+    <!-- Article Metadata -->
+        <meta property="article:author" content="Unbiased Medicare Advisor">
+    <meta property="article:section" content="Medicare">
+    <meta property="article:tag" content="Medicare Part D">
+    <meta property="article:tag" content="Prescription Drugs">
+    <meta property="article:tag" content="Medicare">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        /* Article Header */
+        .article-header {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .article-header-content { max-width: 800px; }
+        .article-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .article-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+        .article-meta {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .article-meta span {
+            margin-right: var(--spacing-md);
+        }
+
+        /* Article Content */
+        .article-section { padding: var(--spacing-xxl) 0; }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+        .article-content { }
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        .article-content h2:first-child { margin-top: 0; }
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+        .article-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+        .article-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+        .article-content strong {
+            color: var(--black);
+        }
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: var(--accent);
+        }
+
+        /* Key Takeaway Box */
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .key-takeaway h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .key-takeaway p {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border: 4px solid #ffc107;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .warning-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box p {
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: var(--off-white); }
+
+        /* Coverage Phases Visual */
+        .phases-visual {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-sm);
+            margin: var(--spacing-lg) 0;
+        }
+        .phase-card {
+            background: var(--off-white);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+        .phase-card.phase-1 { border-top-color: #28a745; }
+        .phase-card.phase-2 { border-top-color: #ffc107; }
+        .phase-card.phase-3 { border-top-color: #dc3545; }
+        .phase-card.phase-4 { border-top-color: #17a2b8; }
+        .phase-number {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-xs);
+        }
+        .phase-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: var(--spacing-xs);
+        }
+        .phase-amount {
+            font-size: 0.85rem;
+            color: var(--medium-gray);
+        }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: calc(var(--header-height) + var(--spacing-md) + 36px); }
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+        .sidebar-card .btn { width: 100%; }
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .sidebar-cta h3 { color: var(--white); }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .toc h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: var(--spacing-xs);
+        }
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta { padding: var(--spacing-xxl) 0; text-align: center; background: var(--primary); color: var(--white); }
+        .cta-content { max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); color: var(--white); }
+        .cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: var(--spacing-lg); }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        /* Footer */
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .article-header h1 { font-size: 3rem; }
+        }
+        @media (max-width: 968px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            .phases-visual { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .article-header { padding-top: calc(var(--header-height) + var(--spacing-xl)); }
+            .article-header h1 { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .comparison-table { font-size: 0.9rem; }
+            .comparison-table th, .comparison-table td { padding: var(--spacing-sm); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .phases-visual { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar & Header Position Fixes -->
+    <style>
+        .top-bar {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: #1a365d !important;
+            color: white !important;
+            padding: 8px 20px !important;
+            z-index: 1001 !important;
+        }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
+        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .top-bar-phone:hover { color: #90cdf4; }
+        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+        .header { top: 36px !important; }
+        .hero, .page-header, .guide-header { padding-top: calc(var(--header-height, 80px) + 36px + 2rem) !important; }
+    </style>
+
+    <!-- ============================================
+         TOP BAR
+         ============================================ -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <a href="tel:+18508101000" class="top-bar-phone">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call Us: (850) 810-1000
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">M</span>
+                <span>Unbiased Medicare Advisor</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Learn</a>
+                        <div class="dropdown-menu">
+                            <a href="/guides/medigap-vs-medicare-advantage" class="dropdown-link">Medigap vs Medicare Advantage</a>
+                            <a href="/guides/turning-65-medicare-guide" class="dropdown-link">Turning 65 Guide</a>
+                            <a href="/guides/medicare-parts-explained" class="dropdown-link">Medicare Parts Explained (A, B, C, D)</a>
+                            <a href="/guides" class="dropdown-link">All Guides</a>
+                            <a href="/blog" class="dropdown-link">Blog Articles</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="/services/medicare-consultant" class="dropdown-link">Medicare Consultant</a>
+                            <a href="/services/fee-only-medicare-advisor" class="dropdown-link">Fee-Only Advisor</a>
+                            <a href="/services/independent-medicare-advisor" class="dropdown-link">Independent Advisor</a>
+                            <a href="/services/medicare-plan-comparison" class="dropdown-link">Plan Comparison Help</a>
+                            <a href="/services/enrollment-assistance" class="dropdown-link">Enrollment Assistance</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Your State</a>
+                        <div class="dropdown-menu">
+                            <a href="/states/florida" class="dropdown-link">Florida</a>
+                            <a href="/states/texas" class="dropdown-link">Texas</a>
+                            <a href="/states/california" class="dropdown-link">California</a>
+                            <a href="/states/ohio" class="dropdown-link">Ohio</a>
+                            <a href="/states/arizona" class="dropdown-link">Arizona</a>
+                            <a href="/states" class="dropdown-link">All 50 States</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item nav-cta">
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Learn</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/guides/medigap-vs-medicare-advantage" class="mobile-dropdown-link">Medigap vs Medicare Advantage</a>
+                        <a href="/guides/turning-65-medicare-guide" class="mobile-dropdown-link">Turning 65 Guide</a>
+                        <a href="/guides/medicare-parts-explained" class="mobile-dropdown-link">Medicare Parts Explained (A, B, C, D)</a>
+                        <a href="/guides" class="mobile-dropdown-link">All Guides</a>
+                        <a href="/blog" class="mobile-dropdown-link">Blog Articles</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Services</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/services/medicare-consultant" class="mobile-dropdown-link">Medicare Consultant</a>
+                        <a href="/services/fee-only-medicare-advisor" class="mobile-dropdown-link">Fee-Only Advisor</a>
+                        <a href="/services/independent-medicare-advisor" class="mobile-dropdown-link">Independent Advisor</a>
+                        <a href="/services/medicare-plan-comparison" class="mobile-dropdown-link">Plan Comparison Help</a>
+                        <a href="/services/enrollment-assistance" class="mobile-dropdown-link">Enrollment Assistance</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Your State</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/states/florida" class="mobile-dropdown-link">Florida</a>
+                        <a href="/states/texas" class="mobile-dropdown-link">Texas</a>
+                        <a href="/states/california" class="mobile-dropdown-link">California</a>
+                        <a href="/states/ohio" class="mobile-dropdown-link">Ohio</a>
+                        <a href="/states/arizona" class="mobile-dropdown-link">Arizona</a>
+                        <a href="/states" class="mobile-dropdown-link">All 50 States</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/about" class="mobile-nav-link">About</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/contact" class="mobile-nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="mobile-nav-cta">
+                <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <span class="article-tag">Medicare Basics</span>
+                <h1>Medicare Part D Explained: Your Complete Guide to Prescription Drug Coverage</h1>
+                <div class="article-meta">
+                    <span>10 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-section">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+                    <p>
+                        <strong>Medicare Part D is the prescription drug coverage portion of Medicare, but it works differently than the other parts.</strong> Unlike Parts A and B, which are administered directly by the federal government, Part D plans are sold by private insurance companies. This means you have choices to make, and those choices can significantly affect both your costs and your access to medications.
+                    </p>
+
+                    <p>
+                        This guide breaks down everything you need to know about Medicare Part D: what it covers, how much it costs, when to enroll, and how to choose the right plan for your specific medications.
+                    </p>
+
+                    <div class="key-takeaway">
+                        <h4>&#9733; Key Takeaway</h4>
+                        <p>
+                            Part D is optional but highly recommended. If you don't enroll when first eligible and don't have other creditable drug coverage, you'll pay a permanent late enrollment penalty of 1% per month for every month you delayed.
+                        </p>
+                    </div>
+
+                    <h2 id="what-is-part-d">What Is Medicare Part D?</h2>
+
+                    <p>
+                        Medicare Part D is prescription drug insurance that helps cover the cost of medications you pick up at the pharmacy. It was added to Medicare in 2006 to address a significant gap: Original Medicare (Parts A and B) doesn't cover most outpatient prescription drugs.
+                    </p>
+
+                    <h3>Two Ways to Get Part D Coverage</h3>
+
+                    <p>
+                        You can get Medicare prescription drug coverage in two ways:
+                    </p>
+
+                    <ul>
+                        <li><strong>Standalone Part D Plan (PDP)</strong> - Works alongside Original Medicare and Medigap plans. You pay a separate premium for drug coverage.</li>
+                        <li><strong>Medicare Advantage with Drug Coverage (MA-PD)</strong> - Bundles Part D into a Medicare Advantage plan. One plan covers medical and prescription benefits.</li>
+                    </ul>
+
+                    <p>
+                        If you have Original Medicare with a Medigap supplement, you'll need a standalone Part D plan for prescription coverage. If you choose Medicare Advantage, you'll typically get Part D included in your plan.
+                    </p>
+
+                    <h2 id="what-it-covers">What Does Part D Cover?</h2>
+
+                    <p>
+                        Part D plans cover a wide range of prescription medications, but not every drug. Each plan has a <strong>formulary</strong> (list of covered drugs) that varies from plan to plan.
+                    </p>
+
+                    <h3>Categories Part D Must Cover</h3>
+
+                    <p>
+                        By law, all Part D plans must cover drugs in these protected categories:
+                    </p>
+
+                    <ul>
+                        <li>Antidepressants</li>
+                        <li>Antipsychotics</li>
+                        <li>Anticonvulsants (seizure medications)</li>
+                        <li>Immunosuppressants (for transplant patients)</li>
+                        <li>HIV/AIDS medications</li>
+                        <li>Cancer medications</li>
+                    </ul>
+
+                    <h3>What Part D Typically Doesn't Cover</h3>
+
+                    <ul>
+                        <li>Drugs for weight loss</li>
+                        <li>Cosmetic drugs (hair growth, wrinkle treatments)</li>
+                        <li>Fertility drugs</li>
+                        <li>Erectile dysfunction medications</li>
+                        <li>Over-the-counter medications</li>
+                        <li>Drugs covered under Part A or Part B (like chemotherapy given in a doctor's office)</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Formulary Tiers Explained</h4>
+                        <p>
+                            Part D plans organize drugs into tiers. Lower tiers (generics) have lower copays, while higher tiers (brand-name and specialty drugs) cost more. Before choosing a plan, check which tier your medications fall into.
+                        </p>
+                    </div>
+
+                    <h2 id="costs">How Much Does Part D Cost?</h2>
+
+                    <p>
+                        Part D costs can be confusing because you pay in multiple ways: premiums, deductibles, copays, and potentially catastrophic coverage costs. Here's how each works.
+                    </p>
+
+                    <h3>Monthly Premiums</h3>
+
+                    <p>
+                        Part D premiums vary widely by plan and location. In 2025:
+                    </p>
+
+                    <ul>
+                        <li><strong>Average premium:</strong> Around $55/month</li>
+                        <li><strong>Range:</strong> From $0 to over $100/month depending on the plan</li>
+                        <li><strong>Lower premiums</strong> often mean higher deductibles or copays</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>High-Income Surcharge (IRMAA)</h4>
+                        <p>
+                            If your income exceeds $106,000 (single) or $212,000 (married filing jointly), you'll pay an additional premium surcharge called IRMAA. This can add $13 to $81 per month to your Part D premium.
+                        </p>
+                    </div>
+
+                    <h3>Annual Deductible</h3>
+
+                    <p>
+                        The Part D deductible is the amount you pay out-of-pocket before your plan starts covering costs.
+                    </p>
+
+                    <ul>
+                        <li><strong>Maximum allowed (2025):</strong> $590</li>
+                        <li><strong>Many plans offer:</strong> $0 deductible (with higher premiums)</li>
+                        <li><strong>Some plans waive</strong> the deductible for generic drugs</li>
+                    </ul>
+
+                    <h3>Copays and Coinsurance</h3>
+
+                    <p>
+                        After your deductible, you'll pay a share of each prescription:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Drug Tier</th>
+                                <th>Typical Cost</th>
+                                <th>Example Drugs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tier 1 (Preferred Generic)</td>
+                                <td>$0-$15 copay</td>
+                                <td>Metformin, Lisinopril</td>
+                            </tr>
+                            <tr>
+                                <td>Tier 2 (Generic)</td>
+                                <td>$10-$25 copay</td>
+                                <td>Other generics</td>
+                            </tr>
+                            <tr>
+                                <td>Tier 3 (Preferred Brand)</td>
+                                <td>$35-$50 copay</td>
+                                <td>Eliquis, Jardiance</td>
+                            </tr>
+                            <tr>
+                                <td>Tier 4 (Non-Preferred)</td>
+                                <td>$80-$100+ copay</td>
+                                <td>Brand drugs with alternatives</td>
+                            </tr>
+                            <tr>
+                                <td>Tier 5 (Specialty)</td>
+                                <td>25-33% coinsurance</td>
+                                <td>Cancer drugs, biologics</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 id="coverage-phases">The Four Coverage Phases</h2>
+
+                    <p>
+                        Part D has four distinct phases that determine how much you pay throughout the year. Understanding these phases helps you anticipate your costs.
+                    </p>
+
+                    <div class="phases-visual">
+                        <div class="phase-card phase-1">
+                            <div class="phase-number">Phase 1</div>
+                            <div class="phase-name">Deductible</div>
+                            <div class="phase-amount">$0 - $590</div>
+                        </div>
+                        <div class="phase-card phase-2">
+                            <div class="phase-number">Phase 2</div>
+                            <div class="phase-name">Initial Coverage</div>
+                            <div class="phase-amount">$590 - $2,000</div>
+                        </div>
+                        <div class="phase-card phase-3">
+                            <div class="phase-number">Phase 3</div>
+                            <div class="phase-name">Coverage Gap</div>
+                            <div class="phase-amount">$2,000 cap</div>
+                        </div>
+                        <div class="phase-card phase-4">
+                            <div class="phase-number">Phase 4</div>
+                            <div class="phase-name">Catastrophic</div>
+                            <div class="phase-amount">$0 cost</div>
+                        </div>
+                    </div>
+
+                    <h3>Phase 1: Deductible Stage</h3>
+
+                    <p>
+                        You pay 100% of drug costs until you've spent up to $590 (the maximum deductible). Many plans have $0 deductibles or waive the deductible for certain drug tiers.
+                    </p>
+
+                    <h3>Phase 2: Initial Coverage Stage</h3>
+
+                    <p>
+                        After meeting your deductible, you pay copays or coinsurance (based on drug tier) while your plan pays the rest. This continues until your total out-of-pocket costs reach $2,000.
+                    </p>
+
+                    <h3>Phase 3: Coverage Gap (formerly "Donut Hole")</h3>
+
+                    <p>
+                        Starting in 2025, the coverage gap has been eliminated for most beneficiaries thanks to the Inflation Reduction Act. Once you hit $2,000 in out-of-pocket costs, you move directly to catastrophic coverage.
+                    </p>
+
+                    <div class="key-takeaway">
+                        <h4>&#127881; 2025 Update: $2,000 Cap</h4>
+                        <p>
+                            The Inflation Reduction Act caps your annual Part D out-of-pocket costs at $2,000. Once you hit this limit, you pay $0 for covered drugs the rest of the year. This is a major improvement from previous years.
+                        </p>
+                    </div>
+
+                    <h3>Phase 4: Catastrophic Coverage</h3>
+
+                    <p>
+                        After reaching the $2,000 out-of-pocket cap, you pay nothing for covered Part D drugs for the rest of the calendar year.
+                    </p>
+
+                    <h2 id="enrollment">When to Enroll in Part D</h2>
+
+                    <p>
+                        Timing matters with Part D. Enrolling at the wrong time can leave you without coverage or result in permanent penalties.
+                    </p>
+
+                    <h3>Initial Enrollment Period (IEP)</h3>
+
+                    <p>
+                        When you first become eligible for Medicare at 65, your Initial Enrollment Period spans 7 months:
+                    </p>
+
+                    <ul>
+                        <li>Starts 3 months before your 65th birthday month</li>
+                        <li>Includes your birthday month</li>
+                        <li>Ends 3 months after your birthday month</li>
+                    </ul>
+
+                    <h3>Annual Enrollment Period (AEP)</h3>
+
+                    <p>
+                        <strong>October 15 - December 7</strong> each year. During this window, you can:
+                    </p>
+
+                    <ul>
+                        <li>Join a Part D plan for the first time</li>
+                        <li>Switch from one Part D plan to another</li>
+                        <li>Drop Part D (not recommended unless you have creditable coverage)</li>
+                    </ul>
+
+                    <h3>Special Enrollment Periods (SEP)</h3>
+
+                    <p>
+                        You may qualify for a Special Enrollment Period if you:
+                    </p>
+
+                    <ul>
+                        <li>Lose employer or union drug coverage</li>
+                        <li>Move to a new service area</li>
+                        <li>Qualify for Extra Help (Low Income Subsidy)</li>
+                        <li>Leave a Medicare Advantage plan</li>
+                    </ul>
+
+                    <h2 id="late-penalty">The Late Enrollment Penalty</h2>
+
+                    <p>
+                        If you don't enroll in Part D when first eligible and don't have other creditable drug coverage, you'll pay a penalty when you do eventually enroll.
+                    </p>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>Permanent Penalty</h4>
+                        <p>
+                            The penalty is 1% of the national base premium ($34.70 in 2025) for every month you went without coverage. This penalty is added to your premium <strong>permanently</strong> - you'll pay it every month for as long as you have Part D.
+                        </p>
+                    </div>
+
+                    <h3>Example Penalty Calculation</h3>
+
+                    <p>
+                        If you waited 24 months to enroll:
+                    </p>
+
+                    <ul>
+                        <li>24 months x 1% = 24% penalty</li>
+                        <li>24% x $34.70 = $8.33 per month</li>
+                        <li><strong>You'd pay $8.33 extra every month, forever</strong></li>
+                    </ul>
+
+                    <h3>What Counts as Creditable Coverage?</h3>
+
+                    <p>
+                        You can avoid the penalty if you had "creditable" drug coverage - meaning coverage that's at least as good as standard Part D. Common examples:
+                    </p>
+
+                    <ul>
+                        <li>Employer or union health coverage with drug benefits</li>
+                        <li>TRICARE</li>
+                        <li>VA health benefits</li>
+                        <li>Indian Health Service coverage</li>
+                        <li>COBRA (if the original coverage was creditable)</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Get Proof of Creditable Coverage</h4>
+                        <p>
+                            Your employer or plan must send you a letter each year stating whether your coverage is creditable. Keep these letters - you'll need them to prove you shouldn't pay the late penalty.
+                        </p>
+                    </div>
+
+                    <h2 id="choosing-plan">How to Choose a Part D Plan</h2>
+
+                    <p>
+                        With dozens of Part D plans available in most areas, choosing the right one requires comparing costs for your specific medications. Here's how to approach it:
+                    </p>
+
+                    <h3>Step 1: List Your Medications</h3>
+
+                    <p>
+                        Make a complete list of your prescription drugs, including:
+                    </p>
+
+                    <ul>
+                        <li>Drug name (brand and generic)</li>
+                        <li>Dosage (e.g., 10mg, 20mg)</li>
+                        <li>Quantity per month</li>
+                    </ul>
+
+                    <h3>Step 2: Use the Medicare Plan Finder</h3>
+
+                    <p>
+                        Go to <a href="https://www.medicare.gov/plan-compare" target="_blank" rel="noopener">Medicare.gov/plan-compare</a> and enter your medications. The tool will show you:
+                    </p>
+
+                    <ul>
+                        <li>Which plans cover your drugs</li>
+                        <li>Your estimated annual costs for each plan</li>
+                        <li>Which pharmacies are in each plan's network</li>
+                        <li>Any coverage restrictions (prior authorization, quantity limits)</li>
+                    </ul>
+
+                    <h3>Step 3: Compare Total Costs, Not Just Premiums</h3>
+
+                    <p>
+                        A plan with a low premium might have higher copays for your specific drugs. Always compare:
+                    </p>
+
+                    <ul>
+                        <li>Annual premium ($0-$100+/month)</li>
+                        <li>Annual deductible ($0-$590)</li>
+                        <li>Copays/coinsurance for your medications</li>
+                        <li>Pharmacy network (preferred vs. standard)</li>
+                    </ul>
+
+                    <h3>Step 4: Check for Restrictions</h3>
+
+                    <p>
+                        Some drugs have coverage rules that can affect your access:
+                    </p>
+
+                    <ul>
+                        <li><strong>Prior Authorization:</strong> Doctor must get approval before the plan covers the drug</li>
+                        <li><strong>Step Therapy:</strong> You must try a cheaper drug first</li>
+                        <li><strong>Quantity Limits:</strong> Plan limits how much you can get per month</li>
+                    </ul>
+
+                    <h2 id="extra-help">Extra Help (Low Income Subsidy)</h2>
+
+                    <p>
+                        If you have limited income and resources, you may qualify for Extra Help, a federal program that pays most of your Part D costs.
+                    </p>
+
+                    <h3>What Extra Help Covers</h3>
+
+                    <ul>
+                        <li>Part D premium (up to benchmark amount)</li>
+                        <li>Annual deductible (reduced or eliminated)</li>
+                        <li>Copays (reduced to $0-$11 per prescription)</li>
+                        <li>No coverage gap (coverage continues all year)</li>
+                    </ul>
+
+                    <h3>Who Qualifies?</h3>
+
+                    <p>
+                        You may qualify if your annual income is below approximately:
+                    </p>
+
+                    <ul>
+                        <li><strong>Single:</strong> $22,590</li>
+                        <li><strong>Married:</strong> $30,660</li>
+                    </ul>
+
+                    <p>
+                        And your resources (savings, investments - not your home or car) are below:
+                    </p>
+
+                    <ul>
+                        <li><strong>Single:</strong> $17,220</li>
+                        <li><strong>Married:</strong> $34,360</li>
+                    </ul>
+
+                    <p>
+                        Apply through Social Security at <a href="https://www.ssa.gov/medicare/part-d-extra-help" target="_blank" rel="noopener">SSA.gov</a> or your state Medicaid office.
+                    </p>
+
+                    <h2 id="common-questions">Common Part D Questions</h2>
+
+                    <h3>Do I need Part D if I'm healthy and don't take medications?</h3>
+
+                    <p>
+                        It's still recommended. Without creditable coverage, you'll face the late enrollment penalty if you need Part D later. Many people choose a low-premium plan ($0-$15/month) to avoid the penalty while minimizing costs.
+                    </p>
+
+                    <h3>Can I change my Part D plan if it stops covering my medication?</h3>
+
+                    <p>
+                        During the Annual Enrollment Period (October 15 - December 7), you can switch to any plan. If your plan drops a drug mid-year, you may qualify for a Special Enrollment Period.
+                    </p>
+
+                    <h3>What if I have VA or TRICARE coverage?</h3>
+
+                    <p>
+                        VA health benefits and TRICARE are both considered creditable coverage. You don't need Part D unless you want it. You can delay enrollment without penalty.
+                    </p>
+
+                    <h3>Can I use a mail-order pharmacy with Part D?</h3>
+
+                    <p>
+                        Yes. Most Part D plans offer mail-order options, often with lower costs for 90-day supplies. Check your plan's preferred mail-order pharmacy for the best prices.
+                    </p>
+
+                    <h2 id="next-steps">Your Next Steps</h2>
+
+                    <p>
+                        Understanding Part D is the first step. Here's what to do next:
+                    </p>
+
+                    <ol>
+                        <li><strong>Make a medication list</strong> - Include all prescriptions with dosages and quantities</li>
+                        <li><strong>Check for creditable coverage</strong> - If you have employer/union drug coverage, verify it's creditable</li>
+                        <li><strong>Use the Medicare Plan Finder</strong> - Compare plans based on your specific medications</li>
+                        <li><strong>Consider total costs</strong> - Factor in premium, deductible, and copays for your drugs</li>
+                        <li><strong>Review annually</strong> - Plans change each year, so compare options every fall during AEP</li>
+                    </ol>
+
+                    <div class="info-box">
+                        <h4>Need Help Choosing a Plan?</h4>
+                        <p>
+                            Comparing Part D plans can be overwhelming, especially if you take multiple medications. A fee-only Medicare advisor can help you navigate the options and find the plan with the lowest total cost for your specific situation.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="toc">
+                        <h3>In This Article</h3>
+                        <ul>
+                            <li><a href="#what-is-part-d">What Is Part D?</a></li>
+                            <li><a href="#what-it-covers">What It Covers</a></li>
+                            <li><a href="#costs">Costs & Premiums</a></li>
+                            <li><a href="#coverage-phases">Coverage Phases</a></li>
+                            <li><a href="#enrollment">When to Enroll</a></li>
+                            <li><a href="#late-penalty">Late Enrollment Penalty</a></li>
+                            <li><a href="#choosing-plan">How to Choose a Plan</a></li>
+                            <li><a href="#extra-help">Extra Help Program</a></li>
+                            <li><a href="#common-questions">Common Questions</a></li>
+                            <li><a href="#next-steps">Your Next Steps</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Confused About Part D?</h3>
+                        <p>
+                            Get personalized help comparing Part D plans based on your medications from a fee-only advisor.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-parts-explained" style="color: var(--primary); text-decoration: none;">
+                                    Medicare Parts A, B, C, D Explained
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-enrollment-periods" style="color: var(--primary); text-decoration: none;">
+                                    Enrollment Periods Explained
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/turning-65-medicare-guide" style="color: var(--primary); text-decoration: none;">
+                                    Turning 65 Medicare Guide
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Help With Part D?</h2>
+                <p>
+                    Choosing the right Part D plan depends on your specific medications.
+                    Schedule a free consultation for personalized guidance.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">M</span>
+                        <span>Unbiased Medicare Advisor</span>
+                    </a>
+                    <p>
+                        Independent, fee-only Medicare guidance. We're paid by you, not insurance companies,
+                        so you can trust our advice is always in your best interest.
+                    </p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services/medicare-consultant">Medicare Consultant</a></li>
+                        <li><a href="/services/fee-only-medicare-advisor">Fee-Only Advisor</a></li>
+                        <li><a href="/services/medicare-plan-comparison">Plan Comparison</a></li>
+                        <li><a href="/services/enrollment-assistance">Enrollment Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/guides/medigap-vs-medicare-advantage">Medigap vs MA</a></li>
+                        <li><a href="/guides/turning-65-medicare-guide">Turning 65 Guide</a></li>
+                        <li><a href="/guides">All Guides</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/book-consultation">Book a Call</a></li>
+                    </ul>
+                    <a href="tel:+18508101000" class="footer-phone">
+                        <span class="footer-phone-icon" aria-hidden="true">&#128222;</span>
+                        <span>(850) 810-1000</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(event) {
+            event.preventDefault();
+            const parent = event.target.closest('.mobile-dropdown');
+            parent.classList.toggle('active');
+        }
+
+        // FAQ accordion toggle
+        function toggleFaq(element) {
+            element.closest('.faq-item').classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        if (backToTop) {
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+</body>
+</html>
