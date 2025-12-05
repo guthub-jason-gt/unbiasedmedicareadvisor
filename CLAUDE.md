@@ -194,21 +194,24 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 - **Batch 01 (PA, GA, NC)** - DONE - Standard federal rules states
 - **Batch 02 (NY, MA, MN)** - DONE - Special rules states (Dec 5, 2025)
 
-### Next Batch Ready:
-- **Batch 03 (CT, WA, MO, OR)** - Remaining special rules states
+### Next Batches Ready:
+- **Batch 03 (CT, WA)** - Year-round guaranteed issue states
+- **Batch 04 (MO, OR)** - Birthday rule states
 
 ### Future Batches to Create:
-- **Batch 04+** - Standard states (alphabetically)
+- **Batch 05+** - Standard states (alphabetically)
 
 ### Remaining States to Complete:
 
-**Special Rules States (Batch 03):**
-- Connecticut - Year-round GI for certain plans
-- Washington - Year-round GI
-- Missouri - Birthday rule
-- Oregon - Birthday rule
+**Year-Round GI States (Batch 03):**
+- Connecticut - Year-round GI for plans C, D, F, G
+- Washington - Year-round GI for ALL plans
 
-**Standard States (Batch 04+, federal rules only):**
+**Birthday Rule States (Batch 04):**
+- Missouri - 30-day birthday window annually
+- Oregon - 30-day birthday window annually
+
+**Standard States (Batch 05+, federal rules only):**
 Alabama, Alaska, Arkansas, Colorado, Delaware, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Michigan, Mississippi, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, North Dakota, Oklahoma, Rhode Island, South Carolina, South Dakota, Tennessee, Utah, Vermont, Virginia, West Virginia, Wisconsin, Wyoming
 
 ---
@@ -261,3 +264,28 @@ Remove `width: 100%` and `text-align: center` from `.state-card h3`. Let the par
     /* NO width: 100% or text-align - let flexbox handle centering */
 }
 ```
+
+### State Card HTML Templates
+
+**ALWAYS use these exact templates when adding new state cards to /states/index.html:**
+
+**Live state card:**
+```html
+<a href="/states/[state-slug]" class="state-card active">
+    <h3>[State Name]</h3>
+    <span class="live-badge">Live</span>
+</a>
+```
+
+**Coming soon state card:**
+```html
+<a href="/states/[state-slug]" class="state-card">
+    <h3>[State Name]</h3>
+    <p class="coming-soon">Coming Soon</p>
+</a>
+```
+
+**Key rules:**
+- Use `class="state-card active"` for live states, `class="state-card"` for coming soon
+- Keep the h3 simple with just the state name - no inline styles needed
+- The flexbox centering on the parent handles alignment automatically
