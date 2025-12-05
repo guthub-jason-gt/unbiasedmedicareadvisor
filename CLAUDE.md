@@ -197,7 +197,7 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 - **Batch 04 (MO, OR)** - DONE - Birthday rule states (Dec 5, 2025)
 
 ### Next Batch:
-- **Batch 06 (DE, HI, ID, IL)** - Prompt ready at `/Prompts/batch-06-DE-HI-ID-IL.txt`
+- **Batch 07 (IN, IA, KS, KY)** - Prompt ready at `/Prompts/batch-07-IN-IA-KS-KY.txt`
 
 ### Batch Size Note:
 **Now using 4 states per batch** with opus[1m] model (1 million token context window).
@@ -205,7 +205,7 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 ### Remaining States to Complete (35 total, alphabetical order):
 
 **Batch 05:** Alabama, Alaska, Arkansas, Colorado - DONE
-**Batch 06:** Delaware, Hawaii, Idaho, Illinois
+**Batch 06:** Delaware, Hawaii, Idaho, Illinois - DONE
 **Batch 07:** Indiana, Iowa, Kansas, Kentucky
 **Batch 08:** Louisiana, Maine, Maryland, Michigan
 **Batch 09:** Mississippi, Montana, Nebraska, Nevada
@@ -306,6 +306,31 @@ Total pages: 50
 - Alabama and Arkansas emphasize rural healthcare access advantages of Medigap
 
 **Rollback available:** "Site before AL, AK, AR, CO" (commit 0d0851c)
+
+---
+
+## Progress Update - December 5, 2025 (Batch 06)
+
+**Added 4 Standard Federal Rules State Pages (DE, HI, ID, IL)**
+
+Successfully created state pages for four states following standard federal Medigap rules:
+- **Delaware:** /states/delaware/ - ELDERinfo SHIP, ~200K beneficiaries, $120-290/mo premiums
+- **Hawaii:** /states/hawaii/ - SHIP (Sage PLUS), ~280K beneficiaries, $150-350/mo (higher cost of living)
+- **Idaho:** /states/idaho/ - SHIBA, ~350K beneficiaries, $75-250/mo premiums
+- **Illinois:** /states/illinois/ - SHIP, ~2.2M beneficiaries, $85-300/mo premiums
+
+Total state pages now: 23 (AL, AK, AR, AZ, CA, CO, CT, DE, FL, GA, HI, ID, IL, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
+Total pages: 54
+
+**Key Content Highlights:**
+- All 4 states follow standard federal rules (no birthday rule, no year-round GI)
+- SHIP programs correctly identified for each state
+- Hawaii includes unique content about inter-island healthcare and higher premiums
+- Idaho addresses rural healthcare access advantages of Medigap
+- Illinois covers Chicago metro vs downstate premium variations
+- Delaware as a small state with limited carrier options
+
+**Rollback available:** "Site before DE, HI, ID, IL" (commit 417791b)
 
 ---
 
