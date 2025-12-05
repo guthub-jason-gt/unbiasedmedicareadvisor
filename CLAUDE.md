@@ -132,6 +132,16 @@ gh api repos/guthub-jason-gt/unbiasedmedicareadvisor/deployments/DEPLOYMENT_ID/s
 
 ---
 
+## Rollback Reference Points
+
+### Site before NY, MA and MN (December 5, 2025)
+- **Commit:** `e780b5a`
+- **Command to rollback:** `git reset --hard e780b5a && git push --force`
+- **State:** 8 state pages (AZ, CA, FL, GA, NC, OH, PA, TX), 39 total pages
+- **Description:** Last stable state before adding New York, Massachusetts, Minnesota special rules states
+
+---
+
 ## Progress Update - December 3, 2025
 
 **ALL 6 GUIDES COMPLETE!**

@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Massachusetts Medicare Supplement Plans explained. Learn about Core and Supplement 1 plans unique to MA. Unbiased, fee-only Medicare guidance for Massachusetts residents.">
+    <meta name="keywords" content="medicare supplement plans massachusetts, massachusetts medigap plans, medicare advisor massachusetts, ma medicare help, core plan massachusetts, supplement 1 massachusetts">
+    <title>Medicare Supplement Plans in Massachusetts | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Medicare Supplement Plans in Massachusetts | Unbiased Medicare Advisor">
+    <meta property="og:description" content="Massachusetts uses a different Medigap system - Core and Supplement plans, not Plan G or N. Get unbiased, fee-only guidance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/states/massachusetts">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            /* Primary Colors - Navy (trustworthy, authoritative) */
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+
+            /* Accent Colors - Orange (high-visibility CTA) */
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+
+            /* Secondary Color */
+            --secondary: #4a90d9;
+
+            /* Neutral Colors */
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+
+            /* Typography - Senior-friendly sizing */
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+
+            /* Spacing - increased for better section separation */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+
+            /* Layout */
+            --max-width: 1200px;
+            --header-height: 80px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: var(--font-size-base);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: var(--line-height);
+            color: var(--black);
+            background: var(--white);
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* ============================================
+           HEADER & NAVIGATION
+           ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+
+        /* Desktop Navigation */
+        .nav {
+            display: none;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-xs);
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+
+        .dropdown:hover .dropdown-toggle::after {
+            transform: rotate(-135deg);
+            margin-top: 3px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .dropdown-link:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-link:hover {
+            background: #d5dbe0;
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            margin-left: var(--spacing-sm);
+        }
+
+        .nav-cta .btn-primary {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #1e3a5f;
+            border-radius: 2px;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+        }
+
+        .mobile-nav-item {
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 0;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .mobile-dropdown-menu {
+            display: none;
+            padding-left: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            display: block;
+        }
+
+        .mobile-dropdown-link {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--medium-gray);
+            text-decoration: none;
+        }
+
+        .mobile-nav-cta {
+            margin-top: var(--spacing-lg);
+        }
+
+        .mobile-nav-cta .btn {
+            display: block;
+            width: 100%;
+        }
+
+        /* ============================================
+           HERO SECTION - STATE PAGE
+           ============================================ */
+        .hero {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xxl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        /* ============================================
+           BREADCRUMB
+           ============================================ */
+        .breadcrumb {
+            padding: var(--spacing-sm) 0;
+            background: var(--off-white);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: '→';
+            margin: 0 0.5rem;
+            color: var(--medium-gray);
+        }
+
+        .breadcrumb-label {
+            color: var(--medium-gray);
+            margin-right: 0.5rem;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-item a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           MAIN CONTENT
+           ============================================ */
+        .content-section {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--off-white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-xl);
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-subtitle {
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+
+        .main-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
+        .main-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .main-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+
+        .main-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+
+        .main-content ul, .main-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+
+        .main-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           SIDEBAR
+           ============================================ */
+        .sidebar {
+            position: sticky;
+            top: calc(var(--header-height) + var(--spacing-md));
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .sidebar-card .btn {
+            width: 100%;
+        }
+
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .sidebar-cta h3 {
+            color: var(--white);
+        }
+
+        .sidebar-cta p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* ============================================
+           STATE STATS
+           ============================================ */
+        .state-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           COMPARISON TABLE
+           ============================================ */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: var(--off-white);
+        }
+
+        /* ============================================
+           INFO BOX
+           ============================================ */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        .info-box.warning {
+            background: #fef5e7;
+            border-left-color: #f9e79f;
+        }
+
+        /* ============================================
+           FAQ SECTION
+           ============================================ */
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+            padding: var(--spacing-md) 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            color: var(--medium-gray);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta {
+            padding: var(--spacing-xxl) 0;
+            text-align: center;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--white);
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: var(--spacing-xxl) 0 var(--spacing-lg);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-logo .logo-icon {
+            background: var(--primary-light);
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-nav h4 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--white);
+        }
+
+        .footer-nav ul {
+            list-style: none;
+        }
+
+        .footer-nav li {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .footer-nav a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--white);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .footer-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: var(--spacing-md);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-phone:hover {
+            color: var(--accent);
+        }
+
+        .footer-phone-icon {
+            font-size: 1.5rem;
+            filter: brightness(0) invert(1);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (min-width: 768px) {
+            .nav {
+                display: block;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }
+
+        @media (max-width: 767px) {
+            :root {
+                --font-size-base: 17px;
+            }
+
+            .hero {
+                padding-top: calc(var(--header-height) + var(--spacing-xl));
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: var(--spacing-sm);
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Top Bar Styles */
+        .top-bar { background: #1a365d; color: white; padding: 8px 20px; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
+        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .top-bar-phone:hover { color: #90cdf4; }
+        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+</head>
+<body>
+    <!-- Top Bar & Header Position Fixes -->
+    <style>
+        .top-bar {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: #1a365d !important;
+            color: white !important;
+            padding: 8px 20px !important;
+            z-index: 1001 !important;
+        }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
+        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .top-bar-phone:hover { color: #90cdf4; }
+        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+        .header { top: 36px !important; }
+        .hero, .page-header, .guide-header { padding-top: calc(var(--header-height, 80px) + 36px + 2rem) !important; }
+    </style>
+
+    <!-- ============================================
+         TOP BAR
+         ============================================ -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <a href="tel:+18508101000" class="top-bar-phone">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call Us: (850) 810-1000
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">M</span>
+                <span>Unbiased Medicare Advisor</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Learn</a>
+                        <div class="dropdown-menu">
+                            <a href="/guides/medigap-vs-medicare-advantage" class="dropdown-link">Medigap vs Medicare Advantage</a>
+                            <a href="/guides/turning-65-medicare-guide" class="dropdown-link">Turning 65 Guide</a>
+                            <a href="/guides/medicare-parts-explained" class="dropdown-link">Medicare Parts Explained (A, B, C, D)</a>
+                            <a href="/guides" class="dropdown-link">All Guides</a>
+                            <a href="/blog" class="dropdown-link">Blog Articles</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="/services/medicare-consultant" class="dropdown-link">Medicare Consultant</a>
+                            <a href="/services/fee-only-medicare-advisor" class="dropdown-link">Fee-Only Advisor</a>
+                            <a href="/services/independent-medicare-advisor" class="dropdown-link">Independent Advisor</a>
+                            <a href="/services/medicare-plan-comparison" class="dropdown-link">Plan Comparison Help</a>
+                            <a href="/services/medicare-enrollment-help" class="dropdown-link">Medicare Enrollment Help</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Your State</a>
+                        <div class="dropdown-menu">
+                            <a href="/states/florida" class="dropdown-link">Florida</a>
+                            <a href="/states/texas" class="dropdown-link">Texas</a>
+                            <a href="/states/california" class="dropdown-link">California</a>
+                            <a href="/states/ohio" class="dropdown-link">Ohio</a>
+                            <a href="/states/arizona" class="dropdown-link">Arizona</a>
+                            <a href="/states" class="dropdown-link">All 50 States</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item nav-cta">
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Learn</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/guides/medigap-vs-medicare-advantage" class="mobile-dropdown-link">Medigap vs Medicare Advantage</a>
+                        <a href="/guides/turning-65-medicare-guide" class="mobile-dropdown-link">Turning 65 Guide</a>
+                        <a href="/guides/medicare-parts-explained" class="mobile-dropdown-link">Medicare Parts Explained (A, B, C, D)</a>
+                        <a href="/guides" class="mobile-dropdown-link">All Guides</a>
+                        <a href="/blog" class="mobile-dropdown-link">Blog Articles</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Services</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/services/medicare-consultant" class="mobile-dropdown-link">Medicare Consultant</a>
+                        <a href="/services/fee-only-medicare-advisor" class="mobile-dropdown-link">Fee-Only Advisor</a>
+                        <a href="/services/independent-medicare-advisor" class="mobile-dropdown-link">Independent Advisor</a>
+                        <a href="/services/medicare-plan-comparison" class="mobile-dropdown-link">Plan Comparison Help</a>
+                        <a href="/services/medicare-enrollment-help" class="mobile-dropdown-link">Medicare Enrollment Help</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Your State</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/states/florida" class="mobile-dropdown-link">Florida</a>
+                        <a href="/states/texas" class="mobile-dropdown-link">Texas</a>
+                        <a href="/states/california" class="mobile-dropdown-link">California</a>
+                        <a href="/states/ohio" class="mobile-dropdown-link">Ohio</a>
+                        <a href="/states/arizona" class="mobile-dropdown-link">Arizona</a>
+                        <a href="/states" class="mobile-dropdown-link">All 50 States</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/about" class="mobile-nav-link">About</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/contact" class="mobile-nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="mobile-nav-cta">
+                <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Massachusetts Medicare Guide</span>
+                <h1>Medicare Supplement Plans in Massachusetts</h1>
+                <p class="hero-subtitle">
+                    Massachusetts uses a completely different Medigap system than most states. Instead of Plans A through N,
+                    Massachusetts offers Core, Supplement 1, and Supplement 1A plans. With over 1.2 million Medicare beneficiaries
+                    and access to world-class healthcare in Boston, understanding these unique options is essential.
+                </p>
+                <div class="hero-cta">
+                    <a href="/book-consultation" class="btn btn-primary">Get Massachusetts-Specific Help</a>
+                    <a href="/guides/medigap-vs-medicare-advantage" class="btn btn-outline-white">Medigap vs Medicare Advantage</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MASSACHUSETTS STATS SECTION
+         ============================================ -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Massachusetts Medicare by the Numbers</span>
+                <h2 class="section-title">Understanding Massachusetts's Unique Medicare System</h2>
+            </div>
+            <div class="state-stats">
+                <div class="stat-card">
+                    <div class="stat-number">1.2M+</div>
+                    <div class="stat-label">Massachusetts Medicare Beneficiaries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Plan Types (Not 10)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Unique</div>
+                    <div class="stat-label">Core/Supplement System</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6 Mo</div>
+                    <div class="stat-label">Open Enrollment Period</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MAIN CONTENT SECTION
+         ============================================ -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>Massachusetts's Unique Medicare Supplement System</h2>
+                    <p>
+                        If you've heard about Plan G or Plan N from friends or family in other states, you'll find that
+                        <strong>Massachusetts is completely different</strong>. The Bay State does NOT use the standard
+                        federal Medigap plan letters (A, B, C, D, F, G, K, L, M, N) that are used in 47 other states.
+                    </p>
+                    <p>
+                        Instead, Massachusetts developed its own standardized Medigap system BEFORE the federal government
+                        created national standards, and the state was allowed to keep its unique approach. Massachusetts
+                        offers three main plan types: <strong>Core</strong>, <strong>Supplement 1</strong>, and
+                        <strong>Supplement 1A</strong>.
+                    </p>
+
+                    <div class="info-box warning">
+                        <h4>Important: Massachusetts Uses a DIFFERENT System</h4>
+                        <p>
+                            Massachusetts uses a DIFFERENT Medigap system than the rest of the country. Instead of Plans A through N,
+                            Massachusetts offers <strong>Core</strong>, <strong>Supplement 1</strong>, and <strong>Supplement 1A</strong>.
+                            These are NOT the same as federal Medigap plans. If you're moving from another state or comparing to
+                            friends' coverage elsewhere, the plan names and structures will be different.
+                        </p>
+                    </div>
+
+                    <h2>Understanding Massachusetts Medigap Plans</h2>
+
+                    <h3>Core Plan</h3>
+                    <p>
+                        The <strong>Core Plan</strong> is the foundation of Massachusetts Medigap coverage. All insurance
+                        companies selling Medigap in Massachusetts must offer the Core Plan. It provides:
+                    </p>
+                    <ul>
+                        <li>Part A coinsurance and hospital costs (up to 365 additional days after Medicare benefits end)</li>
+                        <li>Part B coinsurance (the 20% you'd normally pay for doctor visits and outpatient care)</li>
+                        <li>First 3 pints of blood each year</li>
+                    </ul>
+                    <p>
+                        The Core Plan is similar to the federal Plan A but uses Massachusetts terminology. It provides
+                        essential coverage but leaves some gaps that the Supplement plans can fill.
+                    </p>
+
+                    <h3>Supplement 1</h3>
+                    <p>
+                        <strong>Supplement 1</strong> builds on the Core Plan by adding important additional benefits:
+                    </p>
+                    <ul>
+                        <li>Everything in the Core Plan, PLUS</li>
+                        <li>Part A deductible coverage (currently $1,632 per benefit period)</li>
+                        <li>Part B deductible coverage (currently $240 per year)</li>
+                        <li>Skilled nursing facility coinsurance (days 21-100)</li>
+                        <li>Foreign travel emergency coverage (80% of costs after $250 deductible)</li>
+                    </ul>
+                    <p>
+                        Supplement 1 provides comprehensive coverage similar to what Plan F or Plan G offers in other states.
+                        This is the most popular choice for Massachusetts residents who want thorough protection.
+                    </p>
+
+                    <h3>Supplement 1A</h3>
+                    <p>
+                        <strong>Supplement 1A</strong> is an enhanced version of Supplement 1 that may include additional
+                        benefits depending on the insurance company. The specific extra benefits can vary by insurer, so
+                        it's important to compare what each company offers in their Supplement 1A plan.
+                    </p>
+
+                    <h2>Massachusetts Medigap Premium Ranges</h2>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Plan</th>
+                                <th>Coverage Level</th>
+                                <th>Key Features</th>
+                                <th>MA Monthly Premium*</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Core</strong></td>
+                                <td>Basic</td>
+                                <td>Part A/B coinsurance, blood, hospital</td>
+                                <td>$200 - $350</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Supplement 1</strong></td>
+                                <td>Comprehensive</td>
+                                <td>Core + deductibles, SNF, foreign travel</td>
+                                <td>$300 - $500</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Supplement 1A</strong></td>
+                                <td>Enhanced</td>
+                                <td>Supplement 1 + additional benefits</td>
+                                <td>$350 - $550</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size: 0.9rem; color: var(--medium-gray);">
+                        *Premium ranges vary by age, location within Massachusetts, and insurance company. Massachusetts
+                        uses attained-age rating, meaning premiums increase as you get older.
+                    </p>
+
+                    <h3>How Massachusetts Plans Compare to Federal Plans</h3>
+                    <p>
+                        If you're comparing coverage to friends in other states, here's a rough comparison:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Massachusetts Plan</th>
+                                <th>Similar Federal Plan</th>
+                                <th>Key Difference</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Core</strong></td>
+                                <td>Plan A</td>
+                                <td>Basic coverage, no deductible coverage</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Supplement 1</strong></td>
+                                <td>Plan F or Plan G</td>
+                                <td>Comprehensive coverage including deductibles</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Supplement 1A</strong></td>
+                                <td>Enhanced Plan F</td>
+                                <td>Most comprehensive, varies by insurer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Massachusetts Medigap Open Enrollment Period</h2>
+                    <p>
+                        Like all states, Massachusetts provides a 6-month Medigap Open Enrollment Period that begins on
+                        the first day of the month you turn 65 <strong>and</strong> are enrolled in Medicare Part B.
+                        During this critical window:
+                    </p>
+                    <ul>
+                        <li>Insurance companies <strong>cannot deny you coverage</strong> for any reason</li>
+                        <li>They <strong>cannot charge you more</strong> due to health conditions</li>
+                        <li>You have <strong>guaranteed issue rights</strong> to any Massachusetts Medigap plan</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Massachusetts Consumer Protection</h4>
+                        <p>
+                            Massachusetts law requires insurance companies to offer a 30-day "free look" period for all
+                            Medigap policies. During this time, you can review the policy and cancel for a full refund
+                            if you're not satisfied.
+                        </p>
+                    </div>
+
+                    <h2>Massachusetts Medigap vs Medicare Advantage</h2>
+                    <p>
+                        Massachusetts has a robust Medicare Advantage market, particularly in the Boston metro area.
+                        Here's how the options compare:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Medigap (Core/Supplement)</th>
+                                <th>Medicare Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monthly Premium</td>
+                                <td>$200 - $550+</td>
+                                <td>$0 - $100 (some higher)</td>
+                            </tr>
+                            <tr>
+                                <td>Out-of-Pocket Maximum</td>
+                                <td>Very low (predictable)</td>
+                                <td>Up to $8,850/year</td>
+                            </tr>
+                            <tr>
+                                <td>Doctor Network</td>
+                                <td>Any doctor accepting Medicare</td>
+                                <td>Network restrictions</td>
+                            </tr>
+                            <tr>
+                                <td>Boston Hospital Access</td>
+                                <td>All major hospitals included</td>
+                                <td>Varies by plan network</td>
+                            </tr>
+                            <tr>
+                                <td>Prior Authorization</td>
+                                <td>None required</td>
+                                <td>Often required</td>
+                            </tr>
+                            <tr>
+                                <td>Prescription Drug Coverage</td>
+                                <td>Separate Part D plan needed</td>
+                                <td>Usually included</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        <a href="/guides/medigap-vs-medicare-advantage">Read our complete Medigap vs Medicare Advantage guide</a>
+                        to understand which option might be better for your situation.
+                    </p>
+
+                    <h2>Massachusetts-Specific Medicare Considerations</h2>
+
+                    <h3>Boston Metro Healthcare Excellence</h3>
+                    <p>
+                        Massachusetts is home to some of the nation's most prestigious medical institutions. With Medigap,
+                        you have unrestricted access to:
+                    </p>
+                    <ul>
+                        <li>Massachusetts General Hospital</li>
+                        <li>Brigham and Women's Hospital</li>
+                        <li>Dana-Farber Cancer Institute</li>
+                        <li>Beth Israel Deaconess Medical Center</li>
+                        <li>Boston Children's Hospital (for certain adult services)</li>
+                        <li>Tufts Medical Center</li>
+                    </ul>
+                    <p>
+                        With Medigap, you can see any doctor or specialist at these world-renowned institutions without
+                        referrals, prior authorization, or network restrictions.
+                    </p>
+
+                    <h3>Snowbirds and Seasonal Residents</h3>
+                    <p>
+                        Many Massachusetts residents spend winters in Florida or other warm-weather states. If you're a
+                        snowbird, Medigap offers critical advantages:
+                    </p>
+                    <ul>
+                        <li><strong>Nationwide coverage:</strong> Your Massachusetts Medigap plan works anywhere in the U.S.</li>
+                        <li><strong>Same benefits:</strong> Get the same coverage whether you're in Boston or Boca Raton</li>
+                        <li><strong>Foreign travel coverage:</strong> Supplement 1 and 1A include emergency coverage abroad</li>
+                        <li><strong>No network restrictions:</strong> See any Medicare-accepting doctor in your winter location</li>
+                    </ul>
+
+                    <h3>SHINE Program</h3>
+                    <p>
+                        Massachusetts offers <strong>SHINE (Serving Health Insurance Needs of Everyone)</strong>, a free
+                        counseling program that helps Medicare beneficiaries understand their options. SHINE counselors
+                        can provide general Medicare information and help you compare plans. While SHINE offers valuable
+                        objective information, they cannot make specific recommendations. A fee-only Medicare advisor can
+                        provide personalized guidance based on your specific situation.
+                    </p>
+
+                    <h3>Regional Premium Variations</h3>
+                    <p>
+                        Medigap premiums in Massachusetts vary by region:
+                    </p>
+                    <ul>
+                        <li><strong>Greater Boston:</strong> Highest premiums due to healthcare costs</li>
+                        <li><strong>Worcester County:</strong> Moderate premiums</li>
+                        <li><strong>Western Massachusetts (Springfield area):</strong> Generally lower premiums</li>
+                        <li><strong>Cape Cod and Islands:</strong> Varies, often moderate to high</li>
+                    </ul>
+
+                    <h2>Frequently Asked Questions: Massachusetts Medicare</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Why doesn't Massachusetts use Plan G, Plan N, etc.?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Massachusetts standardized its Medigap plans BEFORE the federal government created national
+                                standards in 1990. When federal standards were implemented, Massachusetts (along with Minnesota
+                                and Wisconsin) was allowed to keep its existing system because it was already well-established
+                                and provided strong consumer protections. That's why Massachusetts uses Core, Supplement 1,
+                                and Supplement 1A instead of the Plan A through N letters used elsewhere.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            What's the difference between Core and Supplement 1 in Massachusetts?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                The Core Plan provides basic coverage: Part A and Part B coinsurance, blood, and additional
+                                hospital days. Supplement 1 includes everything in Core PLUS coverage for the Part A deductible,
+                                Part B deductible, skilled nursing facility coinsurance, and foreign travel emergency care.
+                                Most Massachusetts residents who want comprehensive coverage choose Supplement 1.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Can I get a federal Medigap plan (like Plan G) if I live in Massachusetts?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                No. If you live in Massachusetts, you must choose from the Massachusetts Medigap plans:
+                                Core, Supplement 1, or Supplement 1A. Federal plan letters like Plan G, Plan N, or Plan F
+                                are not available to Massachusetts residents. However, Supplement 1 provides similar
+                                comprehensive coverage to what Plan F or Plan G offers in other states.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            When can I switch Medigap plans in Massachusetts?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Your best opportunity is during your 6-month Medigap Open Enrollment Period, which starts
+                                the month you turn 65 and are enrolled in Part B. During this time, you have guaranteed
+                                issue rights. After this period, you can apply to switch plans, but insurance companies
+                                can use medical underwriting - meaning they can deny you coverage or charge higher rates
+                                based on your health. Massachusetts does not have a birthday rule or continuous open enrollment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Do I need a separate Part D plan with Massachusetts Medigap?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. Like all Medigap plans nationwide, Massachusetts Core, Supplement 1, and Supplement 1A
+                                do not include prescription drug coverage. You'll need to enroll in a separate Medicare
+                                Part D plan to cover your medications. Massachusetts has many Part D options, and we can
+                                help you compare them based on your specific prescriptions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Get Personalized Massachusetts Medicare Help</h3>
+                        <p>
+                            Confused by Core vs. Supplement 1? Compare plans and make confident decisions with unbiased,
+                            fee-only guidance.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medigap-vs-medicare-advantage" style="color: var(--primary); text-decoration: none;">
+                                    Medigap vs Medicare Advantage
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/turning-65-medicare-guide" style="color: var(--primary); text-decoration: none;">
+                                    Turning 65? Start Here
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-parts-explained" style="color: var(--primary); text-decoration: none;">
+                                    Medicare Parts Explained
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Understand Massachusetts Medicare Plans?</h2>
+                <p>
+                    Don't let Massachusetts's unique Medigap system confuse you. Schedule a free consultation
+                    and get personalized, unbiased guidance on whether Core, Supplement 1, or Medicare Advantage
+                    is best for your situation.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">M</span>
+                        <span>Unbiased Medicare Advisor</span>
+                    </a>
+                    <p>
+                        Independent, fee-only Medicare guidance. We're paid by you, not insurance companies,
+                        so you can trust our advice is always in your best interest.
+                    </p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services/medicare-consultant">Medicare Consultant</a></li>
+                        <li><a href="/services/fee-only-medicare-advisor">Fee-Only Advisor</a></li>
+                        <li><a href="/services/medicare-plan-comparison">Plan Comparison</a></li>
+                        <li><a href="/services/medicare-enrollment-help">Enrollment Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/guides/medigap-vs-medicare-advantage">Medigap vs MA</a></li>
+                        <li><a href="/guides/turning-65-medicare-guide">Turning 65 Guide</a></li>
+                        <li><a href="/guides">All Guides</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/book-consultation">Book a Call</a></li>
+                    </ul>
+                    <a href="tel:+18508101000" class="footer-phone">
+                        <span class="footer-phone-icon" aria-hidden="true">&#128222;</span>
+                        <span>(850) 810-1000</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(event) {
+            event.preventDefault();
+            const parent = event.target.closest('.mobile-dropdown');
+            parent.classList.toggle('active');
+        }
+
+        // FAQ accordion toggle
+        function toggleFaq(element) {
+            element.closest('.faq-item').classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        if (backToTop) {
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+</body>
+</html>
