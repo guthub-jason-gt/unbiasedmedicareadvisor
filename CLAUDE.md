@@ -19,11 +19,11 @@
 - `{{FOOTER}}` - **17 pages** use this partial (7 have hardcoded footers)
 - `{{SCRIPTS}}` - **17 pages** use this partial (7 have hardcoded scripts)
 
-### Current Page Count: 46 pages
+### Current Page Count: 50 pages
 - 7 Core pages (Home, About, Contact, Contact Thank You, Book Consultation, FAQ, Privacy)
 - 5 Service pages
 - 6 Guide pages (ALL COMPLETE as of Dec 3, 2025)
-- 1 States index + 15 State pages (AZ, CA, CT, FL, GA, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
+- 1 States index + 19 State pages (AL, AK, AR, AZ, CA, CO, CT, FL, GA, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
 - 1 Guides index
 - 1 Blog index + 10 Blog posts
 
@@ -197,14 +197,14 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 - **Batch 04 (MO, OR)** - DONE - Birthday rule states (Dec 5, 2025)
 
 ### Next Batch:
-- **Batch 05 (AL, AK, AR, CO)** - Prompt ready at `/Prompts/batch-05-AL-AK-AR-CO.txt`
+- **Batch 06 (DE, HI, ID, IL)** - Prompt ready at `/Prompts/batch-06-DE-HI-ID-IL.txt`
 
 ### Batch Size Note:
 **Now using 4 states per batch** with opus[1m] model (1 million token context window).
 
 ### Remaining States to Complete (35 total, alphabetical order):
 
-**Batch 05:** Alabama, Alaska, Arkansas, Colorado - NEXT (prompt ready)
+**Batch 05:** Alabama, Alaska, Arkansas, Colorado - DONE
 **Batch 06:** Delaware, Hawaii, Idaho, Illinois
 **Batch 07:** Indiana, Iowa, Kansas, Kentucky
 **Batch 08:** Louisiana, Maine, Maryland, Michigan
@@ -282,6 +282,30 @@ Total pages: 46
 - Both pages emphasize annual rate shopping opportunity
 
 **Rollback available:** "Site before MO and OR" (commit 945d881)
+
+---
+
+## Progress Update - December 5, 2025 (Batch 05)
+
+**Added 4 Standard Federal Rules State Pages (AL, AK, AR, CO)**
+
+Successfully created state pages for four states following standard federal Medigap rules:
+- **Alabama:** /states/alabama/ - ~1M beneficiaries, Birmingham/Montgomery/Mobile/Huntsville
+- **Alaska:** /states/alaska/ - ~110K beneficiaries, higher premiums due to geographic isolation
+- **Arkansas:** /states/arkansas/ - ~650K beneficiaries, lower cost state with affordable premiums
+- **Colorado:** /states/colorado/ - ~1M beneficiaries, mountain community considerations
+
+Total state pages now: 19 (AL, AK, AR, AZ, CA, CO, CT, FL, GA, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
+Total pages: 50
+
+**Key Content Highlights:**
+- All 4 states follow standard federal rules (no birthday rule, no year-round GI)
+- SHIP programs correctly identified for each state
+- Alaska includes unique content about limited MA options and higher premiums
+- Colorado addresses mountain communities and active lifestyle considerations
+- Alabama and Arkansas emphasize rural healthcare access advantages of Medigap
+
+**Rollback available:** "Site before AL, AK, AR, CO" (commit 0d0851c)
 
 ---
 
