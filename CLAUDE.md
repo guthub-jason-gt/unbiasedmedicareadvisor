@@ -19,11 +19,11 @@
 - `{{FOOTER}}` - **17 pages** use this partial (7 have hardcoded footers)
 - `{{SCRIPTS}}` - **17 pages** use this partial (7 have hardcoded scripts)
 
-### Current Page Count: 54 pages
+### Current Page Count: 58 pages
 - 7 Core pages (Home, About, Contact, Contact Thank You, Book Consultation, FAQ, Privacy)
 - 5 Service pages
 - 6 Guide pages (ALL COMPLETE as of Dec 3, 2025)
-- 1 States index + 23 State pages (AL, AK, AR, AZ, CA, CO, CT, DE, FL, GA, HI, ID, IL, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
+- 1 States index + 27 State pages (AL, AK, AR, AZ, CA, CO, CT, DE, FL, GA, HI, ID, IL, IN, IA, KS, KY, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
 - 1 Guides index
 - 1 Blog index + 10 Blog posts
 
@@ -197,16 +197,16 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 - **Batch 04 (MO, OR)** - DONE - Birthday rule states (Dec 5, 2025)
 
 ### Next Batch:
-- **Batch 07 (IN, IA, KS, KY)** - Prompt ready at `/Prompts/batch-07-IN-IA-KS-KY.txt`
+- **Batch 08 (LA, ME, MD, MI)** - Create prompt at `/Prompts/batch-08-LA-ME-MD-MI.txt`
 
 ### Batch Size Note:
 **Now using 4 states per batch** with opus[1m] model (1 million token context window).
 
-### Remaining States to Complete (35 total, alphabetical order):
+### Remaining States to Complete (23 total, alphabetical order):
 
 **Batch 05:** Alabama, Alaska, Arkansas, Colorado - DONE
 **Batch 06:** Delaware, Hawaii, Idaho, Illinois - DONE
-**Batch 07:** Indiana, Iowa, Kansas, Kentucky
+**Batch 07:** Indiana, Iowa, Kansas, Kentucky - DONE
 **Batch 08:** Louisiana, Maine, Maryland, Michigan
 **Batch 09:** Mississippi, Montana, Nebraska, Nevada
 **Batch 10:** New Hampshire, New Jersey, New Mexico, North Dakota
@@ -331,6 +331,31 @@ Total pages: 54
 - Delaware as a small state with limited carrier options
 
 **Rollback available:** "Site before DE, HI, ID, IL" (commit 417791b)
+
+---
+
+## Progress Update - December 5, 2025 (Batch 07)
+
+**Added 4 Standard Federal Rules State Pages (IN, IA, KS, KY)**
+
+Successfully created state pages for four states following standard federal Medigap rules:
+- **Indiana:** /states/indiana/ - SHIP, ~1.2M beneficiaries, $90-230/mo premiums
+- **Iowa:** /states/iowa/ - SHIIP, ~580K beneficiaries, $85-210/mo premiums
+- **Kansas:** /states/kansas/ - SHICK, ~520K beneficiaries, $80-200/mo premiums
+- **Kentucky:** /states/kentucky/ - SHIP, ~900K beneficiaries, $85-220/mo premiums
+
+Total state pages now: 27 (AL, AK, AR, AZ, CA, CO, CT, DE, FL, GA, HI, ID, IL, IN, IA, KS, KY, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
+Total pages: 58
+
+**Key Content Highlights:**
+- All 4 states follow standard federal rules (no birthday rule, no year-round GI)
+- SHIP programs correctly identified for each state (including Iowa's SHIIP and Kansas's SHICK)
+- Indiana covers Crossroads of America travel benefits, IU Health system
+- Iowa addresses rural healthcare access, University of Iowa Hospitals
+- Kansas notes Kansas City metro border considerations with Missouri
+- Kentucky includes Appalachian healthcare access, chronic condition rates
+
+**Rollback available:** "Site before IN, IA, KS, KY" (commit 21dbb7a)
 
 ---
 
