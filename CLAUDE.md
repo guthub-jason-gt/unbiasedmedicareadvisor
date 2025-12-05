@@ -19,11 +19,11 @@
 - `{{FOOTER}}` - **17 pages** use this partial (7 have hardcoded footers)
 - `{{SCRIPTS}}` - **17 pages** use this partial (7 have hardcoded scripts)
 
-### Current Page Count: 42 pages
+### Current Page Count: 44 pages
 - 7 Core pages (Home, About, Contact, Contact Thank You, Book Consultation, FAQ, Privacy)
 - 5 Service pages
 - 6 Guide pages (ALL COMPLETE as of Dec 3, 2025)
-- 1 States index + 11 State pages (AZ, CA, FL, GA, MA, MN, NC, NY, OH, PA, TX)
+- 1 States index + 13 State pages (AZ, CA, CT, FL, GA, MA, MN, NC, NY, OH, PA, TX, WA)
 - 1 Guides index
 - 1 Blog index + 10 Blog posts
 
@@ -193,19 +193,15 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 ### Completed Batches:
 - **Batch 01 (PA, GA, NC)** - DONE - Standard federal rules states
 - **Batch 02 (NY, MA, MN)** - DONE - Special rules states (Dec 5, 2025)
+- **Batch 03 (CT, WA)** - DONE - Year-round guaranteed issue states (Dec 5, 2025)
 
 ### Next Batches Ready:
-- **Batch 03 (CT, WA)** - Year-round guaranteed issue states
 - **Batch 04 (MO, OR)** - Birthday rule states
 
 ### Future Batches to Create:
 - **Batch 05+** - Standard states (alphabetically)
 
 ### Remaining States to Complete:
-
-**Year-Round GI States (Batch 03):**
-- Connecticut - Year-round GI for plans C, D, F, G
-- Washington - Year-round GI for ALL plans
 
 **Birthday Rule States (Batch 04):**
 - Missouri - 30-day birthday window annually
@@ -234,6 +230,27 @@ Total pages: 42
 - MN: Basic plan + rider system explained, how to build federal-equivalent coverage
 
 **Rollback available:** "Site before NY, MA and MN" (commit e780b5a)
+
+---
+
+## Progress Update - December 5, 2025 (Batch 03)
+
+**Added 2 Year-Round Guaranteed Issue State Pages (CT, WA)**
+
+Successfully created state pages for the two states with year-round GI rights:
+- **Connecticut:** /states/connecticut/ - Year-round GI for plans C, D, F, G only
+- **Washington:** /states/washington/ - Year-round GI for ALL plans (strongest after NY)
+
+Total state pages now: 13 (AZ, CA, CT, FL, GA, MA, MN, NC, NY, OH, PA, TX, WA)
+Total pages: 44
+
+**Key Content Highlights:**
+- CT: Clearly explains which plans have year-round GI (C, D, F, G) vs federal rules (A, B, K, L, M, N)
+- WA: Emphasizes strongest protections after NY, ability to rate shop anytime
+- Both: SHIP programs correct (CHOICES for CT, SHIBA for WA)
+- Both: Realistic premium ranges, state-specific considerations
+
+**Rollback available:** "Site before CT and WA" (commit dce13e2)
 
 ---
 
