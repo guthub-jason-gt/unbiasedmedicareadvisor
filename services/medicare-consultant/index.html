@@ -517,8 +517,17 @@
 
         // Mobile dropdown toggle
         function toggleMobileDropdown(event) {
+            const link = event.target;
+            const href = link.getAttribute('href');
+
+            // If it's a real link (not "#"), let it navigate normally
+            if (href && href !== '#') {
+                return; // Don't prevent default, let the link work
+            }
+
+            // Otherwise, it's a dropdown toggle only
             event.preventDefault();
-            const parent = event.target.closest('.mobile-dropdown');
+            const parent = link.closest('.mobile-dropdown');
             parent.classList.toggle('active');
         }
 
