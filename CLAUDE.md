@@ -196,13 +196,34 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 - **Batch 03 (CT, WA)** - DONE - Year-round guaranteed issue states (Dec 5, 2025)
 - **Batch 04 (MO, OR)** - DONE - Birthday rule states (Dec 5, 2025)
 
-### Next Batches Ready:
-- **Batch 05+** - Standard states (alphabetically)
+### Next Batch:
+- **Batch 05 (AL, AK)** - First 2 alphabetically, standard federal rules
 
-### Remaining States to Complete:
+### Batch Size Note:
+**Use 2 states per batch** to avoid memory issues. 3+ states causes context overflow.
 
-**Standard States (Batch 05+, federal rules only):**
-Alabama, Alaska, Arkansas, Colorado, Delaware, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Michigan, Mississippi, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, North Dakota, Oklahoma, Rhode Island, South Carolina, South Dakota, Tennessee, Utah, Vermont, Virginia, West Virginia, Wisconsin, Wyoming
+### Remaining States to Complete (35 total, alphabetical order):
+
+**Batch 05:** Alabama, Alaska
+**Batch 06:** Arkansas, Colorado
+**Batch 07:** Delaware, Hawaii
+**Batch 08:** Idaho, Illinois
+**Batch 09:** Indiana, Iowa
+**Batch 10:** Kansas, Kentucky
+**Batch 11:** Louisiana, Maine
+**Batch 12:** Maryland, Michigan
+**Batch 13:** Mississippi, Montana
+**Batch 14:** Nebraska, Nevada
+**Batch 15:** New Hampshire, New Jersey
+**Batch 16:** New Mexico, North Dakota
+**Batch 17:** Oklahoma, Rhode Island
+**Batch 18:** South Carolina, South Dakota
+**Batch 19:** Tennessee, Utah
+**Batch 20:** Vermont, Virginia
+**Batch 21:** West Virginia, Wisconsin
+**Batch 22:** Wyoming (final state)
+
+All remaining states follow standard federal Medigap rules only.
 
 ---
 
