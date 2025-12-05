@@ -197,33 +197,27 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 - **Batch 04 (MO, OR)** - DONE - Birthday rule states (Dec 5, 2025)
 
 ### Next Batch:
-- **Batch 05 (AL, AK)** - First 2 alphabetically, standard federal rules
+- **Batch 05 (AL, AK, AR, CO)** - Prompt ready at `/Prompts/batch-05-AL-AK-AR-CO.txt`
 
 ### Batch Size Note:
-**Use 2 states per batch** to avoid memory issues. 3+ states causes context overflow.
+**Now using 4 states per batch** with opus[1m] model (1 million token context window).
 
 ### Remaining States to Complete (35 total, alphabetical order):
 
-**Batch 05:** Alabama, Alaska
-**Batch 06:** Arkansas, Colorado
-**Batch 07:** Delaware, Hawaii
-**Batch 08:** Idaho, Illinois
-**Batch 09:** Indiana, Iowa
-**Batch 10:** Kansas, Kentucky
-**Batch 11:** Louisiana, Maine
-**Batch 12:** Maryland, Michigan
-**Batch 13:** Mississippi, Montana
-**Batch 14:** Nebraska, Nevada
-**Batch 15:** New Hampshire, New Jersey
-**Batch 16:** New Mexico, North Dakota
-**Batch 17:** Oklahoma, Rhode Island
-**Batch 18:** South Carolina, South Dakota
-**Batch 19:** Tennessee, Utah
-**Batch 20:** Vermont, Virginia
-**Batch 21:** West Virginia, Wisconsin
-**Batch 22:** Wyoming (final state)
+**Batch 05:** Alabama, Alaska, Arkansas, Colorado - NEXT (prompt ready)
+**Batch 06:** Delaware, Hawaii, Idaho, Illinois
+**Batch 07:** Indiana, Iowa, Kansas, Kentucky
+**Batch 08:** Louisiana, Maine, Maryland, Michigan
+**Batch 09:** Mississippi, Montana, Nebraska, Nevada
+**Batch 10:** New Hampshire, New Jersey, New Mexico, North Dakota
+**Batch 11:** Oklahoma, Rhode Island, South Carolina, South Dakota
+**Batch 12:** Tennessee, Utah, Vermont, Virginia
+**Batch 13:** West Virginia, Wisconsin, Wyoming (final 3 states)
 
 All remaining states follow standard federal Medigap rules only.
+
+### Model Configuration (Updated Dec 5, 2025)
+Now using `opus[1m]` for extended memory. Set with: `claude config set model opus[1m]`
 
 ---
 
