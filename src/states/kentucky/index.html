@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kentucky Medicare Supplement Plans explained. Compare Medigap options, costs, and find unbiased guidance from a fee-only Medicare advisor serving Kentucky residents.">
+    <meta name="keywords" content="medicare supplement plans kentucky, kentucky medigap plans, medicare advisor kentucky, kentucky medicare help">
+    <title>Medicare Supplement Plans in Kentucky | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Medicare Supplement Plans in Kentucky | Unbiased Medicare Advisor">
+    <meta property="og:description" content="Compare Kentucky Medigap plans with unbiased, fee-only guidance. No commissions, no sales pressure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/states/kentucky">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            /* Primary Colors - Navy (trustworthy, authoritative) */
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+
+            /* Accent Colors - Orange (high-visibility CTA) */
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+
+            /* Secondary Color */
+            --secondary: #4a90d9;
+
+            /* Neutral Colors */
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+
+            /* Typography - Senior-friendly sizing */
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+
+            /* Spacing - increased for better section separation */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+
+            /* Layout */
+            --max-width: 1200px;
+            --header-height: 80px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: var(--font-size-base);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: var(--line-height);
+            color: var(--black);
+            background: var(--white);
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* ============================================
+           HEADER & NAVIGATION
+           ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+
+        /* Desktop Navigation */
+        .nav {
+            display: none;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-xs);
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+
+        .dropdown:hover .dropdown-toggle::after {
+            transform: rotate(-135deg);
+            margin-top: 3px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .dropdown-link:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-link:hover {
+            background: #d5dbe0;
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            margin-left: var(--spacing-sm);
+        }
+
+        .nav-cta .btn-primary {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #1e3a5f;
+            border-radius: 2px;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+        }
+
+        .mobile-nav-item {
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 0;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .mobile-dropdown-menu {
+            display: none;
+            padding-left: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            display: block;
+        }
+
+        .mobile-dropdown-link {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--medium-gray);
+            text-decoration: none;
+        }
+
+        .mobile-nav-cta {
+            margin-top: var(--spacing-lg);
+        }
+
+        .mobile-nav-cta .btn {
+            display: block;
+            width: 100%;
+        }
+
+        /* ============================================
+           HERO SECTION - STATE PAGE
+           ============================================ */
+        .hero {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xxl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        /* ============================================
+           BREADCRUMB
+           ============================================ */
+        .breadcrumb {
+            padding: var(--spacing-sm) 0;
+            background: var(--off-white);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: '→';
+            margin: 0 0.5rem;
+            color: var(--medium-gray);
+        }
+
+        .breadcrumb-label {
+            color: var(--medium-gray);
+            margin-right: 0.5rem;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-item a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           MAIN CONTENT
+           ============================================ */
+        .content-section {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--off-white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-xl);
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-subtitle {
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+
+        .main-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
+        .main-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .main-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+
+        .main-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+
+        .main-content ul, .main-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+
+        .main-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           SIDEBAR
+           ============================================ */
+        .sidebar {
+            position: sticky;
+            top: calc(var(--header-height) + var(--spacing-md));
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .sidebar-card .btn {
+            width: 100%;
+        }
+
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .sidebar-cta h3 {
+            color: var(--white);
+        }
+
+        .sidebar-cta p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* ============================================
+           STATE STATS
+           ============================================ */
+        .state-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           COMPARISON TABLE
+           ============================================ */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: var(--off-white);
+        }
+
+        /* ============================================
+           INFO BOX
+           ============================================ */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* ============================================
+           FAQ SECTION
+           ============================================ */
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+            padding: var(--spacing-md) 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            color: var(--medium-gray);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta {
+            padding: var(--spacing-xxl) 0;
+            text-align: center;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--white);
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: var(--spacing-xxl) 0 var(--spacing-lg);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-logo .logo-icon {
+            background: var(--primary-light);
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-nav h4 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--white);
+        }
+
+        .footer-nav ul {
+            list-style: none;
+        }
+
+        .footer-nav li {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .footer-nav a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--white);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .footer-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: var(--spacing-md);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-phone:hover {
+            color: var(--accent);
+        }
+
+        .footer-phone-icon {
+            font-size: 1.5rem;
+            filter: brightness(0) invert(1);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (min-width: 768px) {
+            .nav {
+                display: block;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }
+
+        @media (max-width: 767px) {
+            :root {
+                --font-size-base: 17px;
+            }
+
+            .hero {
+                padding-top: calc(var(--header-height) + var(--spacing-xl));
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: var(--spacing-sm);
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Top Bar Styles */
+        .top-bar { background: #1a365d; color: white; padding: 8px 20px; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
+        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .top-bar-phone:hover { color: #90cdf4; }
+        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+</head>
+<body>
+{{HEADER}}
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Kentucky Medicare Supplement Guide</span>
+                <h1>Medicare Supplement Plans in Kentucky</h1>
+                <p class="hero-subtitle">
+                    Compare Medigap options for Kentucky residents with unbiased, fee-only guidance. From Louisville to Lexington, get expert help choosing the right Medicare Supplement plan without sales pressure or commissions.
+                </p>
+                <div class="hero-cta">
+                    <a href="/book-consultation/" class="btn btn-primary">Book Free Consultation</a>
+                    <a href="tel:8508101000" class="btn btn-outline-white">Call (850) 810-1000</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/states/">States</a></li>
+                <li class="breadcrumb-item active">Kentucky</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Kentucky Stats Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">By the Numbers</span>
+                <h2 class="section-title">Kentucky Medicare Landscape</h2>
+            </div>
+            <div class="state-stats">
+                <div class="stat-card">
+                    <div class="stat-number">900K+</div>
+                    <div class="stat-label">Medicare Beneficiaries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Insurance Companies</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Medigap Plan Letters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6 Mo.</div>
+                    <div class="stat-label">Open Enrollment Period</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>Understanding Medicare Supplement Plans in Kentucky</h2>
+                    <p>
+                        Kentucky residents have access to standardized Medicare Supplement (Medigap) plans that help cover out-of-pocket costs like deductibles, copayments, and coinsurance. With approximately 900,000 Medicare beneficiaries across the Bluegrass State, understanding your Medigap options is essential to managing healthcare expenses in retirement.
+                    </p>
+                    <p>
+                        Whether you live in urban Louisville or Lexington, or in rural communities throughout Appalachian Kentucky, Medigap policies provide predictable coverage that works with Original Medicare (Parts A and B). These plans are especially valuable for Kentucky residents managing chronic conditions like diabetes and heart disease, which are more prevalent in the state.
+                    </p>
+
+                    <h2>Available Medigap Plans in Kentucky</h2>
+                    <p>
+                        Kentucky follows the federal standardized Medigap plan structure. Ten plan letters are available, each offering different levels of coverage:
+                    </p>
+                    <ul>
+                        <li><strong>Plan G:</strong> The most comprehensive option for new Medicare beneficiaries, covering all costs except the Part B deductible</li>
+                        <li><strong>Plan N:</strong> A cost-effective alternative with modest copays for doctor visits and emergency room visits</li>
+                        <li><strong>Plan F:</strong> Available only to those eligible for Medicare before 2020, offering the most complete coverage including the Part B deductible</li>
+                        <li><strong>Plans A, B, C, D, K, L, and M:</strong> Various coverage levels to match different budgets and healthcare needs</li>
+                        <li><strong>High-Deductible Plans F and G:</strong> Lower monthly premiums with higher out-of-pocket costs before coverage begins</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Important for Kentucky Residents</h4>
+                        <p>
+                            If you live in Northern Kentucky near Cincinnati, you may receive care across state lines in Ohio. Medigap plans provide nationwide coverage, so you can see any doctor who accepts Medicare regardless of location. This is particularly valuable for residents seeking specialized care at facilities like the University of Kentucky Healthcare or traveling to nearby states.
+                        </p>
+                    </div>
+
+                    <h2>Kentucky Medigap Premium Ranges</h2>
+                    <p>
+                        Monthly premiums for Medicare Supplement plans in Kentucky vary based on several factors including your age, location, gender, tobacco use, and the insurance company you choose. Here are typical premium ranges for the most popular plans:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Medigap Plan</th>
+                                <th>Monthly Premium Range</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Plan G</strong></td>
+                                <td>$85 - $220/month</td>
+                                <td>Comprehensive coverage with predictable costs</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan N</strong></td>
+                                <td>$65 - $165/month</td>
+                                <td>Lower premiums with modest copays</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan F</strong></td>
+                                <td>$115 - $270/month</td>
+                                <td>Complete coverage (if eligible before 2020)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>High-Deductible Plan G</strong></td>
+                                <td>$35 - $75/month</td>
+                                <td>Healthy individuals comfortable with higher initial costs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        Premiums in Kentucky tend to be lower in rural areas and higher in metropolitan regions like Louisville and Lexington. Shopping around and comparing quotes from multiple carriers can result in significant savings while maintaining identical coverage.
+                    </p>
+
+                    <h2>Medigap vs. Medicare Advantage in Kentucky</h2>
+                    <p>
+                        Kentucky Medicare beneficiaries can choose between Medicare Supplement plans (with Original Medicare) or Medicare Advantage plans. Understanding the key differences helps you make the right choice:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Medicare Supplement (Medigap)</th>
+                                <th>Medicare Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Provider Network</strong></td>
+                                <td>Any doctor accepting Medicare nationwide</td>
+                                <td>Limited to plan network (HMO/PPO)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Out-of-Pocket Costs</strong></td>
+                                <td>Predictable; most covered by Medigap</td>
+                                <td>Varies; copays/coinsurance for each service</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prescription Drugs</strong></td>
+                                <td>Requires separate Part D plan</td>
+                                <td>Often included in plan</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rural Access</strong></td>
+                                <td>Excellent; any Medicare provider</td>
+                                <td>Can be limited in rural Kentucky</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Travel Coverage</strong></td>
+                                <td>Works anywhere in the U.S.</td>
+                                <td>May have limited out-of-area coverage</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Referrals</strong></td>
+                                <td>Not required</td>
+                                <td>May be required depending on plan type</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Kentucky-Specific Considerations</h2>
+
+                    <h3>Rural Healthcare Access</h3>
+                    <p>
+                        Many Kentucky residents, particularly in Appalachian regions, live in rural areas with limited healthcare facilities. Medicare Supplement plans offer significant advantages in these areas because they allow you to see any doctor or specialist who accepts Medicare without network restrictions. This flexibility is crucial when local options are limited and you may need to travel for specialized care.
+                    </p>
+
+                    <h3>Chronic Health Conditions</h3>
+                    <p>
+                        Kentucky has higher-than-average rates of chronic conditions including diabetes, heart disease, and COPD. For residents managing these conditions, comprehensive Medigap plans like Plan G provide predictable coverage and eliminate most out-of-pocket costs. This financial certainty is especially valuable when managing ongoing treatments and specialist visits.
+                    </p>
+
+                    <h3>Border Communities</h3>
+                    <p>
+                        Kentucky shares borders with seven states, and many residents—particularly in Northern Kentucky (Cincinnati area), Ashland (Huntington area), and Paducah—may receive healthcare services across state lines. Medigap policies work nationwide, making them ideal for residents who cross state borders for medical care.
+                    </p>
+
+                    <h3>University of Kentucky Healthcare</h3>
+                    <p>
+                        As Kentucky's premier academic medical center, UK Healthcare in Lexington attracts patients from across the state seeking specialized treatment. Medigap plans ensure you can access these services without network limitations, regardless of where in Kentucky you live.
+                    </p>
+
+                    <h3>Limited Medicare Advantage Options</h3>
+                    <p>
+                        Rural Kentucky counties, especially in the eastern part of the state, may have limited Medicare Advantage plan options. In these areas, Original Medicare with a Medigap plan often provides better access to care and more provider choices than available Medicare Advantage plans.
+                    </p>
+
+                    <h2>When to Enroll in a Kentucky Medigap Plan</h2>
+
+                    <h3>Open Enrollment Period (Best Time)</h3>
+                    <p>
+                        Your Medigap Open Enrollment Period begins the month you turn 65 and are enrolled in Medicare Part B. During this 6-month window, you have guaranteed issue rights—insurance companies cannot deny you coverage or charge higher premiums based on health conditions. This is the absolute best time to purchase a Medigap policy.
+                    </p>
+
+                    <h3>Guaranteed Issue Rights</h3>
+                    <p>
+                        Kentucky residents may qualify for guaranteed issue rights in specific situations, such as:
+                    </p>
+                    <ul>
+                        <li>Your Medicare Advantage plan is leaving Kentucky or stops providing coverage in your area</li>
+                        <li>You moved out of your plan's service area</li>
+                        <li>Your insurance company went bankrupt or misled you</li>
+                        <li>You're leaving a PACE program or employer/union coverage</li>
+                    </ul>
+
+                    <h3>Outside Open Enrollment</h3>
+                    <p>
+                        If you apply for Medigap coverage outside your Open Enrollment Period and don't have guaranteed issue rights, insurance companies in Kentucky can use medical underwriting. They may deny coverage, charge higher premiums, or impose waiting periods for pre-existing conditions. Working with an experienced advisor can help you navigate these situations.
+                    </p>
+
+                    <h2>How to Choose the Right Medigap Plan in Kentucky</h2>
+                    <p>
+                        Selecting the best Medicare Supplement plan requires evaluating several personal factors:
+                    </p>
+                    <ul>
+                        <li><strong>Healthcare needs:</strong> Consider your current health status and expected medical expenses</li>
+                        <li><strong>Budget:</strong> Balance monthly premiums against potential out-of-pocket costs</li>
+                        <li><strong>Providers:</strong> Ensure your doctors accept Medicare (most do in Kentucky)</li>
+                        <li><strong>Location:</strong> Consider whether you travel frequently or live near state borders</li>
+                        <li><strong>Prescription drugs:</strong> Remember to enroll in a separate Part D plan for medication coverage</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Fee-Only Guidance for Kentucky Residents</h4>
+                        <p>
+                            As a fee-only Medicare advisor, I provide unbiased recommendations without earning commissions from insurance companies. This means my only focus is helping you find the right coverage for your needs and budget—not maximizing my commission. Kentucky residents deserve honest advice when making important Medicare decisions.
+                        </p>
+                    </div>
+
+                    <h2>State Resources for Kentucky Medicare Beneficiaries</h2>
+
+                    <h3>SHIP (State Health Insurance Assistance Program)</h3>
+                    <p>
+                        Kentucky's SHIP program provides free, unbiased counseling to Medicare beneficiaries. Trained volunteers can help you understand your options, compare plans, and answer questions about Medicare Supplement insurance.
+                    </p>
+                    <ul>
+                        <li><strong>Phone:</strong> 1-877-293-7447</li>
+                        <li><strong>Website:</strong> chfs.ky.gov/agencies/dail/Pages/ship.aspx</li>
+                        <li>Services available in all 120 Kentucky counties</li>
+                    </ul>
+
+                    <h3>Kentucky Department of Insurance</h3>
+                    <p>
+                        The Kentucky Department of Insurance regulates insurance companies operating in the state and can assist with complaints or questions about Medigap policies.
+                    </p>
+                    <ul>
+                        <li><strong>Phone:</strong> 1-800-595-6053</li>
+                        <li><strong>Website:</strong> insurance.ky.gov</li>
+                    </ul>
+
+                    <h2>Common Questions from Kentucky Residents</h2>
+
+                    <h3>Are Medigap premiums the same throughout Kentucky?</h3>
+                    <p>
+                        No. Premiums vary by location within Kentucky, with urban areas like Louisville and Lexington typically having higher rates than rural counties. However, coverage is identical regardless of price—a Plan G in Louisville provides the same benefits as a Plan G in Pikeville.
+                    </p>
+
+                    <h3>Can I keep my Medigap plan if I move within Kentucky?</h3>
+                    <p>
+                        Yes. Your Medigap policy remains in effect if you move to a different city or county within Kentucky. However, if you move to another state, you should contact your insurance company as availability and pricing may differ. You may need to apply for a new policy in your new state.
+                    </p>
+
+                    <h3>What if I need to see a specialist at UK Healthcare or Norton Healthcare?</h3>
+                    <p>
+                        With a Medigap plan and Original Medicare, you can see any specialist who accepts Medicare without needing referrals or worrying about networks. Both UK Healthcare in Lexington and Norton Healthcare in Louisville accept Medicare, making access straightforward with Medigap coverage.
+                    </p>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Speak with a Kentucky Medicare Expert</h3>
+                        <p>Get personalized, unbiased guidance on Medigap plans in Kentucky. No commissions, no pressure.</p>
+                        <a href="/book-consultation/" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Kentucky Quick Facts</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;"><strong>Medicare Beneficiaries:</strong> ~900,000</li>
+                            <li style="margin-bottom: 0.75rem;"><strong>Major Cities:</strong> Louisville, Lexington, Bowling Green</li>
+                            <li style="margin-bottom: 0.75rem;"><strong>SHIP Program:</strong> 1-877-293-7447</li>
+                            <li style="margin-bottom: 0.75rem;"><strong>Insurance Dept:</strong> 1-800-595-6053</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Popular Kentucky Resources</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem;"><a href="/guides/" style="color: var(--primary); text-decoration: none;">Medicare Guides</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="/services/" style="color: var(--primary); text-decoration: none;">Advisory Services</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="/contact/" style="color: var(--primary); text-decoration: none;">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Common Questions</span>
+                <h2 class="section-title">Kentucky Medigap FAQ</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">How much do Medicare Supplement plans cost in Kentucky?</div>
+                    <div class="faq-answer">
+                        <p>Monthly premiums for Medigap plans in Kentucky typically range from $65 to $270 depending on the plan letter, your age, location, and the insurance company. Plan G generally costs between $85-$220/month, while Plan N ranges from $65-$165/month. Rates in Louisville and Lexington tend to be higher than in rural areas. It's important to compare quotes from multiple companies, as coverage is standardized but prices vary significantly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Does Kentucky have special Medigap protections or rules?</div>
+                    <div class="faq-answer">
+                        <p>Kentucky follows standard federal Medigap regulations without additional state-specific protections. You have a 6-month Open Enrollment Period starting when you turn 65 and enroll in Part B, during which insurers cannot deny coverage or charge more based on health conditions. Kentucky does not have a birthday rule, year-round guaranteed issue, or other special enrollment rights beyond federal requirements. This makes it crucial to enroll during your initial Open Enrollment Period.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I use my Medigap plan if I receive care in Ohio, Tennessee, or Indiana?</div>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely. Medigap plans work anywhere in the United States with any doctor or hospital that accepts Medicare. This is particularly valuable for Kentucky residents living near state borders—such as Northern Kentucky residents using Cincinnati healthcare facilities, or Paducah residents accessing care in Illinois. Your coverage remains the same regardless of which state you receive treatment in, as long as the provider accepts Medicare.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is a Medicare Supplement plan better than Medicare Advantage in rural Kentucky?</div>
+                    <div class="faq-answer">
+                        <p>For many rural Kentucky residents, especially in eastern Appalachian counties, Medicare Supplement plans often provide better access to care. Medicare Advantage plans use provider networks that may be limited or nonexistent in rural areas, potentially requiring long drives to in-network facilities. Medigap plans work with Original Medicare, allowing you to see any doctor who accepts Medicare without network restrictions. This flexibility is particularly valuable in areas with fewer healthcare options.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What happens to my Medigap plan if I move to another state from Kentucky?</div>
+                    <div class="faq-answer">
+                        <p>If you move from Kentucky to another state, your current Medigap policy typically remains in effect, but you may want to explore options in your new state. Some insurance companies operate in multiple states and may transfer your policy. However, you might face medical underwriting if you apply for a new policy in your new state (unless you qualify for guaranteed issue rights). It's advisable to contact your insurance company before moving and consider working with an advisor who can help you understand your options in the new state.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Kentucky Medigap Plan?</h2>
+                <p>Get unbiased, expert guidance tailored to your needs. No commissions, no sales pressure—just honest advice to help you make the best Medicare decision.</p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation/" class="btn btn-primary">Schedule Free Consultation</a>
+                    <a href="tel:8508101000" class="btn btn-outline-white">Call (850) 810-1000</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{FOOTER}}
+
+{{SCRIPTS}}
+</body>
+</html>

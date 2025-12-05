@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Indiana Medicare Supplement Plans explained. Compare Medigap options, costs, and find unbiased guidance from a fee-only Medicare advisor serving Indiana residents.">
+    <meta name="keywords" content="medicare supplement plans indiana, indiana medigap plans, medicare advisor indiana, indiana medicare help">
+    <title>Medicare Supplement Plans in Indiana | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Medicare Supplement Plans in Indiana | Unbiased Medicare Advisor">
+    <meta property="og:description" content="Compare Indiana Medigap plans with unbiased, fee-only guidance. No commissions, no sales pressure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/states/indiana">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            /* Primary Colors - Navy (trustworthy, authoritative) */
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+
+            /* Accent Colors - Orange (high-visibility CTA) */
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+
+            /* Secondary Color */
+            --secondary: #4a90d9;
+
+            /* Neutral Colors */
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+
+            /* Typography - Senior-friendly sizing */
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+
+            /* Spacing - increased for better section separation */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+
+            /* Layout */
+            --max-width: 1200px;
+            --header-height: 80px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: var(--font-size-base);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: var(--line-height);
+            color: var(--black);
+            background: var(--white);
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* ============================================
+           HEADER & NAVIGATION
+           ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+
+        /* Desktop Navigation */
+        .nav {
+            display: none;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-xs);
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+
+        .dropdown:hover .dropdown-toggle::after {
+            transform: rotate(-135deg);
+            margin-top: 3px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .dropdown-link:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-link:hover {
+            background: #d5dbe0;
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            margin-left: var(--spacing-sm);
+        }
+
+        .nav-cta .btn-primary {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #1e3a5f;
+            border-radius: 2px;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+        }
+
+        .mobile-nav-item {
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 0;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .mobile-dropdown-menu {
+            display: none;
+            padding-left: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            display: block;
+        }
+
+        .mobile-dropdown-link {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--medium-gray);
+            text-decoration: none;
+        }
+
+        .mobile-nav-cta {
+            margin-top: var(--spacing-lg);
+        }
+
+        .mobile-nav-cta .btn {
+            display: block;
+            width: 100%;
+        }
+
+        /* ============================================
+           HERO SECTION - STATE PAGE
+           ============================================ */
+        .hero {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xxl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        /* ============================================
+           BREADCRUMB
+           ============================================ */
+        .breadcrumb {
+            padding: var(--spacing-sm) 0;
+            background: var(--off-white);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: '→';
+            margin: 0 0.5rem;
+            color: var(--medium-gray);
+        }
+
+        .breadcrumb-label {
+            color: var(--medium-gray);
+            margin-right: 0.5rem;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-item a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           MAIN CONTENT
+           ============================================ */
+        .content-section {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--off-white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-xl);
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-subtitle {
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+
+        .main-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
+        .main-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .main-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+
+        .main-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+
+        .main-content ul, .main-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+
+        .main-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           SIDEBAR
+           ============================================ */
+        .sidebar {
+            position: sticky;
+            top: calc(var(--header-height) + var(--spacing-md));
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .sidebar-card .btn {
+            width: 100%;
+        }
+
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .sidebar-cta h3 {
+            color: var(--white);
+        }
+
+        .sidebar-cta p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* ============================================
+           STATE STATS
+           ============================================ */
+        .state-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           COMPARISON TABLE
+           ============================================ */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: var(--off-white);
+        }
+
+        /* ============================================
+           INFO BOX
+           ============================================ */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* ============================================
+           FAQ SECTION
+           ============================================ */
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+            padding: var(--spacing-md) 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            color: var(--medium-gray);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta {
+            padding: var(--spacing-xxl) 0;
+            text-align: center;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--white);
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: var(--spacing-xxl) 0 var(--spacing-lg);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-logo .logo-icon {
+            background: var(--primary-light);
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-nav h4 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--white);
+        }
+
+        .footer-nav ul {
+            list-style: none;
+        }
+
+        .footer-nav li {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .footer-nav a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--white);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .footer-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: var(--spacing-md);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-phone:hover {
+            color: var(--accent);
+        }
+
+        .footer-phone-icon {
+            font-size: 1.5rem;
+            filter: brightness(0) invert(1);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (min-width: 768px) {
+            .nav {
+                display: block;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }
+
+        @media (max-width: 767px) {
+            :root {
+                --font-size-base: 17px;
+            }
+
+            .hero {
+                padding-top: calc(var(--header-height) + var(--spacing-xl));
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: var(--spacing-sm);
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Top Bar Styles */
+        .top-bar { background: #1a365d; color: white; padding: 8px 20px; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
+        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .top-bar-phone:hover { color: #90cdf4; }
+        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+</head>
+<body>
+    <!-- Top Bar & Header Position Fixes -->
+    <style>
+        .top-bar {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: #1a365d !important;
+            color: white !important;
+            padding: 8px 20px !important;
+            z-index: 1001 !important;
+        }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
+        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .top-bar-phone:hover { color: #90cdf4; }
+        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+        .header { top: 36px !important; }
+        .hero, .page-header, .guide-header { padding-top: calc(var(--header-height, 80px) + 36px + 2rem) !important; }
+    </style>
+
+    <!-- ============================================
+         TOP BAR
+         ============================================ -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <a href="tel:+18508101000" class="top-bar-phone">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call Us: (850) 810-1000
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">M</span>
+                <span>Unbiased Medicare Advisor</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Learn</a>
+                        <div class="dropdown-menu">
+                            <a href="/guides/medigap-vs-medicare-advantage" class="dropdown-link">Medigap vs Medicare Advantage</a>
+                            <a href="/guides/turning-65-medicare-guide" class="dropdown-link">Turning 65 Guide</a>
+                            <a href="/guides/medicare-parts-explained" class="dropdown-link">Medicare Parts Explained (A, B, C, D)</a>
+                            <a href="/guides" class="dropdown-link">All Guides</a>
+                            <a href="/blog" class="dropdown-link">Blog Articles</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="/services/medicare-consultant" class="dropdown-link">Medicare Consultant</a>
+                            <a href="/services/fee-only-medicare-advisor" class="dropdown-link">Fee-Only Advisor</a>
+                            <a href="/services/independent-medicare-advisor" class="dropdown-link">Independent Advisor</a>
+                            <a href="/services/medicare-plan-comparison" class="dropdown-link">Plan Comparison Help</a>
+                            <a href="/services/medicare-enrollment-help" class="dropdown-link">Medicare Enrollment Help</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Your State</a>
+                        <div class="dropdown-menu">
+                            <a href="/states/florida" class="dropdown-link">Florida</a>
+                            <a href="/states/texas" class="dropdown-link">Texas</a>
+                            <a href="/states/california" class="dropdown-link">California</a>
+                            <a href="/states/ohio" class="dropdown-link">Ohio</a>
+                            <a href="/states/arizona" class="dropdown-link">Arizona</a>
+                            <a href="/states" class="dropdown-link">All 50 States</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item nav-cta">
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Learn</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/guides/medigap-vs-medicare-advantage" class="mobile-dropdown-link">Medigap vs Medicare Advantage</a>
+                        <a href="/guides/turning-65-medicare-guide" class="mobile-dropdown-link">Turning 65 Guide</a>
+                        <a href="/guides/medicare-parts-explained" class="mobile-dropdown-link">Medicare Parts Explained (A, B, C, D)</a>
+                        <a href="/guides" class="mobile-dropdown-link">All Guides</a>
+                        <a href="/blog" class="mobile-dropdown-link">Blog Articles</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Services</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/services/medicare-consultant" class="mobile-dropdown-link">Medicare Consultant</a>
+                        <a href="/services/fee-only-medicare-advisor" class="mobile-dropdown-link">Fee-Only Advisor</a>
+                        <a href="/services/independent-medicare-advisor" class="mobile-dropdown-link">Independent Advisor</a>
+                        <a href="/services/medicare-plan-comparison" class="mobile-dropdown-link">Plan Comparison Help</a>
+                        <a href="/services/medicare-enrollment-help" class="mobile-dropdown-link">Medicare Enrollment Help</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Your State</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/states/florida" class="mobile-dropdown-link">Florida</a>
+                        <a href="/states/texas" class="mobile-dropdown-link">Texas</a>
+                        <a href="/states/california" class="mobile-dropdown-link">California</a>
+                        <a href="/states/ohio" class="mobile-dropdown-link">Ohio</a>
+                        <a href="/states/arizona" class="mobile-dropdown-link">Arizona</a>
+                        <a href="/states" class="mobile-dropdown-link">All 50 States</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/about" class="mobile-nav-link">About</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/contact" class="mobile-nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="mobile-nav-cta">
+                <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/guides/">Medicare Guides</a></li>
+                <li class="breadcrumb-item active">Indiana Medicare Supplement Plans</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Indiana Medicare Supplement Insurance</div>
+                <h1>Medicare Supplement Plans in Indiana</h1>
+                <p class="hero-subtitle">
+                    Compare Medigap plans from Indiana's top carriers with unbiased, fee-only guidance. Serving Indianapolis, Fort Wayne, Evansville, South Bend, Carmel, and communities across the Hoosier State.
+                </p>
+                <div class="hero-cta">
+                    <a href="/book-consultation/" class="btn btn-primary">Schedule Free Consultation</a>
+                    <a href="tel:8508101000" class="btn btn-outline-white">Call (850) 810-1000</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- State Statistics -->
+    <section class="content-section">
+        <div class="container">
+            <div class="state-stats">
+                <div class="stat-card">
+                    <div class="stat-number">1.2M</div>
+                    <div class="stat-label">Medicare Beneficiaries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Insurance Companies</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Plan Letters Available</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6 Mo</div>
+                    <div class="stat-label">Open Enrollment Period</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <h2>Understanding Medicare Supplement Plans in Indiana</h2>
+                    <p>
+                        Indiana residents have access to standardized Medicare Supplement (Medigap) plans that help cover out-of-pocket costs not paid by Original Medicare. With approximately 1.2 million Medicare beneficiaries across the state, choosing the right Medigap plan is an important decision for Hoosiers entering Medicare.
+                    </p>
+                    <p>
+                        Whether you live in the bustling Indianapolis metro area, the industrial heartland of Fort Wayne, or the rural communities of southern Indiana, Medicare Supplement plans offer the same core benefits regardless of where you receive care. This standardization provides peace of mind for Indiana residents who travel frequently or visit family across state lines.
+                    </p>
+
+                    <div class="info-box">
+                        <h4>Important for Indiana Residents</h4>
+                        <p>
+                            Indiana follows standard federal Medigap regulations. Your best opportunity to enroll in a Medicare Supplement plan is during your 6-month Open Enrollment Period, which begins the month you turn 65 and are enrolled in Medicare Part B. During this time, you cannot be denied coverage or charged higher premiums due to pre-existing health conditions.
+                        </p>
+                    </div>
+
+                    <h2>Medicare Supplement Plans Available in Indiana</h2>
+                    <p>
+                        Indiana residents can choose from up to 10 standardized Medigap plan letters. The most popular plans in Indiana include:
+                    </p>
+                    <ul>
+                        <li><strong>Plan G:</strong> The most comprehensive option for new Medicare beneficiaries, covering all out-of-pocket costs except the Medicare Part B deductible</li>
+                        <li><strong>Plan N:</strong> A cost-effective alternative with small copays for doctor visits and emergency room visits</li>
+                        <li><strong>Plan F:</strong> Available only to those eligible for Medicare before 2020, offering the most comprehensive coverage including the Part B deductible</li>
+                        <li><strong>High Deductible Plan G:</strong> Lower monthly premiums with a higher deductible, appealing to healthier Indiana residents who want catastrophic protection</li>
+                    </ul>
+
+                    <h2>Average Medigap Costs in Indiana</h2>
+                    <p>
+                        Medicare Supplement premiums in Indiana are generally moderate compared to the national average, reflecting the state's balanced cost of living and healthcare expenses. Premiums vary based on your age, gender, tobacco use, zip code, and the insurance company you choose.
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Plan Type</th>
+                                <th>Average Monthly Premium</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Plan G</strong></td>
+                                <td>$90 - $230</td>
+                                <td>Most comprehensive coverage for new beneficiaries</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan N</strong></td>
+                                <td>$70 - $170</td>
+                                <td>Budget-conscious individuals comfortable with small copays</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan F</strong></td>
+                                <td>$120 - $280</td>
+                                <td>Those eligible before 2020 wanting full coverage</td>
+                            </tr>
+                            <tr>
+                                <td><strong>High Deductible Plan G</strong></td>
+                                <td>$35 - $85</td>
+                                <td>Healthy individuals seeking catastrophic protection</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        <em>Note: Premiums shown are estimates for Indiana residents and vary by location, age, gender, and carrier. Contact us for personalized quotes from multiple carriers.</em>
+                    </p>
+
+                    <h2>Medigap vs. Medicare Advantage in Indiana</h2>
+                    <p>
+                        Indiana residents have a choice between Medicare Supplement plans and Medicare Advantage plans. Understanding the key differences is crucial to making the right decision for your healthcare needs.
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Medicare Supplement</th>
+                                <th>Medicare Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Doctor Choice</strong></td>
+                                <td>Any doctor accepting Medicare nationwide</td>
+                                <td>Network restrictions apply</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Monthly Premium</strong></td>
+                                <td>$70 - $280+ (plus Part B premium)</td>
+                                <td>$0 - $100+ (may replace Part B premium)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Out-of-Pocket Costs</strong></td>
+                                <td>Predictable, often minimal</td>
+                                <td>Copays, coinsurance, annual maximums</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Coverage Area</strong></td>
+                                <td>Nationwide</td>
+                                <td>Limited to service area (often county-specific)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prescription Coverage</strong></td>
+                                <td>Requires separate Part D plan</td>
+                                <td>Often included</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Referrals</strong></td>
+                                <td>Not required</td>
+                                <td>May be required for specialists</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Indiana-Specific Considerations</h2>
+
+                    <h3>Healthcare Landscape</h3>
+                    <p>
+                        Indiana's healthcare system features several world-class medical centers, particularly in Indianapolis. Major health systems include:
+                    </p>
+                    <ul>
+                        <li><strong>IU Health:</strong> Indiana's largest healthcare system with facilities across the state</li>
+                        <li><strong>Community Health Network:</strong> Extensive presence in central Indiana</li>
+                        <li><strong>Parkview Health:</strong> Serving northeastern Indiana and Fort Wayne</li>
+                        <li><strong>Deaconess Health System:</strong> Primary provider in southwestern Indiana</li>
+                        <li><strong>Beacon Health System:</strong> Serving the South Bend and Michiana region</li>
+                    </ul>
+                    <p>
+                        With a Medicare Supplement plan, you can access any of these providers and specialists without network restrictions, which is particularly valuable if you need specialized care at IU Health's academic medical center in Indianapolis.
+                    </p>
+
+                    <h3>Rural Healthcare Access</h3>
+                    <p>
+                        Southern Indiana and many rural counties have more limited healthcare provider networks. Medicare Advantage plans in these areas may have very narrow networks, making it challenging to find in-network specialists. Medicare Supplement plans eliminate this concern by allowing you to see any provider that accepts Medicare, which is particularly important in areas with fewer healthcare options.
+                    </p>
+
+                    <h3>The "Crossroads of America" Advantage</h3>
+                    <p>
+                        Indiana's central location and excellent highway system mean many residents travel frequently—whether visiting family in neighboring states, spending winters in warmer climates, or traveling for recreation. Medicare Supplement plans provide seamless coverage anywhere in the United States, whereas Medicare Advantage plans often provide limited or no coverage outside your local service area.
+                    </p>
+
+                    <h3>State Health Insurance Assistance Program (SHIP)</h3>
+                    <p>
+                        Indiana's SHIP program provides free, unbiased Medicare counseling to Hoosier residents. While SHIP counselors offer excellent general information, they cannot recommend specific insurance carriers or plans. As a fee-only Medicare advisor, I complement SHIP services by providing personalized plan comparisons and carrier recommendations based on your specific needs and budget.
+                    </p>
+
+                    <h2>How to Choose the Right Plan</h2>
+                    <p>
+                        Selecting the right Medicare Supplement plan involves evaluating several factors:
+                    </p>
+                    <ol>
+                        <li><strong>Healthcare needs:</strong> Consider your current health status, regular medications, and expected medical services</li>
+                        <li><strong>Budget:</strong> Balance monthly premiums against potential out-of-pocket costs</li>
+                        <li><strong>Travel patterns:</strong> Do you spend time outside Indiana or travel frequently?</li>
+                        <li><strong>Doctor preferences:</strong> Do you have established relationships with specific providers?</li>
+                        <li><strong>Future flexibility:</strong> Plans become harder to change later due to medical underwriting</li>
+                    </ol>
+
+                    <div class="info-box">
+                        <h4>Working with a Fee-Only Advisor</h4>
+                        <p>
+                            Unlike commission-based agents who are incentivized to sell specific carriers, I charge a transparent flat fee and provide unbiased recommendations. You'll receive personalized quotes from multiple top-rated carriers, ensuring you find the best value for your situation. My guidance helps Indiana residents make confident decisions without sales pressure.
+                        </p>
+                    </div>
+
+                    <h2>When to Enroll</h2>
+                    <p>
+                        Timing is critical when enrolling in a Medicare Supplement plan in Indiana:
+                    </p>
+                    <ul>
+                        <li><strong>6-Month Open Enrollment Period:</strong> Begins when you turn 65 and enroll in Part B. During this period, insurance companies cannot deny you coverage or charge higher premiums due to health conditions.</li>
+                        <li><strong>Outside Open Enrollment:</strong> After your 6-month window, insurance companies in Indiana can use medical underwriting and may deny coverage or charge significantly higher premiums based on your health history.</li>
+                        <li><strong>Guaranteed Issue Rights:</strong> Limited special circumstances that provide another opportunity to enroll without medical underwriting (such as losing employer coverage or moving out of a Medicare Advantage plan's service area).</li>
+                    </ul>
+
+                    <h2>Major Insurance Carriers in Indiana</h2>
+                    <p>
+                        Indiana residents have access to Medicare Supplement plans from numerous highly-rated insurance carriers, including national companies and regional providers with strong local presence. Premium rates vary significantly between carriers for the same standardized coverage, making it essential to compare options.
+                    </p>
+                    <p>
+                        As a fee-only advisor, I'll provide you with personalized quotes from multiple A-rated carriers, helping you find the best combination of price, customer service, and financial stability.
+                    </p>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Ready to Compare Plans?</h3>
+                        <p>Get personalized Medicare Supplement quotes from Indiana's top-rated carriers with unbiased, fee-only guidance.</p>
+                        <a href="/book-consultation/" class="btn btn-primary">Schedule Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Call for Immediate Assistance</h3>
+                        <p>Speak with a licensed Medicare advisor who serves Indiana residents.</p>
+                        <a href="tel:8508101000" class="btn btn-secondary">(850) 810-1000</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Indiana SHIP Program</h3>
+                        <p>The State Health Insurance Assistance Program (SHIP) offers free Medicare counseling to Indiana residents.</p>
+                        <p><strong>Contact SHIP:</strong><br>1-800-452-4800</p>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Helpful Resources</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/" style="color: var(--primary); text-decoration: none;">Medicare Planning Guides</a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/services/" style="color: var(--primary); text-decoration: none;">Our Services</a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/contact/" style="color: var(--primary); text-decoration: none;">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section" style="background: var(--off-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Frequently Asked Questions</span>
+                <h2 class="section-title">Indiana Medicare Supplement FAQs</h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is the best Medicare Supplement plan in Indiana?
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Plan G is currently the most comprehensive Medicare Supplement plan available to new beneficiaries in Indiana. It covers all Medicare out-of-pocket costs except the annual Part B deductible. However, the "best" plan depends on your individual healthcare needs, budget, and preferences. Plan N offers similar coverage at a lower premium for those comfortable with small copays at doctor visits. I recommend comparing both options with current premium rates from multiple carriers to determine which provides the best value for your situation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How much do Medicare Supplement plans cost in Indiana?
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Medicare Supplement premiums in Indiana typically range from $70 to $280 per month, depending on the plan type, your age, gender, location, tobacco use, and the insurance carrier. Plan G averages $90-$230/month, while Plan N ranges from $70-$170/month. Premiums can vary by $100 or more between carriers for identical coverage, which is why comparing multiple quotes is essential. Your premium will also increase annually based on age and healthcare inflation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I use my Indiana Medicare Supplement plan when traveling out of state?
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes, one of the major advantages of Medicare Supplement plans is nationwide coverage. You can use your Medigap plan at any healthcare facility that accepts Original Medicare, anywhere in the United States. This is particularly valuable for Indiana residents who travel frequently, visit family in other states, or spend winters in warmer climates. Unlike Medicare Advantage plans, which often have limited coverage outside your local service area, Medigap provides seamless coverage wherever you go.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Does Indiana have any special Medigap enrollment rules or protections?
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Indiana follows standard federal Medicare Supplement regulations and does not have additional state-specific protections beyond federal requirements. Your primary enrollment opportunity is the 6-month Open Enrollment Period that begins when you turn 65 and enroll in Medicare Part B. During this time, you have guaranteed issue rights and cannot be denied coverage or charged higher premiums due to pre-existing conditions. Indiana does not have a birthday rule, annual open enrollment, or other special provisions that some states offer, making it crucial to choose the right plan during your initial enrollment period.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Should I choose a Medicare Supplement or Medicare Advantage plan in Indiana?
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            The choice between Medicare Supplement and Medicare Advantage depends on your priorities. Medicare Supplement plans offer unlimited doctor choice, predictable costs, nationwide coverage, and no network restrictions—ideal for those who want flexibility, travel frequently, or have established relationships with specific providers. Medicare Advantage plans may have lower monthly premiums and include prescription coverage, but come with network restrictions, referral requirements, and potentially higher out-of-pocket costs. For Indiana residents in rural areas or those who access care at specialized facilities like IU Health in Indianapolis, Medicare Supplement plans often provide more flexibility and peace of mind.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Get Unbiased Medicare Supplement Guidance</h2>
+                <p>
+                    Compare personalized quotes from Indiana's top-rated carriers with transparent, fee-only advice. No commissions, no sales pressure—just honest guidance to help you make the best decision.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation/" class="btn btn-primary">Schedule Free Consultation</a>
+                    <a href="tel:8508101000" class="btn btn-outline-white">Call (850) 810-1000</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">M</span>
+                        <span>Unbiased Medicare Advisor</span>
+                    </a>
+                    <p>
+                        Independent, fee-only Medicare guidance. We're paid by you, not insurance companies,
+                        so you can trust our advice is always in your best interest.
+                    </p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services/medicare-consultant">Medicare Consultant</a></li>
+                        <li><a href="/services/fee-only-medicare-advisor">Fee-Only Advisor</a></li>
+                        <li><a href="/services/medicare-plan-comparison">Plan Comparison</a></li>
+                        <li><a href="/services/medicare-enrollment-help">Enrollment Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/guides/medigap-vs-medicare-advantage">Medigap vs MA</a></li>
+                        <li><a href="/guides/turning-65-medicare-guide">Turning 65 Guide</a></li>
+                        <li><a href="/guides">All Guides</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/book-consultation">Book a Call</a></li>
+                    </ul>
+                    <a href="tel:+18508101000" class="footer-phone">
+                        <span class="footer-phone-icon" aria-hidden="true">&#128222;</span>
+                        <span>(850) 810-1000</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(event) {
+            event.preventDefault();
+            const parent = event.target.closest('.mobile-dropdown');
+            parent.classList.toggle('active');
+        }
+
+        // FAQ accordion toggle
+        function toggleFaq(element) {
+            element.closest('.faq-item').classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        if (backToTop) {
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+</body>
+</html>
