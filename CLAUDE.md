@@ -234,69 +234,30 @@ Total pages: 42
 
 ---
 
-## OPEN ISSUE: Massachusetts Card Centering on /states/ Page
+## RESOLVED: Massachusetts Card Centering on /states/ Page
 
-### Problem
-The "Massachusetts" text in the state card on /states/index.html appears LEFT-aligned while all other state names (including "Minnesota" which is similar length) appear centered.
+### Problem (FIXED)
+The "Massachusetts" text appeared LEFT-aligned while all other state names were centered.
 
-### Confirmed Details
-- Issue appears in both Chrome and Safari
-- Minnesota (same card structure, similar length) displays correctly centered
-- HTML structure is identical between Massachusetts and Minnesota cards
-- No hidden characters or whitespace differences found via hex dump
-- Issue persists regardless of CSS changes tried
+### Solution
+Remove `width: 100%` and `text-align: center` from `.state-card h3`. Let the parent flexbox's `align-items: center` handle centering the h3 element directly.
 
-### Attempted Fixes (None Worked)
-1. **Inline font-size reduction** (`font-size: 0.95rem`) - Made text smaller but still not centered
-2. **Inline text-align: center** on h3 - No effect
-3. **Removed all inline styles** to match other states exactly - Still not centered
-4. **Added explicit CSS to .state-card h3:**
-   ```css
-   display: block;
-   width: 100%;
-   text-align: center;
-   ```
-   - No effect
-5. **Changed .state-card to flexbox:**
-   ```css
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   ```
-   - Deployed but not yet verified
+**Why it works:** When h3 had `width: 100%`, it stretched to full container width, so `align-items: center` had no effect. The `text-align: center` was supposed to center the text inside, but something (still unknown) prevented it for Massachusetts specifically. By removing `width: 100%`, the h3 shrinks to content size and flexbox centers the element itself.
 
-### Current CSS State (in /src/states/index.html)
+### Final Working CSS
 ```css
 .state-card {
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
-    text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.2s ease;
-    text-decoration: none;
-    color: var(--black);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    /* other styles... */
 }
 .state-card h3 {
     font-size: 1.1rem;
     margin-bottom: var(--spacing-xs);
     color: var(--primary);
-    display: block;
-    width: 100%;
-    text-align: center;
+    /* NO width: 100% or text-align - let flexbox handle centering */
 }
 ```
-
-### Next Steps to Try
-- Check browser dev tools for any inherited/computed styles affecting only Massachusetts
-- Try word-break or overflow-wrap properties
-- Check if something in the build process is different for this specific card
-- Consider renaming to "Mass." as workaround if nothing else works
-
-### Screenshot Reference
-`/Users/jasonbaar/Desktop/Screenshot 2025-12-05 at 11.05.26 AM.png`
