@@ -164,3 +164,37 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 - Each agent copied Texas template structure exactly
 - Quality review before deployment confirmed all pages matched template structure
 - Approach saves significant time vs sequential page creation
+
+---
+
+## State Page Batch Workflow
+
+**IMPORTANT: Clear memory between batches** to give agents fresh context.
+
+### After Each Batch:
+1. Complete all tasks (save, update index, build, deploy, update CLAUDE.md)
+2. Create a prompt file for the next batch at: `/Users/jasonbaar/Desktop/claudefolder/Prompts/next-batch-prompt.txt`
+3. User clears memory and starts new session
+4. User pastes: `Read and execute /Users/jasonbaar/Desktop/claudefolder/Prompts/next-batch-prompt.txt`
+
+### Prompt File Template:
+Include in the next-batch-prompt.txt:
+- Which states to create (3-4 max per batch)
+- State-specific data (beneficiary count, premium ranges, special rules)
+- Files to read first (state-page-agent-prompt.txt, Texas template, CLAUDE.md)
+- Quality review requirements before deployment
+- Post-approval steps (save, update index, build, deploy, update CLAUDE.md)
+
+### Remaining States to Complete:
+
+**Special Rules States (do these next):**
+- New York - Community rated, year-round GI
+- Massachusetts - Different plan structure (Core, Supplement 1, 1A)
+- Minnesota - Different plan structure (Basic + riders)
+- Connecticut - Year-round GI for certain plans
+- Washington - Year-round GI
+- Missouri - Birthday rule
+- Oregon - Birthday rule
+
+**Standard States (federal rules only):**
+Alabama, Alaska, Arkansas, Colorado, Delaware, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Michigan, Mississippi, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, North Dakota, Oklahoma, Rhode Island, South Carolina, South Dakota, Tennessee, Utah, Vermont, Virginia, West Virginia, Wisconsin, Wyoming
