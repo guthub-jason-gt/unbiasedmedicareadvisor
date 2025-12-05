@@ -19,11 +19,11 @@
 - `{{FOOTER}}` - **17 pages** use this partial (7 have hardcoded footers)
 - `{{SCRIPTS}}` - **17 pages** use this partial (7 have hardcoded scripts)
 
-### Current Page Count: 50 pages
+### Current Page Count: 54 pages
 - 7 Core pages (Home, About, Contact, Contact Thank You, Book Consultation, FAQ, Privacy)
 - 5 Service pages
 - 6 Guide pages (ALL COMPLETE as of Dec 3, 2025)
-- 1 States index + 19 State pages (AL, AK, AR, AZ, CA, CO, CT, FL, GA, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
+- 1 States index + 23 State pages (AL, AK, AR, AZ, CA, CO, CT, DE, FL, GA, HI, ID, IL, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
 - 1 Guides index
 - 1 Blog index + 10 Blog posts
 
