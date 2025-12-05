@@ -19,11 +19,11 @@
 - `{{FOOTER}}` - **17 pages** use this partial (7 have hardcoded footers)
 - `{{SCRIPTS}}` - **17 pages** use this partial (7 have hardcoded scripts)
 
-### Current Page Count: 44 pages
+### Current Page Count: 46 pages
 - 7 Core pages (Home, About, Contact, Contact Thank You, Book Consultation, FAQ, Privacy)
 - 5 Service pages
 - 6 Guide pages (ALL COMPLETE as of Dec 3, 2025)
-- 1 States index + 13 State pages (AZ, CA, CT, FL, GA, MA, MN, NC, NY, OH, PA, TX, WA)
+- 1 States index + 15 State pages (AZ, CA, CT, FL, GA, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
 - 1 Guides index
 - 1 Blog index + 10 Blog posts
 
@@ -194,18 +194,12 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 - **Batch 01 (PA, GA, NC)** - DONE - Standard federal rules states
 - **Batch 02 (NY, MA, MN)** - DONE - Special rules states (Dec 5, 2025)
 - **Batch 03 (CT, WA)** - DONE - Year-round guaranteed issue states (Dec 5, 2025)
+- **Batch 04 (MO, OR)** - DONE - Birthday rule states (Dec 5, 2025)
 
 ### Next Batches Ready:
-- **Batch 04 (MO, OR)** - Birthday rule states
-
-### Future Batches to Create:
 - **Batch 05+** - Standard states (alphabetically)
 
 ### Remaining States to Complete:
-
-**Birthday Rule States (Batch 04):**
-- Missouri - 30-day birthday window annually
-- Oregon - 30-day birthday window annually
 
 **Standard States (Batch 05+, federal rules only):**
 Alabama, Alaska, Arkansas, Colorado, Delaware, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Michigan, Mississippi, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, North Dakota, Oklahoma, Rhode Island, South Carolina, South Dakota, Tennessee, Utah, Vermont, Virginia, West Virginia, Wisconsin, Wyoming
@@ -251,6 +245,28 @@ Total pages: 44
 - Both: Realistic premium ranges, state-specific considerations
 
 **Rollback available:** "Site before CT and WA" (commit dce13e2)
+
+---
+
+## Progress Update - December 5, 2025 (Batch 04)
+
+**Added 2 Birthday Rule State Pages (MO, OR)**
+
+Successfully created state pages for the two states with birthday rule protections:
+- **Missouri:** /states/missouri/ - 30-day birthday window, CLAIM SHIP program
+- **Oregon:** /states/oregon/ - 30-day birthday window, SHIBA SHIP program
+
+Total state pages now: 15 (AZ, CA, CT, FL, GA, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA)
+Total pages: 46
+
+**Birthday Rule Accurately Explained:**
+- 30-day window starting on your birthday each year
+- Can switch to EQUAL OR LESSER coverage only without underwriting
+- CANNOT switch to MORE coverage without underwriting
+- Examples provided: Plan G to Plan N allowed, Plan N to Plan G NOT allowed
+- Both pages emphasize annual rate shopping opportunity
+
+**Rollback available:** "Site before MO and OR" (commit 945d881)
 
 ---
 
