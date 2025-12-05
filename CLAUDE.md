@@ -19,11 +19,11 @@
 - `{{FOOTER}}` - **17 pages** use this partial (7 have hardcoded footers)
 - `{{SCRIPTS}}` - **17 pages** use this partial (7 have hardcoded scripts)
 
-### Current Page Count: 39 pages
+### Current Page Count: 42 pages
 - 7 Core pages (Home, About, Contact, Contact Thank You, Book Consultation, FAQ, Privacy)
 - 5 Service pages
 - 6 Guide pages (ALL COMPLETE as of Dec 3, 2025)
-- 1 States index + 8 State pages (AZ, CA, FL, GA, NC, OH, PA, TX)
+- 1 States index + 11 State pages (AZ, CA, FL, GA, MA, MN, NC, NY, OH, PA, TX)
 - 1 Guides index
 - 1 Blog index + 10 Blog posts
 
@@ -192,24 +192,42 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 
 ### Completed Batches:
 - **Batch 01 (PA, GA, NC)** - DONE - Standard federal rules states
+- **Batch 02 (NY, MA, MN)** - DONE - Special rules states (Dec 5, 2025)
 
 ### Next Batch Ready:
-- **Batch 02 (NY, MA, MN)** - File: `state-batch-02-NY-MA-MN.txt` - Special rules states
+- **Batch 03 (CT, WA, MO, OR)** - Remaining special rules states
 
 ### Future Batches to Create:
-- **Batch 03 (CT, WA, MO, OR)** - Remaining special rules states
 - **Batch 04+** - Standard states (alphabetically)
 
 ### Remaining States to Complete:
 
-**Special Rules States (Batch 02-03):**
-- New York - Community rated, year-round GI *(Batch 02)*
-- Massachusetts - Different plan structure (Core, Supplement 1, 1A) *(Batch 02)*
-- Minnesota - Different plan structure (Basic + riders) *(Batch 02)*
-- Connecticut - Year-round GI for certain plans *(Batch 03)*
-- Washington - Year-round GI *(Batch 03)*
-- Missouri - Birthday rule *(Batch 03)*
-- Oregon - Birthday rule *(Batch 03)*
+**Special Rules States (Batch 03):**
+- Connecticut - Year-round GI for certain plans
+- Washington - Year-round GI
+- Missouri - Birthday rule
+- Oregon - Birthday rule
 
 **Standard States (Batch 04+, federal rules only):**
 Alabama, Alaska, Arkansas, Colorado, Delaware, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Michigan, Mississippi, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, North Dakota, Oklahoma, Rhode Island, South Carolina, South Dakota, Tennessee, Utah, Vermont, Virginia, West Virginia, Wisconsin, Wyoming
+
+---
+
+## Progress Update - December 5, 2025
+
+**Added 3 Special Rules State Pages (NY, MA, MN)**
+
+Successfully created state pages for the three states with unique Medigap systems:
+- **New York:** /states/new-york/ - Community rating, year-round guaranteed issue
+- **Massachusetts:** /states/massachusetts/ - Core/Supplement 1/1A system (not federal letters)
+- **Minnesota:** /states/minnesota/ - Basic plan + optional riders system
+
+Total state pages now: 11 (AZ, CA, FL, GA, MA, MN, NC, NY, OH, PA, TX)
+Total pages: 42
+
+**Special Rules Accurately Documented:**
+- NY: Year-round GI rights, community rating explained, why premiums appear higher
+- MA: Core/Supplement structure explained, comparison to federal plans, SHINE program
+- MN: Basic plan + rider system explained, how to build federal-equivalent coverage
+
+**Rollback available:** "Site before NY, MA and MN" (commit e780b5a)
