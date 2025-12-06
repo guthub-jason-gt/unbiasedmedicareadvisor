@@ -177,47 +177,54 @@ Total state pages now: 8 (Arizona, California, Florida, Georgia, North Carolina,
 
 ---
 
-## State Page Batch Workflow
+## State Page Creation
 
-**IMPORTANT: Clear memory between batches** to give agents fresh context.
+### IMPORTANT: Do NOT Use Parallel Agents for State Pages
+**As of December 5, 2025**, the parallel agent approach for creating state pages has been discontinued. Agent-created pages were found to be error-prone with issues including:
+- Broken sidebar links (e.g., `/services/` which doesn't exist)
+- Inconsistent sidebar formats across pages
+- Missing onclick handlers for FAQ dropdowns
+- Other quality issues requiring manual fixes
 
-### How to Run a Batch:
-1. User clears memory and starts new session
-2. User types: `Read and execute /Users/jasonbaar/Desktop/claudefolder/Prompts/[batch-file-name].txt`
-3. Claude reads files, launches agents, reviews quality, then deploys if approved
-4. After batch completes, update this CLAUDE.md and create next batch prompt file
+**For future state pages:** Create them manually one at a time, using Florida (`/src/states/florida/index.html`) as the template. This ensures consistent quality and proper sidebar format.
 
-### Batch Prompt Files Location:
-`/Users/jasonbaar/Desktop/claudefolder/Prompts/`
+### Completed State Pages (27 total):
+AL, AK, AR, AZ, CA, CO, CT, DE, FL, GA, HI, ID, IL, IN, IA, KS, KY, MA, MN, MO, NC, NY, OH, OR, PA, TX, WA
 
-### Completed Batches:
-- **Batch 01 (PA, GA, NC)** - DONE - Standard federal rules states
-- **Batch 02 (NY, MA, MN)** - DONE - Special rules states (Dec 5, 2025)
-- **Batch 03 (CT, WA)** - DONE - Year-round guaranteed issue states (Dec 5, 2025)
-- **Batch 04 (MO, OR)** - DONE - Birthday rule states (Dec 5, 2025)
+### Remaining States (23 total):
+LA, ME, MD, MI, MS, MT, NE, NV, NH, NJ, NM, ND, OK, RI, SC, SD, TN, UT, VT, VA, WV, WI, WY
 
-### Next Batch:
-- **Batch 08 (LA, ME, MD, MI)** - Create prompt at `/Prompts/batch-08-LA-ME-MD-MI.txt`
+### Standard Sidebar Format (use for all state pages):
+```html
+<aside class="sidebar">
+    <div class="sidebar-card sidebar-cta">
+        <h3>Get Personalized [State] Medicare Help</h3>
+        <p>Compare plans, understand your options, and make confident decisions with unbiased, fee-only guidance.</p>
+        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+    </div>
 
-### Batch Size Note:
-**Now using 4 states per batch** with opus[1m] model (1 million token context window).
+    <div class="sidebar-card">
+        <h3>Related Guides</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.75rem;">
+                <a href="/guides/medigap-vs-medicare-advantage" style="color: var(--primary); text-decoration: none;">Medigap vs Medicare Advantage</a>
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+                <a href="/guides/turning-65-medicare-guide" style="color: var(--primary); text-decoration: none;">Turning 65? Start Here</a>
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+                <a href="/guides/medicare-parts-explained" style="color: var(--primary); text-decoration: none;">Medicare Parts Explained</a>
+            </li>
+        </ul>
+    </div>
 
-### Remaining States to Complete (23 total, alphabetical order):
-
-**Batch 05:** Alabama, Alaska, Arkansas, Colorado - DONE
-**Batch 06:** Delaware, Hawaii, Idaho, Illinois - DONE
-**Batch 07:** Indiana, Iowa, Kansas, Kentucky - DONE
-**Batch 08:** Louisiana, Maine, Maryland, Michigan
-**Batch 09:** Mississippi, Montana, Nebraska, Nevada
-**Batch 10:** New Hampshire, New Jersey, New Mexico, North Dakota
-**Batch 11:** Oklahoma, Rhode Island, South Carolina, South Dakota
-**Batch 12:** Tennessee, Utah, Vermont, Virginia
-**Batch 13:** West Virginia, Wisconsin, Wyoming (final 3 states)
-
-All remaining states follow standard federal Medigap rules only.
-
-### Model Configuration (Updated Dec 5, 2025)
-Now using `opus[1m]` for extended memory. Set with: `claude config set model opus[1m]`
+    <div class="sidebar-card">
+        <h3>Why Fee-Only Advice?</h3>
+        <p>Most Medicare advisors earn commissions from insurance companies. We're different: we're paid by you, so our only goal is finding what's best for you.</p>
+        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+    </div>
+</aside>
+```
 
 ---
 
