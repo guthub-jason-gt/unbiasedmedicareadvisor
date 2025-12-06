@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="New Hampshire Medicare Supplement Plans explained. Compare Medigap options, costs, and find unbiased guidance from a fee-only Medicare advisor.">
+    <meta name="keywords" content="medicare supplement plans new hampshire, new hampshire medigap plans, medicare advisor new hampshire, nh medicare help">
+    <title>Medicare Supplement Plans in New Hampshire | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Medicare Supplement Plans in New Hampshire | Unbiased Medicare Advisor">
+    <meta property="og:description" content="Compare New Hampshire Medigap plans with unbiased, fee-only guidance. No commissions, no sales pressure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/states/new-hampshire">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            /* Primary Colors - Navy (trustworthy, authoritative) */
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+
+            /* Accent Colors - Orange (high-visibility CTA) */
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+
+            /* Secondary Color */
+            --secondary: #4a90d9;
+
+            /* Neutral Colors */
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+
+            /* Typography - Senior-friendly sizing */
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+
+            /* Spacing - increased for better section separation */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+
+            /* Layout */
+            --max-width: 1200px;
+            --header-height: 80px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: var(--font-size-base);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: var(--line-height);
+            color: var(--black);
+            background: var(--white);
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* ============================================
+           HEADER & NAVIGATION
+           ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+
+        /* Desktop Navigation */
+        .nav {
+            display: none;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-xs);
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+
+        .dropdown:hover .dropdown-toggle::after {
+            transform: rotate(-135deg);
+            margin-top: 3px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .dropdown-link:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-link:hover {
+            background: #d5dbe0;
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            margin-left: var(--spacing-sm);
+        }
+
+        .nav-cta .btn-primary {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #1e3a5f;
+            border-radius: 2px;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+        }
+
+        .mobile-nav-item {
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 0;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .mobile-dropdown-menu {
+            display: none;
+            padding-left: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            display: block;
+        }
+
+        .mobile-dropdown-link {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--medium-gray);
+            text-decoration: none;
+        }
+
+        .mobile-nav-cta {
+            margin-top: var(--spacing-lg);
+        }
+
+        .mobile-nav-cta .btn {
+            display: block;
+            width: 100%;
+        }
+
+        /* ============================================
+           HERO SECTION - STATE PAGE
+           ============================================ */
+        .hero {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xxl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        /* ============================================
+           BREADCRUMB
+           ============================================ */
+        .breadcrumb {
+            padding: var(--spacing-sm) 0;
+            background: var(--off-white);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: '→';
+            margin: 0 0.5rem;
+            color: var(--medium-gray);
+        }
+
+        .breadcrumb-label {
+            color: var(--medium-gray);
+            margin-right: 0.5rem;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-item a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           MAIN CONTENT
+           ============================================ */
+        .content-section {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--off-white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-xl);
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-subtitle {
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+
+        .main-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
+        .main-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .main-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+
+        .main-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+
+        .main-content ul, .main-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+
+        .main-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           SIDEBAR
+           ============================================ */
+        .sidebar {
+            position: sticky;
+            top: calc(var(--header-height) + var(--spacing-md));
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .sidebar-card .btn {
+            width: 100%;
+        }
+
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .sidebar-cta h3 {
+            color: var(--white);
+        }
+
+        .sidebar-cta p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* ============================================
+           STATE-SPECIFIC STATS
+           ============================================ */
+        .state-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+        }
+
+        /* ============================================
+           COMPARISON TABLE
+           ============================================ */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: var(--off-white);
+        }
+
+        /* ============================================
+           INFO BOX
+           ============================================ */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* ============================================
+           FAQ SECTION
+           ============================================ */
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+            padding: var(--spacing-md) 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            color: var(--medium-gray);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta {
+            padding: var(--spacing-xxl) 0;
+            text-align: center;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--white);
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: var(--spacing-xxl) 0 var(--spacing-lg);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-logo .logo-icon {
+            background: var(--primary-light);
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-nav h4 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--white);
+        }
+
+        .footer-nav ul {
+            list-style: none;
+        }
+
+        .footer-nav li {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .footer-nav a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--white);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .footer-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: var(--spacing-md);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-phone:hover {
+            color: var(--accent);
+        }
+
+        .footer-phone-icon {
+            font-size: 1.5rem;
+            filter: brightness(0) invert(1);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (min-width: 768px) {
+            .nav {
+                display: block;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }
+
+        @media (max-width: 767px) {
+            :root {
+                --font-size-base: 17px;
+            }
+
+            .hero {
+                padding-top: calc(var(--header-height) + var(--spacing-xl));
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: var(--spacing-sm);
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Top Bar Styles */
+        .top-bar { background: #1a365d; color: white; padding: 8px 20px; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
+        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .top-bar-phone:hover { color: #90cdf4; }
+        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+</head>
+<body>
+{{HEADER}}
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">New Hampshire Medicare Guide</span>
+                <h1>Medicare Supplement Plans in New Hampshire</h1>
+                <p class="hero-subtitle">
+                    With approximately 280,000 Medicare beneficiaries and one of the nation's oldest populations,
+                    New Hampshire residents face unique healthcare decisions. From accessing Boston's world-class
+                    medical centers to finding care in rural areas, unbiased guidance helps you choose wisely.
+                </p>
+                <div class="hero-cta">
+                    <a href="/book-consultation" class="btn btn-primary">Get New Hampshire-Specific Help</a>
+                    <a href="/guides/medigap-vs-medicare-advantage" class="btn btn-outline-white">Medigap vs Medicare Advantage</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         NEW HAMPSHIRE STATS SECTION
+         ============================================ -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">New Hampshire Medicare by the Numbers</span>
+                <h2 class="section-title">Understanding New Hampshire's Medicare Landscape</h2>
+            </div>
+            <div class="state-stats">
+                <div class="stat-card">
+                    <div class="stat-number">280K+</div>
+                    <div class="stat-label">New Hampshire Medicare Beneficiaries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Insurance Companies Offering Medigap</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Standardized Medigap Plan Letters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6 Mo</div>
+                    <div class="stat-label">Open Enrollment Period</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MAIN CONTENT SECTION
+         ============================================ -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>New Hampshire Medicare Supplement Plans: What You Need to Know</h2>
+                    <p>
+                        New Hampshire has one of the oldest populations in the United States, which means Medicare
+                        decisions here carry significant weight. Whether you're in Manchester, Nashua, Concord, or
+                        a rural community in the White Mountains, understanding your Medigap options is essential
+                        for protecting your health and finances.
+                    </p>
+                    <p>
+                        Unlike Medicare Advantage plans that vary by county, <strong>Medigap plans in New Hampshire are
+                        standardized by letter</strong> (A, B, C, D, F, G, K, L, M, N). This means a Plan G from one
+                        company covers exactly the same benefits as a Plan G from another company. The only differences
+                        are the premium you pay and the company's customer service.
+                    </p>
+
+                    <h3>New Hampshire's Medigap Open Enrollment Period</h3>
+                    <p>
+                        In New Hampshire, your Medigap Open Enrollment Period begins on the first day of the month you turn
+                        65 <strong>and</strong> are enrolled in Medicare Part B. This 6-month window is critical because:
+                    </p>
+                    <ul>
+                        <li>Insurance companies <strong>cannot deny you coverage</strong> for any reason</li>
+                        <li>They <strong>cannot charge you more</strong> due to health conditions</li>
+                        <li>You have <strong>guaranteed issue rights</strong> to any Medigap plan sold in New Hampshire</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>New Hampshire Consumer Protections</h4>
+                        <p>
+                            New Hampshire follows federal Medigap regulations with standard consumer protections.
+                            If you're replacing an existing Medigap policy with another, you have a 30-day "free look"
+                            period during which you can cancel the new policy for a full refund. New Hampshire does
+                            not have a birthday rule or year-round guaranteed issue like some states.
+                        </p>
+                    </div>
+
+                    <h2>Most Popular Medigap Plans in New Hampshire</h2>
+                    <p>
+                        While 10 standardized Medigap plans are available in New Hampshire, the most popular choices are:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Plan</th>
+                                <th>Coverage Level</th>
+                                <th>Best For</th>
+                                <th>NH Monthly Premium*</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Plan G</strong></td>
+                                <td>Comprehensive</td>
+                                <td>Most new enrollees (best value)</td>
+                                <td>$140 - $280</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan N</strong></td>
+                                <td>High with copays</td>
+                                <td>Those wanting lower premiums</td>
+                                <td>$100 - $200</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan F</strong></td>
+                                <td>Most comprehensive</td>
+                                <td>Those eligible before 2020</td>
+                                <td>$170 - $320</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size: 0.9rem; color: var(--medium-gray);">
+                        *Premium ranges are estimates and vary by age, location within New Hampshire, gender, and tobacco use.
+                        Contact us for personalized quotes.
+                    </p>
+
+                    <h3>Plan G vs Plan N in New Hampshire</h3>
+                    <p>
+                        For most New Hampshire residents new to Medicare, the choice comes down to <strong>Plan G</strong> or
+                        <strong>Plan N</strong>:
+                    </p>
+                    <ul>
+                        <li><strong>Plan G</strong> covers everything except the Part B deductible ($240 in 2024).
+                            No copays, no surprises. Ideal if you want predictable costs and visit doctors frequently.</li>
+                        <li><strong>Plan N</strong> has lower premiums but requires up to $20 copays for office visits
+                            and up to $50 for ER visits (waived if admitted). Good choice if you're healthy and want
+                            to save on monthly costs.</li>
+                    </ul>
+
+                    <h2>New Hampshire Medicare Supplement vs Medicare Advantage</h2>
+                    <p>
+                        New Hampshire also has Medicare Advantage plans available, but these are very different products.
+                        Here's how they compare:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Medigap (Supplement)</th>
+                                <th>Medicare Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monthly Premium</td>
+                                <td>$100 - $320+</td>
+                                <td>$0 - $50 (some higher)</td>
+                            </tr>
+                            <tr>
+                                <td>Out-of-Pocket Maximum</td>
+                                <td>Very low (predictable)</td>
+                                <td>Up to $8,850/year</td>
+                            </tr>
+                            <tr>
+                                <td>Doctor Network</td>
+                                <td>Any doctor accepting Medicare</td>
+                                <td>Network restrictions</td>
+                            </tr>
+                            <tr>
+                                <td>Referrals Needed</td>
+                                <td>No</td>
+                                <td>Often yes (HMO plans)</td>
+                            </tr>
+                            <tr>
+                                <td>Prescription Drug Coverage</td>
+                                <td>Separate Part D plan needed</td>
+                                <td>Usually included</td>
+                            </tr>
+                            <tr>
+                                <td>Extra Benefits</td>
+                                <td>None</td>
+                                <td>May include dental, vision, gym</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        <a href="/guides/medigap-vs-medicare-advantage">Read our complete Medigap vs Medicare Advantage guide</a>
+                        to understand which option might be better for your situation.
+                    </p>
+
+                    <h2>New Hampshire-Specific Medicare Considerations</h2>
+
+                    <h3>Aging Population</h3>
+                    <p>
+                        New Hampshire consistently ranks among the states with the oldest median age in the nation.
+                        This means healthcare planning is especially important here. Many residents are active
+                        retirees who want comprehensive coverage that lets them see specialists without network
+                        restrictions or prior authorizations.
+                    </p>
+
+                    <h3>Rural Healthcare Access</h3>
+                    <p>
+                        Much of New Hampshire, particularly the northern regions and the White Mountains area,
+                        is rural with limited healthcare facilities. Medigap's ability to work with any doctor
+                        who accepts Medicare becomes especially valuable when you may need to travel for
+                        specialized care or when local options are limited.
+                    </p>
+
+                    <h3>Proximity to Boston Medical Centers</h3>
+                    <p>
+                        Southern New Hampshire residents in Manchester, Nashua, Salem, and surrounding areas
+                        often access Boston's world-class medical centers for specialized procedures. Medigap
+                        plans work seamlessly across state lines, making it easy to see specialists at
+                        Massachusetts General Hospital, Brigham and Women's, Dana-Farber, and other renowned facilities.
+                    </p>
+
+                    <h3>Dartmouth-Hitchcock Medical Center</h3>
+                    <p>
+                        Located in Lebanon, <strong>Dartmouth-Hitchcock</strong> is New Hampshire's only academic
+                        medical center and serves patients from across northern New England. As a major regional
+                        healthcare hub, having Medicare coverage that works anywhere ensures easy access to this
+                        important facility regardless of what plan you choose.
+                    </p>
+
+                    <h3>Seasonal and Snowbird Residents</h3>
+                    <p>
+                        Many New Hampshire residents split their time between the Granite State and warmer climates
+                        during winter months. If you're a snowbird who heads to Florida, Arizona, or another state,
+                        Medigap offers <strong>nationwide coverage</strong>. Your plan works with any Medicare-accepting
+                        provider anywhere in the United States, unlike Medicare Advantage plans that often have
+                        geographic network restrictions.
+                    </p>
+
+                    <h3>Cross-Border Care</h3>
+                    <p>
+                        New Hampshire's borders with Vermont, Maine, and Massachusetts mean residents often cross
+                        state lines for healthcare. Whether you're seeing a specialist in Portland, Burlington,
+                        or Boston, Medigap plans work seamlessly across all state lines with no network restrictions.
+                    </p>
+
+                    <h3>Major Health Systems in New Hampshire</h3>
+                    <p>
+                        Understanding the healthcare landscape helps with Medicare planning. Major health systems include:
+                    </p>
+                    <ul>
+                        <li><strong>Dartmouth-Hitchcock Health</strong> - Academic medical center in Lebanon serving northern New England</li>
+                        <li><strong>Catholic Medical Center</strong> - Major hospital in Manchester</li>
+                        <li><strong>Elliot Health System</strong> - Comprehensive care in the Manchester area</li>
+                        <li><strong>Southern NH Health System</strong> - Serving Nashua and surrounding communities</li>
+                        <li><strong>Wentworth-Douglass Hospital</strong> - Dover area's major medical facility</li>
+                        <li><strong>Concord Hospital</strong> - Serving the state capital region</li>
+                    </ul>
+
+                    <h3>New Hampshire ServiceLink (SHIP Program)</h3>
+                    <p>
+                        New Hampshire offers free Medicare counseling through <strong>ServiceLink</strong>,
+                        the state's Health Insurance Assistance Program (SHIP). While ServiceLink counselors
+                        can provide general Medicare information, they cannot recommend specific plans or companies.
+                        That's where a fee-only Medicare advisor adds value: we can make specific recommendations
+                        based on your individual situation.
+                    </p>
+
+                    <h3>Four-Season Active Living</h3>
+                    <p>
+                        New Hampshire's four-season climate attracts active outdoor enthusiasts who ski, hike,
+                        and enjoy the lakes and mountains year-round. This active lifestyle means access to
+                        quality orthopedic specialists, sports medicine physicians, and rehabilitation services
+                        is important. Medigap's freedom to see any specialist without referrals supports this
+                        active New Hampshire lifestyle.
+                    </p>
+
+                    <h2>Frequently Asked Questions: New Hampshire Medicare</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            When is the best time to enroll in a Medigap plan in New Hampshire?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                The best time is during your 6-month Medigap Open Enrollment Period, which starts
+                                the month you turn 65 and are enrolled in Part B. During this time, you have
+                                guaranteed issue rights and cannot be denied coverage or charged more due to
+                                health conditions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Can I switch Medigap plans in New Hampshire after my open enrollment ends?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, but you'll need to go through medical underwriting, which means the insurance
+                                company can deny you coverage or charge higher premiums based on your health.
+                                New Hampshire follows standard federal rules and does not have a birthday rule
+                                or year-round guaranteed issue. Some situations trigger "guaranteed issue" rights
+                                outside of open enrollment, such as losing employer coverage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            How much does Medigap cost in New Hampshire?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Medigap premiums in New Hampshire typically range from $100-$320+ per month depending on
+                                the plan letter, your age, location within the state, gender, and tobacco use. Plan G
+                                generally offers the best value for comprehensive coverage, with premiums typically
+                                in the $140-$280 range.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Is Plan F still available in New Hampshire?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Plan F is only available to those who became eligible for Medicare <strong>before</strong>
+                                January 1, 2020. If you turned 65 before that date, you can still enroll in Plan F.
+                                However, Plan G offers nearly identical coverage (minus the Part B deductible) and
+                                often has lower premiums.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Do I need a separate Part D plan with Medigap in New Hampshire?
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. Medigap plans do not include prescription drug coverage. You'll need to enroll
+                                in a standalone Medicare Part D plan separately. We can help you compare Part D
+                                options based on your specific medications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Get Personalized New Hampshire Medicare Help</h3>
+                        <p>Compare plans, understand your options, and make confident decisions with unbiased, fee-only guidance.</p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medigap-vs-medicare-advantage" style="color: var(--primary); text-decoration: none;">Medigap vs Medicare Advantage</a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/turning-65-medicare-guide" style="color: var(--primary); text-decoration: none;">Turning 65? Start Here</a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-parts-explained" style="color: var(--primary); text-decoration: none;">Medicare Parts Explained</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>Most Medicare advisors earn commissions from insurance companies. We're different: we're paid by you, so our only goal is finding what's best for you.</p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Compare New Hampshire Medicare Plans?</h2>
+                <p>
+                    Don't navigate New Hampshire's Medicare market alone. Schedule a free consultation
+                    and get personalized, unbiased guidance on the best Medigap or Medicare Advantage
+                    options for your situation.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{FOOTER}}
+
+{{SCRIPTS}}
+</body>
+</html>
