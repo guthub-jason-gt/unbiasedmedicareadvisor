@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What's the best Medicare plan for YOU? Learn how health, budget, and lifestyle determine your ideal coverage. See examples for different Medicare beneficiary profiles.">
+    <meta name="keywords" content="best medicare plan for me, find best medicare plan, what is the best medicare plan, best medicare coverage for me, best medicare option for my situation">
+    <title>Best Medicare Plan for Me: Finding Your Personal Fit | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Best Medicare Plan for Me: Finding Your Personal Fit">
+    <meta property="og:description" content="What's the best Medicare plan for YOU? Learn how health, budget, and lifestyle determine your ideal coverage. See examples for different Medicare beneficiary profiles.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/blog/best-medicare-plan-for-me">
+
+    <!-- Article Metadata -->
+        <meta property="article:author" content="Unbiased Medicare Advisor">
+    <meta property="article:section" content="Medicare">
+    <meta property="article:tag" content="Medicare">
+    <meta property="article:tag" content="Personalized">
+    <meta property="article:tag" content="Plan Selection">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        /* Article Header */
+        .article-header {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .article-header-content { max-width: 800px; }
+        .article-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .article-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+        .article-meta {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .article-meta span {
+            margin-right: var(--spacing-md);
+        }
+
+        /* Article Content */
+        .article-section { padding: var(--spacing-xxl) 0; }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+        .article-content { }
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        .article-content h2:first-child { margin-top: 0; }
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+        .article-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+        .article-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+        .article-content strong {
+            color: var(--black);
+        }
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: var(--accent);
+        }
+
+        /* Key Takeaway Box */
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .key-takeaway h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .key-takeaway p {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border: 4px solid #ffc107;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .warning-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box p {
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: var(--off-white); }
+
+        /* Profile Card */
+        .profile-card {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+            border-left: 4px solid var(--primary);
+        }
+        .profile-card h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.2rem;
+        }
+        .profile-card .profile-details {
+            font-style: italic;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-sm);
+        }
+        .profile-card .best-fit {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: calc(var(--header-height) + var(--spacing-md) + 36px); }
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+        .sidebar-card .btn { width: 100%; }
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .sidebar-cta h3 { color: var(--white); }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .toc h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: var(--spacing-xs);
+        }
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta { padding: var(--spacing-xxl) 0; text-align: center; background: var(--primary); color: var(--white); }
+        .cta-content { max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); color: var(--white); }
+        .cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: var(--spacing-lg); }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        /* Footer */
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .article-header h1 { font-size: 3rem; }
+        }
+        @media (max-width: 968px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .article-header { padding-top: calc(var(--header-height) + var(--spacing-xl)); }
+            .article-header h1 { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .comparison-table { font-size: 0.9rem; }
+            .comparison-table th, .comparison-table td { padding: var(--spacing-sm); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar & Header Position Fixes -->
+    <style>
+        .top-bar {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: #1a365d !important;
+            color: white !important;
+            padding: 8px 20px !important;
+            z-index: 1001 !important;
+        }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
+        .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .top-bar-phone:hover { color: #90cdf4; }
+        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+        .header { top: 36px !important; }
+        .hero, .page-header, .guide-header { padding-top: calc(var(--header-height, 80px) + 36px + 2rem) !important; }
+    </style>
+
+    <!-- ============================================
+         TOP BAR
+         ============================================ -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <a href="tel:+18508101000" class="top-bar-phone">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call Us: (850) 810-1000
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">M</span>
+                <span>Unbiased Medicare Advisor</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Learn</a>
+                        <div class="dropdown-menu">
+                            <a href="/guides/medigap-vs-medicare-advantage" class="dropdown-link">Medigap vs Medicare Advantage</a>
+                            <a href="/guides/turning-65-medicare-guide" class="dropdown-link">Turning 65 Guide</a>
+                            <a href="/guides/medicare-parts-explained" class="dropdown-link">Medicare Parts Explained (A, B, C, D)</a>
+                            <a href="/guides" class="dropdown-link">All Guides</a>
+                            <a href="/blog" class="dropdown-link">Blog Articles</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/services/medicare-consultant" class="nav-link dropdown-toggle">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="/services/medicare-consultant" class="dropdown-link">Medicare Consultant</a>
+                            <a href="/services/fee-only-medicare-advisor" class="dropdown-link">Fee-Only Advisor</a>
+                            <a href="/services/independent-medicare-advisor" class="dropdown-link">Independent Advisor</a>
+                            <a href="/services/medicare-plan-comparison" class="dropdown-link">Plan Comparison Help</a>
+                            <a href="/services/medicare-enrollment-help" class="dropdown-link">Medicare Enrollment Help</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Your State</a>
+                        <div class="dropdown-menu">
+                            <a href="/states/california" class="dropdown-link">California</a>
+                            <a href="/states/florida" class="dropdown-link">Florida</a>
+                            <a href="/states/new-york" class="dropdown-link">New York</a>
+                            <a href="/states/texas" class="dropdown-link">Texas</a>
+                            <a href="/states" class="dropdown-link">All 50 States</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item nav-cta">
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Learn</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/guides/medigap-vs-medicare-advantage" class="mobile-dropdown-link">Medigap vs Medicare Advantage</a>
+                        <a href="/guides/turning-65-medicare-guide" class="mobile-dropdown-link">Turning 65 Guide</a>
+                        <a href="/guides/medicare-parts-explained" class="mobile-dropdown-link">Medicare Parts Explained (A, B, C, D)</a>
+                        <a href="/guides" class="mobile-dropdown-link">All Guides</a>
+                        <a href="/blog" class="mobile-dropdown-link">Blog Articles</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="/services/medicare-consultant" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Services</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/services/medicare-consultant" class="mobile-dropdown-link">Medicare Consultant</a>
+                        <a href="/services/fee-only-medicare-advisor" class="mobile-dropdown-link">Fee-Only Advisor</a>
+                        <a href="/services/independent-medicare-advisor" class="mobile-dropdown-link">Independent Advisor</a>
+                        <a href="/services/medicare-plan-comparison" class="mobile-dropdown-link">Plan Comparison Help</a>
+                        <a href="/services/medicare-enrollment-help" class="mobile-dropdown-link">Medicare Enrollment Help</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item mobile-dropdown">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event)">Your State</a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="/states/california" class="mobile-dropdown-link">California</a>
+                        <a href="/states/florida" class="mobile-dropdown-link">Florida</a>
+                        <a href="/states/new-york" class="mobile-dropdown-link">New York</a>
+                        <a href="/states/texas" class="mobile-dropdown-link">Texas</a>
+                        <a href="/states" class="mobile-dropdown-link">All 50 States</a>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/about" class="mobile-nav-link">About</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="/contact" class="mobile-nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="mobile-nav-cta">
+                <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <span class="article-tag">Personalized</span>
+                <h1>Best Medicare Plan for Me: How to Find Your Perfect Fit</h1>
+                <div class="article-meta">
+                    <span>9 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-section">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+                    <p>
+                        <strong>"What's the best Medicare plan for me?" is the most common question people ask when approaching 65, and it has no universal answer.</strong> That's not a dodge. It's the truth. The plan that's perfect for your neighbor could be completely wrong for you.
+                    </p>
+
+                    <p>
+                        Here's what most Medicare guides won't tell you: "best" is entirely personal. Your ideal Medicare plan depends on YOUR health, YOUR doctors, YOUR medications, YOUR budget, and YOUR lifestyle. Two people standing next to each other at a Medicare seminar could have completely different "best" plans.
+                    </p>
+
+                    <p>
+                        This guide helps you stop searching for the mythical "best plan" and start finding the best plan <em>for you</em>.
+                    </p>
+
+                    <div class="key-takeaway">
+                        <h4>&#9733; Key Takeaway</h4>
+                        <p>
+                            There is no single "best Medicare plan." The right plan depends on your individual circumstances: health status, medications, preferred doctors, travel habits, budget, and risk tolerance. Your job isn't to find the best plan; it's to find YOUR best plan.
+                        </p>
+                    </div>
+
+                    <h2 id="why-best-varies">Why "Best" Varies So Much by Person</h2>
+
+                    <p>
+                        Medicare isn't like choosing a phone plan where you can compare features on a spreadsheet and pick the winner. It's more like choosing a home: what's "best" depends entirely on what you need.
+                    </p>
+
+                    <p>
+                        Consider two people turning 65 on the same day:
+                    </p>
+
+                    <ul>
+                        <li><strong>Person A:</strong> Healthy, takes no medications, lives in one place, rarely sees doctors, wants to minimize monthly costs</li>
+                        <li><strong>Person B:</strong> Has diabetes and a heart condition, takes 6 medications, sees 3 specialists regularly, travels between two states, values predictability</li>
+                    </ul>
+
+                    <p>
+                        The "best" plan for Person A might cost Person B thousands in out-of-pocket expenses. The "best" plan for Person B might have Person A paying premiums for coverage they'll never use.
+                    </p>
+
+                    <p>
+                        This is why anyone who tells you "Plan X is the best" without knowing your situation is giving you bad advice.
+                    </p>
+
+                    <h2 id="factors">The 5 Factors That Determine YOUR Best Plan</h2>
+
+                    <p>
+                        To find your best Medicare plan, you need to honestly evaluate five key factors. Your answers will point you toward the right coverage path.
+                    </p>
+
+                    <h3 id="factor-health">Factor 1: Your Current and Expected Health Needs</h3>
+
+                    <p>
+                        This is the most important factor. Be honest about:
+                    </p>
+
+                    <ul>
+                        <li>How often do you currently see doctors?</li>
+                        <li>Do you have any chronic conditions (diabetes, heart disease, arthritis, etc.)?</li>
+                        <li>What's your family health history?</li>
+                        <li>Are you anticipating any surgeries or major procedures?</li>
+                        <li>How is your overall health trajectory? Stable? Declining? Improving?</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Think 10 Years Ahead, Not Just Today</h4>
+                        <p>
+                            You're not choosing coverage for next year; you're choosing a Medicare path you'll likely stay on for decades. Most people's healthcare needs increase with age. The 65-year-old who "never goes to the doctor" often becomes the 75-year-old with multiple specialists. Consider your likely future health, not just today's.
+                        </p>
+                    </div>
+
+                    <h3 id="factor-doctors">Factor 2: Your Doctor and Hospital Requirements</h3>
+
+                    <p>
+                        Do you have doctors you absolutely must keep?
+                    </p>
+
+                    <ul>
+                        <li>Primary care physician you've seen for years?</li>
+                        <li>Specialists managing ongoing conditions?</li>
+                        <li>A preferred hospital system?</li>
+                        <li>Doctors who know your complete health history?</li>
+                    </ul>
+
+                    <p>
+                        If keeping specific doctors is non-negotiable, that significantly narrows your options. Original Medicare lets you see any doctor who accepts Medicare. Medicare Advantage plans have networks that may or may not include your doctors.
+                    </p>
+
+                    <h3 id="factor-medications">Factor 3: Your Prescription Medications</h3>
+
+                    <p>
+                        Medications can be the deciding factor between plans. Evaluate:
+                    </p>
+
+                    <ul>
+                        <li>What prescription drugs do you currently take?</li>
+                        <li>Are any brand-name or specialty medications?</li>
+                        <li>What do they cost without insurance?</li>
+                        <li>Are you likely to need new medications soon?</li>
+                    </ul>
+
+                    <p>
+                        Different plans cover different drugs at different costs. A plan with a $0 premium could cost you hundreds more monthly if it doesn't cover your medications well. For drug coverage details, see our <a href="/blog/medicare-part-d-explained">Medicare Part D Explained</a> guide.
+                    </p>
+
+                    <h3 id="factor-lifestyle">Factor 4: Your Lifestyle and Travel Patterns</h3>
+
+                    <p>
+                        Where will you need healthcare coverage?
+                    </p>
+
+                    <ul>
+                        <li>Do you stay in one location year-round?</li>
+                        <li>Are you a snowbird spending months in another state?</li>
+                        <li>Do you travel frequently for work or pleasure?</li>
+                        <li>Do you RV or live a mobile lifestyle?</li>
+                    </ul>
+
+                    <p>
+                        Geographic flexibility is a major differentiator between Medicare paths. If you need coverage that works everywhere, that limits your options.
+                    </p>
+
+                    <h3 id="factor-budget">Factor 5: Your Budget and Risk Tolerance</h3>
+
+                    <p>
+                        Medicare involves trade-offs between monthly premiums and out-of-pocket risk:
+                    </p>
+
+                    <ul>
+                        <li>Can you afford $200-$400/month in premiums for predictable costs?</li>
+                        <li>Or would you prefer lower premiums and accept potential out-of-pocket costs up to $8,850/year?</li>
+                        <li>How would a $5,000 unexpected medical bill affect you?</li>
+                        <li>Do you value predictability or are you comfortable with variable costs?</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>Don't Choose Based on Premium Alone</h4>
+                        <p>
+                            A $0 premium Medicare Advantage plan isn't "free." You pay through cost-sharing every time you use healthcare. In a bad health year, a $0 premium plan could cost thousands more than a plan with a $200/month premium. Total potential cost matters more than premium cost.
+                        </p>
+                    </div>
+
+                    <h2 id="profiles">Real-World Examples: Best Plan by Profile</h2>
+
+                    <p>
+                        Here are five common Medicare beneficiary profiles and what "best" typically looks like for each. See which one is closest to your situation.
+                    </p>
+
+                    <div class="profile-card">
+                        <h4>Profile 1: The Healthy 65-Year-Old</h4>
+                        <p class="profile-details">Takes no medications, rarely sees doctors beyond annual checkups, stays local, wants to minimize monthly costs.</p>
+                        <span class="best-fit">Best Fit: Medicare Advantage (HMO or PPO)</span>
+                        <p>
+                            <strong>Why:</strong> With minimal healthcare needs, the $0 premium Medicare Advantage plans make sense. You'll pay little to nothing if you don't use much care. The out-of-pocket maximum ($8,850 in 2025) protects you if something unexpected happens. Extra benefits like dental and vision are a nice bonus for basic maintenance.
+                        </p>
+                        <p>
+                            <strong>Watch out for:</strong> Your health can change. Medicare Advantage works great when you're healthy, but switching to Medigap later requires medical underwriting. Consider whether locking in guaranteed-issue Medigap now is worth the higher premium for long-term flexibility.
+                        </p>
+                    </div>
+
+                    <div class="profile-card">
+                        <h4>Profile 2: The Chronic Condition Manager</h4>
+                        <p class="profile-details">Has diabetes, high blood pressure, and arthritis. Takes 5 daily medications. Sees an endocrinologist, cardiologist, and rheumatologist regularly.</p>
+                        <span class="best-fit">Best Fit: Original Medicare + Medigap + Part D</span>
+                        <p>
+                            <strong>Why:</strong> Predictable costs matter when you know you'll use significant healthcare. Medigap Plan G or N covers most out-of-pocket costs, so specialist visits and lab work don't add up. No prior authorization means no delays getting approved treatments. Freedom to see any specialist who accepts Medicare, anywhere.
+                        </p>
+                        <p>
+                            <strong>Cost example:</strong> Yes, you might pay $300-$400/month in premiums (Part B + Medigap + Part D), but your annual out-of-pocket might be just $257 (Part B deductible). With Medicare Advantage, $0 premium could still mean $3,000-$5,000 annually in copays and coinsurance.
+                        </p>
+                    </div>
+
+                    <div class="profile-card">
+                        <h4>Profile 3: The Snowbird / Traveler</h4>
+                        <p class="profile-details">Spends winters in Florida, summers in Michigan. Travels frequently. Wants healthcare access anywhere they go.</p>
+                        <span class="best-fit">Best Fit: Original Medicare + Medigap + Part D</span>
+                        <p>
+                            <strong>Why:</strong> Original Medicare works in all 50 states with any doctor who accepts Medicare. Medigap coverage travels with you. No network restrictions means you can see doctors wherever you are, not just in emergencies.
+                        </p>
+                        <p>
+                            <strong>Warning:</strong> Most Medicare Advantage plans only cover emergency care outside your home service area. If you need to see a doctor for a non-emergency while traveling, you may have no coverage. Some MA plans marketed as having "national networks" still have significant limitations.
+                        </p>
+                    </div>
+
+                    <div class="profile-card">
+                        <h4>Profile 4: The Budget-Conscious Retiree</h4>
+                        <p class="profile-details">Living on a fixed income. Social Security is primary income source. Every dollar matters. Relatively healthy but needs coverage "just in case."</p>
+                        <span class="best-fit">Best Fit: Medicare Advantage ($0 premium) or High-Deductible Medigap</span>
+                        <p>
+                            <strong>Why:</strong> When monthly cash flow is tight, a $0 premium Medicare Advantage plan keeps your fixed costs low. You trade premium savings for potential out-of-pocket costs if you need significant care.
+                        </p>
+                        <p>
+                            <strong>Alternative:</strong> If you have savings for emergencies, Medigap Plan K or L offer lower premiums than Plan G but with more cost-sharing (up to $3,620 or $7,240 out-of-pocket in 2025). This gives you Medigap's flexibility at a lower monthly cost.
+                        </p>
+                        <p>
+                            <strong>Also check:</strong> You may qualify for <a href="/blog/medicare-assistance-programs">Medicare Savings Programs</a> that can pay your Part B premium and other costs. Don't assume you don't qualify without checking.
+                        </p>
+                    </div>
+
+                    <div class="profile-card">
+                        <h4>Profile 5: The Specialist-Dependent Patient</h4>
+                        <p class="profile-details">Has a complex condition requiring a specific specialist. Has built a relationship with a doctor at a major medical center. Cannot switch providers.</p>
+                        <span class="best-fit">Best Fit: Original Medicare + Medigap + Part D</span>
+                        <p>
+                            <strong>Why:</strong> If you need a specific doctor or medical center, you can't risk network changes. Medicare Advantage networks change annually, sometimes dropping providers. With Original Medicare, any doctor who accepts Medicare is in-network, always.
+                        </p>
+                        <p>
+                            <strong>Key point:</strong> For serious conditions like cancer or rare diseases, the freedom to see any specialist anywhere in the country can be invaluable. Major medical centers like Mayo Clinic, MD Anderson, or Cleveland Clinic accept Medicare but may not be in your Medicare Advantage network.
+                        </p>
+                    </div>
+
+                    <h2 id="quick-guide">Quick Reference: Which Path Fits Your Situation?</h2>
+
+                    <p>
+                        Based on the five factors above, here's a quick guide to help you identify your likely best path:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>If You...</th>
+                                <th>Likely Best Path</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Are healthy and rarely use healthcare</td>
+                                <td>Medicare Advantage (consider $0 premium plans)</td>
+                            </tr>
+                            <tr>
+                                <td>Have chronic conditions requiring regular care</td>
+                                <td>Original Medicare + Medigap + Part D</td>
+                            </tr>
+                            <tr>
+                                <td>Travel frequently or live part-year elsewhere</td>
+                                <td>Original Medicare + Medigap + Part D</td>
+                            </tr>
+                            <tr>
+                                <td>Need to keep specific specialists</td>
+                                <td>Original Medicare + Medigap (or verify MA network)</td>
+                            </tr>
+                            <tr>
+                                <td>Want lowest possible monthly cost</td>
+                                <td>Medicare Advantage ($0 premium)</td>
+                            </tr>
+                            <tr>
+                                <td>Want most predictable annual costs</td>
+                                <td>Original Medicare + Medigap Plan G</td>
+                            </tr>
+                            <tr>
+                                <td>Value dental/vision/hearing coverage</td>
+                                <td>Medicare Advantage (extras included)</td>
+                            </tr>
+                            <tr>
+                                <td>Want maximum flexibility for the future</td>
+                                <td>Original Medicare + Medigap (harder to get later)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        For a more detailed decision framework, see our guide on <a href="/blog/which-medicare-plan-should-i-choose">Which Medicare Plan Should I Choose</a>.
+                    </p>
+
+                    <h2 id="comparison-tools">Tools to Compare Your Options</h2>
+
+                    <p>
+                        Once you know your priorities, use these resources to compare specific plans:
+                    </p>
+
+                    <h3>Medicare.gov Plan Finder</h3>
+
+                    <p>
+                        The official Medicare <a href="https://www.medicare.gov/plan-compare" target="_blank" rel="noopener">Plan Finder tool</a> lets you:
+                    </p>
+
+                    <ul>
+                        <li>Enter your zip code to see available plans</li>
+                        <li>Add your medications to compare drug costs</li>
+                        <li>Check if your doctors are in plan networks</li>
+                        <li>See estimated total annual costs</li>
+                        <li>Compare star ratings (plan quality)</li>
+                    </ul>
+
+                    <h3>State SHIP Programs</h3>
+
+                    <p>
+                        Every state has a <a href="https://shiphelp.org" target="_blank" rel="noopener">State Health Insurance Assistance Program (SHIP)</a> offering free, unbiased Medicare counseling. SHIP counselors can help you compare options without any sales agenda.
+                    </p>
+
+                    <h3>Your State Insurance Department</h3>
+
+                    <p>
+                        State insurance departments maintain lists of Medigap plans available in your state with current pricing. This helps you compare Medigap premiums across insurance companies.
+                    </p>
+
+                    <div class="info-box">
+                        <h4>Medigap Comparison Tip</h4>
+                        <p>
+                            Medigap Plan G from Company A is identical to Plan G from Company B. The coverage is standardized by federal law. The only differences are price and customer service. Shop by price, but stick with well-rated insurers.
+                        </p>
+                    </div>
+
+                    <h2 id="getting-help">Getting Personalized Help</h2>
+
+                    <p>
+                        Sometimes the best way to find your best plan is to talk to someone who can analyze your specific situation.
+                    </p>
+
+                    <h3>Free Help Options</h3>
+
+                    <ul>
+                        <li><strong>SHIP counselors:</strong> Free, unbiased help from trained volunteers in every state</li>
+                        <li><strong>1-800-MEDICARE:</strong> Official Medicare helpline (1-800-633-4227)</li>
+                        <li><strong>Social Security offices:</strong> Can help with enrollment questions</li>
+                    </ul>
+
+                    <h3>Paid Professional Help</h3>
+
+                    <ul>
+                        <li><strong>Insurance brokers:</strong> Help you compare plans (free to you; they earn commissions from insurers)</li>
+                        <li><strong>Fee-only Medicare advisors:</strong> You pay a flat fee for unbiased analysis (no commissions, no sales agenda)</li>
+                    </ul>
+
+                    <p>
+                        Insurance brokers can be helpful, but remember their income depends on which plans you choose. Some plans pay higher commissions than others. A fee-only advisor has no financial stake in your decision, just in providing good advice.
+                    </p>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>Watch Out for "Free" Medicare Seminars</h4>
+                        <p>
+                            Many "free" Medicare seminars and dinners are sales events hosted by insurance agents or companies. The information may be accurate, but the goal is selling you their plans. Get information from multiple sources, including sources that don't earn money from your decision.
+                        </p>
+                    </div>
+
+                    <h2 id="action-plan">Your Action Plan for Finding Your Best Plan</h2>
+
+                    <p>
+                        Ready to find the best Medicare plan for you? Follow these steps:
+                    </p>
+
+                    <ol>
+                        <li><strong>Complete your personal assessment:</strong> Work through the 5 factors above honestly. Write down your answers.</li>
+                        <li><strong>Identify your profile:</strong> Which of the 5 example profiles best matches your situation?</li>
+                        <li><strong>Gather your information:</strong> List all your doctors, medications (with dosages), and current healthcare spending.</li>
+                        <li><strong>Use the Plan Finder:</strong> Enter your information at medicare.gov to see estimated costs for plans in your area.</li>
+                        <li><strong>Verify doctor networks:</strong> If considering Medicare Advantage, call your doctors' offices to confirm they're in the specific plan's network.</li>
+                        <li><strong>Compare drug costs:</strong> Check that your medications are covered and at what tier in each plan you're considering.</li>
+                        <li><strong>Consider the long term:</strong> Think about how your needs might change in the next 5-10 years.</li>
+                        <li><strong>Get help if needed:</strong> Contact SHIP or a fee-only advisor if you want personalized analysis.</li>
+                    </ol>
+
+                    <div class="key-takeaway">
+                        <h4>&#128203; The Bottom Line</h4>
+                        <p>
+                            Stop searching for "the best Medicare plan" and start searching for YOUR best Medicare plan. The answer depends entirely on your health, doctors, medications, lifestyle, and budget. There's no universal right answer, but there is a right answer for you. Take the time to find it.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Need Personalized Analysis?</h4>
+                        <p>
+                            If you'd like help evaluating your specific situation, our <a href="/services/fee-only-medicare-advisor">fee-only Medicare advisors</a> can provide a personalized analysis. We review your doctors, medications, health situation, and preferences to help you identify your best options, with no commissions or sales pressure. <a href="/book-consultation">Schedule a free initial consultation</a> to discuss your needs.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="toc">
+                        <h3>In This Article</h3>
+                        <ul>
+                            <li><a href="#why-best-varies">Why "Best" Varies by Person</a></li>
+                            <li><a href="#factors">5 Factors That Determine Your Best</a></li>
+                            <li><a href="#profiles">Real-World Profile Examples</a></li>
+                            <li><a href="#quick-guide">Quick Reference Guide</a></li>
+                            <li><a href="#comparison-tools">Tools to Compare Options</a></li>
+                            <li><a href="#getting-help">Getting Personalized Help</a></li>
+                            <li><a href="#action-plan">Your Action Plan</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Not Sure What's Best for You?</h3>
+                        <p>
+                            Get a personalized Medicare analysis from a fee-only advisor with no sales agenda.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medigap-vs-medicare-advantage" style="color: var(--primary); text-decoration: none;">
+                                    Medigap vs Medicare Advantage
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/turning-65-medicare-guide" style="color: var(--primary); text-decoration: none;">
+                                    Turning 65 Medicare Guide
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/blog/best-medicare-supplement-plans" style="color: var(--primary); text-decoration: none;">
+                                    Best Medicare Supplement Plans
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Best Medicare Plan?</h2>
+                <p>
+                    Your situation is unique. Get personalized guidance from an advisor who
+                    works for you, not the insurance companies.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">M</span>
+                        <span>Unbiased Medicare Advisor</span>
+                    </a>
+                    <p>
+                        Independent, fee-only Medicare guidance. We're paid by you, not insurance companies,
+                        so you can trust our advice is always in your best interest.
+                    </p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services/medicare-consultant">Medicare Consultant</a></li>
+                        <li><a href="/services/fee-only-medicare-advisor">Fee-Only Advisor</a></li>
+                        <li><a href="/services/medicare-plan-comparison">Plan Comparison</a></li>
+                        <li><a href="/services/medicare-enrollment-help">Enrollment Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/guides/medigap-vs-medicare-advantage">Medigap vs MA</a></li>
+                        <li><a href="/guides/turning-65-medicare-guide">Turning 65 Guide</a></li>
+                        <li><a href="/guides">All Guides</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/book-consultation">Book a Call</a></li>
+                    </ul>
+                    <a href="tel:+18508101000" class="footer-phone">
+                        <span class="footer-phone-icon" aria-hidden="true">&#128222;</span>
+                        <span>(850) 810-1000</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(event) {
+            const link = event.target;
+            const href = link.getAttribute('href');
+
+            // If it's a real link (not "#"), let it navigate normally
+            if (href && href !== '#') {
+                return; // Don't prevent default, let the link work
+            }
+
+            // Otherwise, it's a dropdown toggle only
+            event.preventDefault();
+            const parent = link.closest('.mobile-dropdown');
+            parent.classList.toggle('active');
+        }
+
+        // FAQ accordion toggle
+        function toggleFaq(element) {
+            element.closest('.faq-item').classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        if (backToTop) {
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+</body>
+</html>
