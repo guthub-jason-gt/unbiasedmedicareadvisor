@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn what a Medicare counselor does, how they help you navigate Medicare's complexity, and how to find free or fee-only Medicare counseling in your area.">
+    <meta name="keywords" content="medicare counselor, medicare counseling, SHIP counselor, medicare help, medicare advisor, medicare guidance, free medicare counseling">
+    <title>What Is a Medicare Counselor? How They Help You Navigate Medicare | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="What Is a Medicare Counselor? How They Help You Navigate Medicare">
+    <meta property="og:description" content="Learn what a Medicare counselor does, how they help you navigate Medicare's complexity, and how to find free or fee-only Medicare counseling in your area.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/blog/medicare-counselor">
+
+    <!-- Article Metadata -->
+        <meta property="article:author" content="Unbiased Medicare Advisor">
+    <meta property="article:section" content="Medicare">
+    <meta property="article:tag" content="Medicare">
+    <meta property="article:tag" content="Counseling">
+    <meta property="article:tag" content="SHIP">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        /* Article Header */
+        .article-header {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .article-header-content { max-width: 800px; }
+        .article-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .article-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+        .article-meta {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .article-meta span {
+            margin-right: var(--spacing-md);
+        }
+
+        /* Article Content */
+        .article-section { padding: var(--spacing-xxl) 0; }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+        .article-content { }
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        .article-content h2:first-child { margin-top: 0; }
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+        .article-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+        .article-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+        .article-content strong {
+            color: var(--black);
+        }
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: var(--accent);
+        }
+
+        /* Key Takeaway Box */
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .key-takeaway h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .key-takeaway p {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border: 4px solid #ffc107;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .warning-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box p {
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: var(--off-white); }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: calc(var(--header-height) + var(--spacing-md) + 36px); }
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+        .sidebar-card .btn { width: 100%; }
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .sidebar-cta h3 { color: var(--white); }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .toc h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: var(--spacing-xs);
+        }
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta { padding: var(--spacing-xxl) 0; text-align: center; background: var(--primary); color: var(--white); }
+        .cta-content { max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); color: var(--white); }
+        .cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: var(--spacing-lg); }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        /* Footer */
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .article-header h1 { font-size: 3rem; }
+        }
+        @media (max-width: 968px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .article-header { padding-top: calc(var(--header-height) + var(--spacing-xl)); }
+            .article-header h1 { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .comparison-table { font-size: 0.9rem; }
+            .comparison-table th, .comparison-table td { padding: var(--spacing-sm); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+{{HEADER}}
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <span class="article-tag">Guidance</span>
+                <h1>What Is a Medicare Counselor? How They Help You Navigate Medicare</h1>
+                <div class="article-meta">
+                    <span>9 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-section">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+                    <p>
+                        <strong>Medicare is complicated, and you don't have to figure it out alone.</strong> A Medicare counselor is someone trained to help you understand your options, avoid costly mistakes, and make informed decisions about your healthcare coverage. Whether you're turning 65, retiring, or just trying to make sense of your current plan, a Medicare counselor can be one of your most valuable resources.
+                    </p>
+
+                    <p>
+                        But here's where it gets confusing: there are different types of Medicare counselors, and they don't all work the same way. Some are free volunteers, some are paid professionals, and some are actually salespeople in disguise. This guide explains what Medicare counselors do, the different types available, and how to find unbiased help you can trust.
+                    </p>
+
+                    <div class="key-takeaway">
+                        <h4>&#9733; Key Takeaway</h4>
+                        <p>
+                            A Medicare counselor helps you understand and navigate Medicare's complexity. The best counselors provide unbiased guidance without trying to sell you anything. Free SHIP counselors are available in every state, and fee-only advisors offer more personalized, in-depth help.
+                        </p>
+                    </div>
+
+                    <h2 id="what-is">What Does a Medicare Counselor Do?</h2>
+
+                    <p>
+                        A Medicare counselor is a trained professional or volunteer who helps people understand and navigate the Medicare system. They provide education, answer questions, and help you compare your coverage options.
+                    </p>
+
+                    <h3>Services Medicare Counselors Provide</h3>
+
+                    <ul>
+                        <li><strong>Explain Medicare basics:</strong> Break down Parts A, B, C, and D in plain language</li>
+                        <li><strong>Enrollment guidance:</strong> Help you enroll in Original Medicare, Medicare Advantage, or Part D plans</li>
+                        <li><strong>Plan comparison:</strong> Review available plans in your area and help you compare costs, coverage, and networks</li>
+                        <li><strong>Cost analysis:</strong> Calculate your expected out-of-pocket costs under different coverage options</li>
+                        <li><strong>Special situations:</strong> Navigate complex scenarios like retiring while still working, <a href="/blog/tricare-to-medicare-transition-guide">transitioning from TRICARE</a>, or managing chronic conditions</li>
+                        <li><strong>Problem resolution:</strong> Help resolve billing issues, appeals, and disputes with Medicare or insurance companies</li>
+                        <li><strong>Annual review:</strong> Review your coverage each year to make sure it still meets your needs</li>
+                    </ul>
+
+                    <p>
+                        Think of a Medicare counselor as a guide through a maze. Medicare has over 60 different plan choices in most areas, and the rules change every year. A good counselor helps you find the path that makes sense for your specific health needs, budget, and preferences.
+                    </p>
+
+                    <h2 id="types">Types of Medicare Counselors</h2>
+
+                    <p>
+                        Not all Medicare counselors are the same. Understanding the differences helps you find the right type of help for your situation.
+                    </p>
+
+                    <h3>SHIP Counselors (Free, Government-Sponsored)</h3>
+
+                    <p>
+                        SHIP stands for State Health Insurance Assistance Program. These are <strong>free, volunteer-based counseling services</strong> available in every state. SHIP counselors are trained by Medicare and operate independently of insurance companies.
+                    </p>
+
+                    <ul>
+                        <li><strong>Cost:</strong> Always free</li>
+                        <li><strong>Who they are:</strong> Trained volunteers, often retired professionals</li>
+                        <li><strong>What they do:</strong> Answer questions, help with enrollment, explain options</li>
+                        <li><strong>Limitations:</strong> May have limited availability, appointments can book up during busy enrollment periods</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Find Your State's SHIP</h4>
+                        <p>
+                            Every state has a SHIP program with a different name. In Florida it's SHINE, in California it's HICAP, in Texas it's HICAP. Visit <a href="https://www.shiphelp.org" target="_blank" rel="noopener">shiphelp.org</a> to find your local program and schedule a free appointment.
+                        </p>
+                    </div>
+
+                    <h3>Fee-Only Medicare Advisors</h3>
+
+                    <p>
+                        Fee-only Medicare advisors are <strong>independent professionals you pay directly</strong> for their expertise. Because they don't earn commissions from insurance companies, their only job is helping you find what's best for your situation.
+                    </p>
+
+                    <ul>
+                        <li><strong>Cost:</strong> Typically $400-600 for a comprehensive review</li>
+                        <li><strong>Who they are:</strong> Licensed professionals, often with backgrounds in healthcare or financial planning</li>
+                        <li><strong>What they do:</strong> In-depth analysis, personalized recommendations, ongoing support</li>
+                        <li><strong>Benefits:</strong> No conflicts of interest, more time and attention, expertise in complex situations</li>
+                    </ul>
+
+                    <p>
+                        Fee-only advisors are particularly valuable if you have a complex situation, like multiple chronic conditions, high prescription drug costs, or unique coverage needs. Learn more about <a href="/services/fee-only-medicare-advisor">how fee-only Medicare advice works</a>.
+                    </p>
+
+                    <h3>Insurance Agents and Brokers</h3>
+
+                    <p>
+                        Insurance agents and brokers are licensed to sell Medicare plans. While many are knowledgeable and helpful, it's important to understand how they're compensated.
+                    </p>
+
+                    <ul>
+                        <li><strong>Cost:</strong> Free to you (but they earn commissions)</li>
+                        <li><strong>Who they are:</strong> Licensed insurance salespeople</li>
+                        <li><strong>What they do:</strong> Help you enroll in plans they're contracted to sell</li>
+                        <li><strong>Potential conflicts:</strong> May steer you toward plans with higher commissions or only show plans from certain companies</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>Watch for "Free Medicare Help" Marketing</h4>
+                        <p>
+                            Many TV commercials and mailers advertising "free Medicare counseling" or "Medicare specialists" are actually lead generation for insurance agents. The "counseling" is a sales pitch. If someone is trying to enroll you in a specific plan, they're a salesperson, not a counselor.
+                        </p>
+                    </div>
+
+                    <h2 id="ship-vs-feeonly">SHIP vs. Fee-Only: Which Do You Need?</h2>
+
+                    <p>
+                        Both SHIP counselors and fee-only advisors provide unbiased help, but they serve different needs.
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Factor</th>
+                                <th>SHIP Counselor</th>
+                                <th>Fee-Only Advisor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Cost</strong></td>
+                                <td>Free</td>
+                                <td>$400-600 typically</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Time Available</strong></td>
+                                <td>Usually 30-60 minutes</td>
+                                <td>As much as you need</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Depth of Analysis</strong></td>
+                                <td>General guidance</td>
+                                <td>Comprehensive, personalized</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Complex Situations</strong></td>
+                                <td>Basic help</td>
+                                <td>Specialized expertise</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ongoing Support</strong></td>
+                                <td>Limited</td>
+                                <td>Often included</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Best For</strong></td>
+                                <td>Simple questions, basic enrollment</td>
+                                <td>Complex situations, high stakes decisions</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>When Free SHIP Counseling Is Enough</h3>
+
+                    <ul>
+                        <li>You have a straightforward Medicare situation</li>
+                        <li>You're generally healthy with few medications</li>
+                        <li>You mainly need help understanding the basics</li>
+                        <li>You're comfortable making decisions after getting general guidance</li>
+                    </ul>
+
+                    <h3>When Fee-Only Advice Is Worth It</h3>
+
+                    <ul>
+                        <li>You have multiple chronic conditions or complex health needs</li>
+                        <li>You take expensive specialty medications</li>
+                        <li>You're deciding between Medicare and <a href="/blog/medicare-and-employer-insurance">employer coverage</a></li>
+                        <li>You want someone to analyze all your options in detail</li>
+                        <li>You're considering <a href="/blog/switch-medicare-advantage-to-medigap">switching from Medicare Advantage to Medigap</a></li>
+                        <li>You want ongoing support and annual reviews</li>
+                    </ul>
+
+                    <h2 id="questions">Questions a Medicare Counselor Can Answer</h2>
+
+                    <p>
+                        Not sure if you need a Medicare counselor? If you're struggling with any of these questions, professional guidance can help:
+                    </p>
+
+                    <ul>
+                        <li>Should I enroll in Medicare or stay on my employer's plan?</li>
+                        <li>What's the difference between Original Medicare and Medicare Advantage?</li>
+                        <li>How do I avoid late enrollment penalties?</li>
+                        <li>Which Part D plan covers my medications at the lowest cost?</li>
+                        <li>Is Medigap worth the extra premium?</li>
+                        <li>Will my doctors accept Medicare?</li>
+                        <li>What happens when I retire and lose employer coverage?</li>
+                        <li>How do I coordinate Medicare with other coverage?</li>
+                        <li>Can I change my Medicare coverage, and when?</li>
+                    </ul>
+
+                    <p>
+                        A Medicare counselor can also help you understand resources you might qualify for, like <a href="https://www.medicare.gov/your-medicare-costs/get-help-paying-costs/medicare-savings-programs" target="_blank" rel="noopener">Medicare Savings Programs</a> or <a href="https://www.medicare.gov/your-medicare-costs/get-help-paying-costs/lower-prescription-costs" target="_blank" rel="noopener">Extra Help</a> with prescription drug costs.
+                    </p>
+
+                    <h2 id="when-to-see">When Should You See a Medicare Counselor?</h2>
+
+                    <p>
+                        Timing matters with Medicare. These are the most important times to get counseling:
+                    </p>
+
+                    <h3>3-6 Months Before Turning 65</h3>
+
+                    <p>
+                        Your Initial Enrollment Period begins 3 months before your 65th birthday month. Starting early gives you time to understand your options, compare plans, and make informed decisions without feeling rushed.
+                    </p>
+
+                    <h3>Before Retiring</h3>
+
+                    <p>
+                        If you're retiring and losing employer coverage, you have a Special Enrollment Period to sign up for Medicare. A counselor can help you coordinate the timing so you don't have a gap in coverage or trigger late penalties.
+                    </p>
+
+                    <h3>During Annual Enrollment (October 15 - December 7)</h3>
+
+                    <p>
+                        This is your annual opportunity to change Medicare Advantage or Part D plans. A counselor can help you evaluate whether your current coverage still makes sense or if there's a better option for next year.
+                    </p>
+
+                    <div class="info-box">
+                        <h4>Don't Wait Until the Last Week</h4>
+                        <p>
+                            SHIP counselors are busiest in late November and early December. If you want free counseling during Annual Enrollment, call in October to schedule your appointment before the rush.
+                        </p>
+                    </div>
+
+                    <h3>When Something Changes</h3>
+
+                    <p>
+                        Life changes can affect your Medicare needs:
+                    </p>
+
+                    <ul>
+                        <li>You're diagnosed with a new health condition</li>
+                        <li>Your medications change significantly</li>
+                        <li>You're moving to a new state</li>
+                        <li>Your income changes (which can affect premiums)</li>
+                        <li>Your spouse passes away or you get divorced</li>
+                    </ul>
+
+                    <h2 id="red-flags">Red Flags: Signs of Biased "Counseling"</h2>
+
+                    <p>
+                        Unfortunately, some people use the term "Medicare counselor" while actually trying to sell you insurance. Watch for these warning signs:
+                    </p>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>Warning Signs of a Sales Pitch</h4>
+                        <p>
+                            Be skeptical if anyone: pushes one specific plan, downplays other options, creates urgency to sign up today, cold calls you about Medicare, or can't explain how they're compensated.
+                        </p>
+                    </div>
+
+                    <h3>Specific Red Flags</h3>
+
+                    <ul>
+                        <li><strong>"This plan is the best for everyone"</strong> - No single plan is best for everyone. Your needs are unique.</li>
+                        <li><strong>"You need to decide right now"</strong> - Legitimate counselors give you time to think. Salespeople create urgency.</li>
+                        <li><strong>"I can save you money"</strong> - Without knowing your full situation, no one can promise savings.</li>
+                        <li><strong>Unsolicited phone calls or door knocks</strong> - Medicare marketing rules prohibit cold calling. This is likely a scam or aggressive sales tactic.</li>
+                        <li><strong>Refusing to answer how they're paid</strong> - Ethical counselors are transparent about compensation.</li>
+                        <li><strong>Only discussing one type of coverage</strong> - A true counselor explains all options: Original Medicare, Medicare Advantage, and Medigap.</li>
+                    </ul>
+
+                    <h2 id="find-counselor">How to Find a Trustworthy Medicare Counselor</h2>
+
+                    <h3>For Free Help (SHIP)</h3>
+
+                    <ol>
+                        <li>Visit <a href="https://www.shiphelp.org" target="_blank" rel="noopener">shiphelp.org</a></li>
+                        <li>Enter your zip code to find your local SHIP program</li>
+                        <li>Call to schedule an appointment (phone, in-person, or video)</li>
+                        <li>Prepare your Medicare card, list of medications, and questions in advance</li>
+                    </ol>
+
+                    <h3>For Fee-Only Advice</h3>
+
+                    <ol>
+                        <li>Look for advisors who clearly state they don't sell insurance</li>
+                        <li>Ask how they're compensated (should be a flat fee paid by you)</li>
+                        <li>Verify they have experience with Medicare specifically</li>
+                        <li>Ask for references or read reviews from past clients</li>
+                        <li>Schedule an initial consultation to see if they're a good fit</li>
+                    </ol>
+
+                    <h3>Questions to Ask Any Medicare Counselor</h3>
+
+                    <ul>
+                        <li>How are you compensated?</li>
+                        <li>Do you sell insurance or earn commissions?</li>
+                        <li>What's your experience with Medicare counseling?</li>
+                        <li>Can you explain all my options, not just certain plans?</li>
+                        <li>Will you put your recommendations in writing?</li>
+                    </ul>
+
+                    <h2 id="what-to-bring">What to Bring to Your Counseling Appointment</h2>
+
+                    <p>
+                        Come prepared to get the most from your Medicare counseling session:
+                    </p>
+
+                    <ul>
+                        <li><strong>Your Medicare card</strong> (if you have one)</li>
+                        <li><strong>List of all current medications</strong> with dosages</li>
+                        <li><strong>Names of your doctors</strong> you want to keep seeing</li>
+                        <li><strong>Information about any current coverage</strong> (employer plan, COBRA, etc.)</li>
+                        <li><strong>Your questions</strong> written down so you don't forget</li>
+                        <li><strong>Social Security information</strong> if enrolling</li>
+                        <li><strong>Information about your health conditions</strong></li>
+                        <li><strong>Your budget</strong> or what you can afford for premiums and out-of-pocket costs</li>
+                    </ul>
+
+                    <h2 id="next-steps">Next Steps: Getting the Medicare Help You Need</h2>
+
+                    <p>
+                        You don't have to navigate Medicare alone. Here's how to move forward:
+                    </p>
+
+                    <ol>
+                        <li><strong>Identify your situation:</strong> Are you turning 65, retiring, or reviewing current coverage?</li>
+                        <li><strong>Decide on the type of help:</strong> Free SHIP counseling for basic questions, or fee-only advice for complex situations</li>
+                        <li><strong>Schedule early:</strong> Don't wait until enrollment deadlines are looming</li>
+                        <li><strong>Come prepared:</strong> Gather your medications, doctors, and questions</li>
+                        <li><strong>Take notes:</strong> Write down what you learn and any recommendations</li>
+                        <li><strong>Get a second opinion:</strong> If someone is pushing you toward a specific plan, consult another counselor</li>
+                    </ol>
+
+                    <div class="key-takeaway">
+                        <h4>&#128203; The Bottom Line</h4>
+                        <p>
+                            A Medicare counselor is a guide through one of the most confusing systems in American healthcare. Whether you choose free SHIP counseling or invest in fee-only advice, getting unbiased help can save you thousands of dollars and prevent costly mistakes that last for years.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Need Personalized Help?</h4>
+                        <p>
+                            As fee-only Medicare advisors, we help people navigate Medicare without any sales pressure or insurance company influence. If you want someone in your corner who's paid by you and works only for you, <a href="/book-consultation">schedule a free consultation</a> to discuss your situation.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="toc">
+                        <h3>In This Article</h3>
+                        <ul>
+                            <li><a href="#what-is">What Does a Counselor Do?</a></li>
+                            <li><a href="#types">Types of Counselors</a></li>
+                            <li><a href="#ship-vs-feeonly">SHIP vs. Fee-Only</a></li>
+                            <li><a href="#questions">Questions They Answer</a></li>
+                            <li><a href="#when-to-see">When to See One</a></li>
+                            <li><a href="#red-flags">Red Flags to Watch</a></li>
+                            <li><a href="#find-counselor">How to Find One</a></li>
+                            <li><a href="#what-to-bring">What to Bring</a></li>
+                            <li><a href="#next-steps">Next Steps</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Get Unbiased Medicare Guidance</h3>
+                        <p>
+                            Talk to a fee-only Medicare advisor who works for you, not insurance companies.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/turning-65-medicare-guide" style="color: var(--primary); text-decoration: none;">
+                                    Turning 65 Medicare Guide
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-enrollment-periods" style="color: var(--primary); text-decoration: none;">
+                                    Medicare Enrollment Periods
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/blog/medicare-enrollment-mistakes" style="color: var(--primary); text-decoration: none;">
+                                    Medicare Enrollment Mistakes to Avoid
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Looking for Medicare Counseling?</h2>
+                <p>
+                    Get unbiased guidance from a fee-only advisor who doesn't sell insurance.
+                    We'll help you understand your options and make the right choice for your situation.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{FOOTER}}
+{{SCRIPTS}}
+</body>
+</html>
