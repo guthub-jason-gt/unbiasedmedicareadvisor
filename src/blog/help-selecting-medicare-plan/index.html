@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get help selecting a Medicare plan with this guide to free and paid resources. Learn about SHIP counselors, insurance agents, fee-only advisors, and online tools.">
+    <meta name="keywords" content="help selecting medicare plan, medicare plan selection help, choose medicare plan, medicare plan guidance, selecting medicare coverage, help picking medicare plan">
+    <title>Help Selecting a Medicare Plan: Your Guide to Expert Guidance | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Help Selecting a Medicare Plan: Your Guide to Expert Guidance">
+    <meta property="og:description" content="Get help selecting a Medicare plan with this guide to free and paid resources. Learn about SHIP counselors, insurance agents, fee-only advisors, and online tools.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/blog/help-selecting-medicare-plan">
+
+    <!-- Article Metadata -->
+        <meta property="article:author" content="Unbiased Medicare Advisor">
+    <meta property="article:section" content="Medicare">
+    <meta property="article:tag" content="Medicare">
+    <meta property="article:tag" content="Guidance">
+    <meta property="article:tag" content="Plan Selection">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 80px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        /* Article Header */
+        .article-header {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .article-header-content { max-width: 800px; }
+        .article-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .article-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+        .article-meta {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .article-meta span {
+            margin-right: var(--spacing-md);
+        }
+
+        /* Article Content */
+        .article-section { padding: var(--spacing-xxl) 0; }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+        .article-content { }
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        .article-content h2:first-child { margin-top: 0; }
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+        .article-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+        .article-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+        .article-content strong {
+            color: var(--black);
+        }
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: var(--accent);
+        }
+
+        /* Key Takeaway Box */
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .key-takeaway h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .key-takeaway p {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border: 4px solid #ffc107;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .warning-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box p {
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: var(--off-white); }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: calc(var(--header-height) + var(--spacing-md) + 36px); }
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+        .sidebar-card .btn { width: 100%; }
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .sidebar-cta h3 { color: var(--white); }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .toc h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: var(--spacing-xs);
+        }
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta { padding: var(--spacing-xxl) 0; text-align: center; background: var(--primary); color: var(--white); }
+        .cta-content { max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); color: var(--white); }
+        .cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: var(--spacing-lg); }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        /* Footer */
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .article-header h1 { font-size: 3rem; }
+        }
+        @media (max-width: 968px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .article-header { padding-top: calc(var(--header-height) + var(--spacing-xl)); }
+            .article-header h1 { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .comparison-table { font-size: 0.9rem; }
+            .comparison-table th, .comparison-table td { padding: var(--spacing-sm); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+{{HEADER}}
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <span class="article-tag">Guidance</span>
+                <h1>Help Selecting a Medicare Plan: Your Guide to Getting Expert Guidance</h1>
+                <div class="article-meta">
+                    <span>10 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-section">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+                    <p>
+                        <strong>With over 60 Medicare Advantage plans and dozens of Medigap options in most areas, trying to select a Medicare plan on your own can feel impossible.</strong> You're not imagining the complexity. Medicare has more moving parts than almost any other insurance decision you'll ever make.
+                    </p>
+
+                    <p>
+                        The good news? You don't have to figure it out alone. Multiple types of help exist, from completely free government programs to paid professional advisors. The challenge is knowing which type of help is right for your situation and how to evaluate the advice you receive.
+                    </p>
+
+                    <p>
+                        This guide covers every option available for getting help selecting a Medicare plan, what each type of helper can and can't do for you, and how to make sure the guidance you receive is truly in your best interest.
+                    </p>
+
+                    <div class="key-takeaway">
+                        <h4>&#9733; Key Takeaway</h4>
+                        <p>
+                            Help selecting a Medicare plan is available for free through SHIP counselors and Medicare.gov, but the depth and personalization varies. Understanding who's giving you advice and how they're compensated helps you evaluate whether their recommendations serve your interests.
+                        </p>
+                    </div>
+
+                    <h2 id="why-help-matters">Why Getting Help With Medicare Selection Matters</h2>
+
+                    <p>
+                        Before diving into where to find help, let's acknowledge why Medicare plan selection is so overwhelming and why professional guidance can be valuable.
+                    </p>
+
+                    <h3>The Complexity Problem</h3>
+
+                    <p>
+                        Selecting a Medicare plan involves understanding:
+                    </p>
+
+                    <ul>
+                        <li><strong>Multiple coverage types:</strong> Original Medicare, Medicare Advantage, Medigap, Part D, and how they interact</li>
+                        <li><strong>Dozens of plan options:</strong> The average county has 40+ Medicare Advantage plans and 10+ Medigap carriers</li>
+                        <li><strong>Variable costs:</strong> Premiums, deductibles, copays, coinsurance, and out-of-pocket maximums</li>
+                        <li><strong>Network restrictions:</strong> Which doctors, hospitals, and pharmacies each plan covers</li>
+                        <li><strong>Drug formularies:</strong> Whether your medications are covered and at what tier</li>
+                        <li><strong>Enrollment timing:</strong> Missing deadlines can result in permanent penalties</li>
+                    </ul>
+
+                    <p>
+                        One wrong choice can cost you thousands of dollars or leave you without coverage when you need it most. That's why getting help selecting a Medicare plan isn't a sign of weakness. It's smart planning.
+                    </p>
+
+                    <div class="info-box">
+                        <h4>Related Resource</h4>
+                        <p>
+                            If you want to understand the basics of how to evaluate plans yourself, see our guide on <a href="/blog/help-choosing-medicare-plan">How to Choose the Right Medicare Plan</a>. This article focuses on where to GET help, not the decision-making process itself.
+                        </p>
+                    </div>
+
+                    <h2 id="free-resources">Free Medicare Help Resources</h2>
+
+                    <p>
+                        Several free resources exist to help you select a Medicare plan. Each has strengths and limitations.
+                    </p>
+
+                    <h3>SHIP (State Health Insurance Assistance Program)</h3>
+
+                    <p>
+                        SHIP is a federally funded program that provides free, unbiased Medicare counseling in every state. SHIP counselors are trained volunteers who don't sell insurance and have no financial stake in which plan you choose.
+                    </p>
+
+                    <p>
+                        <strong>What SHIP counselors can do:</strong>
+                    </p>
+
+                    <ul>
+                        <li>Explain Medicare Parts A, B, C, and D</li>
+                        <li>Help you understand your coverage options</li>
+                        <li>Review your current coverage for problems</li>
+                        <li>Assist with enrollment paperwork</li>
+                        <li>Help with Medicare appeals and billing issues</li>
+                        <li>Explain Medicare Savings Programs and Extra Help</li>
+                    </ul>
+
+                    <p>
+                        <strong>Limitations:</strong>
+                    </p>
+
+                    <ul>
+                        <li>Availability varies by location (some areas have long wait times)</li>
+                        <li>Counselor experience levels vary</li>
+                        <li>May not provide specific plan recommendations</li>
+                        <li>Limited appointment availability during busy enrollment periods</li>
+                    </ul>
+
+                    <p>
+                        To find your local SHIP program, call <strong>1-800-MEDICARE (1-800-633-4227)</strong> or visit <a href="https://www.shiphelp.org" target="_blank" rel="noopener noreferrer">shiphelp.org</a>.
+                    </p>
+
+                    <h3>Medicare.gov and the Plan Finder Tool</h3>
+
+                    <p>
+                        The official Medicare website offers a Plan Finder tool that lets you compare Medicare Advantage and Part D plans based on your medications, doctors, and pharmacy preferences.
+                    </p>
+
+                    <p>
+                        <strong>What Medicare.gov offers:</strong>
+                    </p>
+
+                    <ul>
+                        <li>Side-by-side plan comparisons</li>
+                        <li>Drug cost estimates based on your specific prescriptions</li>
+                        <li>Star ratings for plan quality</li>
+                        <li>Provider network lookup</li>
+                        <li>Online enrollment capability</li>
+                    </ul>
+
+                    <p>
+                        <strong>Limitations:</strong>
+                    </p>
+
+                    <ul>
+                        <li>Requires computer literacy and patience</li>
+                        <li>Doesn't include Medigap plans in comparisons</li>
+                        <li>Can't account for nuances in your health situation</li>
+                        <li>Drug cost estimates may not reflect actual costs</li>
+                    </ul>
+
+                    <h3>1-800-MEDICARE</h3>
+
+                    <p>
+                        Medicare's toll-free hotline (1-800-633-4227) is staffed 24/7 and can answer questions about Medicare coverage, enrollment, and benefits.
+                    </p>
+
+                    <p>
+                        <strong>Best for:</strong> Factual questions about Medicare rules, enrollment periods, and eligibility. Less helpful for personalized plan selection guidance.
+                    </p>
+
+                    <div class="info-box">
+                        <h4>Additional Free Resources</h4>
+                        <p>
+                            If you're on a limited income, you may qualify for <a href="/blog/medicare-assistance-programs">Medicare assistance programs</a> that help pay for premiums, deductibles, and prescriptions. SHIP counselors can help you determine eligibility.
+                        </p>
+                    </div>
+
+                    <h2 id="insurance-agents">Insurance Agents and Brokers</h2>
+
+                    <p>
+                        Most people who get help selecting a Medicare plan work with insurance agents or brokers. Understanding how they operate is essential to evaluating their advice.
+                    </p>
+
+                    <h3>How Agent Compensation Works</h3>
+
+                    <p>
+                        Insurance agents and brokers are typically paid by insurance companies, not by you. Here's how the compensation model works:
+                    </p>
+
+                    <ul>
+                        <li><strong>Medicare Advantage:</strong> Agents earn $600-$700 for each new enrollment (2025 rates), with renewal commissions of $300-$350 per year</li>
+                        <li><strong>Part D:</strong> Lower commissions, typically $80-$100 per enrollment</li>
+                        <li><strong>Medigap:</strong> Commission rates vary by carrier but are often a percentage of the first-year premium</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>The Commission Conflict</h4>
+                        <p>
+                            Commission-based agents earn more from Medicare Advantage than Medigap policies. This doesn't mean every agent will steer you wrong, but it creates a structural conflict of interest you should be aware of. Always ask how an agent is compensated.
+                        </p>
+                    </div>
+
+                    <h3>What Agents Can Do</h3>
+
+                    <ul>
+                        <li>Explain plan options in your area</li>
+                        <li>Help you compare plans based on your needs</li>
+                        <li>Assist with enrollment paperwork</li>
+                        <li>Provide ongoing service after enrollment</li>
+                        <li>Answer questions year-round</li>
+                    </ul>
+
+                    <h3>What Agents Can't (or Won't) Do</h3>
+
+                    <ul>
+                        <li><strong>Recommend plans they don't sell:</strong> Captive agents work for one company; even independent agents may not represent all carriers</li>
+                        <li><strong>Always recommend what's best for you:</strong> Some prioritize plans with higher commissions</li>
+                        <li><strong>Help with Medicare billing issues:</strong> Their job ends after enrollment</li>
+                        <li><strong>Provide objective analysis:</strong> They have a financial interest in your decision</li>
+                    </ul>
+
+                    <h3>Questions to Ask Any Insurance Agent</h3>
+
+                    <p>
+                        Before working with an agent, ask:
+                    </p>
+
+                    <ol>
+                        <li>"How are you compensated for this advice?"</li>
+                        <li>"Which insurance companies do you represent?"</li>
+                        <li>"Why are you recommending this specific plan over others?"</li>
+                        <li>"What are the downsides of this plan?"</li>
+                        <li>"Did you consider Original Medicare + Medigap for my situation?"</li>
+                    </ol>
+
+                    <p>
+                        For more on evaluating Medicare advisors, see our article on <a href="/blog/unbiased-medicare-advice">getting unbiased Medicare advice</a>.
+                    </p>
+
+                    <h2 id="fee-only-advisors">Fee-Only Medicare Advisors</h2>
+
+                    <p>
+                        Fee-only Medicare advisors represent a different model: you pay them directly for advice, and they don't sell insurance or earn commissions.
+                    </p>
+
+                    <h3>How Fee-Only Advice Works</h3>
+
+                    <p>
+                        Instead of being compensated by insurance companies, fee-only advisors charge you directly, usually:
+                    </p>
+
+                    <ul>
+                        <li><strong>Flat fee:</strong> A set price for a comprehensive Medicare review ($400-$600 is typical)</li>
+                        <li><strong>Hourly rate:</strong> Payment for time spent on your case ($150-$300/hour)</li>
+                        <li><strong>No commissions:</strong> The advisor doesn't sell insurance or receive payments from insurance companies</li>
+                    </ul>
+
+                    <h3>What Fee-Only Advisors Provide</h3>
+
+                    <ul>
+                        <li>Objective analysis of all options, including Original Medicare + Medigap vs. Medicare Advantage</li>
+                        <li>No financial incentive to recommend one plan over another</li>
+                        <li>Personalized recommendations based on your specific health situation</li>
+                        <li>Drug cost analysis using your actual prescriptions</li>
+                        <li>Provider network verification</li>
+                        <li>Documentation of reasoning behind recommendations</li>
+                    </ul>
+
+                    <h3>When Fee-Only Advice Is Worth It</h3>
+
+                    <p>
+                        Paying for Medicare advice makes sense if you:
+                    </p>
+
+                    <ul>
+                        <li>Have complex health conditions requiring expensive treatments</li>
+                        <li>Take multiple specialty medications</li>
+                        <li>Are uncertain whether Medicare Advantage or Medigap is better for you</li>
+                        <li>Want to switch from Medicare Advantage to Medigap and need help navigating underwriting</li>
+                        <li>Split time between states and need coverage that works everywhere</li>
+                        <li>Want confidence that advice is truly unbiased</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Our Approach</h4>
+                        <p>
+                            We provide fee-only Medicare consulting with no commission bias. Learn more about our <a href="/services/fee-only-medicare-advisor">fee-only Medicare advisor services</a> or <a href="/services/medicare-consultant">Medicare consulting services</a>.
+                        </p>
+                    </div>
+
+                    <h2 id="comparison-table">Comparing Your Help Options</h2>
+
+                    <p>
+                        Here's how the different types of Medicare help compare:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Resource</th>
+                                <th>Cost</th>
+                                <th>Bias Risk</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>SHIP Counselors</strong></td>
+                                <td>Free</td>
+                                <td>None</td>
+                                <td>General education, enrollment help, billing issues</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Medicare.gov</strong></td>
+                                <td>Free</td>
+                                <td>None</td>
+                                <td>Self-directed research, plan comparisons</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1-800-MEDICARE</strong></td>
+                                <td>Free</td>
+                                <td>None</td>
+                                <td>Factual questions, enrollment status</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Insurance Agents</strong></td>
+                                <td>Free to you</td>
+                                <td>High (commission-based)</td>
+                                <td>Enrollment assistance, ongoing service</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fee-Only Advisors</strong></td>
+                                <td>$400-$600+</td>
+                                <td>None</td>
+                                <td>Complex situations, objective analysis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 id="online-tools">Online Tools and Plan Finders</h2>
+
+                    <p>
+                        Beyond Medicare.gov, several online tools can help with Medicare plan selection:
+                    </p>
+
+                    <h3>Third-Party Plan Comparison Sites</h3>
+
+                    <p>
+                        Websites like eHealth, Medicare.com, and others offer plan comparison tools. Be aware:
+                    </p>
+
+                    <ul>
+                        <li>Most are lead generation sites that earn commissions on enrollments</li>
+                        <li>Results may be influenced by business relationships with insurers</li>
+                        <li>Useful for seeing what's available but not for unbiased recommendations</li>
+                    </ul>
+
+                    <h3>Insurance Company Websites</h3>
+
+                    <p>
+                        Individual insurance companies (UnitedHealthcare, Humana, Aetna, etc.) have tools to explore their own plans. These are helpful for understanding specific plan details but obviously don't compare competitors objectively.
+                    </p>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>Beware of "Free" Online Medicare Advice</h4>
+                        <p>
+                            When something is free online, you're often the product. Many Medicare websites earn money by selling your information to agents or receiving commissions. The advice you receive may be influenced by who's paying them.
+                        </p>
+                    </div>
+
+                    <h2 id="red-flags">Red Flags When Getting Medicare Help</h2>
+
+                    <p>
+                        Not all Medicare help is good help. Watch for these warning signs:
+                    </p>
+
+                    <h3>High-Pressure Sales Tactics</h3>
+
+                    <ul>
+                        <li>"You need to decide today" (you almost never do)</li>
+                        <li>Refusing to explain other options</li>
+                        <li>Calling or visiting repeatedly after you've said no</li>
+                        <li>Using scare tactics about penalties or coverage loss</li>
+                    </ul>
+
+                    <h3>Limited Options</h3>
+
+                    <ul>
+                        <li>Only presenting one plan or one company's plans</li>
+                        <li>Dismissing Medigap without explaining why</li>
+                        <li>Not asking about your doctors or medications</li>
+                        <li>Generic advice that doesn't account for your situation</li>
+                    </ul>
+
+                    <h3>Lack of Transparency</h3>
+
+                    <ul>
+                        <li>Won't explain how they're compensated</li>
+                        <li>Can't explain why this plan is better than alternatives</li>
+                        <li>Won't put recommendations in writing</li>
+                        <li>Glosses over plan limitations or costs</li>
+                    </ul>
+
+                    <h3>Medicare Fraud Warning Signs</h3>
+
+                    <ul>
+                        <li>Asking for your Medicare number without your consent</li>
+                        <li>Offering gifts or cash for enrolling</li>
+                        <li>Claiming to be from Medicare itself</li>
+                        <li>Showing up at your door uninvited</li>
+                    </ul>
+
+                    <p>
+                        If something feels wrong, trust your instincts. Report suspected Medicare fraud to 1-800-MEDICARE.
+                    </p>
+
+                    <h2 id="preparing">Preparing for a Medicare Consultation</h2>
+
+                    <p>
+                        Whether you're meeting with a SHIP counselor, insurance agent, or fee-only advisor, preparation helps you get better guidance.
+                    </p>
+
+                    <h3>Documents to Gather</h3>
+
+                    <ul>
+                        <li><strong>Medicare card:</strong> Your Medicare number and Part A/B effective dates</li>
+                        <li><strong>Current insurance cards:</strong> If you have existing coverage</li>
+                        <li><strong>List of medications:</strong> Name, dosage, frequency, and pharmacy</li>
+                        <li><strong>List of doctors:</strong> Names, specialties, and addresses</li>
+                        <li><strong>Recent medical bills:</strong> To understand your current healthcare usage</li>
+                        <li><strong>Annual Notice of Change:</strong> If you have an existing Medicare plan</li>
+                    </ul>
+
+                    <h3>Questions to Prepare</h3>
+
+                    <ul>
+                        <li>What's most important to me: low premiums, low out-of-pocket costs, or specific doctor access?</li>
+                        <li>Do I travel frequently or live in multiple states?</li>
+                        <li>Am I comfortable with network restrictions?</li>
+                        <li>What's my budget for monthly premiums?</li>
+                        <li>Do I have any major health procedures planned?</li>
+                    </ul>
+
+                    <h3>Questions to Ask the Advisor</h3>
+
+                    <ul>
+                        <li>"Why do you recommend this plan for my situation?"</li>
+                        <li>"What are the downsides of this plan?"</li>
+                        <li>"Are all my doctors in-network?"</li>
+                        <li>"What will my medications cost under this plan?"</li>
+                        <li>"What happens if I need expensive care?"</li>
+                        <li>"How does this compare to [alternative option]?"</li>
+                    </ul>
+
+                    <h2 id="annual-reviews">Why Selecting a Plan Is Just Step One</h2>
+
+                    <p>
+                        Here's what many people miss: selecting a Medicare plan isn't a one-time decision. It's an annual responsibility.
+                    </p>
+
+                    <h3>Plans Change Every Year</h3>
+
+                    <p>
+                        Medicare Advantage and Part D plans can change significantly from year to year:
+                    </p>
+
+                    <ul>
+                        <li>Premiums can increase</li>
+                        <li>Drug formularies can drop or tier-up your medications</li>
+                        <li>Provider networks can shrink</li>
+                        <li>Benefits can be reduced</li>
+                        <li>Star ratings can decline</li>
+                    </ul>
+
+                    <h3>Your Needs Change Too</h3>
+
+                    <p>
+                        Even if your plan stays the same, your situation evolves:
+                    </p>
+
+                    <ul>
+                        <li>New diagnoses requiring new treatments</li>
+                        <li>Changes in medications</li>
+                        <li>Doctors retiring or leaving networks</li>
+                        <li>Moving to a new area</li>
+                        <li>Changes in your budget</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Annual Review Is Essential</h4>
+                        <p>
+                            Every September, review your Annual Notice of Change from your current plan. During the Annual Enrollment Period (October 15 - December 7), compare your plan to alternatives. For more on this process, see our article on <a href="/blog/medicare-plan-review">Medicare plan reviews</a>.
+                        </p>
+                    </div>
+
+                    <h2 id="next-steps">Taking the Next Step</h2>
+
+                    <p>
+                        Getting help selecting a Medicare plan doesn't have to be complicated. Here's a simple path forward:
+                    </p>
+
+                    <ol>
+                        <li><strong>Start with free resources:</strong> Call your local SHIP or use Medicare.gov's Plan Finder to understand your options</li>
+                        <li><strong>Gather your information:</strong> Compile your medications, doctors, and current coverage details</li>
+                        <li><strong>Consider your complexity level:</strong> Simple situations may only need free help; complex cases benefit from professional guidance</li>
+                        <li><strong>Evaluate any advisor carefully:</strong> Ask how they're compensated and why they recommend specific plans</li>
+                        <li><strong>Don't rush:</strong> Take time to compare options and understand trade-offs</li>
+                        <li><strong>Plan for annual reviews:</strong> Mark your calendar to reassess coverage each fall</li>
+                    </ol>
+
+                    <div class="key-takeaway">
+                        <h4>&#128203; The Bottom Line</h4>
+                        <p>
+                            Help selecting a Medicare plan is available from free government programs, commission-based agents, and fee-only advisors. Each has trade-offs. The key is understanding who's giving you advice, how they're compensated, and whether their recommendations truly fit your situation. Don't let the complexity paralyze you. Use the resources available, ask good questions, and make an informed choice.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Need Personalized Help?</h4>
+                        <p>
+                            If you're feeling overwhelmed by Medicare plan selection or want an objective second opinion on your options, our fee-only advisors can help. We don't sell insurance, which means our only goal is helping you find what's best for your situation. <a href="/book-consultation">Book a free consultation</a> to discuss your needs.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="toc">
+                        <h3>In This Article</h3>
+                        <ul>
+                            <li><a href="#why-help-matters">Why Getting Help Matters</a></li>
+                            <li><a href="#free-resources">Free Medicare Help Resources</a></li>
+                            <li><a href="#insurance-agents">Insurance Agents & Brokers</a></li>
+                            <li><a href="#fee-only-advisors">Fee-Only Medicare Advisors</a></li>
+                            <li><a href="#comparison-table">Comparing Your Options</a></li>
+                            <li><a href="#online-tools">Online Tools & Plan Finders</a></li>
+                            <li><a href="#red-flags">Red Flags to Watch For</a></li>
+                            <li><a href="#preparing">Preparing for a Consultation</a></li>
+                            <li><a href="#annual-reviews">Annual Reviews Matter</a></li>
+                            <li><a href="#next-steps">Taking the Next Step</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Need Help Selecting a Plan?</h3>
+                        <p>
+                            Our fee-only advisors help you compare all options with no commission bias.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Resources</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/blog/medicare-counselor" style="color: var(--primary); text-decoration: none;">
+                                    What Is a Medicare Counselor?
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/blog/unbiased-medicare-advice" style="color: var(--primary); text-decoration: none;">
+                                    Getting Unbiased Medicare Advice
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medigap-vs-medicare-advantage" style="color: var(--primary); text-decoration: none;">
+                                    Medigap vs Medicare Advantage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Expert Medicare Guidance?</h2>
+                <p>
+                    Whether you're new to Medicare or reviewing your current coverage, our fee-only advisors
+                    can help you find the right plan with no sales pressure or hidden agendas.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{FOOTER}}
+{{SCRIPTS}}
+</body>
+</html>
