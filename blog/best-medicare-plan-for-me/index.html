@@ -556,6 +556,45 @@
         .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
         .header { top: 36px !important; }
         .hero, .page-header, .guide-header { padding-top: calc(var(--header-height, 80px) + 36px + 2rem) !important; }
+
+        /* Breadcrumb Styles (Option 9) */
+        .breadcrumb-bar {
+            background: #e8f4fc;
+            padding: 10px 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-bottom: 1px solid #cce5f5;
+            margin-top: calc(var(--header-height, 80px) + 36px);
+        }
+        .breadcrumb-bar a, .breadcrumb-bar .current {
+            background: white;
+            color: var(--primary, #1e3a5f);
+            text-decoration: none;
+            padding: 5px 12px;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .breadcrumb-bar a:hover {
+            background: var(--primary, #1e3a5f);
+            color: white;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+        .breadcrumb-bar .arrow {
+            color: #5a9fd4;
+            font-size: 0.85rem;
+        }
+        .breadcrumb-bar .current {
+            background: var(--primary, #1e3a5f);
+            color: white;
+            box-shadow: 0 2px 6px rgba(30, 58, 95, 0.3);
+        }
     </style>
 
     <!-- ============================================
