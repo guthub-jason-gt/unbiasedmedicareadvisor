@@ -1060,6 +1060,34 @@
             margin-left: 1rem;
             font-size: 1.2rem;
         }
+
+        /* Mobile Header CTA Button */
+        .mobile-header-right {
+            display: none;
+            align-items: center;
+            gap: 12px;
+        }
+        .mobile-cta-btn {
+            background: #ff6b35;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+        }
+        .mobile-cta-btn:hover {
+            background: #e55a2b;
+        }
+        @media (max-width: 768px) {
+            .mobile-header-right {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: flex !important;
+            }
+        }
     </style>
 
     <!-- ============================================
@@ -1128,12 +1156,15 @@
                 </ul>
             </nav>
 
-            <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <!-- Mobile CTA + Menu Button -->
+            <div class="mobile-header-right">
+                <a href="/book-consultation" class="mobile-cta-btn">Book Call</a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Navigation -->
