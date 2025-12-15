@@ -1664,6 +1664,14 @@
             element.closest('.faq-item').classList.toggle('active');
         }
 
+        // State selector - navigate to selected state page
+        function goToState() {
+            const select = document.getElementById('stateSelect');
+            if (select && select.value) {
+                window.location.href = '/states/' + select.value;
+            }
+        }
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             const mobileNav = document.getElementById('mobileNav');
