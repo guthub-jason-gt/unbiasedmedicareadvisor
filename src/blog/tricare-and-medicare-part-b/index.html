@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="description" content="Do military retirees have to pay for Medicare Part B? Learn about Part B costs, why it's required for TRICARE For Life, and how to avoid penalties.">
+    <meta name="keywords" content="tricare and medicare part b, do military retirees have to pay for medicare part b, tricare for life and medicare part b, tricare medicare part b cost">
+    <title>TRICARE and Medicare Part B: Costs, Requirements & What Military Retirees Need to Know | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="TRICARE and Medicare Part B: Costs, Requirements & What Military Retirees Need to Know">
+    <meta property="og:description" content="Do military retirees have to pay for Medicare Part B? Learn about Part B costs, why it's required for TRICARE For Life, and how to avoid penalties.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/blog/tricare-and-medicare-part-b">
+
+    <!-- Article Metadata -->
+    <meta property="article:author" content="Unbiased Medicare Advisor">
+    <meta property="article:section" content="Medicare">
+    <meta property="article:tag" content="TRICARE">
+    <meta property="article:tag" content="Medicare Part B">
+    <meta property="article:tag" content="Military">
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do military retirees have to pay for Medicare Part B?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Military retirees must pay the Medicare Part B premium (approximately $185/month in 2025) to qualify for TRICARE For Life. There is no military exemption or discount on this premium. However, TRICARE For Life coverage itself has no additional premium beyond Part B."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I keep TRICARE without Medicare Part B?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Once you turn 65 and become Medicare-eligible, you must enroll in both Medicare Part A and Part B to maintain TRICARE coverage. If you don't enroll in Part B, you'll lose TRICARE benefits entirely. This is a common misconception that catches many military retirees off guard."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does TRICARE For Life cover the Part B deductible?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "TRICARE For Life covers Medicare's 20% coinsurance after the deductible, but the Part B deductible ($257 in 2025) is typically your responsibility. However, some services may have different cost-sharing. Overall, TFL significantly reduces your out-of-pocket costs compared to Original Medicare alone."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much is Medicare Part B for military retirees?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Military retirees pay the same Medicare Part B premiums as everyone else. The standard premium is approximately $185/month in 2025, with higher premiums for those with income above $103,000 (individual) or $206,000 (married filing jointly). TRICARE For Life does not cover this premium."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens if I don't sign up for Part B at 65?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If you're a military retiree and don't enroll in Part B when first eligible (at 65), you'll lose TRICARE coverage immediately. You'll also face late enrollment penalties when you eventually do enroll: your Part B premium will be 10% higher for each 12-month period you could have had Part B but didn't. These penalties last for life."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 150px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        /* Article Header */
+        .article-header {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .article-header-content { max-width: 800px; }
+        .article-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .article-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+        .article-meta {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .article-meta span {
+            margin-right: var(--spacing-md);
+        }
+
+        /* Article Content */
+        .article-section { padding: var(--spacing-xxl) 0; }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+        .article-content { }
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        .article-content h2:first-child { margin-top: 0; }
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+        .article-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+        .article-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+        .article-content strong {
+            color: var(--black);
+        }
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: var(--accent);
+        }
+
+        /* Key Takeaway Box */
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .key-takeaway h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .key-takeaway p {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+        }
+        .key-takeaway ul {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+            padding-left: var(--spacing-md);
+        }
+        .key-takeaway li {
+            color: rgba(255,255,255,0.95);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border: 4px solid #ffc107;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .warning-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box p {
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: var(--off-white); }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: calc(var(--header-height) + var(--spacing-md) + 36px); }
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+        .sidebar-card .btn { width: 100%; }
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .sidebar-cta h3 { color: var(--white); }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .toc h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: var(--spacing-xs);
+        }
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta { padding: var(--spacing-xxl) 0; text-align: center; background: var(--primary); color: var(--white); }
+        .cta-content { max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); color: var(--white); }
+        .cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: var(--spacing-lg); }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        /* Footer */
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+            padding: var(--spacing-md) 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+        }
+        .faq-answer {
+            color: var(--medium-gray);
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .article-header h1 { font-size: 3rem; }
+        }
+        @media (max-width: 968px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .article-header { padding-top: calc(var(--header-height) + var(--spacing-xl)); }
+            .article-header h1 { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .comparison-table { font-size: 0.9rem; }
+            .comparison-table th, .comparison-table td { padding: var(--spacing-sm); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+{{HEADER}}
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+        <a href="/"><span>🏠</span></a>
+        <span class="arrow">→</span>
+        <a href="/blog">Blog</a>
+        <span class="arrow">→</span>
+        <span class="current">TRICARE and Medicare Part B</span>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <span class="article-tag">TRICARE</span>
+                <h1>TRICARE and Medicare Part B: Costs, Requirements, and What Military Retirees Need to Know</h1>
+                <div class="article-meta">
+                    <span>7 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-section">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+                    <p>
+                        <strong>One of the most common questions military retirees ask is: "Do I really have to pay for Medicare Part B?"</strong> The answer is yes - and understanding why is critical to keeping your TRICARE coverage.
+                    </p>
+
+                    <p>
+                        This guide explains the relationship between TRICARE For Life and Medicare Part B, what it costs, and why skipping Part B is one of the most expensive mistakes you can make.
+                    </p>
+
+                    <div class="key-takeaway">
+                        <h4>&#9733; Key Takeaway</h4>
+                        <ul>
+                            <li>You MUST enroll in Medicare Part B to keep TRICARE For Life</li>
+                            <li>You MUST pay the Part B premium (there is no military discount)</li>
+                            <li>If you skip Part B, you lose TRICARE coverage entirely</li>
+                            <li>Late enrollment = permanent penalties on top of lost coverage</li>
+                        </ul>
+                    </div>
+
+                    <h2 id="why-part-b-required">Why Medicare Part B Is Required for TRICARE For Life</h2>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>This Is the #1 Mistake Military Retirees Make</h4>
+                        <p>
+                            Many military retirees assume TRICARE will continue as usual after 65. It won't. If you don't enroll in Medicare Part B when you turn 65, you will lose ALL TRICARE coverage. No exceptions.
+                        </p>
+                    </div>
+
+                    <p>
+                        TRICARE For Life was designed to work <em>with</em> Medicare, not replace it. Here's how the system works:
+                    </p>
+
+                    <ul>
+                        <li><strong>Medicare pays first</strong> - When you receive medical care, Medicare Part A or Part B covers its portion</li>
+                        <li><strong>TRICARE For Life pays second</strong> - TFL then covers most or all of what Medicare doesn't</li>
+                        <li><strong>Without Part B, there's nothing for TFL to supplement</strong> - The system breaks down entirely</li>
+                    </ul>
+
+                    <p>
+                        Think of it this way: TRICARE For Life is specifically designed as a Medicare supplement. If you don't have Medicare, there's nothing to supplement. For more details on how this coverage works together, see our <a href="/blog/tricare-to-medicare-transition-guide/">TRICARE to Medicare Transition Guide</a>.
+                    </p>
+
+                    <h2 id="part-b-costs">Medicare Part B Costs for Military Retirees (2025)</h2>
+
+                    <p>
+                        Military retirees pay the same Medicare Part B costs as everyone else. There is no military discount or exemption.
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Cost Component</th>
+                                <th>2025 Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Standard Part B premium</strong></td>
+                                <td>~$185/month</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Annual deductible</strong></td>
+                                <td>$257/year</td>
+                            </tr>
+                            <tr>
+                                <td><strong>TRICARE For Life premium</strong></td>
+                                <td>$0 (no additional cost)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Higher-Income Premium Adjustments (IRMAA)</h3>
+
+                    <p>
+                        If your income is above certain thresholds, you'll pay more for Part B. These are called Income-Related Monthly Adjustment Amounts (IRMAA):
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Income (Individual)</th>
+                                <th>Income (Married)</th>
+                                <th>Monthly Premium</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$103,000 or less</td>
+                                <td>$206,000 or less</td>
+                                <td>~$185</td>
+                            </tr>
+                            <tr>
+                                <td>$103,001 - $129,000</td>
+                                <td>$206,001 - $258,000</td>
+                                <td>~$259</td>
+                            </tr>
+                            <tr>
+                                <td>$129,001 - $161,000</td>
+                                <td>$258,001 - $322,000</td>
+                                <td>~$370</td>
+                            </tr>
+                            <tr>
+                                <td>$161,001 - $193,000</td>
+                                <td>$322,001 - $386,000</td>
+                                <td>~$480</td>
+                            </tr>
+                            <tr>
+                                <td>Over $193,000</td>
+                                <td>Over $386,000</td>
+                                <td>~$594</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="info-box">
+                        <h4>How You Pay the Part B Premium</h4>
+                        <p>
+                            If you're receiving Social Security benefits, your Part B premium is automatically deducted from your Social Security check. If you're not yet receiving Social Security, you'll receive a quarterly bill from Medicare.
+                        </p>
+                    </div>
+
+                    <h2 id="how-coverage-works">How Part B and TRICARE For Life Work Together</h2>
+
+                    <p>
+                        When you have both Medicare Part B and TRICARE For Life, here's what happens when you see a doctor:
+                    </p>
+
+                    <ol>
+                        <li>You visit a doctor for a $200 service</li>
+                        <li>Medicare Part B pays its share (typically 80% after deductible) = $160</li>
+                        <li>TRICARE For Life automatically pays the remaining 20% = $40</li>
+                        <li>Your out-of-pocket cost = $0</li>
+                    </ol>
+
+                    <p>
+                        This coordination happens automatically. You don't need to file claims or coordinate between programs. Your healthcare provider handles everything.
+                    </p>
+
+                    <p>
+                        The result: despite paying the Part B premium, your total healthcare costs are minimal. Most military retirees pay very little out-of-pocket for covered medical services. For a complete look at what TFL covers, see <a href="/blog/is-tricare-for-life-enough-coverage/">Is TRICARE For Life Enough Coverage?</a>
+                    </p>
+
+                    <h2 id="what-part-b-covers">What Medicare Part B Covers</h2>
+
+                    <p>
+                        Medicare Part B covers outpatient and preventive services. Here's a quick overview (see our <a href="/guides/medicare-parts-explained/">Medicare Parts Explained guide</a> for complete details):
+                    </p>
+
+                    <ul>
+                        <li><strong>Doctor visits</strong> - Office visits, specialist consultations</li>
+                        <li><strong>Outpatient care</strong> - Same-day surgery, ER visits, lab work</li>
+                        <li><strong>Preventive services</strong> - Annual wellness visits, vaccinations, screenings (many are free)</li>
+                        <li><strong>Mental health services</strong> - Therapy, psychiatric visits</li>
+                        <li><strong>Durable medical equipment</strong> - Wheelchairs, walkers, oxygen equipment</li>
+                        <li><strong>Some home health care</strong> - Part-time skilled nursing, therapy services</li>
+                    </ul>
+
+                    <h2 id="late-enrollment-penalties">Late Enrollment Penalties - Don't Make This Mistake</h2>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>Late Enrollment Penalties Are Permanent</h4>
+                        <p>
+                            If you don't enroll in Part B when you're first eligible and don't have other qualifying coverage, you'll pay a permanent penalty on your Part B premium. This penalty lasts for the rest of your life.
+                        </p>
+                    </div>
+
+                    <p>
+                        The Part B late enrollment penalty is calculated as follows:
+                    </p>
+
+                    <ul>
+                        <li><strong>10% additional premium</strong> for each full 12-month period you could have had Part B but didn't</li>
+                        <li><strong>This penalty never goes away</strong> - you'll pay it every month for life</li>
+                    </ul>
+
+                    <p>
+                        <strong>Example:</strong> If you wait 2 years to enroll in Part B when you could have enrolled at 65, your Part B premium will be 20% higher than the standard premium - forever. At 2025 rates, that's an extra $37/month, or $444/year, for the rest of your life.
+                    </p>
+
+                    <p>
+                        And remember: during those 2 years without Part B, you would have had <strong>no TRICARE coverage at all</strong>. For more common mistakes to avoid, see <a href="/blog/medicare-enrollment-mistakes/">Medicare Enrollment Mistakes to Avoid</a>.
+                    </p>
+
+                    <h2 id="when-to-enroll">When to Enroll in Medicare Part B</h2>
+
+                    <p>
+                        Your Initial Enrollment Period (IEP) for Medicare is a 7-month window around your 65th birthday:
+                    </p>
+
+                    <ul>
+                        <li><strong>Starts:</strong> 3 months before your 65th birthday month</li>
+                        <li><strong>Includes:</strong> Your birthday month</li>
+                        <li><strong>Ends:</strong> 3 months after your birthday month</li>
+                    </ul>
+
+                    <p>
+                        <strong>Best practice:</strong> Enroll during the 3 months <em>before</em> you turn 65. This ensures your coverage starts right on your birthday with no gap.
+                    </p>
+
+                    <h3>How to Enroll</h3>
+
+                    <ul>
+                        <li><strong>Online:</strong> <a href="https://www.ssa.gov" target="_blank" rel="noopener">SSA.gov</a></li>
+                        <li><strong>By phone:</strong> 1-800-772-1213 (Social Security)</li>
+                        <li><strong>In person:</strong> Visit your local Social Security office</li>
+                    </ul>
+
+                    <p>
+                        For a complete timeline and step-by-step instructions, see our <a href="/blog/tricare-to-medicare-transition-guide/">TRICARE to Medicare Transition Guide</a>.
+                    </p>
+
+                    <h2 id="part-d-not-needed">Do You Need Medicare Part D with TRICARE For Life?</h2>
+
+                    <p>
+                        <strong>No, you do not need Medicare Part D.</strong>
+                    </p>
+
+                    <p>
+                        TRICARE For Life includes comprehensive prescription drug coverage through the TRICARE pharmacy benefit. This coverage is considered "creditable" - meaning it's at least as good as Medicare Part D.
+                    </p>
+
+                    <ul>
+                        <li>You can skip Part D without penalty (TFL counts as creditable coverage)</li>
+                        <li>TRICARE pharmacy benefits are usually better than Part D plans</li>
+                        <li>You have access to military pharmacies, mail-order, and retail options</li>
+                    </ul>
+
+                    <p>
+                        Unlike Part B, there's no requirement to have Part D to maintain TRICARE For Life. For more on this topic, see <a href="/blog/is-tricare-for-life-enough-coverage/">Is TRICARE For Life Enough Coverage?</a>
+                    </p>
+
+                    <h2 id="faq">Frequently Asked Questions</h2>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Do military retirees have to pay for Medicare Part B?</p>
+                        <p class="faq-answer">
+                            Yes. Military retirees must pay the Medicare Part B premium (approximately $185/month in 2025) to qualify for TRICARE For Life. There is no military exemption or discount on this premium. However, TRICARE For Life coverage itself has no additional premium beyond Part B.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Can I keep TRICARE without Medicare Part B?</p>
+                        <p class="faq-answer">
+                            No. Once you turn 65 and become Medicare-eligible, you must enroll in both Medicare Part A and Part B to maintain TRICARE coverage. If you don't enroll in Part B, you'll lose TRICARE benefits entirely. This is a common misconception that catches many military retirees off guard.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Does TRICARE For Life cover the Part B deductible?</p>
+                        <p class="faq-answer">
+                            TRICARE For Life covers Medicare's 20% coinsurance after the deductible, but the Part B deductible ($257 in 2025) is typically your responsibility. However, some services may have different cost-sharing. Overall, TFL significantly reduces your out-of-pocket costs compared to Original Medicare alone.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">How much is Medicare Part B for military retirees?</p>
+                        <p class="faq-answer">
+                            Military retirees pay the same Medicare Part B premiums as everyone else. The standard premium is approximately $185/month in 2025, with higher premiums for those with income above $103,000 (individual) or $206,000 (married filing jointly). TRICARE For Life does not cover this premium.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">What happens if I don't sign up for Part B at 65?</p>
+                        <p class="faq-answer">
+                            If you're a military retiree and don't enroll in Part B when first eligible (at 65), you'll lose TRICARE coverage immediately. You'll also face late enrollment penalties when you eventually do enroll: your Part B premium will be 10% higher for each 12-month period you could have had Part B but didn't. These penalties last for life.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Need Personalized Help?</h4>
+                        <p>
+                            Confused about Medicare enrollment? Every military retiree's situation is unique. A <a href="/services/fee-only-medicare-advisor/">fee-only Medicare advisor</a> can help you navigate the process and ensure you don't miss critical deadlines.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="toc">
+                        <h3>In This Article</h3>
+                        <ul>
+                            <li><a href="#why-part-b-required">Why Part B Is Required</a></li>
+                            <li><a href="#part-b-costs">Part B Costs</a></li>
+                            <li><a href="#how-coverage-works">How Coverage Works Together</a></li>
+                            <li><a href="#what-part-b-covers">What Part B Covers</a></li>
+                            <li><a href="#late-enrollment-penalties">Late Enrollment Penalties</a></li>
+                            <li><a href="#when-to-enroll">When to Enroll</a></li>
+                            <li><a href="#part-d-not-needed">Part D Not Needed</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Questions About Medicare Enrollment?</h3>
+                        <p>
+                            Get personalized answers about Part B, TRICARE For Life, and enrollment deadlines from a fee-only advisor.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related TRICARE Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/blog/tricare-to-medicare-transition-guide" style="color: var(--primary); text-decoration: none;">
+                                    TRICARE to Medicare Transition Guide
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/blog/is-tricare-for-life-enough-coverage" style="color: var(--primary); text-decoration: none;">
+                                    Is TRICARE For Life Enough Coverage?
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medicare-enrollment-periods" style="color: var(--primary); text-decoration: none;">
+                                    Medicare Enrollment Periods
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Confused About Medicare Enrollment?</h2>
+                <p>
+                    We can help you navigate the process. Schedule a free consultation
+                    to get personalized answers about Part B, TRICARE For Life, and enrollment deadlines.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{FOOTER}}
+{{SCRIPTS}}
+</body>
+</html>
