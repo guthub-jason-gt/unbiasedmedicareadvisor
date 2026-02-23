@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="description" content="Should military retirees choose TRICARE For Life or Medicare Advantage? Compare coverage, costs, and networks to make the right choice.">
+    <meta name="keywords" content="tricare and medicare advantage, tricare for life vs medicare advantage, can you have tricare and medicare advantage, military retiree medicare advantage">
+    <title>TRICARE For Life vs Medicare Advantage: Which Is Better for Military Retirees? | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="TRICARE For Life vs Medicare Advantage: Which Is Better for Military Retirees?">
+    <meta property="og:description" content="Should military retirees choose TRICARE For Life or Medicare Advantage? Compare coverage, costs, and networks to make the right choice.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/blog/tricare-for-life-vs-medicare-advantage">
+
+    <!-- Article Metadata -->
+    <meta property="article:author" content="Unbiased Medicare Advisor">
+    <meta property="article:section" content="Medicare">
+    <meta property="article:tag" content="TRICARE">
+    <meta property="article:tag" content="Medicare Advantage">
+    <meta property="article:tag" content="Military">
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can you have TRICARE For Life and Medicare Advantage at the same time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, you can technically have both. If you enroll in a Medicare Advantage plan, TRICARE For Life becomes your secondary coverage. However, TFL doesn't eliminate MA's network restrictions or prior authorization requirements. Most military retirees are better off with Original Medicare + TFL."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does TRICARE For Life work as a supplement to Medicare Advantage?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "TFL can act as secondary coverage to Medicare Advantage, potentially reducing your out-of-pocket costs. However, it doesn't fix MA's main downsides: network restrictions still apply, and you'll still need prior authorizations for many services."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Medicare Advantage free for military retirees?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Many Medicare Advantage plans have $0 premiums (beyond the Part B premium you must pay anyway). However, 'free' doesn't mean better. You still pay the Part B premium, and you give up the freedom of Original Medicare + TRICARE For Life for network restrictions and prior authorizations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why would a military retiree choose Medicare Advantage?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Very few situations make MA better than Original Medicare + TFL for military retirees. Some may want bundled dental/vision benefits, though standalone plans are often better. Most military retirees who switch to MA do so because of marketing, not because it's actually better for them."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I switch back to Original Medicare if I don't like Medicare Advantage?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. You can switch back to Original Medicare during the Annual Enrollment Period (October 15 - December 7) or during the Medicare Advantage Open Enrollment Period (January 1 - March 31). TRICARE For Life will automatically coordinate with Original Medicare once you switch back."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 150px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        /* Article Header */
+        .article-header {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .article-header-content { max-width: 800px; }
+        .article-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .article-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+        .article-meta {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .article-meta span {
+            margin-right: var(--spacing-md);
+        }
+
+        /* Article Content */
+        .article-section { padding: var(--spacing-xxl) 0; }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+        .article-content { }
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        .article-content h2:first-child { margin-top: 0; }
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+        .article-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+        .article-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+        .article-content strong {
+            color: var(--black);
+        }
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: var(--accent);
+        }
+
+        /* Key Takeaway Box */
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .key-takeaway h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .key-takeaway p {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+        }
+        .key-takeaway ul {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+            padding-left: var(--spacing-md);
+        }
+        .key-takeaway li {
+            color: rgba(255,255,255,0.95);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border: 4px solid #ffc107;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .warning-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box p {
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: var(--off-white); }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: calc(var(--header-height) + var(--spacing-md) + 36px); }
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+        .sidebar-card .btn { width: 100%; }
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .sidebar-cta h3 { color: var(--white); }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .toc h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: var(--spacing-xs);
+        }
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta { padding: var(--spacing-xxl) 0; text-align: center; background: var(--primary); color: var(--white); }
+        .cta-content { max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); color: var(--white); }
+        .cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: var(--spacing-lg); }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        /* Footer */
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+            padding: var(--spacing-md) 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+        }
+        .faq-answer {
+            color: var(--medium-gray);
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .article-header h1 { font-size: 3rem; }
+        }
+        @media (max-width: 968px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .article-header { padding-top: calc(var(--header-height) + var(--spacing-xl)); }
+            .article-header h1 { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .comparison-table { font-size: 0.9rem; }
+            .comparison-table th, .comparison-table td { padding: var(--spacing-sm); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+{{HEADER}}
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+        <a href="/"><span>🏠</span></a>
+        <span class="arrow">→</span>
+        <a href="/blog">Blog</a>
+        <span class="arrow">→</span>
+        <span class="current">TRICARE For Life vs Medicare Advantage</span>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <span class="article-tag">TRICARE</span>
+                <h1>TRICARE For Life vs Medicare Advantage: Which Is Better for Military Retirees?</h1>
+                <div class="article-meta">
+                    <span>8 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-section">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+                    <p>
+                        <strong>If you're a military retiree with TRICARE For Life, you've probably seen ads for Medicare Advantage plans promising extra benefits and $0 premiums.</strong> It's natural to wonder: should you stick with Original Medicare + TRICARE For Life, or switch to Medicare Advantage?
+                    </p>
+
+                    <p>
+                        The short answer for most military retirees: stick with Original Medicare + TRICARE For Life. It's simpler, provides better coverage, and doesn't restrict your choice of doctors. Here's why.
+                    </p>
+
+                    <div class="key-takeaway">
+                        <h4>&#9733; Key Takeaway</h4>
+                        <ul>
+                            <li>Most military retirees should stick with Original Medicare + TRICARE For Life</li>
+                            <li>Medicare Advantage adds network restrictions and complications that TFL can't eliminate</li>
+                            <li>TFL already provides near-complete coverage - MA rarely adds meaningful value</li>
+                        </ul>
+                    </div>
+
+                    <h2 id="quick-comparison">Quick Comparison: Original Medicare + TFL vs. Medicare Advantage + TFL</h2>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Factor</th>
+                                <th>Original Medicare + TFL</th>
+                                <th>Medicare Advantage + TFL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Monthly cost</strong></td>
+                                <td>Part B premium (~$185)</td>
+                                <td>Part B + possibly $0 MA premium</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Doctor choice</strong></td>
+                                <td>Any Medicare provider</td>
+                                <td>Usually network-restricted</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Referrals needed</strong></td>
+                                <td>No</td>
+                                <td>Often yes (HMO plans)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prior authorization</strong></td>
+                                <td>Rarely required</td>
+                                <td>Commonly required</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Out-of-pocket costs</strong></td>
+                                <td>Near zero (TFL covers)</td>
+                                <td>Varies, potential copays</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Simplicity</strong></td>
+                                <td>Very simple</td>
+                                <td>More complex</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Best for</strong></td>
+                                <td>Most military retirees</td>
+                                <td>Very rare situations</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 id="tfl-with-original">How TRICARE For Life Works with Original Medicare</h2>
+
+                    <p>
+                        TRICARE For Life was specifically designed to work with Original Medicare. It's a seamless partnership:
+                    </p>
+
+                    <ol>
+                        <li><strong>Medicare pays first</strong> - Medicare Part A or Part B covers its share of the bill</li>
+                        <li><strong>TRICARE For Life pays second</strong> - TFL picks up most or all of the remaining costs</li>
+                        <li><strong>You pay little to nothing</strong> - For most covered services, your out-of-pocket cost is $0</li>
+                    </ol>
+
+                    <p>
+                        This is how TFL was meant to work. The system is automatic - you don't file claims or coordinate between programs. Just show your Medicare and TRICARE cards, and the coverage handles itself.
+                    </p>
+
+                    <h3>Key Benefits of Original Medicare + TFL</h3>
+
+                    <ul>
+                        <li><strong>No network restrictions</strong> - See any doctor or hospital that accepts Medicare (virtually all providers)</li>
+                        <li><strong>No referrals needed</strong> - Go directly to specialists when you need them</li>
+                        <li><strong>No prior authorizations for most care</strong> - Get treatment when you need it</li>
+                        <li><strong>Works anywhere in the US</strong> - Perfect for travel or moving</li>
+                        <li><strong>Simple claims processing</strong> - Medicare and TFL coordinate automatically</li>
+                    </ul>
+
+                    <p>
+                        For a complete overview of TFL coverage, see our guide: <a href="/blog/is-tricare-for-life-enough-coverage/">Is TRICARE For Life Enough Coverage?</a>
+                    </p>
+
+                    <h2 id="tfl-with-ma">How TRICARE For Life Works with Medicare Advantage</h2>
+
+                    <p>
+                        Yes, you <em>can</em> have both TRICARE For Life and a Medicare Advantage plan. But understanding how they work together reveals why it's usually not a good idea.
+                    </p>
+
+                    <p>
+                        When you enroll in Medicare Advantage:
+                    </p>
+
+                    <ol>
+                        <li><strong>The MA plan pays first</strong> - Your Medicare Advantage plan becomes your primary coverage</li>
+                        <li><strong>TFL pays second</strong> - TFL becomes secondary, potentially covering remaining costs</li>
+                        <li><strong>But MA restrictions still apply</strong> - Network limits, prior authorizations, and referral requirements don't go away</li>
+                    </ol>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>TFL Doesn't "Fix" Medicare Advantage Restrictions</h4>
+                        <p>
+                            Even though TFL is your secondary coverage, it can't override your Medicare Advantage plan's network restrictions. If your MA plan doesn't cover an out-of-network doctor, you'll still face those limitations - TFL can't change that.
+                        </p>
+                    </div>
+
+                    <h3>The Complications of MA + TFL</h3>
+
+                    <ul>
+                        <li><strong>Network restrictions still apply</strong> - You may be limited to certain doctors and hospitals</li>
+                        <li><strong>Prior authorizations still required</strong> - Your MA plan can still require approval before treatment</li>
+                        <li><strong>More complex claims</strong> - Three-way coordination between providers, MA plan, and TRICARE</li>
+                        <li><strong>Potential surprise bills</strong> - Out-of-network care may leave gaps TFL can't fully cover</li>
+                        <li><strong>Annual plan changes</strong> - MA plans can change networks and benefits yearly</li>
+                    </ul>
+
+                    <h2 id="why-ma-doesnt-make-sense">Why Medicare Advantage Doesn't Make Sense for Most Military Retirees</h2>
+
+                    <p>
+                        Here's the fundamental issue: <strong>you already have better coverage than most Medicare Advantage plans offer.</strong>
+                    </p>
+
+                    <p>
+                        When civilians compare their options, they're often choosing between:
+                    </p>
+
+                    <ul>
+                        <li>Original Medicare alone (with 20% coinsurance they must pay)</li>
+                        <li>Original Medicare + Medigap (comprehensive, but expensive - $150-300+/month)</li>
+                        <li>Medicare Advantage ($0 premium, but with network restrictions)</li>
+                    </ul>
+
+                    <p>
+                        For civilians without other coverage, Medicare Advantage can be attractive because it limits out-of-pocket costs. But as a military retiree, you already have TFL doing that - for free.
+                    </p>
+
+                    <h3>The "Extra Benefits" Argument</h3>
+
+                    <p>
+                        Medicare Advantage plans often advertise extra benefits like dental, vision, hearing, and gym memberships. But consider:
+                    </p>
+
+                    <ul>
+                        <li><strong>Dental benefits are often basic</strong> - Usually just cleanings and basic work, with caps around $1,000-$2,000/year</li>
+                        <li><strong>Vision benefits are limited</strong> - Often just an annual exam and $100-$200 toward glasses</li>
+                        <li><strong>Standalone plans may be better</strong> - You can buy dental/vision plans separately without giving up Original Medicare + TFL</li>
+                        <li><strong>FEDVIP is available</strong> - Military retirees have access to Federal dental and vision plans</li>
+                    </ul>
+
+                    <p>
+                        Trading your freedom to see any doctor, anywhere, for a basic dental cleaning doesn't make sense when you can buy dental coverage separately.
+                    </p>
+
+                    <div class="info-box">
+                        <h4>More on Medicare Advantage Trade-offs</h4>
+                        <p>
+                            For a detailed look at the pros and cons of Medicare Advantage plans, see our guide: <a href="/guides/medicare-advantage-pros-cons/">Medicare Advantage Pros and Cons</a>.
+                        </p>
+                    </div>
+
+                    <h2 id="when-ma-might-make-sense">When Medicare Advantage Might Make Sense</h2>
+
+                    <p>
+                        To be fair, there are rare situations where a military retiree might reasonably consider Medicare Advantage:
+                    </p>
+
+                    <ul>
+                        <li><strong>You want everything bundled</strong> - Some people prefer having dental, vision, and medical in one plan, even if it's not the best value</li>
+                        <li><strong>You never travel</strong> - If you're certain you'll stay in one area with excellent MA options</li>
+                        <li><strong>Specific plan integration</strong> - Some areas have MA plans that coordinate well with military facilities</li>
+                        <li><strong>Very high prescription costs</strong> - In rare cases, an MA plan's drug coverage might be better than TRICARE pharmacy benefits (but this is uncommon)</li>
+                    </ul>
+
+                    <p>
+                        Even in these situations, carefully compare what you'd be giving up. The freedom to see any doctor, anywhere, without prior authorization, is valuable.
+                    </p>
+
+                    <h2 id="military-ma-plans">What About "TRICARE Supplement" Medicare Advantage Plans?</h2>
+
+                    <p>
+                        Some Medicare Advantage plans specifically market themselves to military retirees, sometimes calling themselves "TRICARE supplements" or using similar language. Be cautious:
+                    </p>
+
+                    <ul>
+                        <li><strong>These are still Medicare Advantage plans</strong> - They have the same network restrictions and prior authorization requirements as any MA plan</li>
+                        <li><strong>They don't replace TFL</strong> - TRICARE For Life remains your secondary coverage</li>
+                        <li><strong>Marketing can be misleading</strong> - The plan may not be better than what you already have</li>
+                    </ul>
+
+                    <p>
+                        Before considering any of these plans, compare their benefits and restrictions to what you already have with Original Medicare + TFL. In most cases, you'll find your current coverage is better.
+                    </p>
+
+                    <h2 id="bottom-line">The Bottom Line</h2>
+
+                    <p>
+                        For the vast majority of military retirees, <strong>Original Medicare + TRICARE For Life is the best choice.</strong>
+                    </p>
+
+                    <ul>
+                        <li>You already have comprehensive coverage with minimal out-of-pocket costs</li>
+                        <li>You have complete freedom to see any Medicare-accepting doctor</li>
+                        <li>You don't need prior authorizations or referrals</li>
+                        <li>Your coverage works anywhere in the United States</li>
+                    </ul>
+
+                    <p>
+                        Don't let flashy Medicare Advantage marketing convince you to give up these benefits. If it ain't broke, don't fix it.
+                    </p>
+
+                    <p>
+                        If you're just approaching 65 and need to understand how to transition to TRICARE For Life, see our <a href="/blog/tricare-to-medicare-transition-guide/">TRICARE to Medicare Transition Guide</a>.
+                    </p>
+
+                    <h2 id="faq">Frequently Asked Questions</h2>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Can you have TRICARE For Life and Medicare Advantage at the same time?</p>
+                        <p class="faq-answer">
+                            Yes, you can technically have both. If you enroll in a Medicare Advantage plan, TRICARE For Life becomes your secondary coverage. However, TFL doesn't eliminate MA's network restrictions or prior authorization requirements. Most military retirees are better off with Original Medicare + TFL.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Does TRICARE For Life work as a supplement to Medicare Advantage?</p>
+                        <p class="faq-answer">
+                            TFL can act as secondary coverage to Medicare Advantage, potentially reducing your out-of-pocket costs. However, it doesn't fix MA's main downsides: network restrictions still apply, and you'll still need prior authorizations for many services.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Is Medicare Advantage free for military retirees?</p>
+                        <p class="faq-answer">
+                            Many Medicare Advantage plans have $0 premiums (beyond the Part B premium you must pay anyway). However, "free" doesn't mean better. You still pay the Part B premium, and you give up the freedom of Original Medicare + TRICARE For Life for network restrictions and prior authorizations.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Why would a military retiree choose Medicare Advantage?</p>
+                        <p class="faq-answer">
+                            Very few situations make MA better than Original Medicare + TFL for military retirees. Some may want bundled dental/vision benefits, though standalone plans are often better. Most military retirees who switch to MA do so because of marketing, not because it's actually better for them.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Can I switch back to Original Medicare if I don't like Medicare Advantage?</p>
+                        <p class="faq-answer">
+                            Yes. You can switch back to Original Medicare during the Annual Enrollment Period (October 15 - December 7) or during the Medicare Advantage Open Enrollment Period (January 1 - March 31). TRICARE For Life will automatically coordinate with Original Medicare once you switch back.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Need Personalized Help?</h4>
+                        <p>
+                            Every military retiree's situation is unique. If you're unsure whether Original Medicare + TFL or Medicare Advantage is right for you, a <a href="/services/fee-only-medicare-advisor/">fee-only Medicare advisor</a> can help you compare your specific options without any sales pressure.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="toc">
+                        <h3>In This Article</h3>
+                        <ul>
+                            <li><a href="#quick-comparison">Quick Comparison</a></li>
+                            <li><a href="#tfl-with-original">TFL with Original Medicare</a></li>
+                            <li><a href="#tfl-with-ma">TFL with Medicare Advantage</a></li>
+                            <li><a href="#why-ma-doesnt-make-sense">Why MA Usually Doesn't Make Sense</a></li>
+                            <li><a href="#when-ma-might-make-sense">When MA Might Work</a></li>
+                            <li><a href="#military-ma-plans">Military MA Plans</a></li>
+                            <li><a href="#bottom-line">Bottom Line</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Questions About Your Medicare Options?</h3>
+                        <p>
+                            Get personalized answers about TRICARE For Life, Medicare Advantage, and your coverage options from a fee-only advisor.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related TRICARE Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/blog/tricare-to-medicare-transition-guide" style="color: var(--primary); text-decoration: none;">
+                                    TRICARE to Medicare Transition Guide
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/blog/is-tricare-for-life-enough-coverage" style="color: var(--primary); text-decoration: none;">
+                                    Is TRICARE For Life Enough Coverage?
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medigap-vs-medicare-advantage" style="color: var(--primary); text-decoration: none;">
+                                    Medigap vs Medicare Advantage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Help Comparing Your Medicare Options?</h2>
+                <p>
+                    Every military retiree's situation is unique. Schedule a free consultation
+                    to get personalized answers about TRICARE For Life vs. Medicare Advantage for your specific needs.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{FOOTER}}
+{{SCRIPTS}}
+</body>
+</html>
