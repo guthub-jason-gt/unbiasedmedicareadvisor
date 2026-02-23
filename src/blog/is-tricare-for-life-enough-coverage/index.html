@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="description" content="Is TRICARE For Life enough coverage for military retirees? Learn what TFL covers, the gaps to watch for, and whether you need Medigap or Medicare Advantage.">
+    <meta name="keywords" content="is tricare for life enough coverage, tricare for life coverage gaps, do i need medigap with tricare for life, tricare for life benefits, military retiree medicare">
+    <title>Is TRICARE For Life Enough Coverage? What Military Retirees Need to Know | Unbiased Medicare Advisor</title>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Is TRICARE For Life Enough Coverage? What Military Retirees Need to Know">
+    <meta property="og:description" content="Is TRICARE For Life enough coverage for military retirees? Learn what TFL covers, the gaps to watch for, and whether you need Medigap or Medicare Advantage.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/blog/is-tricare-for-life-enough-coverage">
+
+    <!-- Article Metadata -->
+    <meta property="article:author" content="Unbiased Medicare Advisor">
+    <meta property="article:section" content="Medicare">
+    <meta property="article:tag" content="TRICARE">
+    <meta property="article:tag" content="Military">
+    <meta property="article:tag" content="Medicare">
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is TRICARE For Life free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "TRICARE For Life itself has no premium, but you must pay the Medicare Part B premium (approximately $185/month in 2025) to qualify for TFL coverage. Once you're enrolled in Medicare Parts A and B, TFL activates automatically at no additional cost."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does TRICARE For Life cover prescription drugs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. TRICARE For Life includes pharmacy benefits through the TRICARE pharmacy program. You can fill prescriptions at military pharmacies (free), TRICARE Pharmacy Home Delivery, or retail pharmacies with copays. You do not need Medicare Part D."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use any doctor with TRICARE For Life?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. TRICARE For Life has no network restrictions. You can see any doctor or hospital that accepts Medicare. This includes virtually all healthcare providers in the United States."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need Medicare Part D with TRICARE For Life?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. The TRICARE pharmacy benefit is considered 'creditable coverage' - meaning it's as good as or better than Medicare Part D. You can skip Part D without penalty because TRICARE pharmacy coverage counts as equivalent coverage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between TRICARE For Life and Medigap?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "TRICARE For Life functions similarly to a Medigap policy - both cover Medicare's gaps like the 20% coinsurance. However, TFL is free (no monthly premium beyond Part B), includes prescription coverage, and provides worldwide coverage. Medigap plans cost $150-$300+/month and don't include prescriptions or comprehensive foreign travel coverage."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 150px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after {
+            content: '';
+            border: solid var(--dark-gray);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-top: -3px;
+            transition: transform 0.2s;
+        }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--spacing-md);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+        .mobile-nav-cta .btn { display: block; width: 100%; }
+
+        /* Article Header */
+        .article-header {
+            padding-top: calc(var(--header-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .article-header-content { max-width: 800px; }
+        .article-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .article-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+        .article-meta {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .article-meta span {
+            margin-right: var(--spacing-md);
+        }
+
+        /* Article Content */
+        .article-section { padding: var(--spacing-xxl) 0; }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+        .article-content { }
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        .article-content h2:first-child { margin-top: 0; }
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+        .article-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--medium-gray);
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+        .article-content li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--medium-gray);
+        }
+        .article-content strong {
+            color: var(--black);
+        }
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: var(--accent);
+        }
+
+        /* Key Takeaway Box */
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .key-takeaway h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .key-takeaway p {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+        }
+        .key-takeaway ul {
+            color: rgba(255,255,255,0.95);
+            margin: 0;
+            padding-left: var(--spacing-md);
+        }
+        .key-takeaway li {
+            color: rgba(255,255,255,0.95);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border: 4px solid #ffc107;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .warning-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: var(--spacing-sm);
+        }
+        .warning-box p {
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: var(--off-white); }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: calc(var(--header-height) + var(--spacing-md) + 36px); }
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+        .sidebar-card .btn { width: 100%; }
+        .sidebar-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        .sidebar-cta h3 { color: var(--white); }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .toc h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--black);
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: var(--spacing-xs);
+        }
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta { padding: var(--spacing-xxl) 0; text-align: center; background: var(--primary); color: var(--white); }
+        .cta-content { max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); color: var(--white); }
+        .cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: var(--spacing-lg); }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+
+        /* Footer */
+        .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { display: flex; align-items: center; color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+        .footer-logo .logo-icon { background: var(--primary-light); }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+        .footer-nav h4 { font-size: 1rem; margin-bottom: var(--spacing-md); color: var(--white); }
+        .footer-nav ul { list-style: none; }
+        .footer-nav li { margin-bottom: var(--spacing-xs); }
+        .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
+        .footer-phone:hover { color: var(--accent); }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+            padding: var(--spacing-md) 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+        }
+        .faq-answer {
+            color: var(--medium-gray);
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .article-header h1 { font-size: 3rem; }
+        }
+        @media (max-width: 968px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .article-header { padding-top: calc(var(--header-height) + var(--spacing-xl)); }
+            .article-header h1 { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .comparison-table { font-size: 0.9rem; }
+            .comparison-table th, .comparison-table td { padding: var(--spacing-sm); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+{{HEADER}}
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+        <a href="/"><span>🏠</span></a>
+        <span class="arrow">→</span>
+        <a href="/blog">Blog</a>
+        <span class="arrow">→</span>
+        <span class="current">Is TRICARE For Life Enough Coverage?</span>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <span class="article-tag">TRICARE</span>
+                <h1>Is TRICARE For Life Enough Coverage? What Military Retirees Need to Know</h1>
+                <div class="article-meta">
+                    <span>9 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-section">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+                    <p>
+                        <strong>If you're a military retiree with TRICARE For Life, you've probably wondered: is this coverage actually enough, or should I be looking at Medigap or Medicare Advantage?</strong> It's a fair question, especially when you see civilians buying additional Medicare supplements.
+                    </p>
+
+                    <p>
+                        The short answer is that for most military retirees, TRICARE For Life combined with Medicare provides excellent, comprehensive coverage. But there are some gaps you should know about, and some situations where additional coverage makes sense.
+                    </p>
+
+                    <div class="key-takeaway">
+                        <h4>&#9733; Key Takeaway</h4>
+                        <ul>
+                            <li>For most military retirees, TFL + Medicare is excellent coverage</li>
+                            <li>TFL acts as a "Medigap-like" supplement, covering what Medicare doesn't</li>
+                            <li>Main gaps to know: Part B premium, dental/vision, long-term care, and some international travel situations</li>
+                        </ul>
+                    </div>
+
+                    <h2 id="how-tfl-works">How TRICARE For Life Coverage Works</h2>
+
+                    <p>
+                        TRICARE For Life is a Medicare wraparound coverage that works as a seamless supplement to Original Medicare. Understanding how the two programs work together helps explain why TFL coverage is so comprehensive.
+                    </p>
+
+                    <p>
+                        Here's the basic flow when you receive medical care:
+                    </p>
+
+                    <ol>
+                        <li><strong>Medicare pays first</strong> - Medicare Part A or Part B covers its share (typically 80% after your deductible)</li>
+                        <li><strong>TRICARE For Life pays second</strong> - TFL covers the remaining 20% coinsurance, plus deductibles and copays</li>
+                        <li><strong>You pay little to nothing</strong> - In most cases, your out-of-pocket cost for covered services is $0</li>
+                    </ol>
+
+                    <p>
+                        This coordination is automatic. You don't need to file claims or coordinate between programs. Your healthcare providers bill Medicare first, and TFL picks up the rest.
+                    </p>
+
+                    <div class="info-box">
+                        <h4>Network Freedom</h4>
+                        <p>
+                            TRICARE For Life has no network restrictions. You can see any doctor, specialist, or hospital that accepts Medicare, which includes virtually all healthcare providers in the United States.
+                        </p>
+                    </div>
+
+                    <h2 id="what-tfl-covers">What TRICARE For Life Covers</h2>
+
+                    <p>
+                        TRICARE For Life provides comprehensive coverage that rivals or exceeds most civilian Medicare supplement plans. Here's what's covered:
+                    </p>
+
+                    <h3>Medical Services</h3>
+                    <ul>
+                        <li><strong>Doctor visits</strong> - Primary care and specialist appointments</li>
+                        <li><strong>Hospital stays</strong> - Inpatient care, including semi-private rooms</li>
+                        <li><strong>Outpatient surgery</strong> - Same-day surgical procedures</li>
+                        <li><strong>Emergency care</strong> - ER visits and urgent care</li>
+                        <li><strong>Lab work and imaging</strong> - Blood tests, X-rays, MRIs, CT scans</li>
+                        <li><strong>Preventive care</strong> - Annual wellness visits, screenings, vaccinations</li>
+                    </ul>
+
+                    <h3>Mental Health Services</h3>
+                    <ul>
+                        <li>Outpatient therapy and counseling</li>
+                        <li>Psychiatric visits</li>
+                        <li>Inpatient mental health care</li>
+                        <li>Substance abuse treatment</li>
+                    </ul>
+
+                    <h3>Prescription Drugs</h3>
+                    <p>
+                        TRICARE For Life includes pharmacy benefits through the TRICARE pharmacy program. You have three options:
+                    </p>
+                    <ul>
+                        <li><strong>Military pharmacies</strong> - Free prescriptions</li>
+                        <li><strong>TRICARE Pharmacy Home Delivery</strong> - Low copays for 90-day supplies</li>
+                        <li><strong>Retail pharmacies</strong> - Higher copays, but convenient</li>
+                    </ul>
+
+                    <p>
+                        Because TRICARE pharmacy coverage is considered "creditable" (as good as Medicare Part D), you don't need to enroll in a separate Part D plan.
+                    </p>
+
+                    <h3>Worldwide Coverage</h3>
+                    <p>
+                        Unlike Medicare and most Medigap plans, TRICARE For Life provides coverage outside the United States. This is a significant advantage for retirees who travel internationally or live abroad part of the year.
+                    </p>
+
+                    <div class="info-box">
+                        <h4>Why TFL Is Often Called "Better Than Medigap"</h4>
+                        <p>
+                            TRICARE For Life provides the same gap coverage as a Medigap plan (covering Medicare's 20% coinsurance), plus prescription drug coverage, plus worldwide coverage - all for $0 additional premium beyond your Part B cost. A comparable Medigap plan would cost $150-$300+ per month and still wouldn't include prescriptions.
+                        </p>
+                    </div>
+
+                    <h2 id="coverage-gaps">The Gaps in TRICARE For Life Coverage</h2>
+
+                    <p>
+                        While TRICARE For Life is excellent coverage, no insurance plan covers everything. Here are the gaps you should know about:
+                    </p>
+
+                    <h3>Medicare Part B Premium</h3>
+                    <p>
+                        To qualify for TRICARE For Life, you <strong>must</strong> pay the Medicare Part B premium. In 2025, the standard premium is approximately $185 per month. There's no way around this cost - it's required to maintain your TFL benefits.
+                    </p>
+                    <p>
+                        If your income is above certain thresholds, you may pay more due to <a href="/guides/medicare-parts-explained/">Income-Related Monthly Adjustment Amounts (IRMAA)</a>.
+                    </p>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>Part B Is Required</h4>
+                        <p>
+                            If you don't enroll in Medicare Part B when first eligible, you'll lose TRICARE coverage entirely. The Part B premium is a non-negotiable cost of having TFL.
+                        </p>
+                    </div>
+
+                    <h3>Dental Care</h3>
+                    <p>
+                        TRICARE For Life does not cover routine dental care. This includes:
+                    </p>
+                    <ul>
+                        <li>Cleanings and checkups</li>
+                        <li>Fillings, crowns, and root canals</li>
+                        <li>Dentures and dental implants</li>
+                        <li>Oral surgery (in most cases)</li>
+                    </ul>
+                    <p>
+                        If you need dental coverage, you'll need to purchase a separate dental plan. The Federal Employees Dental and Vision Insurance Program (FEDVIP) is available to military retirees and often provides good coverage at reasonable rates.
+                    </p>
+
+                    <h3>Vision Care</h3>
+                    <p>
+                        Routine vision care is generally not covered by TFL:
+                    </p>
+                    <ul>
+                        <li>Annual eye exams for glasses/contacts - <strong>Not covered</strong></li>
+                        <li>Eyeglasses and contact lenses - <strong>Not covered</strong></li>
+                        <li>Medical eye conditions (cataracts, glaucoma, macular degeneration) - <strong>Covered</strong></li>
+                    </ul>
+                    <p>
+                        FEDVIP also offers vision plans that can fill this gap.
+                    </p>
+
+                    <h3>Hearing Aids</h3>
+                    <p>
+                        Medicare and TRICARE For Life provide limited coverage for hearing aids. While hearing tests related to medical conditions are covered, the hearing aids themselves typically are not. This can be a significant out-of-pocket expense, as quality hearing aids cost $2,000-$6,000 per pair.
+                    </p>
+
+                    <h3>Long-Term Care</h3>
+                    <p>
+                        Neither Medicare nor TRICARE For Life covers long-term care, including:
+                    </p>
+                    <ul>
+                        <li>Nursing home stays (beyond short-term skilled nursing)</li>
+                        <li>Assisted living facilities</li>
+                        <li>In-home custodial care (help with bathing, dressing, eating)</li>
+                        <li>Memory care facilities</li>
+                    </ul>
+                    <p>
+                        Long-term care is one of the largest potential gaps in any Medicare coverage. If long-term care is a concern, you may want to explore long-term care insurance separately.
+                    </p>
+
+                    <h3>Some International Travel Situations</h3>
+                    <p>
+                        While TFL does provide overseas coverage (a major advantage), there are some limitations:
+                    </p>
+                    <ul>
+                        <li>You may need to pay upfront and file for reimbursement</li>
+                        <li>Coverage may be limited in certain countries</li>
+                        <li>Medical evacuation may not be fully covered</li>
+                    </ul>
+                    <p>
+                        If you spend significant time abroad, consider supplemental travel medical insurance for additional peace of mind.
+                    </p>
+
+                    <h2 id="medigap-needed">Do You Need Medigap with TRICARE For Life?</h2>
+
+                    <p>
+                        <strong>Short answer: No.</strong>
+                    </p>
+
+                    <p>
+                        TRICARE For Life already provides Medigap-level coverage. It pays Medicare's 20% coinsurance, covers deductibles, and provides additional benefits that Medigap doesn't offer (like prescription coverage and overseas care).
+                    </p>
+
+                    <p>
+                        Purchasing a Medigap policy on top of TFL would be:
+                    </p>
+                    <ul>
+                        <li><strong>Redundant</strong> - You'd be paying for coverage you already have</li>
+                        <li><strong>Wasteful</strong> - Medigap premiums of $150-$300+/month with no additional benefit</li>
+                        <li><strong>Potentially confusing</strong> - Multiple payers can complicate claims processing</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <span class="warning-icon">&#9888;</span>
+                        <h4>Exception: If You Lose TRICARE Eligibility</h4>
+                        <p>
+                            If you ever lose TRICARE eligibility (rare, but possible in certain circumstances), having a Medigap policy would become important. However, you'd likely need to go through medical underwriting at that point.
+                        </p>
+                    </div>
+
+                    <h2 id="medicare-advantage">Do You Need Medicare Advantage with TRICARE For Life?</h2>
+
+                    <p>
+                        <strong>Short answer: Generally, no.</strong>
+                    </p>
+
+                    <p>
+                        Original Medicare plus TRICARE For Life is typically simpler and provides better coverage than switching to a Medicare Advantage plan. Here's why:
+                    </p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Factor</th>
+                                <th>Original Medicare + TFL</th>
+                                <th>Medicare Advantage + TFL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Network restrictions</td>
+                                <td>None - any Medicare provider</td>
+                                <td>May have network limits</td>
+                            </tr>
+                            <tr>
+                                <td>Prior authorization</td>
+                                <td>Rarely required</td>
+                                <td>Often required</td>
+                            </tr>
+                            <tr>
+                                <td>Referrals for specialists</td>
+                                <td>Not required</td>
+                                <td>May be required (HMO plans)</td>
+                            </tr>
+                            <tr>
+                                <td>Out-of-pocket costs</td>
+                                <td>Typically $0 (TFL covers)</td>
+                                <td>May still have copays</td>
+                            </tr>
+                            <tr>
+                                <td>Coverage complexity</td>
+                                <td>Simple - Medicare pays, TFL covers rest</td>
+                                <td>More complex coordination</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        Medicare Advantage can complicate how TFL coordinates with your coverage, and the restrictions that come with many MA plans (networks, prior authorizations) don't offer any benefit when you already have TFL.
+                    </p>
+
+                    <p>
+                        For a deeper comparison, see our guide on <a href="/blog/tricare-for-life-vs-medicare-advantage/">TRICARE For Life vs. Medicare Advantage</a>.
+                    </p>
+
+                    <h2 id="additional-coverage">When You Might Want Additional Coverage</h2>
+
+                    <p>
+                        While TFL is comprehensive for medical care, there are situations where additional coverage makes sense:
+                    </p>
+
+                    <h3>Dental Plans</h3>
+                    <p>
+                        If you need regular dental care, consider:
+                    </p>
+                    <ul>
+                        <li><strong>FEDVIP dental plans</strong> - Available during the Federal Benefits Open Season (November-December)</li>
+                        <li><strong>Private dental insurance</strong> - Many options available</li>
+                        <li><strong>Dental discount plans</strong> - Lower cost, but not insurance</li>
+                    </ul>
+
+                    <h3>Vision Plans</h3>
+                    <p>
+                        For routine eye exams and glasses:
+                    </p>
+                    <ul>
+                        <li><strong>FEDVIP vision plans</strong> - Affordable coverage for exams, glasses, contacts</li>
+                        <li><strong>Standalone vision insurance</strong> - Various options available</li>
+                    </ul>
+
+                    <h3>Long-Term Care Insurance</h3>
+                    <p>
+                        If you're concerned about future nursing home or assisted living costs:
+                    </p>
+                    <ul>
+                        <li>Consider purchasing long-term care insurance while you're healthy</li>
+                        <li>Premiums are lower when you're younger and healthier</li>
+                        <li>The Federal Long Term Care Insurance Program (FLTCIP) is available to some military retirees</li>
+                    </ul>
+
+                    <h3>Travel Insurance</h3>
+                    <p>
+                        If you travel internationally frequently:
+                    </p>
+                    <ul>
+                        <li>Supplemental travel medical insurance provides additional coverage abroad</li>
+                        <li>Medical evacuation coverage can be valuable for remote destinations</li>
+                        <li>Annual travel insurance policies are cost-effective for frequent travelers</li>
+                    </ul>
+
+                    <h2 id="faq">Frequently Asked Questions</h2>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Is TRICARE For Life free?</p>
+                        <p class="faq-answer">
+                            TRICARE For Life itself has no premium, but you must pay the Medicare Part B premium (approximately $185/month in 2025) to qualify for TFL coverage. Once you're enrolled in Medicare Parts A and B, TFL activates automatically at no additional cost.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Does TRICARE For Life cover prescription drugs?</p>
+                        <p class="faq-answer">
+                            Yes. TRICARE For Life includes pharmacy benefits through the TRICARE pharmacy program. You can fill prescriptions at military pharmacies (free), TRICARE Pharmacy Home Delivery, or retail pharmacies with copays. You do not need Medicare Part D.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Can I use any doctor with TRICARE For Life?</p>
+                        <p class="faq-answer">
+                            Yes. TRICARE For Life has no network restrictions. You can see any doctor or hospital that accepts Medicare. This includes virtually all healthcare providers in the United States.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">Do I need Medicare Part D with TRICARE For Life?</p>
+                        <p class="faq-answer">
+                            No. The TRICARE pharmacy benefit is considered "creditable coverage" - meaning it's as good as or better than Medicare Part D. You can skip Part D without penalty because TRICARE pharmacy coverage counts as equivalent coverage.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <p class="faq-question">What's the difference between TRICARE For Life and Medigap?</p>
+                        <p class="faq-answer">
+                            TRICARE For Life functions similarly to a Medigap policy - both cover Medicare's gaps like the 20% coinsurance. However, TFL is free (no monthly premium beyond Part B), includes prescription coverage, and provides worldwide coverage. Medigap plans cost $150-$300+/month and don't include prescriptions or comprehensive foreign travel coverage.
+                        </p>
+                    </div>
+
+                    <h2 id="bottom-line">The Bottom Line</h2>
+
+                    <p>
+                        For the vast majority of military retirees, TRICARE For Life combined with Medicare provides excellent, comprehensive coverage. You'll have:
+                    </p>
+
+                    <ul>
+                        <li>Little to no out-of-pocket costs for most medical care</li>
+                        <li>Freedom to see any Medicare-accepting provider</li>
+                        <li>Prescription drug coverage without needing Part D</li>
+                        <li>International coverage that most civilians don't have</li>
+                    </ul>
+
+                    <p>
+                        The main areas where you might want additional coverage are dental, vision, and long-term care - none of which are covered well by any Medicare plan, including civilian options.
+                    </p>
+
+                    <p>
+                        If you're transitioning from active TRICARE to TRICARE For Life, read our complete <a href="/blog/tricare-to-medicare-transition-guide/">TRICARE to Medicare Transition Guide</a> for step-by-step enrollment instructions.
+                    </p>
+
+                    <div class="info-box">
+                        <h4>Need Personalized Help?</h4>
+                        <p>
+                            Every military retiree's situation is unique. If you have questions about your specific circumstances - coordinating with a spouse's coverage, understanding income-related costs, or evaluating dental and vision options - a <a href="/services/fee-only-medicare-advisor/">fee-only Medicare advisor</a> can help you make the right decisions.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="toc">
+                        <h3>In This Article</h3>
+                        <ul>
+                            <li><a href="#how-tfl-works">How TFL Coverage Works</a></li>
+                            <li><a href="#what-tfl-covers">What TFL Covers</a></li>
+                            <li><a href="#coverage-gaps">Coverage Gaps</a></li>
+                            <li><a href="#medigap-needed">Do You Need Medigap?</a></li>
+                            <li><a href="#medicare-advantage">What About MA?</a></li>
+                            <li><a href="#additional-coverage">Additional Coverage</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#bottom-line">Bottom Line</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card sidebar-cta">
+                        <h3>Questions About Your TRICARE Coverage?</h3>
+                        <p>
+                            Get personalized answers about TRICARE For Life, Medicare coordination, and coverage options from a fee-only advisor.
+                        </p>
+                        <a href="/book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related TRICARE Guides</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/blog/tricare-to-medicare-transition-guide" style="color: var(--primary); text-decoration: none;">
+                                    TRICARE to Medicare Transition Guide
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/blog/tricare-and-medicare-part-b" style="color: var(--primary); text-decoration: none;">
+                                    TRICARE and Medicare Part B Explained
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.75rem;">
+                                <a href="/guides/medigap-vs-medicare-advantage" style="color: var(--primary); text-decoration: none;">
+                                    Medigap vs Medicare Advantage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Why Fee-Only Advice?</h3>
+                        <p>
+                            Most Medicare advisors earn commissions from insurance companies. We're different:
+                            we're paid by you, so our only goal is finding what's best for you.
+                        </p>
+                        <a href="/services/fee-only-medicare-advisor" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Help Understanding Your TRICARE Benefits?</h2>
+                <p>
+                    Every military retiree's situation is unique. Schedule a free consultation
+                    to get personalized answers about your TRICARE For Life coverage and Medicare options.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/book-consultation" class="btn btn-primary">Book a Free Consultation</a>
+                    <a href="/contact" class="btn btn-outline-white">Send Us a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{FOOTER}}
+{{SCRIPTS}}
+</body>
+</html>
