@@ -8,14 +8,65 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="description" content="Work with an independent Medicare advisor who isn't tied to any insurance company. Get objective guidance and personalized recommendations based solely on your needs.">
-    <meta name="keywords" content="independent medicare advisor, unbiased medicare help, medicare guidance, medicare expert">
-    <title>Independent Medicare Advisor | Unbiased Medicare Advisor</title>
+    <meta name="description" content="Work with an independent Medicare advisor who isn't tied to any insurance company. Get unbiased plan comparisons and recommendations based solely on your healthcare needs.">
+    <meta name="keywords" content="independent medicare advisor, independent medicare consultant, unbiased medicare advisor, no-contract medicare help, independent medicare agent">
+    <title>Independent Medicare Advisor | Unbiased, No-Contract Guidance</title>
+    <link rel="canonical" href="https://unbiasedmedicareadvisor.com/services/independent-medicare-advisor/">
 
-    <meta property="og:title" content="Independent Medicare Advisor | Unbiased Medicare Advisor">
-    <meta property="og:description" content="Get objective Medicare guidance from an advisor who works for you, not insurance companies.">
+    <meta property="og:title" content="Independent Medicare Advisor | Unbiased, No-Contract Guidance">
+    <meta property="og:description" content="Work with an independent Medicare advisor who isn't tied to any insurance company. Get unbiased plan comparisons and recommendations based solely on your needs.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/services/independent-medicare-advisor">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/services/independent-medicare-advisor/">
+
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is an independent Medicare advisor?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An independent Medicare advisor is a consultant who has no contracts, quotas, or exclusive arrangements with any insurance company. Unlike captive agents who can only sell plans from specific carriers, an independent advisor can objectively compare ALL Medicare options available in your area and recommend what's truly best for your situation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is an independent Medicare advisor different from a Medicare broker?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most Medicare brokers, while they may represent multiple insurance companies, still earn commissions from those carriers when you enroll. An independent Medicare advisor who operates on a fee-only basis has no financial relationship with insurance companies whatsoever. This eliminates conflicts of interest and ensures recommendations are based solely on your needs, not commission payments."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can an independent advisor help with all types of Medicare plans?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! An independent Medicare advisor can help you evaluate and compare all Medicare coverage options including Original Medicare, Medicare Supplement (Medigap) plans, Medicare Advantage plans, and Part D prescription drug plans. Because they're not contracted with specific carriers, they can give you an honest assessment of which plan type and carrier best fits your healthcare needs and budget."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why should I pay for an independent advisor when Medicare help is free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When Medicare help is 'free,' the advisor is typically being paid by insurance companies through commissions. This creates potential conflicts of interest - they may favor plans that pay higher commissions or only show you options from carriers they represent. An independent, fee-only advisor is paid by you, so their only motivation is finding the plan that's genuinely best for you. The consultation fee often pays for itself many times over through better plan selection."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What should I look for in an independent Medicare advisor?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Look for an advisor who: (1) has no contracts with insurance carriers, (2) is compensated directly by clients rather than through commissions, (3) can explain all your options objectively including the pros and cons of each, (4) takes time to understand your specific healthcare needs before making recommendations, and (5) provides written recommendations you can review. Avoid anyone who pressures you to enroll quickly or only discusses one type of plan."
+                }
+            }
+        ]
+    }
+    </script>
 
     <style>
         :root {
@@ -32,6 +83,8 @@
             --medium-gray: #444444;
             --dark-gray: #343a40;
             --black: #1a1a1a;
+            --success: #28a745;
+            --danger: #dc3545;
             --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             --font-size-base: 19px;
             --line-height: 1.75;
@@ -58,10 +111,13 @@
         .btn { display: inline-block; padding: 0.875rem 1.75rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s ease; border: none; text-align: center; }
         .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35); padding: 1rem 2rem; font-size: 1.1rem; }
         .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45); }
+        .btn-primary-lg { padding: 1.25rem 2.5rem; font-size: 1.2rem; }
         .btn-white { background: var(--white); color: var(--primary); }
         .btn-white:hover { background: var(--off-white); transform: translateY(-2px); }
         .btn-outline-white { background: transparent; color: var(--white); border: 2px solid var(--white); }
         .btn-outline-white:hover { background: var(--white); color: var(--primary); }
+        .btn-secondary { background: var(--primary); color: var(--white); }
+        .btn-secondary:hover { background: var(--primary-dark); transform: translateY(-2px); }
 
         .header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-height); background: var(--white); box-shadow: var(--shadow-sm); z-index: 1000; }
         .header-container { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
@@ -98,49 +154,112 @@
         .mobile-nav-cta { margin-top: var(--spacing-lg); }
         .mobile-nav-cta .btn { display: block; width: 100%; }
 
-        .page-header { padding-top: calc(var(--header-height) + var(--spacing-xxl)); padding-bottom: var(--spacing-xl); background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); }
-        .page-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: var(--spacing-sm); }
-        .page-header p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; }
+        /* Hero Section */
+        .hero { padding-top: calc(var(--header-height) + var(--spacing-xxl)); padding-bottom: var(--spacing-xxl); background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); }
+        .hero .container { max-width: 900px; }
+        .hero h1 { font-size: 2.75rem; font-weight: 700; margin-bottom: var(--spacing-md); line-height: 1.2; }
+        .hero .subtitle { font-size: 1.35rem; opacity: 0.95; margin-bottom: var(--spacing-lg); max-width: 700px; }
+        .hero .cta-group { display: flex; flex-wrap: wrap; gap: var(--spacing-sm); align-items: center; }
+        .hero .phone-cta { color: var(--white); font-size: 1.1rem; font-weight: 600; }
+        .hero .phone-cta a { color: var(--white); text-decoration: none; }
+        .hero .phone-cta a:hover { text-decoration: underline; }
 
+        /* Breadcrumb */
+        .breadcrumb-bar { padding: 0.75rem 0; background: var(--off-white); border-bottom: 1px solid var(--light-gray); margin-top: var(--header-height); }
+        .breadcrumb-bar a { color: var(--primary); text-decoration: none; font-size: 0.9rem; }
+        .breadcrumb-bar a:hover { text-decoration: underline; }
+        .breadcrumb-bar .arrow { color: var(--medium-gray); margin: 0 0.5rem; font-size: 0.8rem; }
+        .breadcrumb-bar .current { color: var(--medium-gray); font-size: 0.9rem; }
+
+        /* Main Content */
         .main-content { padding: var(--spacing-xxl) 0; }
-        .service-intro { max-width: 800px; margin: 0 auto var(--spacing-xxl); }
-        .service-intro h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-md); }
-        .service-intro p { color: var(--dark-gray); margin-bottom: var(--spacing-md); font-size: 1.05rem; }
+        .content-section { max-width: 850px; margin: 0 auto var(--spacing-xxl); }
+        .content-section:last-child { margin-bottom: 0; }
+        .content-section h2 { font-size: 1.85rem; color: var(--primary); margin-bottom: var(--spacing-md); }
+        .content-section h3 { font-size: 1.3rem; color: var(--black); margin-bottom: var(--spacing-sm); margin-top: var(--spacing-lg); }
+        .content-section p { color: var(--dark-gray); margin-bottom: var(--spacing-md); font-size: 1.05rem; }
+        .content-section ul { margin-bottom: var(--spacing-md); padding-left: var(--spacing-md); }
+        .content-section li { color: var(--dark-gray); margin-bottom: var(--spacing-xs); }
 
+        /* Problem Section */
+        .problem-section { background: #fff5f5; padding: var(--spacing-xxl) 0; border-left: 4px solid var(--danger); }
+        .problem-section .container { max-width: 850px; }
+        .problem-section h2 { color: var(--danger); }
+        .problem-list { list-style: none; padding-left: 0; }
+        .problem-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; color: var(--dark-gray); }
+        .problem-list li::before { content: '!'; position: absolute; left: 0; width: 24px; height: 24px; background: var(--danger); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; }
+
+        /* Solution Section */
+        .solution-section { background: #f0fff4; padding: var(--spacing-xxl) 0; border-left: 4px solid var(--success); }
+        .solution-section .container { max-width: 850px; }
+        .solution-section h2 { color: var(--success); }
+        .solution-list { list-style: none; padding-left: 0; }
+        .solution-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; color: var(--dark-gray); }
+        .solution-list li::before { content: '\2713'; position: absolute; left: 0; color: var(--success); font-weight: bold; font-size: 1.2rem; }
+
+        /* Benefits Section */
         .benefits-section { background: var(--off-white); padding: var(--spacing-xxl) 0; }
-        .benefits-section h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .benefits-section h2 { font-size: 1.85rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
         .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg); max-width: 1000px; margin: 0 auto; }
         .benefit-card { text-align: center; padding: var(--spacing-lg); background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
-        .benefit-icon { width: 70px; height: 70px; background: var(--off-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); color: var(--primary); font-size: 2rem; }
+        .benefit-icon { width: 70px; height: 70px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); color: var(--white); font-size: 2rem; }
         .benefit-card h3 { font-size: 1.1rem; color: var(--black); margin-bottom: var(--spacing-xs); }
-        .benefit-card p { color: var(--medium-gray); font-size: 0.95rem; }
+        .benefit-card p { color: var(--medium-gray); font-size: 0.95rem; margin-bottom: 0; }
 
+        /* Comparison Section */
         .comparison-section { padding: var(--spacing-xxl) 0; }
-        .comparison-section h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .comparison-section h2 { font-size: 1.85rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
         .comparison-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); max-width: 900px; margin: 0 auto; }
         .comparison-card { background: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
         .comparison-card.highlight { border: 3px solid var(--accent); }
         .comparison-card h3 { font-size: 1.25rem; margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm); }
-        .comparison-card h3 .badge { background: var(--accent); color: var(--black); font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 50px; }
+        .comparison-card h3 .badge { background: var(--accent); color: var(--white); font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 50px; }
         .comparison-list { list-style: none; }
         .comparison-list li { padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem; color: var(--dark-gray); }
         .comparison-list li::before { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; }
-        .comparison-list.pros li::before { content: '✓'; color: #28a745; font-weight: bold; }
-        .comparison-list.cons li::before { content: '✗'; color: #dc3545; font-weight: bold; }
+        .comparison-list.pros li::before { content: '\2713'; color: #28a745; font-weight: bold; }
+        .comparison-list.cons li::before { content: '\2717'; color: #dc3545; font-weight: bold; }
 
+        /* Process Section */
         .process-section { background: var(--off-white); padding: var(--spacing-xxl) 0; }
-        .process-section h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .process-section h2 { font-size: 1.85rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); max-width: 1000px; margin: 0 auto; }
         .process-card { background: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); position: relative; padding-top: 3rem; }
-        .process-number { position: absolute; top: -15px; left: var(--spacing-lg); width: 40px; height: 40px; background: var(--accent); color: var(--black); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; }
+        .process-number { position: absolute; top: -15px; left: var(--spacing-lg); width: 40px; height: 40px; background: var(--accent); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; }
         .process-card h3 { font-size: 1.1rem; color: var(--black); margin-bottom: var(--spacing-xs); }
-        .process-card p { color: var(--medium-gray); font-size: 0.95rem; }
+        .process-card p { color: var(--medium-gray); font-size: 0.95rem; margin-bottom: 0; }
 
+        /* FAQ Section */
+        .faq-section { padding: var(--spacing-xxl) 0; }
+        .faq-section .container { max-width: 850px; }
+        .faq-section h2 { font-size: 1.85rem; color: var(--primary); margin-bottom: var(--spacing-lg); text-align: center; }
+        .faq-item { border-bottom: 1px solid var(--light-gray); padding: var(--spacing-md) 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-question { font-size: 1.1rem; font-weight: 600; color: var(--black); margin-bottom: var(--spacing-sm); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question::after { content: '+'; font-size: 1.5rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-item.open .faq-question::after { transform: rotate(45deg); }
+        .faq-answer { color: var(--dark-gray); display: none; padding-top: var(--spacing-xs); }
+        .faq-item.open .faq-answer { display: block; }
+
+        /* Internal Links Section */
+        .internal-links { background: var(--off-white); padding: var(--spacing-lg) 0; border-top: 1px solid var(--light-gray); }
+        .internal-links .container { max-width: 850px; }
+        .internal-links h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: var(--spacing-sm); }
+        .internal-links ul { list-style: none; display: flex; flex-wrap: wrap; gap: var(--spacing-sm); }
+        .internal-links a { color: var(--primary); text-decoration: none; font-size: 0.95rem; }
+        .internal-links a:hover { text-decoration: underline; }
+
+        /* CTA Section */
         .cta-section { background: var(--primary); color: var(--white); padding: var(--spacing-xxl) 0; text-align: center; }
+        .cta-section .container { max-width: 700px; }
         .cta-section h2 { font-size: 2rem; margin-bottom: var(--spacing-sm); }
-        .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
-        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+        .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: var(--spacing-lg); }
+        .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-md); }
+        .cta-phone { font-size: 1.25rem; font-weight: 600; }
+        .cta-phone a { color: var(--white); text-decoration: none; }
+        .cta-phone a:hover { text-decoration: underline; }
 
+        /* Footer */
         .footer { background: var(--dark-gray); color: var(--white); padding: var(--spacing-xxl) 0 var(--spacing-lg); }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
         .footer-brand { max-width: 300px; }
@@ -157,35 +276,40 @@
         .footer-bottom a:hover { color: var(--white); }
         .footer-phone { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--spacing-md); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; transition: color 0.2s; }
         .footer-phone:hover { color: var(--accent); }
-        .footer-phone-icon { font-size: 1.5rem; filter: brightness(0) invert(1); }
-
-        @media (min-width: 768px) {
-            .nav { display: block; }
-            .mobile-menu-btn { display: none; }
-            .page-header h1 { font-size: 3rem; }
-            .comparison-grid { grid-template-columns: 1fr 1fr; }
-        }
-        @media (max-width: 767px) {
-            :root { --font-size-base: 17px; }
-            .page-header h1 { font-size: 2.25rem; }
-            .btn { padding: 1rem 1.75rem; }
-            .cta-buttons { flex-direction: column; }
-            .cta-buttons .btn { width: 100%; }
-            .mobile-nav-link { padding: 1.25rem 0; font-size: 1.15rem; }
-            .mobile-dropdown-link { padding: 0.75rem 0; }
-            .footer-bottom { flex-direction: column; text-align: center; }
-        }
-
-        .back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; background: var(--primary); color: var(--white); border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 999; }
-        .back-to-top.visible { opacity: 1; visibility: visible; }
-        .back-to-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
 
         /* Top Bar Styles */
         .top-bar { background: #1a365d; color: white; padding: 8px 20px; }
         .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; }
         .top-bar-phone { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
         .top-bar-phone:hover { color: #90cdf4; }
-        .top-bar-phone svg { width: 16px; height: 16px; fill: currentColor; }
+
+        .back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; background: var(--primary); color: var(--white); border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 999; }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
+
+        @media (min-width: 768px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .hero h1 { font-size: 3.25rem; }
+            .hero .subtitle { font-size: 1.4rem; }
+            .breadcrumb-bar { margin-top: 0; }
+            .hero { padding-top: calc(var(--header-height) + 2rem + var(--spacing-xxl)); }
+            .comparison-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 767px) {
+            :root { --font-size-base: 17px; }
+            .hero h1 { font-size: 2.25rem; }
+            .hero .subtitle { font-size: 1.15rem; }
+            .btn { padding: 1rem 1.75rem; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .hero .cta-group { flex-direction: column; align-items: stretch; }
+            .hero .phone-cta { text-align: center; margin-top: var(--spacing-sm); }
+            .mobile-nav-link { padding: 1.25rem 0; font-size: 1.15rem; }
+            .mobile-dropdown-link { padding: 0.75rem 0; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .problem-list li, .solution-list li { padding-left: 2.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -193,151 +317,261 @@
 
     <!-- Breadcrumb Navigation -->
     <nav class="breadcrumb-bar" aria-label="Breadcrumb">
-        <a href="/"><span>🏠</span></a>
-        <span class="arrow">→</span>
-        <a href="/services/independent-medicare-advisor">Services</a>
-        <span class="arrow">→</span>
-        <span class="current">Independent Advisor</span>
+        <div class="container">
+            <a href="/"><span>Home</span></a>
+            <span class="arrow">&rarr;</span>
+            <a href="/services/medicare-consultant/">Services</a>
+            <span class="arrow">&rarr;</span>
+            <span class="current">Independent Medicare Advisor</span>
+        </div>
     </nav>
 
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
             <h1>Independent Medicare Advisor</h1>
-            <p>Get objective Medicare guidance from an advisor who works for you, not insurance companies. Our independence means your best interests always come first.</p>
+            <p class="subtitle">Work with a Medicare advisor who has no contracts, quotas, or financial ties to any insurance company. Get objective guidance based solely on what's best for your healthcare needs&mdash;not what pays the highest commission.</p>
+            <div class="cta-group">
+                <a href="/book-consultation/" class="btn btn-white btn-primary-lg">Book Your Free Consultation</a>
+                <span class="phone-cta">or call <a href="tel:8508101000">(850) 810-1000</a></span>
+            </div>
         </div>
     </section>
 
+    <!-- What Is an Independent Medicare Advisor -->
     <main class="main-content">
         <div class="container">
-            <div class="service-intro">
-                <h2>What Does Independence Mean?</h2>
-                <p>An independent Medicare advisor has no contracts, quotas, or financial arrangements with any insurance carrier. This means we can recommend the best plan for your situation &mdash; not the one that pays us the most.</p>
-                <p>When you work with an independent advisor, you can trust that our recommendations are based solely on what's best for you. We're your advocate first, always.</p>
-            </div>
+            <section class="content-section">
+                <h2>What Is an Independent Medicare Advisor?</h2>
+                <p>An <strong>independent Medicare advisor</strong> is a consultant who operates without contracts, quotas, or exclusive arrangements with any insurance carrier. Unlike captive agents who represent specific companies, or brokers who may favor carriers that pay higher commissions, an independent advisor can objectively evaluate ALL Medicare options available in your area.</p>
+                <p>True independence means no insurance company influences our recommendations. We don't have sales targets to meet, bonuses to earn from specific carriers, or contractual obligations that limit which plans we can discuss. When you work with an independent Medicare advisor, you get a complete, unbiased picture of your options.</p>
+                <p>This independence is especially valuable when comparing fundamentally different Medicare approaches&mdash;like weighing Medicare Supplement plans against Medicare Advantage&mdash;because we have no financial stake in which direction you choose.</p>
+            </section>
         </div>
     </main>
 
+    <!-- The Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2>The Problem with Non-Independent Medicare Agents</h2>
+            <p>Most people don't realize that the "free" Medicare advice they receive comes with strings attached. Here's what many Medicare agents and brokers won't tell you:</p>
+            <ul class="problem-list">
+                <li><strong>Captive agents represent only one insurance company.</strong> They physically cannot recommend competitor plans, even if those plans would be better for you.</li>
+                <li><strong>Many brokers favor high-commission carriers.</strong> Even brokers who represent multiple companies may steer you toward plans that pay them more.</li>
+                <li><strong>Sales quotas influence recommendations.</strong> Agents with monthly enrollment targets may push plans to meet their numbers, not your needs.</li>
+                <li><strong>Carrier relationships create bias.</strong> Agents who depend on good relationships with insurance companies may hesitate to point out those companies' weaknesses.</li>
+                <li><strong>You only see part of the picture.</strong> Without true independence, you may never learn about options that could save you money or provide better coverage.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- The Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2>How an Independent Medicare Advisor Works Differently</h2>
+            <p>When you work with a truly independent Medicare advisor, the entire dynamic changes:</p>
+            <ul class="solution-list">
+                <li><strong>Every plan is on the table.</strong> We compare Medicare Supplement plans, Medicare Advantage plans, and Part D options from ALL carriers&mdash;not just the ones that pay us.</li>
+                <li><strong>Honest pros and cons.</strong> We'll tell you the genuine strengths and weaknesses of each option, including things other agents might gloss over.</li>
+                <li><strong>No pressure to enroll.</strong> Without sales targets or commission incentives, we have no reason to rush you into a decision.</li>
+                <li><strong>Your budget matters.</strong> If a lower-cost option meets your needs, we'll recommend it&mdash;even if a pricier plan would "look better" for us.</li>
+                <li><strong>Long-term perspective.</strong> We recommend plans that will serve you well for years, not plans that maximize our income this month.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
     <section class="benefits-section">
         <div class="container">
-            <h2>What Independence Really Means</h2>
+            <h2>What Independence Means for You</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">&#128274;</div>
-                    <h3>No Insurance Company Ties</h3>
-                    <p>We have no contracts or financial arrangements with any carrier. We recommend what's best for you.</p>
+                    <h3>No Insurance Company Contracts</h3>
+                    <p>We have no contracts with any insurance carrier, so we can recommend any plan that fits your needs.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">&#128176;</div>
                     <h3>Fee-Only Compensation</h3>
-                    <p>You pay us directly for expertise, like a lawyer or accountant. No commissions from insurers.</p>
+                    <p>You pay us directly for expertise. We receive zero commissions from insurance companies.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">&#129309;</div>
-                    <h3>Your Advocate First</h3>
-                    <p>We work exclusively for you. Our loyalty is to helping you find the right coverage.</p>
+                    <div class="benefit-icon">&#9878;</div>
+                    <h3>Complete Plan Access</h3>
+                    <p>We can evaluate Medigap plans, Medicare Advantage, Part D, and Original Medicare options objectively.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">&#128200;</div>
                     <h3>Unbiased Analysis</h3>
-                    <p>We analyze all options using objective criteria, evaluating each on its merits for your needs.</p>
+                    <p>Our recommendations are based on your healthcare needs and budget&mdash;nothing else.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">&#128218;</div>
-                    <h3>Education-Focused</h3>
-                    <p>We empower you with knowledge, not pressure. Take time to understand your options fully.</p>
+                    <h3>Education First</h3>
+                    <p>We help you understand your options so you can make confident, informed decisions.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">&#127968;</div>
-                    <h3>Long-Term Relationship</h3>
-                    <p>We're here for the long haul, helping you evaluate coverage as your needs change.</p>
+                    <div class="benefit-icon">&#129309;</div>
+                    <h3>Your Advocate</h3>
+                    <p>Our only loyalty is to you. We work exclusively in your best interest.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Comparison Section -->
     <section class="comparison-section">
         <div class="container">
-            <h2>Independent vs Commission-Based Advisors</h2>
+            <h2>Independent Advisor vs. Captive Agent vs. Broker</h2>
             <div class="comparison-grid">
                 <div class="comparison-card highlight">
                     <h3>Independent Advisor <span class="badge">Our Model</span></h3>
                     <ul class="comparison-list pros">
-                        <li>Primary loyalty is to you, the client</li>
-                        <li>Paid directly by you (fee-only)</li>
-                        <li>Recommendations based solely on your needs</li>
-                        <li>Full transparency and disclosure</li>
-                        <li>No pressure to enroll quickly</li>
-                        <li>Can review any plan from any carrier</li>
+                        <li>No contracts with any insurance carrier</li>
+                        <li>Fee-only: paid by you, not insurers</li>
+                        <li>Can recommend ANY plan on the market</li>
+                        <li>No sales quotas or enrollment targets</li>
+                        <li>100% objective recommendations</li>
+                        <li>No financial incentive to favor certain plans</li>
                         <li>Long-term relationship focus</li>
                     </ul>
                 </div>
                 <div class="comparison-card">
-                    <h3>Commission-Based Agent</h3>
+                    <h3>Captive Agent or Broker</h3>
                     <ul class="comparison-list cons">
-                        <li>Primary loyalty to insurance carriers</li>
-                        <li>Paid by insurers through commissions</li>
-                        <li>May favor high-commission plans</li>
-                        <li>Conflicts of interest often unclear</li>
-                        <li>Pressure to enroll is common</li>
-                        <li>Limited to contracted carriers only</li>
-                        <li>Focused on initial sale</li>
+                        <li>Contracted with one or more carriers</li>
+                        <li>Paid commissions by insurance companies</li>
+                        <li>Limited to plans from contracted carriers</li>
+                        <li>May have sales quotas to meet</li>
+                        <li>Recommendations may be influenced by compensation</li>
+                        <li>Higher-commission plans may be favored</li>
+                        <li>Focused on initial sale and renewals</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Process Section -->
     <section class="process-section">
         <div class="container">
-            <h2>What to Expect Working With Us</h2>
+            <h2>How Our Independent Consultation Works</h2>
             <div class="process-grid">
                 <div class="process-card">
                     <div class="process-number">1</div>
-                    <h3>Discovery Call</h3>
-                    <p>Free consultation to understand your health needs, budget, preferred doctors, and medications.</p>
+                    <h3>Free Discovery Call</h3>
+                    <p>We start with a no-obligation conversation to understand your healthcare needs, medications, doctors, and budget.</p>
                 </div>
                 <div class="process-card">
                     <div class="process-number">2</div>
-                    <h3>Comprehensive Analysis</h3>
-                    <p>We research all options in your area, comparing benefits, costs, and networks.</p>
+                    <h3>Comprehensive Research</h3>
+                    <p>We research every Medicare option available in your area&mdash;Medigap, Medicare Advantage, Part D, and combinations.</p>
                 </div>
                 <div class="process-card">
                     <div class="process-number">3</div>
-                    <h3>Personalized Recommendations</h3>
-                    <p>Clear, written comparison of your top options with our independent assessment.</p>
+                    <h3>Independent Analysis</h3>
+                    <p>We compare all options objectively, evaluating coverage, costs, networks, and how well each fits your specific needs.</p>
                 </div>
                 <div class="process-card">
                     <div class="process-number">4</div>
-                    <h3>Decision Support</h3>
-                    <p>We answer all questions and explain trade-offs. No pressure, ever.</p>
+                    <h3>Written Recommendations</h3>
+                    <p>You receive a clear written comparison of your best options with our honest assessment of each.</p>
                 </div>
                 <div class="process-card">
                     <div class="process-number">5</div>
-                    <h3>Enrollment Assistance</h3>
-                    <p>We guide you through enrollment step by step, ensuring everything is correct.</p>
+                    <h3>Decision Support</h3>
+                    <p>We answer all your questions, explain trade-offs, and help you make a confident decision&mdash;no pressure.</p>
                 </div>
                 <div class="process-card">
                     <div class="process-number">6</div>
                     <h3>Ongoing Partnership</h3>
-                    <p>Year-round support for questions and annual coverage reviews.</p>
+                    <p>We're here for questions year-round and can help you review coverage as your healthcare needs change.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What is an independent Medicare advisor?</div>
+                <div class="faq-answer">
+                    <p>An independent Medicare advisor is a consultant who has no contracts, quotas, or exclusive arrangements with any insurance company. Unlike captive agents who can only sell plans from specific carriers, an independent advisor can objectively compare ALL Medicare options available in your area and recommend what's truly best for your situation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How is an independent Medicare advisor different from a Medicare broker?</div>
+                <div class="faq-answer">
+                    <p>Most Medicare brokers, while they may represent multiple insurance companies, still earn commissions from those carriers when you enroll. An independent Medicare advisor who operates on a fee-only basis has no financial relationship with insurance companies whatsoever. This eliminates conflicts of interest and ensures recommendations are based solely on your needs, not commission payments.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can an independent advisor help with all types of Medicare plans?</div>
+                <div class="faq-answer">
+                    <p>Yes! An independent Medicare advisor can help you evaluate and compare all Medicare coverage options including Original Medicare, Medicare Supplement (Medigap) plans, Medicare Advantage plans, and Part D prescription drug plans. Because they're not contracted with specific carriers, they can give you an honest assessment of which plan type and carrier best fits your healthcare needs and budget.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why should I pay for an independent advisor when Medicare help is free?</div>
+                <div class="faq-answer">
+                    <p>When Medicare help is "free," the advisor is typically being paid by insurance companies through commissions. This creates potential conflicts of interest&mdash;they may favor plans that pay higher commissions or only show you options from carriers they represent. An independent, fee-only advisor is paid by you, so their only motivation is finding the plan that's genuinely best for you. The consultation fee often pays for itself many times over through better plan selection.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What should I look for in an independent Medicare advisor?</div>
+                <div class="faq-answer">
+                    <p>Look for an advisor who: (1) has no contracts with insurance carriers, (2) is compensated directly by clients rather than through commissions, (3) can explain all your options objectively including the pros and cons of each, (4) takes time to understand your specific healthcare needs before making recommendations, and (5) provides written recommendations you can review. Avoid anyone who pressures you to enroll quickly or only discusses one type of plan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internal Links Section -->
+    <section class="internal-links">
+        <div class="container">
+            <h3>Related Resources</h3>
+            <ul>
+                <li><a href="/services/fee-only-medicare-advisor/">Fee-Only Medicare Advisor</a></li>
+                <li><a href="/services/fiduciary-medicare-advisor/">Fiduciary Medicare Advisor</a></li>
+                <li><a href="/services/medicare-consultant/">Medicare Consultant Services</a></li>
+                <li><a href="/blog/what-does-medicare-consultant-do/">What Does a Medicare Consultant Do?</a></li>
+                <li><a href="/guides/medigap-vs-medicare-advantage/">Medigap vs Medicare Advantage</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Experience Truly Independent Medicare Advice</h2>
-            <p>Ready to work with an advisor who puts your interests first? Schedule your free consultation and discover the difference independence makes.</p>
+            <h2>Ready for Truly Independent Medicare Guidance?</h2>
+            <p>Schedule a free consultation to discuss your Medicare questions and learn how working with an independent advisor puts your interests first.</p>
             <div class="cta-buttons">
-                <a href="/book-consultation" class="btn btn-white">Book a Free Consultation</a>
-                <a href="/contact" class="btn btn-outline-white">Contact Us</a>
+                <a href="/book-consultation/" class="btn btn-white">Book Your Free Consultation</a>
+                <a href="/contact/" class="btn btn-outline-white">Contact Us</a>
             </div>
+            <p class="cta-phone">Or call us directly: <a href="tel:8508101000">(850) 810-1000</a></p>
         </div>
     </section>
 
 {{FOOTER}}
 
 {{SCRIPTS}}
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
