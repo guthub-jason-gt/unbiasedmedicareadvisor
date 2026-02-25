@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="description" content="Medicare consultation packages from $250-$1,000. Get expert, fee-only guidance on Part D drug plans, Medicare Supplements, and Medicare Advantage. No commissions.">
+    <meta name="keywords" content="medicare consultation, medicare advisor cost, fee-only medicare help, medicare plan analysis, medicare consultant pricing">
+    <title>Consultation Packages | Unbiased Medicare Advisor</title>
+
+    <meta property="og:title" content="Medicare Consultation Packages | Unbiased Medicare Advisor">
+    <meta property="og:description" content="Expert Medicare guidance packages from $250-$1,000. Fee-only advice with no commissions or hidden agendas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/services/consultation-packages">
+
+    <!-- Stripe.js for embedded checkout -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --teal: #4a90a4;
+            --teal-dark: #3a7a8f;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1200px;
+            --header-height: 150px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--off-white); }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        .btn { display: inline-block; padding: 0.875rem 1.75rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s ease; border: none; text-align: center; }
+        .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35); padding: 1rem 2rem; font-size: 1.1rem; }
+        .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45); }
+        .btn-secondary { background: var(--white); color: var(--primary); border: 2px solid var(--primary); }
+        .btn-secondary:hover { background: var(--primary); color: var(--white); }
+        .btn-teal { background: var(--teal); color: var(--white); box-shadow: 0 4px 12px rgba(74, 144, 164, 0.35); }
+        .btn-teal:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(74, 144, 164, 0.45); }
+
+        .header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-height); background: var(--white); box-shadow: var(--shadow-sm); z-index: 1000; }
+        .header-container { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+        .logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 1.25rem; }
+        .logo-icon { width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; color: var(--white); font-size: 1.25rem; }
+
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: var(--spacing-xs); align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link { display: block; padding: 0.5rem 1rem; color: var(--dark-gray); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after { content: ''; border: solid var(--dark-gray); border-width: 0 2px 2px 0; display: inline-block; padding: 3px; transform: rotate(45deg); margin-top: -3px; transition: transform 0.2s; }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; padding: 0.5rem 0; z-index: 100; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link { display: block; padding: 0.75rem 1.25rem; color: var(--dark-gray); text-decoration: none; transition: all 0.2s; border-bottom: 1px solid var(--light-gray); }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+
+        .mobile-menu-btn { display: flex; flex-direction: column; justify-content: space-around; width: 30px; height: 24px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 1001; }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav { position: fixed; top: var(--header-height); left: 0; right: 0; bottom: 0; background: var(--white); padding: var(--spacing-md); transform: translateX(100%); transition: transform 0.3s ease; overflow-y: auto; z-index: 999; }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+
+        @media (min-width: 900px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .mobile-nav { display: none; }
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: calc(var(--header-height) + 3rem) 0 3rem;
+            text-align: center;
+            color: var(--white);
+        }
+        .page-header h1 {
+            font-size: 2.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .page-header p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumb-bar {
+            background: #e8f4fc;
+            padding: 10px 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-bottom: 1px solid #cce5f5;
+        }
+        .breadcrumb-bar a, .breadcrumb-bar .current {
+            background: white;
+            color: var(--primary);
+            text-decoration: none;
+            padding: 5px 12px;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .breadcrumb-bar a:hover {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+        .breadcrumb-bar .arrow { color: var(--primary-light); font-size: 0.85rem; }
+        .breadcrumb-bar .current {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 2px 6px rgba(30, 58, 95, 0.3);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: var(--spacing-xl) 0;
+        }
+
+        /* Package Cards */
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        @media (max-width: 900px) {
+            .packages {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .package-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 30px 25px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-card:hover {
+            border-color: var(--teal);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .package-card.popular {
+            border-color: var(--accent);
+            position: relative;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .package-name {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .package-delivery {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--light-gray);
+            padding-left: 30px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+
+        .package-features li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: bold;
+        }
+
+        .package-best-for {
+            background: #f0f7fa;
+            border-radius: var(--radius-md);
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: var(--primary);
+        }
+
+        .package-best-for strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        /* Payment buttons */
+        .payment-section {
+            margin-top: auto;
+        }
+
+        .btn-pay {
+            display: block;
+            width: 100%;
+            padding: 16px 24px;
+            background: var(--teal);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-pay:hover {
+            background: var(--teal-dark);
+            transform: scale(1.02);
+        }
+
+        .btn-pay:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Comparison table */
+        .comparison-section {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .comparison-section h2 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table th:first-child,
+        .comparison-table td:first-child {
+            text-align: left;
+        }
+
+        .comparison-table tr:hover {
+            background: var(--off-white);
+        }
+
+        .check { color: var(--teal); font-weight: bold; }
+        .dash { color: #ccc; }
+
+        @media (max-width: 768px) {
+            .comparison-table { font-size: 0.85rem; }
+            .comparison-table th, .comparison-table td { padding: 8px 5px; }
+        }
+
+        /* Questions section */
+        .questions-section {
+            background: #e8f4fc;
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .questions-section h2 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .questions-section p {
+            color: var(--medium-gray);
+            margin-bottom: 0;
+        }
+
+        .questions-section a {
+            color: var(--teal);
+            font-weight: 600;
+        }
+
+        /* Trust section */
+        .trust-section {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .trust-section h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trust-badge span {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .trust-badges {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Checkout Modal */
+        .checkout-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .checkout-modal.active {
+            display: flex;
+        }
+
+        .checkout-container {
+            background: white;
+            border-radius: var(--radius-lg);
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checkout-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .checkout-header h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--medium-gray);
+            padding: 5px;
+        }
+
+        .close-btn:hover {
+            color: var(--primary);
+        }
+
+        #checkout-element {
+            padding: 20px;
+            min-height: 400px;
+            overflow-y: auto;
+        }
+
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            color: var(--medium-gray);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .footer h4 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--white);
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: var(--spacing-md);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+        }
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+{{HEADER}}
+
+<!-- Breadcrumbs -->
+<nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <a href="/"><span>&#127968;</span></a>
+    <span class="arrow">&#8594;</span>
+    <a href="/services/fee-only-medicare-advisor">Services</a>
+    <span class="arrow">&#8594;</span>
+    <span class="current">Consultation Packages</span>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <div class="container">
+        <h1>Medicare Consultation Packages</h1>
+        <p>Expert, unbiased guidance to help you make confident Medicare decisions. Choose the package that fits your needs.</p>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="container">
+
+        <!-- Package Cards -->
+        <div class="packages">
+
+            <!-- Package 1: Drug Plan Analysis -->
+            <div class="package-card">
+                <h2 class="package-name">Drug Plan Analysis</h2>
+                <div class="package-price">$250</div>
+                <div class="package-delivery">PDF report via email</div>
+                <ul class="package-features">
+                    <li>Research the best Part D plan for your unique situation and needs</li>
+                    <li>Pharmacy network analysis</li>
+                    <li>Nationwide vs. regional coverage comparison</li>
+                    <li>Complete PDF report emailed to you</li>
+                    <li>Email follow-up support (4 rounds over 2 weeks)</li>
+                </ul>
+                <div class="package-best-for">
+                    <strong>Best for:</strong>
+                    You already have Medicare coverage and just need help picking a drug plan
+                </div>
+                <div class="payment-section">
+                    <button class="btn-pay" onclick="openCheckout('price_1T4nkSPl0BYzQnbzIlLI2U1r', 'Drug Plan Analysis')">
+                        Pay $250
+                    </button>
+                </div>
+            </div>
+
+            <!-- Package 2: Full Medicare Analysis -->
+            <div class="package-card popular">
+                <span class="popular-badge">Most Popular</span>
+                <h2 class="package-name">Full Medicare Analysis</h2>
+                <div class="package-price">$500</div>
+                <div class="package-delivery">PDF report + phone consultation</div>
+                <ul class="package-features">
+                    <li>Research the best Medicare Supplement or Medicare Advantage plan for your unique situation</li>
+                    <li>Research the best Part D plan to pair with your chosen Medicare coverage</li>
+                    <li>Complete PDF report emailed to you</li>
+                    <li>1-hour phone Q&A session</li>
+                    <li>Email follow-up support (6 rounds over 1 month)</li>
+                </ul>
+                <div class="package-best-for">
+                    <strong>Best for:</strong>
+                    You're new to Medicare or want expert guidance on all your options
+                </div>
+                <div class="payment-section">
+                    <button class="btn-pay" onclick="openCheckout('price_1T4nlyPl0BYzQnbzDjQoxJX7', 'Full Medicare Analysis')">
+                        Pay $500
+                    </button>
+                </div>
+            </div>
+
+            <!-- Package 3: White Glove Service -->
+            <div class="package-card">
+                <h2 class="package-name">White Glove Service</h2>
+                <div class="package-price">$1,000</div>
+                <div class="package-delivery">Full-service phone support</div>
+                <ul class="package-features">
+                    <li>Everything in Full Medicare Analysis</li>
+                    <li>No forms to fill out—we gather all info during phone calls</li>
+                    <li><strong>UNLIMITED</strong> 1-hour phone sessions (first month)</li>
+                    <li>Your choice: phone, video call, or email follow-up</li>
+                    <li>PDF report emailed or paper report via US Mail</li>
+                </ul>
+                <div class="package-best-for">
+                    <strong>Best for:</strong>
+                    You want someone to walk you through everything by phone—no forms, no stress
+                </div>
+                <div class="payment-section">
+                    <button class="btn-pay" onclick="openCheckout('price_1T4noAPl0BYzQnbz1VK0ptWU', 'White Glove Service')">
+                        Pay $1,000
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Comparison Table -->
+        <section class="comparison-section">
+            <h2>Compare Packages</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Drug Plan<br>$250</th>
+                        <th>Full Analysis<br>$500</th>
+                        <th>White Glove<br>$1,000</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Part D drug plan analysis</td>
+                        <td class="check">&#10003;</td>
+                        <td class="check">&#10003;</td>
+                        <td class="check">&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>Medicare Supplement analysis</td>
+                        <td class="dash">—</td>
+                        <td class="check">&#10003;</td>
+                        <td class="check">&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>Medicare Advantage analysis</td>
+                        <td class="dash">—</td>
+                        <td class="check">&#10003;</td>
+                        <td class="check">&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>PDF report</td>
+                        <td class="check">&#10003;</td>
+                        <td class="check">&#10003;</td>
+                        <td class="check">&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>Phone consultation</td>
+                        <td class="dash">—</td>
+                        <td>1 hour</td>
+                        <td>Unlimited (1 month)</td>
+                    </tr>
+                    <tr>
+                        <td>Video call option</td>
+                        <td class="dash">—</td>
+                        <td class="dash">—</td>
+                        <td class="check">&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>No forms required</td>
+                        <td class="dash">—</td>
+                        <td class="dash">—</td>
+                        <td class="check">&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>Email follow-up</td>
+                        <td>4 rounds / 2 weeks</td>
+                        <td>6 rounds / 1 month</td>
+                        <td>Unlimited / 1 month</td>
+                    </tr>
+                    <tr>
+                        <td>Mailed hard copy option</td>
+                        <td class="dash">—</td>
+                        <td class="dash">—</td>
+                        <td class="check">&#10003;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Questions Section -->
+        <section class="questions-section">
+            <h2>Not sure which package is right for you?</h2>
+            <p>Call us at <a href="tel:+18508101000">(850) 810-1000</a> or <a href="/contact">send us a message</a>. We're happy to help you decide.</p>
+        </section>
+
+        <!-- Trust Section -->
+        <div class="trust-section">
+            <h3>Secure Payment Processing</h3>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span>&#128274;</span>
+                    <div>SSL Encrypted</div>
+                </div>
+                <div class="trust-badge">
+                    <span>&#128179;</span>
+                    <div>All Major Cards Accepted</div>
+                </div>
+                <div class="trust-badge">
+                    <span>&#10003;</span>
+                    <div>Fee-Only Advisor</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- Checkout Modal -->
+<div id="checkout-modal" class="checkout-modal">
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h3 id="checkout-title">Complete Your Purchase</h3>
+            <button class="close-btn" onclick="closeCheckout()">&times;</button>
+        </div>
+        <div id="checkout-element">
+            <div class="loading-spinner">Loading checkout...</div>
+        </div>
+    </div>
+</div>
+
+{{FOOTER}}
+
+{{SCRIPTS}}
+
+<script>
+    // Initialize Stripe
+    const stripe = Stripe('pk_live_51T4lmuPl0BYzQnbz5MJGo7dmZU7FkvXD8nKtjAEDg4SFF9jgu6xSh8XuO1oTFJIryOLflg1fSgks6BQarmPPvmP400XYqS8iAD');
+    let checkoutInstance = null;
+
+    async function openCheckout(priceId, productName) {
+        const modal = document.getElementById('checkout-modal');
+        const checkoutElement = document.getElementById('checkout-element');
+        const checkoutTitle = document.getElementById('checkout-title');
+
+        // Show modal with loading state
+        modal.classList.add('active');
+        checkoutTitle.textContent = `Purchase: ${productName}`;
+        checkoutElement.innerHTML = '<div class="loading-spinner">Loading checkout...</div>';
+
+        try {
+            // Create checkout session
+            const response = await fetch('/api/create-checkout-session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ priceId }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to create checkout session');
+            }
+
+            const { clientSecret } = await response.json();
+
+            // Clear loading state
+            checkoutElement.innerHTML = '';
+
+            // Mount embedded checkout
+            checkoutInstance = await stripe.initEmbeddedCheckout({
+                clientSecret,
+            });
+
+            checkoutInstance.mount('#checkout-element');
+
+        } catch (error) {
+            console.error('Checkout error:', error);
+            checkoutElement.innerHTML = `
+                <div style="padding: 40px; text-align: center; color: #666;">
+                    <p style="margin-bottom: 15px;">Sorry, there was a problem loading checkout.</p>
+                    <p>Please call us at <a href="tel:+18508101000" style="color: #4a90a4;">(850) 810-1000</a> to complete your purchase.</p>
+                </div>
+            `;
+        }
+    }
+
+    function closeCheckout() {
+        const modal = document.getElementById('checkout-modal');
+        modal.classList.remove('active');
+
+        // Destroy checkout instance if it exists
+        if (checkoutInstance) {
+            checkoutInstance.destroy();
+            checkoutInstance = null;
+        }
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeCheckout();
+        }
+    });
+
+    // Close modal when clicking outside
+    document.getElementById('checkout-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'checkout-modal') {
+            closeCheckout();
+        }
+    });
+</script>
+
+</body>
+</html>

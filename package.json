@@ -4,5 +4,8 @@
   "description": "Unbiased Medicare Advisor website",
   "scripts": {
     "build": "node build.js"
+  },
+  "dependencies": {
+    "stripe": "^14.0.0"
   }
 }

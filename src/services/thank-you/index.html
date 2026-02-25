@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Thank you for your purchase. We'll be in touch shortly.">
+    <title>Thank You | Unbiased Medicare Advisor</title>
+
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --teal: #4a90a4;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --max-width: 1200px;
+            --header-height: 150px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--off-white); }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        .btn { display: inline-block; padding: 0.875rem 1.75rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s ease; border: none; text-align: center; }
+        .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35); padding: 1rem 2rem; font-size: 1.1rem; }
+        .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+        .btn-secondary { background: var(--white); color: var(--primary); border: 2px solid var(--primary); }
+        .btn-secondary:hover { background: var(--primary); color: var(--white); }
+
+        .header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-height); background: var(--white); box-shadow: var(--shadow-sm); z-index: 1000; }
+        .header-container { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+        .logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 1.25rem; }
+
+        .nav { display: none; }
+        .nav-list { display: flex; list-style: none; gap: 0.5rem; align-items: center; }
+        .nav-item { position: relative; }
+        .nav-link { display: block; padding: 0.5rem 1rem; color: var(--dark-gray); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; }
+        .dropdown-toggle::after { content: ''; border: solid var(--dark-gray); border-width: 0 2px 2px 0; display: inline-block; padding: 3px; transform: rotate(45deg); margin-top: -3px; transition: transform 0.2s; }
+        .dropdown:hover .dropdown-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--white); border-radius: var(--radius-md); box-shadow: 0 10px 25px rgba(0,0,0,0.15); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; padding: 0.5rem 0; z-index: 100; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-link { display: block; padding: 0.75rem 1.25rem; color: var(--dark-gray); text-decoration: none; transition: all 0.2s; border-bottom: 1px solid var(--light-gray); }
+        .dropdown-link:last-child { border-bottom: none; }
+        .dropdown-link:hover { background: #d5dbe0; color: var(--primary); }
+        .nav-cta { margin-left: var(--spacing-sm); }
+        .nav-cta .btn-primary { padding: 0.75rem 1.5rem; font-size: 1.05rem; }
+
+        .mobile-menu-btn { display: flex; flex-direction: column; justify-content: space-around; width: 30px; height: 24px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 1001; }
+        .mobile-menu-btn span { display: block; width: 30px; height: 3px; background-color: #1e3a5f; border-radius: 2px; }
+        .mobile-nav { position: fixed; top: var(--header-height); left: 0; right: 0; bottom: 0; background: var(--white); padding: var(--spacing-md); transform: translateX(100%); transition: transform 0.3s ease; overflow-y: auto; z-index: 999; }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; }
+        .mobile-nav-item { border-bottom: 1px solid var(--light-gray); }
+        .mobile-nav-link { display: block; padding: 1rem 0; color: var(--dark-gray); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .mobile-dropdown-menu { display: none; padding-left: var(--spacing-md); padding-bottom: var(--spacing-sm); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+        .mobile-dropdown-link { display: block; padding: 0.5rem 0; color: var(--medium-gray); text-decoration: none; }
+        .mobile-nav-cta { margin-top: var(--spacing-lg); }
+
+        @media (min-width: 900px) {
+            .nav { display: block; }
+            .mobile-menu-btn { display: none; }
+            .mobile-nav { display: none; }
+        }
+
+        /* Thank You Content */
+        .thank-you-section {
+            min-height: calc(100vh - var(--header-height) - 200px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: calc(var(--header-height) + 2rem) var(--spacing-md) var(--spacing-xl);
+        }
+
+        .thank-you-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            text-align: center;
+            max-width: 600px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #d4edda;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            font-size: 2.5rem;
+            color: #28a745;
+        }
+
+        .thank-you-card h1 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .thank-you-card p {
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .thank-you-card .highlight {
+            background: #f0f7fa;
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .thank-you-card .highlight h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .thank-you-card .highlight p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-info {
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .contact-info p {
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--teal);
+            font-weight: 600;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: var(--spacing-md);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        .footer h4 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--white);
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: var(--spacing-md);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+        }
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+{{HEADER}}
+
+<main class="thank-you-section">
+    <div class="thank-you-card">
+        <div class="success-icon">&#10003;</div>
+        <h1>Thank You for Your Purchase!</h1>
+        <p>Your payment has been received successfully. A confirmation email is on its way to your inbox.</p>
+
+        <div class="highlight">
+            <h3>What Happens Next?</h3>
+            <p>We'll review your purchase and reach out within 1 business day to get started on your Medicare analysis. Keep an eye on your email!</p>
+        </div>
+
+        <div class="contact-info">
+            <p>Questions? Call us at <a href="tel:+18508101000">(850) 810-1000</a> or email us anytime.</p>
+        </div>
+
+        <div class="btn-group">
+            <a href="/" class="btn btn-primary">Return Home</a>
+            <a href="/contact" class="btn btn-secondary">Contact Us</a>
+        </div>
+    </div>
+</main>
+
+{{FOOTER}}
+
+{{SCRIPTS}}
+
+</body>
+</html>
