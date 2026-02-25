@@ -330,6 +330,17 @@
             font-size: 1.1rem !important;
             padding: 0.75rem 1.5rem !important;
         }
+        /* Secondary CTA Button (See Pricing) */
+        .nav-cta .btn-secondary-outline {
+            background: transparent !important;
+            color: #1e3a5f !important;
+            border: 2px solid #1e3a5f !important;
+            margin-right: 12px !important;
+        }
+        .nav-cta .btn-secondary-outline:hover {
+            background: #1e3a5f !important;
+            color: white !important;
+        }
         /* Pipe separators between nav items */
         .nav-item {
             display: flex !important;
@@ -433,6 +444,7 @@
                         <a href="/contact" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item nav-cta">
+                        <a href="/services/consultation-packages" class="btn btn-secondary-outline">See Pricing</a>
                         <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
                     </li>
                 </ul>
@@ -491,7 +503,8 @@
                 </li>
             </ul>
             <div class="mobile-nav-cta">
-                <a href="/book-consultation" class="btn btn-primary">Book Free Call</a>
+                <a href="/services/consultation-packages" class="btn btn-secondary-outline" style="margin-bottom: 12px; display: block; text-align: center;">See Pricing</a>
+                <a href="/book-consultation" class="btn btn-primary" style="display: block; text-align: center;">Book Free Call</a>
             </div>
         </nav>
     </header>
