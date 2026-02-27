@@ -290,7 +290,7 @@
             display: block;
             width: 100%;
             padding: 16px 24px;
-            background: var(--teal);
+            background: var(--accent);
             color: white;
             border: none;
             border-radius: var(--radius-md);
@@ -300,17 +300,55 @@
             transition: all 0.3s ease;
             text-decoration: none;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
         }
 
         .btn-pay:hover {
-            background: var(--teal-dark);
-            transform: scale(1.02);
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
         }
 
         .btn-pay:disabled {
             background: #ccc;
             cursor: not-allowed;
             transform: none;
+            box-shadow: none;
+        }
+
+        .or-divider {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin: 12px 0;
+        }
+
+        .btn-paypal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 14px 24px;
+            background: var(--teal);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(74, 144, 164, 0.35);
+        }
+
+        .btn-paypal:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(74, 144, 164, 0.45);
+        }
+
+        .paypal-text {
+            font-weight: 800;
+            font-style: italic;
         }
 
         /* Comparison table */
@@ -653,6 +691,10 @@
                     <button class="btn-pay" onclick="openCheckout('price_1T4nkSPl0BYzQnbzIlLI2U1r', 'Drug Plan Analysis')">
                         Pay $250
                     </button>
+                    <div class="or-divider">— or —</div>
+                    <button class="btn-paypal" onclick="openPayPal('drug-plan', 250)">
+                        <span class="paypal-text">PayPal</span>
+                    </button>
                 </div>
             </div>
 
@@ -677,6 +719,10 @@
                     <button class="btn-pay" onclick="openCheckout('price_1T4nlyPl0BYzQnbzDjQoxJX7', 'Full Medicare Analysis')">
                         Pay $500
                     </button>
+                    <div class="or-divider">— or —</div>
+                    <button class="btn-paypal" onclick="openPayPal('full-analysis', 500)">
+                        <span class="paypal-text">PayPal</span>
+                    </button>
                 </div>
             </div>
 
@@ -699,6 +745,10 @@
                 <div class="payment-section">
                     <button class="btn-pay" onclick="openCheckout('price_1T4noAPl0BYzQnbz1VK0ptWU', 'White Glove Service')">
                         Pay $1,000
+                    </button>
+                    <div class="or-divider">— or —</div>
+                    <button class="btn-paypal" onclick="openPayPal('white-glove', 1000)">
+                        <span class="paypal-text">PayPal</span>
                     </button>
                 </div>
             </div>
@@ -897,6 +947,11 @@
             closeCheckout();
         }
     });
+
+    // PayPal placeholder function (will be replaced when PayPal is set up)
+    function openPayPal(packageType, amount) {
+        alert('PayPal checkout coming soon! For now, please use the card payment option above, or call us at (850) 810-1000 to pay by phone.');
+    }
 </script>
 
 </body>
