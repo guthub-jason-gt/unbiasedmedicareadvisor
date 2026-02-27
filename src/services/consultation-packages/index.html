@@ -835,14 +835,6 @@
             <p>Call us at <a href="tel:+18508101000">(850) 810-1000</a> or <a href="/contact">send us a message</a>. We're happy to help you decide.</p>
         </section>
 
-        <!-- TEST BUTTON - REMOVE AFTER TESTING -->
-        <div style="background: #fff3cd; border: 3px solid #ffc107; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 30px;">
-            <p style="margin-bottom: 15px; color: #856404; font-weight: 600;">⚠️ TEST ONLY - Remove after testing</p>
-            <button class="btn-paypal" onclick="openPayPal('test', 1)" style="max-width: 300px; margin: 0 auto;">
-                <span class="paypal-text">PayPal</span> - Test $1
-            </button>
-        </div>
-
         <!-- Trust Section -->
         <div class="trust-section">
             <h3>Secure Payment Processing</h3>
@@ -976,8 +968,7 @@
     const paypalPackages = {
         'drug-plan': { name: 'Drug Plan Analysis', amount: '250.00' },
         'full-analysis': { name: 'Full Medicare Analysis', amount: '500.00' },
-        'white-glove': { name: 'White Glove Service', amount: '1000.00' },
-        'test': { name: 'Test Payment', amount: '1.00' }
+        'white-glove': { name: 'White Glove Service', amount: '1000.00' }
     };
 
     let currentPayPalPackage = null;
