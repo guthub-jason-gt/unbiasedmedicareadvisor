@@ -1027,6 +1027,31 @@
                 </div>
             </div>
 
+            <!-- TEST PACKAGE - REMOVE AFTER TESTING -->
+            <div class="package-card" style="border: 3px dashed #c53030; background: #fff5f5;">
+                <h2 class="package-name" style="color: #c53030;">TEST ONLY - $1</h2>
+                <div class="package-price" style="color: #c53030;">$1</div>
+                <div class="package-delivery" style="color: #c53030;">For testing PayPal - DELETE THIS</div>
+                <ul class="package-features">
+                    <li>This is a test package</li>
+                    <li>Refund after testing</li>
+                    <li>Remove this card when done</li>
+                </ul>
+                <div class="package-best-for" style="background: #fed7d7;">
+                    <strong>TESTING ONLY</strong>
+                    Delete this package after confirming PayPal works
+                </div>
+                <div class="payment-section">
+                    <button class="btn-pay" onclick="openCheckout('price_1T4oDRPl0BYzQnbzi8T10Zqa', 'Test Product')">
+                        Pay $1 (Stripe)
+                    </button>
+                    <div class="or-divider">— or —</div>
+                    <button class="btn-paypal" onclick="openPayPal('test', 1)">
+                        <span class="paypal-text">PayPal $1 Test</span>
+                    </button>
+                </div>
+            </div>
+
         </div>
 
         <!-- Comparison Table -->
@@ -1362,7 +1387,8 @@
     const paypalPackages = {
         'drug-plan': { name: 'Drug Plan Analysis', amount: '250.00' },
         'full-analysis': { name: 'Full Medicare Analysis', amount: '500.00' },
-        'white-glove': { name: 'White Glove Service', amount: '1000.00' }
+        'white-glove': { name: 'White Glove Service', amount: '1000.00' },
+        'test': { name: 'Test Product', amount: '1.00' }
     };
 
     let currentPayPalPackage = null;
