@@ -344,6 +344,103 @@
                 display: flex !important;
             }
         }
+
+        /* ============================================
+           CONDENSED LAYOUT (769px - 1400px)
+           Option B: Smaller logo, no pipes, stacked CTAs
+           ============================================ */
+        @media (min-width: 769px) and (max-width: 1400px) {
+            /* CRITICAL: Ensure nav is visible */
+            .nav {
+                display: block !important;
+            }
+
+            /* Hide mobile elements */
+            .mobile-header-right {
+                display: none !important;
+            }
+            .mobile-menu-btn {
+                display: none !important;
+            }
+
+            /* Reduce header height */
+            .header {
+                height: 100px !important;
+            }
+
+            /* Fix header-container layout - change from space-between to flex-start with gap */
+            .header-container {
+                justify-content: flex-start !important;
+                gap: 15px !important;
+                padding: 0 15px !important;
+            }
+
+            /* Shrink logo significantly */
+            .logo-img {
+                height: 70px !important;
+                width: auto !important;
+            }
+
+            /* Nav should take remaining space and push content to right */
+            .nav {
+                flex: 1 !important;
+                display: flex !important;
+                justify-content: flex-end !important;
+            }
+
+            /* Nav list - tighter spacing */
+            .nav-list {
+                gap: 0 !important;
+                align-items: center !important;
+            }
+
+            /* Smaller nav links - aggressive reduction */
+            .nav-link {
+                font-size: 0.9rem !important;
+                padding: 0.4rem 6px !important;
+            }
+
+            /* Smaller dropdown links */
+            .dropdown-link {
+                font-size: 0.85rem !important;
+                padding: 0.5rem 1rem !important;
+            }
+
+            /* Hide pipe separators completely */
+            .nav-item:not(:last-child)::after {
+                display: none !important;
+                content: none !important;
+            }
+
+            /* Nav item - no extra spacing */
+            .nav-item {
+                margin: 0 !important;
+            }
+
+            /* Stack CTA buttons vertically */
+            .nav-cta {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 3px !important;
+                margin-left: 10px !important;
+            }
+
+            /* Much smaller CTA buttons */
+            .nav-cta .btn {
+                font-size: 0.75rem !important;
+                padding: 5px 10px !important;
+                white-space: nowrap !important;
+            }
+
+            .nav-cta .btn-secondary-outline {
+                margin-right: 0 !important;
+            }
+
+            /* Adjust hero/page padding for shorter header */
+            .hero, .page-header, .guide-header {
+                padding-top: calc(100px + 36px + 2rem) !important;
+            }
+        }
     </style>
 
     <!-- ============================================
