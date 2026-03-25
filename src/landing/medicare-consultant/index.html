@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="description" content="Fee-only Medicare consultant. No commissions, no sales pitch. Get unbiased Medicare guidance from an independent expert. Packages from $250.">
+    <meta name="keywords" content="medicare consultant, fee only medicare advisor, hire medicare consultant, independent medicare advice, unbiased medicare help">
+    <title>Fee-Only Medicare Consultant | Unbiased Medicare Advisor</title>
+
+    <meta property="og:title" content="Fee-Only Medicare Consultant | Unbiased Medicare Advisor">
+    <meta property="og:description" content="Medicare advice that works for you, not insurance companies. Fee-only consultant with packages starting at $250.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unbiasedmedicareadvisor.com/landing/medicare-consultant/">
+
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AW3UtRW_XWHdpzBB8cXA8D7hx2Bg_xuMYkZj0nFPGHFN7l5HrOTBSBiYB4QDn_eQpaQm16Kse11mCXli&currency=USD"></script>
+
+    <!-- Google Ads Global Site Tag - REPLACE AW-XXXXXXXXX with your Conversion ID -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-XXXXXXXXX');
+    </script>
+    -->
+
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-dark: #0f1f33;
+            --primary-light: #2d5a8a;
+            --accent: #ff6b35;
+            --accent-dark: #e55a2b;
+            --accent-light: #ff8559;
+            --secondary: #4a90d9;
+            --teal: #4a90a4;
+            --teal-dark: #3a7a8f;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #444444;
+            --dark-gray: #343a40;
+            --black: #1a1a1a;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 19px;
+            --line-height: 1.75;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 5.5rem;
+            --max-width: 1100px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+        body { font-family: var(--font-main); line-height: var(--line-height); color: var(--black); background: var(--white); }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
+
+        /* Header with Logo and Slim Nav */
+        .header {
+            background: var(--white);
+            padding: 20px 0 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.35rem;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 12px;
+        }
+
+        /* Slim Nav Bar */
+        .slim-nav {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .slim-nav a {
+            color: var(--primary);
+            text-decoration: none;
+            padding: 8px 18px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 20px;
+            background: var(--off-white);
+            transition: all 0.2s ease;
+        }
+        .slim-nav a:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        @media (max-width: 500px) {
+            .slim-nav a {
+                padding: 6px 14px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: var(--spacing-xxl) 0;
+            text-align: center;
+            color: var(--white);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-subtitle {
+            font-size: 1.35rem;
+            opacity: 0.95;
+            margin-bottom: var(--spacing-lg);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.5);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            margin-left: 15px;
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.85rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .hero-cta { flex-direction: column; gap: 15px; }
+            .btn-outline-white { margin-left: 0; }
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: var(--spacing-xl) 0;
+            background: var(--off-white);
+        }
+        .problem-section h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-lg);
+        }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .problem-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--accent);
+        }
+        .problem-card p {
+            color: var(--medium-gray);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .problem-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: var(--spacing-xxl) 0;
+        }
+        .solution-section h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.85rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        .solution-intro {
+            text-align: center;
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-xl);
+        }
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .solution-item {
+            text-align: center;
+        }
+        .solution-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--teal) 0%, var(--secondary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            font-size: 2rem;
+            color: var(--white);
+        }
+        .solution-item h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        .solution-item p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .solution-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+
+        /* Packages Section */
+        .packages-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--off-white);
+        }
+        .packages-section h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.85rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        .packages-intro {
+            text-align: center;
+            color: var(--medium-gray);
+            margin-bottom: var(--spacing-xl);
+        }
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .package-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 30px 25px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .package-card:hover {
+            border-color: var(--teal);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .package-card.popular {
+            border-color: var(--accent);
+            position: relative;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .package-name {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        .package-delivery {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .package-features {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: left;
+            flex-grow: 1;
+        }
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--light-gray);
+            padding-left: 28px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        .package-features li:last-child { border-bottom: none; }
+        .package-features li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: bold;
+        }
+        .payment-section { margin-top: auto; }
+        .btn-pay {
+            display: block;
+            width: 100%;
+            padding: 16px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+        }
+        .btn-pay:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.45);
+        }
+        .or-divider {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin: 12px 0;
+        }
+        .btn-paypal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 14px 24px;
+            background: var(--teal);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(74, 144, 164, 0.35);
+        }
+        .btn-paypal:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+        }
+        .paypal-text { font-weight: 800; font-style: italic; }
+
+        @media (max-width: 900px) {
+            .packages { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
+        }
+
+        /* Trust Section */
+        .trust-section {
+            padding: var(--spacing-xl) 0;
+            background: var(--white);
+        }
+        .trust-section h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-lg);
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        .trust-item {
+            padding: 20px;
+        }
+        .trust-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .trust-item h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .trust-item p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .trust-grid { grid-template-columns: 1fr; }
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--off-white);
+        }
+        .faq-section h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-xl);
+        }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 25px;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+        .faq-question:hover {
+            background: var(--off-white);
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--teal);
+            transition: transform 0.2s;
+        }
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        .faq-answer {
+            display: none;
+            padding: 0 25px 20px;
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: var(--spacing-xxl) 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            text-align: center;
+            color: var(--white);
+        }
+        .final-cta h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+        }
+        .final-cta p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg);
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .btn-call {
+            background: var(--white);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-call:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Minimal Footer */
+        .footer {
+            background: var(--dark-gray);
+            color: rgba(255,255,255,0.7);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .footer p {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: var(--white);
+        }
+        .footer-phone {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        /* Checkout Modal */
+        .checkout-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .checkout-modal.active {
+            display: flex;
+        }
+        .checkout-container {
+            background: white;
+            border-radius: var(--radius-lg);
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .checkout-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .checkout-header h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--medium-gray);
+            padding: 5px;
+        }
+        .close-btn:hover {
+            color: var(--primary);
+        }
+        #checkout-element {
+            padding: 20px;
+            min-height: 400px;
+            overflow-y: auto;
+        }
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            color: var(--medium-gray);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header with Logo and Slim Nav -->
+<header class="header">
+    <div class="container header-container">
+        <a href="/" class="logo">
+            <img src="/logo.png" alt="Unbiased Medicare Advisor">
+            Unbiased Medicare Advisor
+        </a>
+        <nav class="slim-nav">
+            <a href="/">Home</a>
+            <a href="/services/">Services</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Medicare Help That Works for You &mdash; Not Insurance Companies</h1>
+        <p class="hero-subtitle">Fee-only Medicare consulting. No commissions. No sales pitch. Just honest guidance that puts YOU first.</p>
+    </div>
+</section>
+
+<!-- Problem Section -->
+<section class="problem-section">
+    <div class="container">
+        <h2>Sound Familiar?</h2>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <p><strong>Tired of Medicare agents pushing plans</strong> that pay THEM the most commission?</p>
+            </div>
+            <div class="problem-card">
+                <p><strong>Wondering if your current coverage</strong> is actually the best option for your situation?</p>
+            </div>
+            <div class="problem-card">
+                <p><strong>Confused by Medicare</strong> and don't know who you can actually trust?</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution Section -->
+<section class="solution-section">
+    <div class="container">
+        <h2>Here's How We're Different</h2>
+        <p class="solution-intro">We're a fee-only Medicare consulting firm. That means you pay us directly &mdash; not insurance companies. Our only job is finding what's best for YOU.</p>
+        <div class="solution-grid">
+            <div class="solution-item">
+                <div class="solution-icon">1</div>
+                <h3>You Tell Us Your Situation</h3>
+                <p>Your medications, doctors, budget, and what matters most to you. No sales pitch &mdash; just questions to understand your needs.</p>
+            </div>
+            <div class="solution-item">
+                <div class="solution-icon">2</div>
+                <h3>We Research Your Options</h3>
+                <p>We analyze Medicare Supplements, Medicare Advantage, and Part D plans available in your area. No shortcuts, no bias.</p>
+            </div>
+            <div class="solution-item">
+                <div class="solution-icon">3</div>
+                <h3>You Get a Clear Recommendation</h3>
+                <p>A detailed PDF report explaining exactly which plans fit your situation &mdash; and why. Plus phone or email support to answer your questions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Packages Section -->
+<section id="packages" class="packages-section">
+    <div class="container">
+        <h2>Choose Your Package</h2>
+        <p class="packages-intro">Select the level of support that fits your needs. All packages include unbiased, expert guidance.</p>
+
+        <div class="packages">
+            <!-- Package 1 -->
+            <div class="package-card">
+                <h2 class="package-name">Drug Plan Analysis</h2>
+                <div class="package-price">$250</div>
+                <div class="package-delivery">PDF report via email</div>
+                <ul class="package-features">
+                    <li>Research the best Part D plan for your medications</li>
+                    <li>Pharmacy network analysis</li>
+                    <li>Complete PDF report</li>
+                    <li>Email support (4 rounds / 2 weeks)</li>
+                </ul>
+                <div class="payment-section">
+                    <button class="btn-pay" onclick="openCheckout('price_1T4nkSPl0BYzQnbzIlLI2U1r', 'Drug Plan Analysis')">
+                        Pay $250
+                    </button>
+                    <div class="or-divider">&mdash; or &mdash;</div>
+                    <button class="btn-paypal" onclick="openPayPal('drug-plan', 250)">
+                        <span class="paypal-text">PayPal</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Package 2 (Popular) -->
+            <div class="package-card popular">
+                <span class="popular-badge">Most Popular</span>
+                <h2 class="package-name">Full Medicare Analysis</h2>
+                <div class="package-price">$500</div>
+                <div class="package-delivery">PDF report + phone call</div>
+                <ul class="package-features">
+                    <li>Medicare Supplement OR Advantage analysis</li>
+                    <li>Part D drug plan analysis included</li>
+                    <li>Complete PDF report</li>
+                    <li>1-hour phone consultation</li>
+                    <li>Email support (6 rounds / 1 month)</li>
+                </ul>
+                <div class="payment-section">
+                    <button class="btn-pay" onclick="openCheckout('price_1T4nlyPl0BYzQnbzDjQoxJX7', 'Full Medicare Analysis')">
+                        Pay $500
+                    </button>
+                    <div class="or-divider">&mdash; or &mdash;</div>
+                    <button class="btn-paypal" onclick="openPayPal('full-analysis', 500)">
+                        <span class="paypal-text">PayPal</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="package-card">
+                <h2 class="package-name">White Glove Service</h2>
+                <div class="package-price">$1,000</div>
+                <div class="package-delivery">Full-service phone support</div>
+                <ul class="package-features">
+                    <li>Everything in Full Analysis</li>
+                    <li>No forms &mdash; we gather info by phone</li>
+                    <li>UNLIMITED phone sessions (1 month)</li>
+                    <li>Phone, video, or email &mdash; your choice</li>
+                    <li>Paper report via US Mail available</li>
+                </ul>
+                <div class="payment-section">
+                    <button class="btn-pay" onclick="openCheckout('price_1T4noAPl0BYzQnbz1VK0ptWU', 'White Glove Service')">
+                        Pay $1,000
+                    </button>
+                    <div class="or-divider">&mdash; or &mdash;</div>
+                    <button class="btn-paypal" onclick="openPayPal('white-glove', 1000)">
+                        <span class="paypal-text">PayPal</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Section -->
+<section class="trust-section">
+    <div class="container">
+        <h2>Why People Trust Us</h2>
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon">&#128176;</div>
+                <h3>No Commissions. Ever.</h3>
+                <p>We don't sell insurance. We don't get paid by insurance companies. You pay us, so our advice is 100% in YOUR interest.</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">&#127758;</div>
+                <h3>Serving All 50 States</h3>
+                <p>Based in Florida, but we help clients nationwide. If you have Medicare questions, we can help &mdash; wherever you live.</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">&#128222;</div>
+                <h3>Real Person. Real Help.</h3>
+                <p>No call centers. No bots. When you call (850) 810-1000, you talk to a real Medicare expert who cares about getting it right.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Why should I pay when Medicare agents are free?
+                </div>
+                <div class="faq-answer">
+                    <p>"Free" Medicare agents are paid by insurance companies &mdash; which means they're incentivized to steer you toward plans that pay THEM the highest commission, not plans that are best for YOU. When you pay us directly, our only loyalty is to you. We research every option without bias and recommend what actually fits your situation.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How does the consultation work?
+                </div>
+                <div class="faq-answer">
+                    <p>After you purchase a package, we'll send you a short questionnaire (or gather the info by phone for White Glove). We'll research the plans available in your area, analyze your medications and doctors, and create a detailed PDF report with our recommendations. You'll have email (and phone, depending on package) access to ask questions and get clarification.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What exactly do I get for my money?
+                </div>
+                <div class="faq-answer">
+                    <p>You get a comprehensive PDF report that compares your options and explains exactly which plan we recommend &mdash; and why. You also get follow-up support via email (and phone for larger packages) to answer any questions. Most importantly, you get peace of mind knowing your Medicare decision was made with YOUR best interest in mind, not an insurance company's.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Can you help my parents?
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. Many clients hire us to help their aging parents navigate Medicare. The White Glove package is especially popular for this &mdash; we handle everything by phone, so your parent doesn't need to fill out any forms or use a computer.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    I'm turning 65 soon. When should I start?
+                </div>
+                <div class="faq-answer">
+                    <p>Ideally, contact us 2-3 months before your 65th birthday. This gives us time to research your options before your Medicare enrollment period begins. But even if you're already on Medicare and want a second opinion on your coverage, we can help any time of year.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Ready to Get Unbiased Medicare Advice?</h2>
+        <p>Choose a package above, or call us directly. We're happy to answer questions before you decide.</p>
+        <div class="cta-buttons">
+            <a href="#packages" class="btn btn-primary">View Packages</a>
+            <a href="tel:+18508101000" class="btn-call">Call (850) 810-1000</a>
+        </div>
+    </div>
+</section>
+
+<!-- Minimal Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Unbiased Medicare Advisor. All rights reserved.</p>
+        <p><a href="/privacy-policy/">Privacy Policy</a></p>
+        <a href="tel:+18508101000" class="footer-phone">(850) 810-1000</a>
+    </div>
+</footer>
+
+<!-- Stripe Checkout Modal -->
+<div id="checkout-modal" class="checkout-modal">
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h3 id="checkout-title">Complete Your Purchase</h3>
+            <button class="close-btn" onclick="closeCheckout()">&times;</button>
+        </div>
+        <div id="checkout-element">
+            <div class="loading-spinner">Loading checkout...</div>
+        </div>
+    </div>
+</div>
+
+<!-- PayPal Checkout Modal -->
+<div id="paypal-modal" class="checkout-modal">
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h3 id="paypal-title">Pay with PayPal</h3>
+            <button class="close-btn" onclick="closePayPalModal()">&times;</button>
+        </div>
+        <div id="paypal-button-container" style="padding: 30px;">
+            <div class="loading-spinner">Loading PayPal...</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Initialize Stripe
+    const stripe = Stripe('pk_live_51T4lmuPl0BYzQnbz5MJGo7dmZU7FkvXD8nKtjAEDg4SFF9jgu6xSh8XuO1oTFJIryOLflg1fSgks6BQarmPPvmP400XYqS8iAD');
+    let checkoutInstance = null;
+
+    async function openCheckout(priceId, productName) {
+        const modal = document.getElementById('checkout-modal');
+        const checkoutElement = document.getElementById('checkout-element');
+        const checkoutTitle = document.getElementById('checkout-title');
+
+        modal.classList.add('active');
+        checkoutTitle.textContent = `Purchase: ${productName}`;
+        checkoutElement.innerHTML = '<div class="loading-spinner">Loading checkout...</div>';
+
+        try {
+            const response = await fetch('/api/create-checkout-session', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ priceId }),
+            });
+
+            if (!response.ok) throw new Error('Failed to create checkout session');
+
+            const { clientSecret } = await response.json();
+            checkoutElement.innerHTML = '';
+
+            checkoutInstance = await stripe.initEmbeddedCheckout({ clientSecret });
+            checkoutInstance.mount('#checkout-element');
+
+        } catch (error) {
+            console.error('Checkout error:', error);
+            checkoutElement.innerHTML = `
+                <div style="padding: 40px; text-align: center; color: #666;">
+                    <p style="margin-bottom: 15px;">Sorry, there was a problem loading checkout.</p>
+                    <p>Please call us at <a href="tel:+18508101000" style="color: #4a90a4;">(850) 810-1000</a> to complete your purchase.</p>
+                </div>
+            `;
+        }
+    }
+
+    function closeCheckout() {
+        const modal = document.getElementById('checkout-modal');
+        modal.classList.remove('active');
+        if (checkoutInstance) {
+            checkoutInstance.destroy();
+            checkoutInstance = null;
+        }
+    }
+
+    // PayPal
+    const paypalPackages = {
+        'drug-plan': { name: 'Drug Plan Analysis', amount: '250.00' },
+        'full-analysis': { name: 'Full Medicare Analysis', amount: '500.00' },
+        'white-glove': { name: 'White Glove Service', amount: '1000.00' }
+    };
+
+    function openPayPal(packageType, amount) {
+        const modal = document.getElementById('paypal-modal');
+        const container = document.getElementById('paypal-button-container');
+        const title = document.getElementById('paypal-title');
+        const pkg = paypalPackages[packageType];
+
+        title.textContent = `Pay with PayPal: ${pkg.name}`;
+        container.innerHTML = '<div class="loading-spinner">Loading PayPal...</div>';
+        modal.classList.add('active');
+
+        setTimeout(() => {
+            container.innerHTML = '';
+            paypal.Buttons({
+                style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'pay' },
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            description: pkg.name,
+                            amount: { value: pkg.amount, currency_code: 'USD' }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        window.location.href = '/services/thank-you/?payment=paypal&order_id=' + data.orderID;
+                    });
+                },
+                onCancel: function(data) { closePayPalModal(); },
+                onError: function(err) {
+                    console.error('PayPal error:', err);
+                    container.innerHTML = `
+                        <div style="padding: 20px; text-align: center; color: #666;">
+                            <p>Sorry, there was a problem with PayPal.</p>
+                            <p>Please call <a href="tel:+18508101000" style="color: #4a90a4;">(850) 810-1000</a>.</p>
+                        </div>
+                    `;
+                }
+            }).render('#paypal-button-container');
+        }, 100);
+    }
+
+    function closePayPalModal() {
+        document.getElementById('paypal-modal').classList.remove('active');
+    }
+
+    // FAQ toggle
+    function toggleFaq(element) {
+        const faqItem = element.closest('.faq-item');
+        faqItem.classList.toggle('active');
+    }
+
+    // Close modals on escape or outside click
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeCheckout();
+            closePayPalModal();
+        }
+    });
+
+    document.getElementById('checkout-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'checkout-modal') closeCheckout();
+    });
+
+    document.getElementById('paypal-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'paypal-modal') closePayPalModal();
+    });
+</script>
+
+</body>
+</html>
