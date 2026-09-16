@@ -177,6 +177,11 @@
             }
         }
 
+        /* Cards size to their own content instead of stretching to the tallest */
+        .packages {
+            align-items: start;
+        }
+
         .package-card {
             background: var(--white);
             border-radius: var(--radius-lg);
@@ -227,7 +232,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
 
         .package-delivery {
@@ -276,6 +281,60 @@
         .package-best-for strong {
             display: block;
             margin-bottom: 3px;
+        }
+
+        /* Package copy blocks */
+        .package-audience {
+            text-align: left;
+        }
+
+        .package-section-label {
+            color: var(--primary);
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        .package-trailing {
+            text-align: left;
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .package-trailing p {
+            margin-bottom: 8px;
+        }
+
+        .package-trailing p:last-child {
+            margin-bottom: 0;
+        }
+
+        .package-footnote {
+            text-align: left;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: var(--medium-gray);
+            border-top: 1px solid var(--light-gray);
+            padding-top: 12px;
+            margin-top: 18px;
+            margin-bottom: 18px;
+        }
+
+        #white-glove {
+            scroll-margin-top: calc(var(--header-height) + 20px);
+        }
+
+        .table-notes {
+            list-style: none;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .table-notes li {
+            padding: 5px 0;
         }
 
         /* Payment buttons */
@@ -398,6 +457,60 @@
             .comparison-table { font-size: 0.85rem; }
             .comparison-table th, .comparison-table td { padding: 8px 5px; }
         }
+
+        /* Mobile per-package comparison cards (ported from JKM shipped version) */
+        .comparison-cards { display: none; }
+
+        @media (max-width: 720px) {
+            .comparison-table-wrap { display: none; }
+            .comparison-cards { display: block; }
+        }
+
+        .comparison-card {
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            border-left: 5px solid var(--primary);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 18px;
+            padding: 20px 16px;
+        }
+
+        .comparison-card:last-child { margin-bottom: 0; }
+
+        .comparison-card-title {
+            color: var(--primary);
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+        }
+
+        .comparison-card-price {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .comparison-card-list { list-style: none; margin: 0; padding: 0; }
+
+        .comparison-card-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-top: 1px solid var(--light-gray);
+            font-size: 0.95rem;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        .comparison-card-list li:first-child { border-top: none; }
+
+        .comparison-card-list .feature { flex: 1; color: var(--primary); font-weight: 600; }
+
+        .comparison-card-list .value { text-align: right; flex-shrink: 0; }
 
         /* Questions section */
         .questions-section {
@@ -668,22 +781,21 @@
         <!-- Package Cards -->
         <div class="packages">
 
-            <!-- Package 1: Drug Plan Analysis -->
+            <!-- Package 1: Prescription Drug Plan (PDP) Audit -->
             <div class="package-card">
-                <h2 class="package-name">Drug Plan Analysis</h2>
+                <h2 class="package-name">Prescription Drug Plan (PDP) Audit</h2>
                 <div class="package-price">$250</div>
-                <div class="package-delivery">PDF report via email</div>
-                <ul class="package-features">
-                    <li>Research the best Part D plan for your unique situation and needs</li>
-                    <li>Pharmacy network analysis</li>
-                    <li>Nationwide vs. regional coverage comparison</li>
-                    <li>Complete PDF report emailed to you</li>
-                    <li>Email follow-up support (4 rounds over 2 weeks)</li>
-                </ul>
-                <div class="package-best-for">
-                    <strong>Best for:</strong>
-                    You already have Medicare coverage and just need help picking a drug plan
+                <div class="package-best-for package-audience">
+                    <strong>Who we built this for</strong>
+                    Already on Medicare with a Part D drug plan? We help you answer one question: keep it for next year, or switch? Plans change their drug lists every January, so a drug covered this year may be gone or cost more next year.
                 </div>
+                <h3 class="package-section-label">What we include</h3>
+                <ul class="package-features">
+                    <li>Analysis of all Part D prescription drug plans available in your area</li>
+                    <li>A written report delivered as a PDF file by email</li>
+                    <li>One hour of telephone advisory</li>
+                    <li>Four rounds of email follow up across two weeks</li>
+                </ul>
                 <div class="payment-section">
                     <a href="https://calendly.com/calendly-unbiasedmedicareadvisor/30min" class="btn-pay" target="_blank" rel="noopener">
                         Book a Consultation
@@ -696,17 +808,24 @@
                 <span class="popular-badge">Most Popular</span>
                 <h2 class="package-name">Full Medicare Analysis</h2>
                 <div class="package-price">$500</div>
-                <div class="package-delivery">PDF report + phone consultation</div>
+                <div class="package-best-for package-audience">
+                    <strong>Who we built this for</strong>
+                    If you already have Medicare, we compare the choices in front of you: Medicare Supplement, also called Medigap, Medicare Advantage, and Part D prescription drug plans. This is not a one time decision. Many clients come back each autumn because plans can change on January 1. Doctors, drugs, benefits, and costs can all be different.
+                </div>
+                <h3 class="package-section-label">What we include</h3>
                 <ul class="package-features">
-                    <li>Research the best Medicare Supplement or Medicare Advantage plan for your unique situation</li>
-                    <li>Research the best Part D plan to pair with your chosen Medicare coverage</li>
-                    <li>Complete PDF report emailed to you</li>
-                    <li>1-hour phone Q&A session</li>
-                    <li>Email follow-up support (6 rounds over 1 month)</li>
+                    <li>Analysis of every Medigap plan available in your state</li>
+                    <li>Analysis of all Medicare Advantage plans available in your county</li>
+                    <li>Your medicines checked against every Part D drug plan available to you</li>
+                    <li>Checking that your own doctors and pharmacies are covered by the plans being compared</li>
+                    <li>Reviewing all of your Medicare deadline dates together by telephone</li>
+                    <li>A written report delivered as a PDF file by email</li>
+                    <li>Two hours of telephone advisory</li>
+                    <li>Six rounds of email follow up across one month</li>
                 </ul>
-                <div class="package-best-for">
-                    <strong>Best for:</strong>
-                    You're new to Medicare or want expert guidance on all your options
+                <div class="package-trailing">
+                    <p>If you do not have Medicare yet, you need the <a href="#white-glove">White Glove</a> package instead.</p>
+                    <p>If you have Medicare plus another kind of coverage, please look at our <a href="#white-glove">White Glove</a> page before you choose this package.</p>
                 </div>
                 <div class="payment-section">
                     <a href="https://calendly.com/calendly-unbiasedmedicareadvisor/30min" class="btn-pay" target="_blank" rel="noopener">
@@ -716,21 +835,22 @@
             </div>
 
             <!-- Package 3: White Glove Service -->
-            <div class="package-card">
+            <div class="package-card" id="white-glove">
                 <h2 class="package-name">White Glove Service</h2>
                 <div class="package-price">$1,000</div>
-                <div class="package-delivery">Full-service phone support</div>
-                <ul class="package-features">
-                    <li>Everything in Full Medicare Analysis</li>
-                    <li>No forms to fill out—we gather all info during phone calls</li>
-                    <li><strong>UNLIMITED</strong> 1-hour phone sessions (first month)</li>
-                    <li>Your choice: phone, video call, or email follow-up</li>
-                    <li>PDF report emailed or paper report via US Mail</li>
-                </ul>
-                <div class="package-best-for">
-                    <strong>Best for:</strong>
-                    You want someone to walk you through everything by phone—no forms, no stress
+                <div class="package-best-for package-audience">
+                    <strong>Who we built this for</strong>
+                    White Glove includes everything in the Full Medicare Analysis package, plus more help through the whole Medicare setup process. It is the package you need if you are not yet on Medicare, or if your Medicare has to work alongside another system of coverage, such as federal retirement.
                 </div>
+                <h3 class="package-section-label">What we include</h3>
+                <ul class="package-features">
+                    <li>Everything in our Full Medicare Analysis package</li>
+                    <li>We guide you through getting your Medicare number and Parts&nbsp;A and&nbsp;B</li>
+                    <li>We work through your IRMAA* bracket, Medicare's income surcharge, and any path to appeal it</li>
+                    <li>We explain how Medicare fits with federal or postal retirement coverage, Railroad Retirement, TRICARE, VA care, or a job plan, including which system pays first, what each leaves unpaid, and where they overlap</li>
+                    <li>Unlimited consultations, until we both agree this year's analysis is complete</li>
+                </ul>
+                <div class="package-footnote">* IRMAA means Income Related Monthly Adjustment Amount. It is an extra charge Medicare adds to Part B and Part D premiums for higher income households.</div>
                 <div class="payment-section">
                     <a href="https://calendly.com/calendly-unbiasedmedicareadvisor/30min" class="btn-pay" target="_blank" rel="noopener">
                         Book a Consultation
@@ -743,72 +863,136 @@
         <!-- Comparison Table -->
         <section class="comparison-section">
             <h2>Compare Packages</h2>
+            <div class="comparison-table-wrap">
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th>Feature</th>
-                        <th>Drug Plan<br>$250</th>
+                        <th>PDP Audit<br>$250</th>
                         <th>Full Analysis<br>$500</th>
                         <th>White Glove<br>$1,000</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Part D drug plan analysis</td>
+                        <td>Part&nbsp;D drug plan (PDP) analysis</td>
                         <td class="check">&#10003;</td>
                         <td class="check">&#10003;</td>
                         <td class="check">&#10003;</td>
                     </tr>
                     <tr>
-                        <td>Medicare Supplement analysis</td>
+                        <td>Medicare Supplement (Medigap) analysis</td>
                         <td class="dash">—</td>
                         <td class="check">&#10003;</td>
                         <td class="check">&#10003;</td>
                     </tr>
                     <tr>
-                        <td>Medicare Advantage analysis</td>
+                        <td>Medicare Advantage (Part&nbsp;C) analysis</td>
                         <td class="dash">—</td>
                         <td class="check">&#10003;</td>
                         <td class="check">&#10003;</td>
                     </tr>
                     <tr>
-                        <td>PDF report</td>
-                        <td class="check">&#10003;</td>
+                        <td>Doctor and pharmacy check</td>
+                        <td class="dash">—</td>
                         <td class="check">&#10003;</td>
                         <td class="check">&#10003;</td>
                     </tr>
                     <tr>
-                        <td>Phone consultation</td>
+                        <td>Medicare deadline review</td>
                         <td class="dash">—</td>
-                        <td>1 hour</td>
-                        <td>Unlimited (1 month)</td>
-                    </tr>
-                    <tr>
-                        <td>Video call option</td>
-                        <td class="dash">—</td>
-                        <td class="dash">—</td>
+                        <td class="check">&#10003;</td>
                         <td class="check">&#10003;</td>
                     </tr>
                     <tr>
-                        <td>No forms required</td>
+                        <td>IRMAA bracket determination</td>
                         <td class="dash">—</td>
                         <td class="dash">—</td>
                         <td class="check">&#10003;</td>
                     </tr>
                     <tr>
-                        <td>Email follow-up</td>
+                        <td>Medicare number and Parts&nbsp;A and&nbsp;B guidance</td>
+                        <td class="dash">—</td>
+                        <td class="dash">—</td>
+                        <td class="check">&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>Written PDF report</td>
+                        <td class="check">&#10003;</td>
+                        <td class="check">&#10003;</td>
+                        <td class="check">&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>Telephone advisory time</td>
+                        <td>1 Hour</td>
+                        <td>2 Hours</td>
+                        <td>Unlimited*</td>
+                    </tr>
+                    <tr>
+                        <td>Follow-up email support</td>
                         <td>4 rounds / 2 weeks</td>
                         <td>6 rounds / 1 month</td>
-                        <td>Unlimited / 1 month</td>
-                    </tr>
-                    <tr>
-                        <td>Mailed hard copy option</td>
-                        <td class="dash">—</td>
-                        <td class="dash">—</td>
-                        <td class="check">&#10003;</td>
+                        <td>Unlimited*</td>
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <div class="comparison-cards">
+            <div class="comparison-card">
+                <h3 class="comparison-card-title">PDP Audit</h3>
+                <div class="comparison-card-price">$250</div>
+                <ul class="comparison-card-list">
+                    <li><span class="feature">Part&nbsp;D drug plan (PDP) analysis</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Medicare Supplement (Medigap) analysis</span><span class="value"><span class="dash">&mdash;</span></span></li>
+                    <li><span class="feature">Medicare Advantage (Part&nbsp;C) analysis</span><span class="value"><span class="dash">&mdash;</span></span></li>
+                    <li><span class="feature">Doctor and pharmacy check</span><span class="value"><span class="dash">&mdash;</span></span></li>
+                    <li><span class="feature">Medicare deadline review</span><span class="value"><span class="dash">&mdash;</span></span></li>
+                    <li><span class="feature">IRMAA bracket determination</span><span class="value"><span class="dash">&mdash;</span></span></li>
+                    <li><span class="feature">Medicare number and Parts&nbsp;A and&nbsp;B guidance</span><span class="value"><span class="dash">&mdash;</span></span></li>
+                    <li><span class="feature">Written PDF report</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Telephone advisory time</span><span class="value">1 Hour</span></li>
+                    <li><span class="feature">Follow-up email support</span><span class="value">4 rounds / 2 weeks</span></li>
+                </ul>
+            </div>
+            <div class="comparison-card">
+                <h3 class="comparison-card-title">Full Analysis</h3>
+                <div class="comparison-card-price">$500</div>
+                <ul class="comparison-card-list">
+                    <li><span class="feature">Part&nbsp;D drug plan (PDP) analysis</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Medicare Supplement (Medigap) analysis</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Medicare Advantage (Part&nbsp;C) analysis</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Doctor and pharmacy check</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Medicare deadline review</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">IRMAA bracket determination</span><span class="value"><span class="dash">&mdash;</span></span></li>
+                    <li><span class="feature">Medicare number and Parts&nbsp;A and&nbsp;B guidance</span><span class="value"><span class="dash">&mdash;</span></span></li>
+                    <li><span class="feature">Written PDF report</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Telephone advisory time</span><span class="value">2 Hours</span></li>
+                    <li><span class="feature">Follow-up email support</span><span class="value">6 rounds / 1 month</span></li>
+                </ul>
+            </div>
+            <div class="comparison-card">
+                <h3 class="comparison-card-title">White Glove</h3>
+                <div class="comparison-card-price">$1,000</div>
+                <ul class="comparison-card-list">
+                    <li><span class="feature">Part&nbsp;D drug plan (PDP) analysis</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Medicare Supplement (Medigap) analysis</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Medicare Advantage (Part&nbsp;C) analysis</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Doctor and pharmacy check</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Medicare deadline review</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">IRMAA bracket determination</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Medicare number and Parts&nbsp;A and&nbsp;B guidance</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Written PDF report</span><span class="value"><span class="check">&#10003;</span></span></li>
+                    <li><span class="feature">Telephone advisory time</span><span class="value">Unlimited*</span></li>
+                    <li><span class="feature">Follow-up email support</span><span class="value">Unlimited*</span></li>
+                </ul>
+            </div>
+            </div>
+            <ul class="table-notes">
+                <li>* Until we both agree this year's analysis is complete.</li>
+                <li>Each price covers one person's Medicare consultation.</li>
+                <li>If both spouses need help, we can often lower the second price because much of the research overlaps.</li>
+                <li>IRMAA is an extra Medicare charge for people with higher income.</li>
+            </ul>
         </section>
 
         <!-- Questions Section -->

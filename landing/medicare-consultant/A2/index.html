@@ -288,6 +288,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
+            align-items: start;
         }
         .package-card {
             background: var(--white);
@@ -334,7 +335,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
         .package-delivery {
             color: var(--medium-gray);
@@ -364,6 +365,53 @@
             font-weight: bold;
         }
         .payment-section { margin-top: auto; }
+        .package-best-for {
+            background: #f0f7fa;
+            border-radius: var(--radius-md);
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: var(--primary);
+        }
+        .package-best-for strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+        .package-audience {
+            text-align: left;
+        }
+        .package-section-label {
+            color: var(--primary);
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: 8px;
+        }
+        .package-trailing {
+            text-align: left;
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .package-trailing p {
+            margin-bottom: 8px;
+        }
+        .package-trailing p:last-child {
+            margin-bottom: 0;
+        }
+        #white-glove {
+            scroll-margin-top: 20px;
+        }
+        .package-footnote {
+            text-align: left;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: var(--medium-gray);
+            border-top: 1px solid var(--light-gray);
+            padding-top: 12px;
+            margin-top: 18px;
+            margin-bottom: 18px;
+        }
         .btn-pay {
             display: block;
             width: 100%;
@@ -712,14 +760,18 @@
         <div class="packages">
             <!-- Package 1 -->
             <div class="package-card">
-                <h2 class="package-name">Drug Plan Analysis</h2>
+                <h2 class="package-name">Prescription Drug Plan (PDP) Audit</h2>
                 <div class="package-price">$250</div>
-                <div class="package-delivery">PDF report via email</div>
+                <div class="package-best-for package-audience">
+                    <strong>Who we built this for</strong>
+                    Already on Medicare with a Part D drug plan? We help you answer one question: keep it for next year, or switch? Plans change their drug lists every January, so a drug covered this year may be gone or cost more next year.
+                </div>
+                <h3 class="package-section-label">What we include</h3>
                 <ul class="package-features">
-                    <li>Research the best Part D plan for your medications</li>
-                    <li>Pharmacy network analysis</li>
-                    <li>Complete PDF report</li>
-                    <li>Email support (4 rounds / 2 weeks)</li>
+                    <li>Analysis of all Part D prescription drug plans available in your area</li>
+                    <li>A written report delivered as a PDF file by email</li>
+                    <li>One hour of telephone advisory</li>
+                    <li>Four rounds of email follow up across two weeks</li>
                 </ul>
                 <div class="payment-section">
                     <a href="https://calendly.com/calendly-unbiasedmedicareadvisor/30min" class="btn-pay" target="_blank" rel="noopener">
@@ -733,14 +785,25 @@
                 <span class="popular-badge">Most Popular</span>
                 <h2 class="package-name">Full Medicare Analysis</h2>
                 <div class="package-price">$500</div>
-                <div class="package-delivery">PDF report + phone call</div>
+                <div class="package-best-for package-audience">
+                    <strong>Who we built this for</strong>
+                    If you already have Medicare, we compare the choices in front of you: Medicare Supplement, also called Medigap, Medicare Advantage, and Part D prescription drug plans. This is not a one time decision. Many clients come back each autumn because plans can change on January 1. Doctors, drugs, benefits, and costs can all be different.
+                </div>
+                <h3 class="package-section-label">What we include</h3>
                 <ul class="package-features">
-                    <li>Medicare Supplement OR Advantage analysis</li>
-                    <li>Part D drug plan analysis included</li>
-                    <li>Complete PDF report</li>
-                    <li>1-hour phone consultation</li>
-                    <li>Email support (6 rounds / 1 month)</li>
+                    <li>Analysis of every Medigap plan available in your state</li>
+                    <li>Analysis of all Medicare Advantage plans available in your county</li>
+                    <li>Your medicines checked against every Part D drug plan available to you</li>
+                    <li>Checking that your own doctors and pharmacies are covered by the plans being compared</li>
+                    <li>Reviewing all of your Medicare deadline dates together by telephone</li>
+                    <li>A written report delivered as a PDF file by email</li>
+                    <li>Two hours of telephone advisory</li>
+                    <li>Six rounds of email follow up across one month</li>
                 </ul>
+                <div class="package-trailing">
+                    <p>If you do not have Medicare yet, you need the <a href="#white-glove">White Glove</a> package instead.</p>
+                    <p>If you have Medicare plus another kind of coverage, please look at our <a href="#white-glove">White Glove</a> page before you choose this package.</p>
+                </div>
                 <div class="payment-section">
                     <a href="https://calendly.com/calendly-unbiasedmedicareadvisor/30min" class="btn-pay" target="_blank" rel="noopener">
                         Book a Consultation
@@ -749,17 +812,22 @@
             </div>
 
             <!-- Package 3 -->
-            <div class="package-card">
+            <div class="package-card" id="white-glove">
                 <h2 class="package-name">White Glove Service</h2>
                 <div class="package-price">$1,000</div>
-                <div class="package-delivery">Full-service phone support</div>
+                <div class="package-best-for package-audience">
+                    <strong>Who we built this for</strong>
+                    White Glove includes everything in the Full Medicare Analysis package, plus more help through the whole Medicare setup process. It is the package you need if you are not yet on Medicare, or if your Medicare has to work alongside another system of coverage, such as federal retirement.
+                </div>
+                <h3 class="package-section-label">What we include</h3>
                 <ul class="package-features">
-                    <li>Everything in Full Analysis</li>
-                    <li>No forms &mdash; we gather info by phone</li>
-                    <li>UNLIMITED phone sessions (1 month)</li>
-                    <li>Phone, video, or email &mdash; your choice</li>
-                    <li>Paper report via US Mail available</li>
+                    <li>Everything in our Full Medicare Analysis package</li>
+                    <li>We guide you through getting your Medicare number and Parts&nbsp;A and&nbsp;B</li>
+                    <li>We work through your IRMAA* bracket, Medicare's income surcharge, and any path to appeal it</li>
+                    <li>We explain how Medicare fits with federal or postal retirement coverage, Railroad Retirement, TRICARE, VA care, or a job plan, including which system pays first, what each leaves unpaid, and where they overlap</li>
+                    <li>Unlimited consultations, until we both agree this year's analysis is complete</li>
                 </ul>
+                <div class="package-footnote">* IRMAA means Income Related Monthly Adjustment Amount. It is an extra charge Medicare adds to Part B and Part D premiums for higher income households.</div>
                 <div class="payment-section">
                     <a href="https://calendly.com/calendly-unbiasedmedicareadvisor/30min" class="btn-pay" target="_blank" rel="noopener">
                         Book a Consultation
@@ -812,7 +880,7 @@
                     How does the consultation work?
                 </div>
                 <div class="faq-answer">
-                    <p>After you purchase a package, we'll send you a short questionnaire (or gather the info by phone for White Glove). We'll research the plans available in your area, analyze your medications and doctors, and create a detailed PDF report with our recommendations. You'll have email (and phone, depending on package) access to ask questions and get clarification.</p>
+                    <p>After you purchase a package, we'll send you a short questionnaire. We'll research the plans available in your area, analyze your medications and doctors, and create a detailed PDF report with our recommendations. You'll have email (and phone, depending on package) access to ask questions and get clarification.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -828,7 +896,7 @@
                     Can you help my parents?
                 </div>
                 <div class="faq-answer">
-                    <p>Absolutely. Many clients hire us to help their aging parents navigate Medicare. The White Glove package is especially popular for this &mdash; we handle everything by phone, so your parent doesn't need to fill out any forms or use a computer.</p>
+                    <p>Absolutely. Many clients hire us to help their aging parents navigate Medicare. The White Glove package is especially popular for this &mdash; we handle everything by phone.</p>
                 </div>
             </div>
             <div class="faq-item">
