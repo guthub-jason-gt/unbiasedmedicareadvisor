@@ -377,10 +377,45 @@
             margin-bottom: var(--spacing-lg);
         }
 
-        /* Calendly Widget */
-        .calendly-inline-widget {
+        /* Cal.com inline embed. Ported 2026-10-06 from JasonKnowsMedicare.com
+           /pages/about-contact so both sites book into ONE calendar. */
+        .uma-booking-banner {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99999;
+            background: #e8f0f7;
+            color: var(--primary);
+            border-bottom: 4px solid var(--primary);
+            padding: 20px 24px;
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(30, 58, 95, 0.18);
+        }
+
+        .uma-booking-banner.is-visible {
+            display: block;
+        }
+
+        #uma-cal-embed {
+            display: block;
+            min-height: 0;
+            background: var(--off-white);
             border-radius: var(--radius-lg);
-            overflow: hidden;
+            margin: 12px 0 16px;
+        }
+
+        #uma-cal-embed:empty::before {
+            content: "Loading scheduler\2026";
+            display: block;
+            text-align: center;
+            padding: 100px 20px;
+            color: var(--primary);
+            font-size: 18px;
         }
 
         /* Info Section */
@@ -615,8 +650,26 @@
                 font-size: 3rem;
             }
 
+            /* 2026-10-06: one column, so the Cal.com booker gets the full width
+               and can show the calendar and the times side by side. The info
+               section flows into two columns below it. */
             .booking-grid {
-                grid-template-columns: 3fr 2fr;
+                grid-template-columns: 1fr;
+            }
+
+            .info-section {
+                columns: 2;
+                column-gap: var(--spacing-xl);
+            }
+
+            .info-section h2 {
+                column-span: all;
+            }
+
+            .info-section .expect-list,
+            .info-section .info-box,
+            .info-section .contact-alternative {
+                break-inside: avoid;
             }
         }
 
@@ -707,9 +760,114 @@
                     <h2>Schedule Your Free Call</h2>
                     <p>Choose a time that works for you. Initial consultations are complimentary and last about 15 minutes.</p>
 
-                    <!-- Calendly inline widget -->
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/calendly-unbiasedmedicareadvisor/30min" style="min-width:320px;height:700px;"></div>
-                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Cal.com inline embed: the same self-hosted scheduler and the same
+                         free 15-minute event as JasonKnowsMedicare.com, so both sites book
+                         into one calendar and cannot double book. -->
+                    <div class="uma-booking-banner" id="uma-booking-banner" role="status" aria-live="polite">
+                        You are booked. We will call you at the time you chose.
+                    </div>
+
+                    <div id="uma-cal-embed"></div>
+
+                    <script>
+                    (function (C, A, L) {
+                      let p = function (a, ar) { a.q.push(ar); };
+                      let d = C.document;
+                      C.Cal = C.Cal || function () {
+                        let cal = C.Cal;
+                        let ar = arguments;
+                        if (!cal.loaded) {
+                          cal.ns = {};
+                          cal.q = cal.q || [];
+                          d.head.appendChild(d.createElement("script")).src = A;
+                          cal.loaded = true;
+                        }
+                        if (ar[0] === L) {
+                          const api = function () { p(api, arguments); };
+                          const namespace = ar[1];
+                          api.q = api.q || [];
+                          if (typeof namespace === "string") {
+                            cal.ns[namespace] = cal.ns[namespace] || api;
+                            p(cal.ns[namespace], ar);
+                            p(cal, ["initNamespace", namespace]);
+                          } else {
+                            p(cal, ar);
+                          }
+                          return;
+                        }
+                        p(cal, ar);
+                      };
+                    })(window, "https://scheduler-staging.jasonknowsmedicare.com/embed/embed.js", "init");
+
+                    Cal("init", "free-15-min", {origin: "https://scheduler-staging.jasonknowsmedicare.com"});
+
+                    (function () {
+                      var embedEl = document.getElementById("uma-cal-embed");
+                      var initialized = false;
+                      function initEmbed() {
+                        if (initialized) return;
+                        initialized = true;
+                        Cal.ns["free-15-min"]("inline", {
+                          elementOrSelector: "#uma-cal-embed",
+                          calLink: "jasonknowsmedicare/free-15-min",
+                          config: { layout: "month_view", utm_source: "unbiasedmedicareadvisor" }
+                        });
+                        Cal.ns["free-15-min"]("ui", {
+                          cssVarsPerTheme: {
+                            light: {
+                              "cal-brand": "#1e3a5f",
+                              "booker-meta-width": "280px",
+                              "booker-main-width": "680px"
+                            }
+                          },
+                          hideEventTypeDetails: true,
+                          layout: "month_view"
+                        });
+                        Cal.ns["free-15-min"]("on", {
+                          action: "linkReady",
+                          callback: function () {
+                            try {
+                              var ci = document.querySelector("#uma-cal-embed cal-inline");
+                              if (ci && ci.shadowRoot) {
+                                var sc = ci.shadowRoot.querySelector("#skeleton-container");
+                                if (sc) sc.style.display = "none";
+                              }
+                            } catch (e) {}
+                          }
+                        });
+                        Cal.ns["free-15-min"]("on", {
+                          action: "bookingSuccessful",
+                          callback: function (e) {
+                            var banner = document.getElementById("uma-booking-banner");
+                            if (banner) {
+                              banner.classList.add("is-visible");
+                              window.scrollTo({ top: 0, behavior: "smooth" });
+                            }
+                          }
+                        });
+                        setTimeout(function () {
+                          try {
+                            var ci = document.querySelector("#uma-cal-embed cal-inline");
+                            if (ci && ci.shadowRoot) {
+                              var sc = ci.shadowRoot.querySelector("#skeleton-container");
+                              if (sc) sc.style.display = "none";
+                            }
+                          } catch (e) {}
+                        }, 2500);
+                      }
+                      if ("IntersectionObserver" in window && embedEl) {
+                        var obs = new IntersectionObserver(function (entries) {
+                          if (entries[0].isIntersecting) {
+                            obs.disconnect();
+                            initEmbed();
+                          }
+                        }, { rootMargin: "600px 0px" });
+                        obs.observe(embedEl);
+                      } else {
+                        initEmbed();
+                      }
+                    })();
+                    </script>
                 </div>
 
                 <!-- Info Section -->
