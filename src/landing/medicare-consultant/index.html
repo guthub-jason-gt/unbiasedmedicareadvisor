@@ -926,7 +926,7 @@
 <!-- Minimal Footer -->
 <footer class="footer">
     <div class="container">
-        <p>&copy; 2026 Unbiased Medicare Advisor. All rights reserved.</p>
+        <p>&copy; <span class="footer-year">2026</span> Unbiased Medicare Advisor. All rights reserved.</p>
         <p><a href="/privacy-policy/">Privacy Policy</a></p>
         <a href="tel:+18508101000" class="footer-phone">(850) 810-1000</a>
     </div>
@@ -940,5 +940,6 @@
     }
 </script>
 
+    <script>document.querySelectorAll('.footer-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 </body>
 </html>

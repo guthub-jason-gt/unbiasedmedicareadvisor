@@ -1068,7 +1068,7 @@
                     </ul>
 
                     <p>
-                        Because <a href="https://tricare.mil/CoveredServices/Pharmacy/Eligibility/Medicare" target="_blank" rel="noopener">TRICARE pharmacy coverage is considered "creditable"</a> (as good as Medicare Part D), you don't need to enroll in a separate Part D plan.
+                        Because <a href="https://www.tricare.mil/LifeEvents/Medicare" target="_blank" rel="noopener">TRICARE pharmacy coverage is considered "creditable"</a> (as good as Medicare Part D), you don't need to enroll in a separate Part D plan.
                     </p>
 
                     <h3>Worldwide Coverage</h3>
@@ -1482,7 +1482,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Unbiased Medicare Advisor. All rights reserved.</p>
+                <p>&copy; <span class="footer-year">2026</span> Unbiased Medicare Advisor. All rights reserved.</p>
                 <div class="footer-legal">
                     <a href="/privacy-policy">Privacy Policy</a>
                 </div>
@@ -1558,5 +1558,6 @@
     </script>
 
 
+    <script>document.querySelectorAll('.footer-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 </body>
 </html>

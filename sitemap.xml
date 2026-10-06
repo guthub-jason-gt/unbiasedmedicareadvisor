@@ -53,6 +53,10 @@
     <loc>https://unbiasedmedicareadvisor.com/services/medicare-enrollment-help/</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://unbiasedmedicareadvisor.com/services/consultation-packages/</loc>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Guide Index -->
   <url>
@@ -391,6 +395,22 @@
   </url>
   <url>
     <loc>https://unbiasedmedicareadvisor.com/blog/best-medicare-plan-for-me/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://unbiasedmedicareadvisor.com/blog/how-to-choose-medicare-advisor/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://unbiasedmedicareadvisor.com/blog/is-tricare-for-life-enough-coverage/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://unbiasedmedicareadvisor.com/blog/tricare-and-medicare-part-b/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://unbiasedmedicareadvisor.com/blog/tricare-for-life-vs-medicare-advantage/</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
